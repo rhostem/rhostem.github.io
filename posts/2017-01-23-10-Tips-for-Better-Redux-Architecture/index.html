@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+ <html lang="ko"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=5.0"/><link rel="icon" type="image/x-icon" href="/favicon.ico"/><title data-react-helmet="true">Redux 아키텍쳐를 위한 10가지 팁 - Rhostem&#x27;s note</title><style>@import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);@import url(https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/menlo-regular.css);._1lkeM08JhCnwSn2DVeoecR:after{content:"";display:block;clear:both}._1lkeM08JhCnwSn2DVeoecR{position:absolute;top:0;left:0;width:100%;background-color:#fff;border-bottom:1px solid #ebebeb}._3vtsIDAmz41DMSTnifGo8Z{max-width:1070px;margin-left:auto;margin-right:auto;padding-right:1rem;padding-left:1rem}._3vtsIDAmz41DMSTnifGo8Z:before{content:"";display:table}._3vtsIDAmz41DMSTnifGo8Z:after{content:"";display:table;clear:both}._1xAxZ9JAz_Q9hTR07A6SFz{float:left;font-weight:400;font-size:1.2rem;font-family:PT Sans Narrow,sans-serif;line-height:3rem;letter-spacing:0;margin:0}._2HBj6PUI-wllZhmH4Doygj{float:left;list-style:none;padding-left:0}._2zoPwXn25_5i1_U9Mb64bH{font-size:16px;line-height:3rem;font-weight:400;color:#222}._27R8rQLWPSjk1H33uu2gky ul li a._254VQs_6m4dyEzsHnuRLbc,._27R8rQLWPSjk1H33uu2gky ul li a:hover{border-bottom:1px solid}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,cite,code,details,figcaption,figure,footer,header,hgroup,main,nav,section,small,summary{display:block}article,article ol,article ul,blockquote,body,div,figure,footer,header,input,nav,section{box-sizing:border-box}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr{letter-spacing:.1em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}mark{background:#ff0;color:#000}small{font-size:70%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}em,i{line-height:0;position:relative;vertical-align:baseline}img{border:0}svg:not(:root){overflow:hidden}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}img{max-width:100%;display:block;margin:inherit auto}html{font-family:Noto Sans KR,AppleSDGothicNeo-Regular,Malgun Gothic,"\B9D1\C740   \ACE0\B515",dotum,\\B3CB\C6C0,sans-serif;-webkit-font-smoothing:antialiased}body{background-color:#fafafa;letter-spacing:-.02em}h1{letter-spacing:-.05em}h2,h3,h4,h5,h6{letter-spacing:-.03em}@media screen and (min-width:40em){.floatLeft{float:left}}@media screen and (min-width:40em){.floatCenter{margin-left:auto;margin-right:auto}}@media screen and (min-width:40em){.floatRight{float:right}}@media screen and (min-width:40em){body,html{margin:0;width:100%;max-width:none}}html{box-sizing:border-box;font-size:16px;font-size:100%;font-size:calc(16px + 2 * ((100vw - 480px) / 800));color:#222;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}@media screen and (min-width:1280px){html{font-size:18px}}@media screen and (max-width:480px){html{font-size:16px}}*,:after,:before{box-sizing:inherit}body{margin:0}footer{display:block}body>footer{margin:0 auto;width:80%}header,main,section{display:block}a{background:transparent;color:#222;text-decoration:none;-webkit-transition:all .3s;transition:all .3s;word-break:break-all}a:active,a:hover{outline:0}a:active,a:hover{color:#222}article{display:block;margin:0 auto;width:80%}@media screen and (min-width:40em){article{max-width:945px;max-width:52.5rem}}audio{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}canvas{display:inline-block;vertical-align:baseline}pre{overflow:auto}code,kbd,pre,samp{font-family:Menlo,Consolas,Liberation Mono,Courier,monospace}code{display:block;padding:26px;padding:1.625rem}@media screen and (min-width:40em){code{padding:31px;padding:1.722222222222222rem}}details,figcaption,summary{display:block}figcaption{line-height:26px;line-height:1.625rem;color:#222;font-size:.8125rem;font-style:italic;margin-bottom:0;text-align:center}@media screen and (min-width:40em){figcaption{line-height:31px;line-height:1.722222222222222rem;margin-top:.75rem;margin-bottom:0}}figure{display:block;margin:2rem auto}@media screen and (min-width:40em){figure.floatLeft,figure.floatRight{max-width:315px;max-width:17.5rem;padding:0 31px;padding:0 1.722222222222222rem}}@media screen and (min-width:40em){figure.floatLeft blockquote,figure.floatRight blockquote{padding:0;text-align:left}}@media screen and (min-width:40em){figure.floatLeft blockquote p,figure.floatRight blockquote p{font-size:19.2px;font-size:1.2rem;line-height:31px;line-height:1.722222222222222rem}}h1{font-size:40px;font-size:2.5rem;line-height:52px;line-height:3.25rem;margin-top:104px;margin-top:6.5rem;margin-bottom:26px;margin-bottom:1.625rem}h2{font-size:27px;font-size:1.6875rem;line-height:39px;line-height:2.4375rem;margin-top:65px;margin-top:4.0625rem;margin-bottom:13px;margin-bottom:.8125rem}h3{font-size:22px;font-size:1.375rem;margin-top:52px;margin-top:3.25rem}h3,h4{line-height:26px;line-height:1.625rem;margin-bottom:13px;margin-bottom:.8125rem}h4{font-size:19.2px;font-size:1.2rem;margin-top:39px;margin-top:2.4375rem}h5,h6{font-size:16px;font-size:1rem;line-height:26px;line-height:1.625rem;margin-top:65px;margin-top:4.0625rem;margin-bottom:13px;margin-bottom:.8125rem}h1,h2,h3,h4,h5,h6{word-break:keep-all;word-wrap:break-word}@media screen and (min-width:40em){h1{font-size:40px;font-size:2.5rem;line-height:62px;line-height:3.444444444444445rem;margin-top:124px;margin-top:6.888888888888889rem;margin-bottom:31px;margin-bottom:1.722222222222222rem}h2{font-size:27px;font-size:1.6875rem;line-height:46.5px;line-height:2.583333333333334rem;margin-top:77.5px;margin-top:4.305555555555556rem;margin-bottom:15.5px;margin-bottom:.861111111111111rem}h3{font-size:22px;font-size:1.375rem;margin-top:62px;margin-top:3.444444444444445rem}h3,h4{line-height:31px;line-height:1.722222222222222rem;margin-bottom:15.5px;margin-bottom:.861111111111111rem}h4{font-size:19.2px;font-size:1.2rem;margin-top:46.5px;margin-top:2.583333333333334rem}h5,h6{font-size:16px;font-size:1rem;line-height:31px;line-height:1.722222222222222rem;margin-top:77.5px;margin-top:4.305555555555556rem;margin-bottom:15.5px;margin-bottom:.861111111111111rem}}h1+h2{margin-top:26px;margin-top:1.625rem}@media screen and (min-width:40em){h1+h2{margin-top:31px;margin-top:1.722222222222222rem}}h2+h3,h3+h4,h4+h5{margin-top:13px;margin-top:.8125rem}@media screen and (min-width:40em){h2+h3,h3+h4,h4+h5{margin-top:15.5px;margin-top:.861111111111111rem}}h5+h6{margin-top:-13px;margin-top:-.8125rem}@media screen and (min-width:40em){h5+h6{margin-top:-15.5px;margin-top:-.861111111111111rem}}h6{font-style:italic;font-weight:400}hgroup,hr{display:block}hr{margin-top:52px;margin-bottom:52px;box-sizing:content-box;border:0;color:#222;margin:3.25rem auto;width:50%;height:1px;background-image:-webkit-linear-gradient(left,rgba(34,34,34,.2),rgba(34,34,34,.75),rgba(34,34,34,.2));background-image:linear-gradient(90deg,rgba(34,34,34,.2),rgba(34,34,34,.75),rgba(34,34,34,.2))}@media screen and (min-width:40em){hr{margin-top:62px;margin-top:3.444444444444445rem;margin-bottom:62px;margin-bottom:3.444444444444445rem}}img{border:0;max-width:100%;display:block;margin:inherit auto}svg:not(:root){overflow:hidden}ol li,ul li{margin-bottom:.75em}nav{display:block}progress{display:inline-block;vertical-align:baseline}blockquote{font-style:italic;padding-left:1.4375rem}@media screen and (min-width:40em){blockquote{padding-left:2rem}}cite{display:block;font-style:normal}figure blockquote{padding:26px 0;padding:1.625rem 0}@media screen and (min-width:40em){figure blockquote{padding:62px 0 31px;padding:3.444444444444445rem 0 1.722222222222222rem;text-align:center}}figure blockquote p{font-size:27px;font-size:1.6875rem;line-height:39px;line-height:2.4375rem}@media screen and (min-width:40em){figure blockquote p{font-size:27px;font-size:1.6875rem;line-height:46.5px;line-height:2.583333333333334rem}}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}[hidden],template{display:none}abbr{letter-spacing:.1em}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:400;background-color:transparent;background-image:-webkit-linear-gradient(top,rgba(39,243,106,.1),rgba(39,243,106,.1));background-image:linear-gradient(180deg,rgba(39,243,106,.1),rgba(39,243,106,.1))}dfn{font-style:italic}em,i{line-height:0;position:relative;vertical-align:baseline}mark{background:#ff0;color:#000}small{line-height:13px;line-height:.8125rem;font-size:70%}@media screen and (min-width:40em){small{line-height:15.5px;line-height:.861111111111111rem}}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}.attention-grabber{font-size:19.2px;font-size:1.2rem}.alignLeft{text-align:left}.alignCenter{text-align:center}.alignRight{text-align:right}.uppercase{letter-spacing:.1em;text-transform:uppercase}video{display:inline-block;vertical-align:baseline}@font-face{font-family:Noto Sans KR;src:url("https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/notokr-regular.woff2") format("woff2"),url("https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/notokr-regular.woff") format("woff");font-weight:400;font-style:normal}@font-face{font-family:Noto Sans KR;src:url("https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/notokr-bold.woff2") format("woff2"),url("https://s3.ap-northeast-2.amazonaws.com/rhostem-cdn/blog/font/notokr-bold.woff") format("woff");font-weight:700;font-style:bold}.description{font-size:calc(12px + 2 * ((100vw - 480px) / 800));line-height:1.6}@media screen and (min-width:1280px){.description{font-size:14px}}@media screen and (max-width:480px){.description{font-size:12px}}._2p_A6KEfS9E7S_lV_Ho9kX:after{content:"";display:block;clear:both}._1DRfYVqYtJYX-XdYgKDzZX{float:left;display:block;padding:4px 10px;margin-bottom:4px;font-size:.8rem;color:rgba(0,0,0,.6);background-color:rgba(0,0,0,.04);border-radius:3px}._1DRfYVqYtJYX-XdYgKDzZX:hover{background-color:rgba(0,0,0,.1)}._1DRfYVqYtJYX-XdYgKDzZX:not(:last-child){margin-right:4px}a>code,h1>code,h2>code,h3>code,h4>code,h5>code,li>code,p>code,span>code{border-radius:3px;white-space:pre;white-space:pre-wrap;white-space:pre-line;white-space:-pre-wrap;white-space:-o-pre-wrap;white-space:-moz-pre-wrap;white-space:-hp-pre-wrap;word-wrap:break-word;background:#f8f8f8;display:inline;max-width:100%;overflow:auto;padding:.1em .5em}pre code{display:block;border-radius:3px;overflow-x:auto;padding:.5em 1em;color:#333;background:#f8f8f8}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.blog-single{margin-left:auto;margin-right:auto;background-color:#fff}.blog-single h1{text-align:left;word-break:keep-all;margin-top:5rem;font-weight:700}.blog-single .text{line-height:31px;margin-bottom:31px;padding-right:1rem;padding-left:1rem}.blog-single a{text-decoration:underline}.blog-single .text{max-width:740px;margin-left:auto;margin-right:auto}.blog-single .text img{max-width:100%;height:auto;margin:0 auto}.blog-single .footer{max-width:740px;margin-left:auto;margin-right:auto;line-height:31px;margin-bottom:31px}@media (max-width:900px){.blog-single h1{margin-top:3rem}.blog-single .footer,.blog-single .text{padding:0 1.5rem;line-height:26px;margin-bottom:26px}}@media (max-width:500px){.blog-single h1{margin-top:2rem}.blog-single .footer,.blog-single .text{padding:0 1.2rem;line-height:26px;margin-bottom:26px}}.blog-social{margin-top:30px}.blog-social ul:after,.blog-social ul:before{content:" ";display:table}.blog-social ul:after{clear:both}.blog-social ul{list-style:none;padding:0;margin:10px 0;zoom:1}.blog-social ul>li{float:left;margin-right:5px;text-align:center;height:24px;width:24px;border-radius:3px;background:#f4f4f4}.blog-social ul>li:hover{background:#f4f4f4}.blog-social ul>li>a{border-bottom:0}.blog-social ul>li>a>i{color:#606060;font-size:14px;line-height:24px}.blog-social ul>li:hover a>i{color:#444}/*!
+ *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */@font-face{font-family:FontAwesome;src:url(/32400f4e08932a94d8bfd2422702c446.eot);src:url(/32400f4e08932a94d8bfd2422702c446.eot?#iefix&v=4.5.0) format("embedded-opentype"),url(/db812d8a70a4e88e888744c1c9a27e89.woff2) format("woff2"),url(/a35720c2fed2c7f043bc7e4ffb45e073.woff) format("woff"),url(/a3de2170e4e9df77161ea5d3f31b2668.ttf) format("truetype"),url(data:image/svg+xml;base64,bW9kdWxlLmV4cG9ydHMgPSBfX3dlYnBhY2tfcHVibGljX3BhdGhfXyArICJmNzc1ZjljY2E4OGUyMWQ0NWJlYmUxODViMjdjMGU1Yi5zdmciOw==) format("svg");font-weight:400;font-style:normal}.fa{display:inline-block;font:400 400 400 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-fw{width:1.28571429em;text-align:center}.fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em;text-align:center}.fa-li.fa-lg{left:-1.85714286em}.fa-border{padding:.2em .25em .15em;border:.08em solid #eee;border-radius:.1em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left{margin-right:.3em}.fa.fa-pull-right{margin-left:.3em}.pull-right{float:right}.pull-left{float:left}.fa.pull-left{margin-right:.3em}.fa.pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.fa-rotate-90{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=3);-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=0,mirror=1);-webkit-transform:scaleX(-1);transform:scaleX(-1)}.fa-flip-vertical{filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2,mirror=1);-webkit-transform:scaleY(-1);transform:scaleY(-1)}:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-90,:root .fa-rotate-180,:root .fa-rotate-270{-webkit-filter:none;filter:none}.fa-stack{position:relative;display:inline-block;width:2em;height:2em;line-height:2em;vertical-align:middle}.fa-stack-1x,.fa-stack-2x{position:absolute;left:0;width:100%;text-align:center}.fa-stack-1x{line-height:inherit}.fa-stack-2x{font-size:2em}.fa-inverse{color:#fff}.fa-glass:before{content:"\F000"}.fa-music:before{content:"\F001"}.fa-search:before{content:"\F002"}.fa-envelope-o:before{content:"\F003"}.fa-heart:before{content:"\F004"}.fa-star:before{content:"\F005"}.fa-star-o:before{content:"\F006"}.fa-user:before{content:"\F007"}.fa-film:before{content:"\F008"}.fa-th-large:before{content:"\F009"}.fa-th:before{content:"\F00A"}.fa-th-list:before{content:"\F00B"}.fa-check:before{content:"\F00C"}.fa-close:before,.fa-remove:before,.fa-times:before{content:"\F00D"}.fa-search-plus:before{content:"\F00E"}.fa-search-minus:before{content:"\F010"}.fa-power-off:before{content:"\F011"}.fa-signal:before{content:"\F012"}.fa-cog:before,.fa-gear:before{content:"\F013"}.fa-trash-o:before{content:"\F014"}.fa-home:before{content:"\F015"}.fa-file-o:before{content:"\F016"}.fa-clock-o:before{content:"\F017"}.fa-road:before{content:"\F018"}.fa-download:before{content:"\F019"}.fa-arrow-circle-o-down:before{content:"\F01A"}.fa-arrow-circle-o-up:before{content:"\F01B"}.fa-inbox:before{content:"\F01C"}.fa-play-circle-o:before{content:"\F01D"}.fa-repeat:before,.fa-rotate-right:before{content:"\F01E"}.fa-refresh:before{content:"\F021"}.fa-list-alt:before{content:"\F022"}.fa-lock:before{content:"\F023"}.fa-flag:before{content:"\F024"}.fa-headphones:before{content:"\F025"}.fa-volume-off:before{content:"\F026"}.fa-volume-down:before{content:"\F027"}.fa-volume-up:before{content:"\F028"}.fa-qrcode:before{content:"\F029"}.fa-barcode:before{content:"\F02A"}.fa-tag:before{content:"\F02B"}.fa-tags:before{content:"\F02C"}.fa-book:before{content:"\F02D"}.fa-bookmark:before{content:"\F02E"}.fa-print:before{content:"\F02F"}.fa-camera:before{content:"\F030"}.fa-font:before{content:"\F031"}.fa-bold:before{content:"\F032"}.fa-italic:before{content:"\F033"}.fa-text-height:before{content:"\F034"}.fa-text-width:before{content:"\F035"}.fa-align-left:before{content:"\F036"}.fa-align-center:before{content:"\F037"}.fa-align-right:before{content:"\F038"}.fa-align-justify:before{content:"\F039"}.fa-list:before{content:"\F03A"}.fa-dedent:before,.fa-outdent:before{content:"\F03B"}.fa-indent:before{content:"\F03C"}.fa-video-camera:before{content:"\F03D"}.fa-image:before,.fa-photo:before,.fa-picture-o:before{content:"\F03E"}.fa-pencil:before{content:"\F040"}.fa-map-marker:before{content:"\F041"}.fa-adjust:before{content:"\F042"}.fa-tint:before{content:"\F043"}.fa-edit:before,.fa-pencil-square-o:before{content:"\F044"}.fa-share-square-o:before{content:"\F045"}.fa-check-square-o:before{content:"\F046"}.fa-arrows:before{content:"\F047"}.fa-step-backward:before{content:"\F048"}.fa-fast-backward:before{content:"\F049"}.fa-backward:before{content:"\F04A"}.fa-play:before{content:"\F04B"}.fa-pause:before{content:"\F04C"}.fa-stop:before{content:"\F04D"}.fa-forward:before{content:"\F04E"}.fa-fast-forward:before{content:"\F050"}.fa-step-forward:before{content:"\F051"}.fa-eject:before{content:"\F052"}.fa-chevron-left:before{content:"\F053"}.fa-chevron-right:before{content:"\F054"}.fa-plus-circle:before{content:"\F055"}.fa-minus-circle:before{content:"\F056"}.fa-times-circle:before{content:"\F057"}.fa-check-circle:before{content:"\F058"}.fa-question-circle:before{content:"\F059"}.fa-info-circle:before{content:"\F05A"}.fa-crosshairs:before{content:"\F05B"}.fa-times-circle-o:before{content:"\F05C"}.fa-check-circle-o:before{content:"\F05D"}.fa-ban:before{content:"\F05E"}.fa-arrow-left:before{content:"\F060"}.fa-arrow-right:before{content:"\F061"}.fa-arrow-up:before{content:"\F062"}.fa-arrow-down:before{content:"\F063"}.fa-mail-forward:before,.fa-share:before{content:"\F064"}.fa-expand:before{content:"\F065"}.fa-compress:before{content:"\F066"}.fa-plus:before{content:"\F067"}.fa-minus:before{content:"\F068"}.fa-asterisk:before{content:"\F069"}.fa-exclamation-circle:before{content:"\F06A"}.fa-gift:before{content:"\F06B"}.fa-leaf:before{content:"\F06C"}.fa-fire:before{content:"\F06D"}.fa-eye:before{content:"\F06E"}.fa-eye-slash:before{content:"\F070"}.fa-exclamation-triangle:before,.fa-warning:before{content:"\F071"}.fa-plane:before{content:"\F072"}.fa-calendar:before{content:"\F073"}.fa-random:before{content:"\F074"}.fa-comment:before{content:"\F075"}.fa-magnet:before{content:"\F076"}.fa-chevron-up:before{content:"\F077"}.fa-chevron-down:before{content:"\F078"}.fa-retweet:before{content:"\F079"}.fa-shopping-cart:before{content:"\F07A"}.fa-folder:before{content:"\F07B"}.fa-folder-open:before{content:"\F07C"}.fa-arrows-v:before{content:"\F07D"}.fa-arrows-h:before{content:"\F07E"}.fa-bar-chart-o:before,.fa-bar-chart:before{content:"\F080"}.fa-twitter-square:before{content:"\F081"}.fa-facebook-square:before{content:"\F082"}.fa-camera-retro:before{content:"\F083"}.fa-key:before{content:"\F084"}.fa-cogs:before,.fa-gears:before{content:"\F085"}.fa-comments:before{content:"\F086"}.fa-thumbs-o-up:before{content:"\F087"}.fa-thumbs-o-down:before{content:"\F088"}.fa-star-half:before{content:"\F089"}.fa-heart-o:before{content:"\F08A"}.fa-sign-out:before{content:"\F08B"}.fa-linkedin-square:before{content:"\F08C"}.fa-thumb-tack:before{content:"\F08D"}.fa-external-link:before{content:"\F08E"}.fa-sign-in:before{content:"\F090"}.fa-trophy:before{content:"\F091"}.fa-github-square:before{content:"\F092"}.fa-upload:before{content:"\F093"}.fa-lemon-o:before{content:"\F094"}.fa-phone:before{content:"\F095"}.fa-square-o:before{content:"\F096"}.fa-bookmark-o:before{content:"\F097"}.fa-phone-square:before{content:"\F098"}.fa-twitter:before{content:"\F099"}.fa-facebook-f:before,.fa-facebook:before{content:"\F09A"}.fa-github:before{content:"\F09B"}.fa-unlock:before{content:"\F09C"}.fa-credit-card:before{content:"\F09D"}.fa-feed:before,.fa-rss:before{content:"\F09E"}.fa-hdd-o:before{content:"\F0A0"}.fa-bullhorn:before{content:"\F0A1"}.fa-bell:before{content:"\F0F3"}.fa-certificate:before{content:"\F0A3"}.fa-hand-o-right:before{content:"\F0A4"}.fa-hand-o-left:before{content:"\F0A5"}.fa-hand-o-up:before{content:"\F0A6"}.fa-hand-o-down:before{content:"\F0A7"}.fa-arrow-circle-left:before{content:"\F0A8"}.fa-arrow-circle-right:before{content:"\F0A9"}.fa-arrow-circle-up:before{content:"\F0AA"}.fa-arrow-circle-down:before{content:"\F0AB"}.fa-globe:before{content:"\F0AC"}.fa-wrench:before{content:"\F0AD"}.fa-tasks:before{content:"\F0AE"}.fa-filter:before{content:"\F0B0"}.fa-briefcase:before{content:"\F0B1"}.fa-arrows-alt:before{content:"\F0B2"}.fa-group:before,.fa-users:before{content:"\F0C0"}.fa-chain:before,.fa-link:before{content:"\F0C1"}.fa-cloud:before{content:"\F0C2"}.fa-flask:before{content:"\F0C3"}.fa-cut:before,.fa-scissors:before{content:"\F0C4"}.fa-copy:before,.fa-files-o:before{content:"\F0C5"}.fa-paperclip:before{content:"\F0C6"}.fa-floppy-o:before,.fa-save:before{content:"\F0C7"}.fa-square:before{content:"\F0C8"}.fa-bars:before,.fa-navicon:before,.fa-reorder:before{content:"\F0C9"}.fa-list-ul:before{content:"\F0CA"}.fa-list-ol:before{content:"\F0CB"}.fa-strikethrough:before{content:"\F0CC"}.fa-underline:before{content:"\F0CD"}.fa-table:before{content:"\F0CE"}.fa-magic:before{content:"\F0D0"}.fa-truck:before{content:"\F0D1"}.fa-pinterest:before{content:"\F0D2"}.fa-pinterest-square:before{content:"\F0D3"}.fa-google-plus-square:before{content:"\F0D4"}.fa-google-plus:before{content:"\F0D5"}.fa-money:before{content:"\F0D6"}.fa-caret-down:before{content:"\F0D7"}.fa-caret-up:before{content:"\F0D8"}.fa-caret-left:before{content:"\F0D9"}.fa-caret-right:before{content:"\F0DA"}.fa-columns:before{content:"\F0DB"}.fa-sort:before,.fa-unsorted:before{content:"\F0DC"}.fa-sort-desc:before,.fa-sort-down:before{content:"\F0DD"}.fa-sort-asc:before,.fa-sort-up:before{content:"\F0DE"}.fa-envelope:before{content:"\F0E0"}.fa-linkedin:before{content:"\F0E1"}.fa-rotate-left:before,.fa-undo:before{content:"\F0E2"}.fa-gavel:before,.fa-legal:before{content:"\F0E3"}.fa-dashboard:before,.fa-tachometer:before{content:"\F0E4"}.fa-comment-o:before{content:"\F0E5"}.fa-comments-o:before{content:"\F0E6"}.fa-bolt:before,.fa-flash:before{content:"\F0E7"}.fa-sitemap:before{content:"\F0E8"}.fa-umbrella:before{content:"\F0E9"}.fa-clipboard:before,.fa-paste:before{content:"\F0EA"}.fa-lightbulb-o:before{content:"\F0EB"}.fa-exchange:before{content:"\F0EC"}.fa-cloud-download:before{content:"\F0ED"}.fa-cloud-upload:before{content:"\F0EE"}.fa-user-md:before{content:"\F0F0"}.fa-stethoscope:before{content:"\F0F1"}.fa-suitcase:before{content:"\F0F2"}.fa-bell-o:before{content:"\F0A2"}.fa-coffee:before{content:"\F0F4"}.fa-cutlery:before{content:"\F0F5"}.fa-file-text-o:before{content:"\F0F6"}.fa-building-o:before{content:"\F0F7"}.fa-hospital-o:before{content:"\F0F8"}.fa-ambulance:before{content:"\F0F9"}.fa-medkit:before{content:"\F0FA"}.fa-fighter-jet:before{content:"\F0FB"}.fa-beer:before{content:"\F0FC"}.fa-h-square:before{content:"\F0FD"}.fa-plus-square:before{content:"\F0FE"}.fa-angle-double-left:before{content:"\F100"}.fa-angle-double-right:before{content:"\F101"}.fa-angle-double-up:before{content:"\F102"}.fa-angle-double-down:before{content:"\F103"}.fa-angle-left:before{content:"\F104"}.fa-angle-right:before{content:"\F105"}.fa-angle-up:before{content:"\F106"}.fa-angle-down:before{content:"\F107"}.fa-desktop:before{content:"\F108"}.fa-laptop:before{content:"\F109"}.fa-tablet:before{content:"\F10A"}.fa-mobile-phone:before,.fa-mobile:before{content:"\F10B"}.fa-circle-o:before{content:"\F10C"}.fa-quote-left:before{content:"\F10D"}.fa-quote-right:before{content:"\F10E"}.fa-spinner:before{content:"\F110"}.fa-circle:before{content:"\F111"}.fa-mail-reply:before,.fa-reply:before{content:"\F112"}.fa-github-alt:before{content:"\F113"}.fa-folder-o:before{content:"\F114"}.fa-folder-open-o:before{content:"\F115"}.fa-smile-o:before{content:"\F118"}.fa-frown-o:before{content:"\F119"}.fa-meh-o:before{content:"\F11A"}.fa-gamepad:before{content:"\F11B"}.fa-keyboard-o:before{content:"\F11C"}.fa-flag-o:before{content:"\F11D"}.fa-flag-checkered:before{content:"\F11E"}.fa-terminal:before{content:"\F120"}.fa-code:before{content:"\F121"}.fa-mail-reply-all:before,.fa-reply-all:before{content:"\F122"}.fa-star-half-empty:before,.fa-star-half-full:before,.fa-star-half-o:before{content:"\F123"}.fa-location-arrow:before{content:"\F124"}.fa-crop:before{content:"\F125"}.fa-code-fork:before{content:"\F126"}.fa-chain-broken:before,.fa-unlink:before{content:"\F127"}.fa-question:before{content:"\F128"}.fa-info:before{content:"\F129"}.fa-exclamation:before{content:"\F12A"}.fa-superscript:before{content:"\F12B"}.fa-subscript:before{content:"\F12C"}.fa-eraser:before{content:"\F12D"}.fa-puzzle-piece:before{content:"\F12E"}.fa-microphone:before{content:"\F130"}.fa-microphone-slash:before{content:"\F131"}.fa-shield:before{content:"\F132"}.fa-calendar-o:before{content:"\F133"}.fa-fire-extinguisher:before{content:"\F134"}.fa-rocket:before{content:"\F135"}.fa-maxcdn:before{content:"\F136"}.fa-chevron-circle-left:before{content:"\F137"}.fa-chevron-circle-right:before{content:"\F138"}.fa-chevron-circle-up:before{content:"\F139"}.fa-chevron-circle-down:before{content:"\F13A"}.fa-html5:before{content:"\F13B"}.fa-css3:before{content:"\F13C"}.fa-anchor:before{content:"\F13D"}.fa-unlock-alt:before{content:"\F13E"}.fa-bullseye:before{content:"\F140"}.fa-ellipsis-h:before{content:"\F141"}.fa-ellipsis-v:before{content:"\F142"}.fa-rss-square:before{content:"\F143"}.fa-play-circle:before{content:"\F144"}.fa-ticket:before{content:"\F145"}.fa-minus-square:before{content:"\F146"}.fa-minus-square-o:before{content:"\F147"}.fa-level-up:before{content:"\F148"}.fa-level-down:before{content:"\F149"}.fa-check-square:before{content:"\F14A"}.fa-pencil-square:before{content:"\F14B"}.fa-external-link-square:before{content:"\F14C"}.fa-share-square:before{content:"\F14D"}.fa-compass:before{content:"\F14E"}.fa-caret-square-o-down:before,.fa-toggle-down:before{content:"\F150"}.fa-caret-square-o-up:before,.fa-toggle-up:before{content:"\F151"}.fa-caret-square-o-right:before,.fa-toggle-right:before{content:"\F152"}.fa-eur:before,.fa-euro:before{content:"\F153"}.fa-gbp:before{content:"\F154"}.fa-dollar:before,.fa-usd:before{content:"\F155"}.fa-inr:before,.fa-rupee:before{content:"\F156"}.fa-cny:before,.fa-jpy:before,.fa-rmb:before,.fa-yen:before{content:"\F157"}.fa-rouble:before,.fa-rub:before,.fa-ruble:before{content:"\F158"}.fa-krw:before,.fa-won:before{content:"\F159"}.fa-bitcoin:before,.fa-btc:before{content:"\F15A"}.fa-file:before{content:"\F15B"}.fa-file-text:before{content:"\F15C"}.fa-sort-alpha-asc:before{content:"\F15D"}.fa-sort-alpha-desc:before{content:"\F15E"}.fa-sort-amount-asc:before{content:"\F160"}.fa-sort-amount-desc:before{content:"\F161"}.fa-sort-numeric-asc:before{content:"\F162"}.fa-sort-numeric-desc:before{content:"\F163"}.fa-thumbs-up:before{content:"\F164"}.fa-thumbs-down:before{content:"\F165"}.fa-youtube-square:before{content:"\F166"}.fa-youtube:before{content:"\F167"}.fa-xing:before{content:"\F168"}.fa-xing-square:before{content:"\F169"}.fa-youtube-play:before{content:"\F16A"}.fa-dropbox:before{content:"\F16B"}.fa-stack-overflow:before{content:"\F16C"}.fa-instagram:before{content:"\F16D"}.fa-flickr:before{content:"\F16E"}.fa-adn:before{content:"\F170"}.fa-bitbucket:before{content:"\F171"}.fa-bitbucket-square:before{content:"\F172"}.fa-tumblr:before{content:"\F173"}.fa-tumblr-square:before{content:"\F174"}.fa-long-arrow-down:before{content:"\F175"}.fa-long-arrow-up:before{content:"\F176"}.fa-long-arrow-left:before{content:"\F177"}.fa-long-arrow-right:before{content:"\F178"}.fa-apple:before{content:"\F179"}.fa-windows:before{content:"\F17A"}.fa-android:before{content:"\F17B"}.fa-linux:before{content:"\F17C"}.fa-dribbble:before{content:"\F17D"}.fa-skype:before{content:"\F17E"}.fa-foursquare:before{content:"\F180"}.fa-trello:before{content:"\F181"}.fa-female:before{content:"\F182"}.fa-male:before{content:"\F183"}.fa-gittip:before,.fa-gratipay:before{content:"\F184"}.fa-sun-o:before{content:"\F185"}.fa-moon-o:before{content:"\F186"}.fa-archive:before{content:"\F187"}.fa-bug:before{content:"\F188"}.fa-vk:before{content:"\F189"}.fa-weibo:before{content:"\F18A"}.fa-renren:before{content:"\F18B"}.fa-pagelines:before{content:"\F18C"}.fa-stack-exchange:before{content:"\F18D"}.fa-arrow-circle-o-right:before{content:"\F18E"}.fa-arrow-circle-o-left:before{content:"\F190"}.fa-caret-square-o-left:before,.fa-toggle-left:before{content:"\F191"}.fa-dot-circle-o:before{content:"\F192"}.fa-wheelchair:before{content:"\F193"}.fa-vimeo-square:before{content:"\F194"}.fa-try:before,.fa-turkish-lira:before{content:"\F195"}.fa-plus-square-o:before{content:"\F196"}.fa-space-shuttle:before{content:"\F197"}.fa-slack:before{content:"\F198"}.fa-envelope-square:before{content:"\F199"}.fa-wordpress:before{content:"\F19A"}.fa-openid:before{content:"\F19B"}.fa-bank:before,.fa-institution:before,.fa-university:before{content:"\F19C"}.fa-graduation-cap:before,.fa-mortar-board:before{content:"\F19D"}.fa-yahoo:before{content:"\F19E"}.fa-google:before{content:"\F1A0"}.fa-reddit:before{content:"\F1A1"}.fa-reddit-square:before{content:"\F1A2"}.fa-stumbleupon-circle:before{content:"\F1A3"}.fa-stumbleupon:before{content:"\F1A4"}.fa-delicious:before{content:"\F1A5"}.fa-digg:before{content:"\F1A6"}.fa-pied-piper:before{content:"\F1A7"}.fa-pied-piper-alt:before{content:"\F1A8"}.fa-drupal:before{content:"\F1A9"}.fa-joomla:before{content:"\F1AA"}.fa-language:before{content:"\F1AB"}.fa-fax:before{content:"\F1AC"}.fa-building:before{content:"\F1AD"}.fa-child:before{content:"\F1AE"}.fa-paw:before{content:"\F1B0"}.fa-spoon:before{content:"\F1B1"}.fa-cube:before{content:"\F1B2"}.fa-cubes:before{content:"\F1B3"}.fa-behance:before{content:"\F1B4"}.fa-behance-square:before{content:"\F1B5"}.fa-steam:before{content:"\F1B6"}.fa-steam-square:before{content:"\F1B7"}.fa-recycle:before{content:"\F1B8"}.fa-automobile:before,.fa-car:before{content:"\F1B9"}.fa-cab:before,.fa-taxi:before{content:"\F1BA"}.fa-tree:before{content:"\F1BB"}.fa-spotify:before{content:"\F1BC"}.fa-deviantart:before{content:"\F1BD"}.fa-soundcloud:before{content:"\F1BE"}.fa-database:before{content:"\F1C0"}.fa-file-pdf-o:before{content:"\F1C1"}.fa-file-word-o:before{content:"\F1C2"}.fa-file-excel-o:before{content:"\F1C3"}.fa-file-powerpoint-o:before{content:"\F1C4"}.fa-file-image-o:before,.fa-file-photo-o:before,.fa-file-picture-o:before{content:"\F1C5"}.fa-file-archive-o:before,.fa-file-zip-o:before{content:"\F1C6"}.fa-file-audio-o:before,.fa-file-sound-o:before{content:"\F1C7"}.fa-file-movie-o:before,.fa-file-video-o:before{content:"\F1C8"}.fa-file-code-o:before{content:"\F1C9"}.fa-vine:before{content:"\F1CA"}.fa-codepen:before{content:"\F1CB"}.fa-jsfiddle:before{content:"\F1CC"}.fa-life-bouy:before,.fa-life-buoy:before,.fa-life-ring:before,.fa-life-saver:before,.fa-support:before{content:"\F1CD"}.fa-circle-o-notch:before{content:"\F1CE"}.fa-ra:before,.fa-rebel:before{content:"\F1D0"}.fa-empire:before,.fa-ge:before{content:"\F1D1"}.fa-git-square:before{content:"\F1D2"}.fa-git:before{content:"\F1D3"}.fa-hacker-news:before,.fa-y-combinator-square:before,.fa-yc-square:before{content:"\F1D4"}.fa-tencent-weibo:before{content:"\F1D5"}.fa-qq:before{content:"\F1D6"}.fa-wechat:before,.fa-weixin:before{content:"\F1D7"}.fa-paper-plane:before,.fa-send:before{content:"\F1D8"}.fa-paper-plane-o:before,.fa-send-o:before{content:"\F1D9"}.fa-history:before{content:"\F1DA"}.fa-circle-thin:before{content:"\F1DB"}.fa-header:before{content:"\F1DC"}.fa-paragraph:before{content:"\F1DD"}.fa-sliders:before{content:"\F1DE"}.fa-share-alt:before{content:"\F1E0"}.fa-share-alt-square:before{content:"\F1E1"}.fa-bomb:before{content:"\F1E2"}.fa-futbol-o:before,.fa-soccer-ball-o:before{content:"\F1E3"}.fa-tty:before{content:"\F1E4"}.fa-binoculars:before{content:"\F1E5"}.fa-plug:before{content:"\F1E6"}.fa-slideshare:before{content:"\F1E7"}.fa-twitch:before{content:"\F1E8"}.fa-yelp:before{content:"\F1E9"}.fa-newspaper-o:before{content:"\F1EA"}.fa-wifi:before{content:"\F1EB"}.fa-calculator:before{content:"\F1EC"}.fa-paypal:before{content:"\F1ED"}.fa-google-wallet:before{content:"\F1EE"}.fa-cc-visa:before{content:"\F1F0"}.fa-cc-mastercard:before{content:"\F1F1"}.fa-cc-discover:before{content:"\F1F2"}.fa-cc-amex:before{content:"\F1F3"}.fa-cc-paypal:before{content:"\F1F4"}.fa-cc-stripe:before{content:"\F1F5"}.fa-bell-slash:before{content:"\F1F6"}.fa-bell-slash-o:before{content:"\F1F7"}.fa-trash:before{content:"\F1F8"}.fa-copyright:before{content:"\F1F9"}.fa-at:before{content:"\F1FA"}.fa-eyedropper:before{content:"\F1FB"}.fa-paint-brush:before{content:"\F1FC"}.fa-birthday-cake:before{content:"\F1FD"}.fa-area-chart:before{content:"\F1FE"}.fa-pie-chart:before{content:"\F200"}.fa-line-chart:before{content:"\F201"}.fa-lastfm:before{content:"\F202"}.fa-lastfm-square:before{content:"\F203"}.fa-toggle-off:before{content:"\F204"}.fa-toggle-on:before{content:"\F205"}.fa-bicycle:before{content:"\F206"}.fa-bus:before{content:"\F207"}.fa-ioxhost:before{content:"\F208"}.fa-angellist:before{content:"\F209"}.fa-cc:before{content:"\F20A"}.fa-ils:before,.fa-shekel:before,.fa-sheqel:before{content:"\F20B"}.fa-meanpath:before{content:"\F20C"}.fa-buysellads:before{content:"\F20D"}.fa-connectdevelop:before{content:"\F20E"}.fa-dashcube:before{content:"\F210"}.fa-forumbee:before{content:"\F211"}.fa-leanpub:before{content:"\F212"}.fa-sellsy:before{content:"\F213"}.fa-shirtsinbulk:before{content:"\F214"}.fa-simplybuilt:before{content:"\F215"}.fa-skyatlas:before{content:"\F216"}.fa-cart-plus:before{content:"\F217"}.fa-cart-arrow-down:before{content:"\F218"}.fa-diamond:before{content:"\F219"}.fa-ship:before{content:"\F21A"}.fa-user-secret:before{content:"\F21B"}.fa-motorcycle:before{content:"\F21C"}.fa-street-view:before{content:"\F21D"}.fa-heartbeat:before{content:"\F21E"}.fa-venus:before{content:"\F221"}.fa-mars:before{content:"\F222"}.fa-mercury:before{content:"\F223"}.fa-intersex:before,.fa-transgender:before{content:"\F224"}.fa-transgender-alt:before{content:"\F225"}.fa-venus-double:before{content:"\F226"}.fa-mars-double:before{content:"\F227"}.fa-venus-mars:before{content:"\F228"}.fa-mars-stroke:before{content:"\F229"}.fa-mars-stroke-v:before{content:"\F22A"}.fa-mars-stroke-h:before{content:"\F22B"}.fa-neuter:before{content:"\F22C"}.fa-genderless:before{content:"\F22D"}.fa-facebook-official:before{content:"\F230"}.fa-pinterest-p:before{content:"\F231"}.fa-whatsapp:before{content:"\F232"}.fa-server:before{content:"\F233"}.fa-user-plus:before{content:"\F234"}.fa-user-times:before{content:"\F235"}.fa-bed:before,.fa-hotel:before{content:"\F236"}.fa-viacoin:before{content:"\F237"}.fa-train:before{content:"\F238"}.fa-subway:before{content:"\F239"}.fa-medium:before{content:"\F23A"}.fa-y-combinator:before,.fa-yc:before{content:"\F23B"}.fa-optin-monster:before{content:"\F23C"}.fa-opencart:before{content:"\F23D"}.fa-expeditedssl:before{content:"\F23E"}.fa-battery-4:before,.fa-battery-full:before{content:"\F240"}.fa-battery-3:before,.fa-battery-three-quarters:before{content:"\F241"}.fa-battery-2:before,.fa-battery-half:before{content:"\F242"}.fa-battery-1:before,.fa-battery-quarter:before{content:"\F243"}.fa-battery-0:before,.fa-battery-empty:before{content:"\F244"}.fa-mouse-pointer:before{content:"\F245"}.fa-i-cursor:before{content:"\F246"}.fa-object-group:before{content:"\F247"}.fa-object-ungroup:before{content:"\F248"}.fa-sticky-note:before{content:"\F249"}.fa-sticky-note-o:before{content:"\F24A"}.fa-cc-jcb:before{content:"\F24B"}.fa-cc-diners-club:before{content:"\F24C"}.fa-clone:before{content:"\F24D"}.fa-balance-scale:before{content:"\F24E"}.fa-hourglass-o:before{content:"\F250"}.fa-hourglass-1:before,.fa-hourglass-start:before{content:"\F251"}.fa-hourglass-2:before,.fa-hourglass-half:before{content:"\F252"}.fa-hourglass-3:before,.fa-hourglass-end:before{content:"\F253"}.fa-hourglass:before{content:"\F254"}.fa-hand-grab-o:before,.fa-hand-rock-o:before{content:"\F255"}.fa-hand-paper-o:before,.fa-hand-stop-o:before{content:"\F256"}.fa-hand-scissors-o:before{content:"\F257"}.fa-hand-lizard-o:before{content:"\F258"}.fa-hand-spock-o:before{content:"\F259"}.fa-hand-pointer-o:before{content:"\F25A"}.fa-hand-peace-o:before{content:"\F25B"}.fa-trademark:before{content:"\F25C"}.fa-registered:before{content:"\F25D"}.fa-creative-commons:before{content:"\F25E"}.fa-gg:before{content:"\F260"}.fa-gg-circle:before{content:"\F261"}.fa-tripadvisor:before{content:"\F262"}.fa-odnoklassniki:before{content:"\F263"}.fa-odnoklassniki-square:before{content:"\F264"}.fa-get-pocket:before{content:"\F265"}.fa-wikipedia-w:before{content:"\F266"}.fa-safari:before{content:"\F267"}.fa-chrome:before{content:"\F268"}.fa-firefox:before{content:"\F269"}.fa-opera:before{content:"\F26A"}.fa-internet-explorer:before{content:"\F26B"}.fa-television:before,.fa-tv:before{content:"\F26C"}.fa-contao:before{content:"\F26D"}.fa-500px:before{content:"\F26E"}.fa-amazon:before{content:"\F270"}.fa-calendar-plus-o:before{content:"\F271"}.fa-calendar-minus-o:before{content:"\F272"}.fa-calendar-times-o:before{content:"\F273"}.fa-calendar-check-o:before{content:"\F274"}.fa-industry:before{content:"\F275"}.fa-map-pin:before{content:"\F276"}.fa-map-signs:before{content:"\F277"}.fa-map-o:before{content:"\F278"}.fa-map:before{content:"\F279"}.fa-commenting:before{content:"\F27A"}.fa-commenting-o:before{content:"\F27B"}.fa-houzz:before{content:"\F27C"}.fa-vimeo:before{content:"\F27D"}.fa-black-tie:before{content:"\F27E"}.fa-fonticons:before{content:"\F280"}.fa-reddit-alien:before{content:"\F281"}.fa-edge:before{content:"\F282"}.fa-credit-card-alt:before{content:"\F283"}.fa-codiepie:before{content:"\F284"}.fa-modx:before{content:"\F285"}.fa-fort-awesome:before{content:"\F286"}.fa-usb:before{content:"\F287"}.fa-product-hunt:before{content:"\F288"}.fa-mixcloud:before{content:"\F289"}.fa-scribd:before{content:"\F28A"}.fa-pause-circle:before{content:"\F28B"}.fa-pause-circle-o:before{content:"\F28C"}.fa-stop-circle:before{content:"\F28D"}.fa-stop-circle-o:before{content:"\F28E"}.fa-shopping-bag:before{content:"\F290"}.fa-shopping-basket:before{content:"\F291"}.fa-hashtag:before{content:"\F292"}.fa-bluetooth:before{content:"\F293"}.fa-bluetooth-b:before{content:"\F294"}.fa-percent:before{content:"\F295"}.sidebar{font-family:PT Sans Narrow,sans-serif;width:calc(99.9% * 1/3 - 20px)}.sidebar:nth-child(1n){float:left;margin-right:30px;clear:none}.sidebar:last-child{margin-right:0}.sidebar:nth-child(3n){margin-right:0;float:right}.sidebar:nth-child(3n+1){clear:both}.sidebar .sidebar-inner{position:relative;padding:40px}.sidebar .sidebar-inner:after{background:#eee;background:-webkit-linear-gradient(top,#eee,#eee 48%,#fff);background:linear-gradient(180deg,#eee 0,#eee 48%,#fff);position:absolute;content:"";width:1px;height:540px;top:30px;right:-10px;bottom:0}.sidebar .sidebar-inner img{display:inline-block;margin-bottom:0;border-radius:50%;background-clip:padding-box}.sidebar .sidebar-inner h1,.sidebar .sidebar-inner h2{font-size:18px;font-weight:700;line-height:18px;margin:20px 0 10px}.sidebar .sidebar-inner p{color:#888;font-size:16px;line-height:26px;margin-bottom:26px}.sidebar .sidebar-inner p.copyright{color:#b6b6b6;font-size:14px}@media (max-width:900px){.sidebar{width:calc(99.9% * 5/12 - 17.5px)}.sidebar:nth-child(1n){float:left;margin-right:30px;clear:none}.sidebar:last-child{margin-right:0}.sidebar:nth-child(12n){margin-right:0;float:right}.sidebar:nth-child(12n+1){clear:both}.sidebar .sidebar-inner{padding:30px 20px 0}}@media (max-width:500px){.sidebar{width:calc(99.9% * 1 - 0px)}.sidebar:nth-child(1n){float:left;margin-right:30px;clear:none}.sidebar:last-child{margin-right:0}.sidebar:nth-child(undefinedn){margin-right:0;float:right}.sidebar:nth-child(undefinedn+1){clear:both}.sidebar .sidebar-inner{padding:25px 20px 0}.sidebar .sidebar-inner:after{display:none}}.blog-page{margin-bottom:40px}.blog-page h1{font-size:calc(20px + 16 * ((100vw - 480px) / 800));margin-top:0}@media screen and (min-width:1280px){.blog-page h1{font-size:36px}}@media screen and (max-width:480px){.blog-page h1{font-size:20px}}.blog-page p{font-size:16px;line-height:26px;margin-bottom:26px}._3tsckNsI_zTYrOZaXR_6IK{max-width:740px;margin-left:auto;margin-right:auto}._1W3__fR7m7-eydodz7wXg0{display:block;padding:1.75rem;background-color:#fff;border:1px solid rgba(0,0,0,.09)}._1W3__fR7m7-eydodz7wXg0 ._1v4BsZYq6EZY87pcU4y8vJ{height:16rem;margin:0 auto 1rem;background-size:auto 100%;background-position:50%;background-repeat:no-repeat}._1W3__fR7m7-eydodz7wXg0 ._3_YP2CwjRKGCGvmxb5Qeuu{margin:0 0 .5rem;font-size:1.75rem;font-weight:700;line-height:1.4}._1W3__fR7m7-eydodz7wXg0 ._1v4BsZYq6EZY87pcU4y8vJ+._3_YP2CwjRKGCGvmxb5Qeuu{margin-top:1.75rem}._1W3__fR7m7-eydodz7wXg0 ._27vnzMOPVXq0srZTmcN9Xv{display:-webkit-box;width:100%;max-height:2.4rem;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;word-wrap:break-word;font-size:.85rem;line-height:1.4}._1W3__fR7m7-eydodz7wXg0 .nlwbSIcVOpLNqdNGWSOmC{margin-top:1rem}._1W3__fR7m7-eydodz7wXg0 ._3q_ody9XsqqwLyXvmPvz64:after{content:"";display:block;clear:both}._1W3__fR7m7-eydodz7wXg0 ._3q_ody9XsqqwLyXvmPvz64{margin-top:1rem}._1W3__fR7m7-eydodz7wXg0 time{float:left;font-size:.8rem;color:rgba(0,0,0,.44)}._1W3__fR7m7-eydodz7wXg0 ._3KOLrobI5ED2v88kJg7PC9{float:right;font-size:.8rem;color:#efa48d}@media (max-width:500px){._1W3__fR7m7-eydodz7wXg0{padding:1rem}}@media (max-width:500px){._1W3__fR7m7-eydodz7wXg0 ._1v4BsZYq6EZY87pcU4y8vJ{margin:.5rem auto;height:11rem}}@media (max-width:500px){._1W3__fR7m7-eydodz7wXg0 ._27vnzMOPVXq0srZTmcN9Xv{margin-top:1rem}}@media (max-width:500px){._1W3__fR7m7-eydodz7wXg0 ._3q_ody9XsqqwLyXvmPvz64{margin-top:.75rem}}._1W3__fR7m7-eydodz7wXg0:not(:last-child){margin-bottom:1rem}.wrapper{padding-top:3rem;max-width:1070px;margin-left:auto;margin-right:auto;background-color:#fff}.wrapper:after,.wrapper:before{content:"";display:table}.wrapper:after{clear:both}.content{background-color:#fafafa}.main{padding:1.1rem 1rem}</style></head><body><div id="react-mount"><div class="wrapper" data-reactroot="" data-reactid="1" data-react-checksum="499286765"><nav class="_1lkeM08JhCnwSn2DVeoecR" data-reactid="2"><div class="_3vtsIDAmz41DMSTnifGo8Z" data-reactid="3"><a href="/" data-reactid="4"><h1 class="_1xAxZ9JAz_Q9hTR07A6SFz" data-reactid="5">Rhostem&#x27;s note</h1></a></div></nav><div data-reactid="6"><!-- react-empty: 7 --><div data-reactid="8"><div class="blog-single" data-reactid="9"><div class="text" data-reactid="10"><h1 data-reactid="11">Redux 아키텍쳐를 위한 10가지 팁</h1><div data-reactid="12"><div class="_2p_A6KEfS9E7S_lV_Ho9kX" data-reactid="13"><span class="_1DRfYVqYtJYX-XdYgKDzZX" data-reactid="14">Redux</span><span class="_1DRfYVqYtJYX-XdYgKDzZX" data-reactid="15">React</span><span class="_1DRfYVqYtJYX-XdYgKDzZX" data-reactid="16">Javascript</span><span class="_1DRfYVqYtJYX-XdYgKDzZX" data-reactid="17">Front-end</span><span class="_1DRfYVqYtJYX-XdYgKDzZX" data-reactid="18">번역</span></div></div><div data-reactid="19"><p>이 글은 <a href="https://medium.com/@_ericelliott">Eric Elliott</a>의 <a href="https://medium.com/javascript-scene/10-tips-for-better-redux-architecture-69250425af44#.ffjkpicnd">10 Tips for Better Redux Architecture</a>를 번역한 글입니다.</p>
+<hr>
+<p>처음 React를 사용하기 시작했을 때는 Redux가 없었다. Flux 아키텍쳐만 있었고 Flux의 여러 구현체들이 경쟁하고 있었다.</p>
+<p>이제는 React의 데이터 관리 분야에 확실한 선두주자가 둘 있다. 바로 Redux와 MobX다. 심지어 후자는 Flux 구현체도 아니다. 그간 많은 관심을 받아온 Redux는 이제 React에만 사용되지 않는다. Angular 2를 포함한 많은 프레임워크를 위한 Redux 아키텍쳐 구현체들이 존재한다. 예를 들면 <a href="https://github.com/ngrx/store">ngrx:store</a>가 있다.</p>
+<blockquote>
+<p>Side note: MobX는 멋지며 나는 이미 간단한 UI에는 Redux 대신 사용하고 있다. 왜냐하면 덜 복잡하고 더 깔끔하기 때문이다. 바꿔 말하면 Redux는 MobX가 제공하지 않는 몇몇 중요한 기능이 있다는 말이다. 프로젝트에 사용할 라이브러리를 선택하기 전에 그 차이점이 무엇인지 이해하는 것이 중요하다.</p>
+</blockquote>
+<blockquote>
+<p>Side note: <a href="https://facebook.github.io/relay/">Relay</a>와 <a href="https://netflix.github.io/falcor/">Falcor</a>는 흥미로운 상태 관리 솔루션이다. 하지만 Redux와 MobX와는 달리 두 솔루션은 각각 GraphQL과 Falcor Server가 뒷받침해야 사용할 수 있다. 그리고 모든 Relay 상태는 서버상에 유지되고 있는 데이터와 연결되어 있다. 내가 아는 한 둘 다 클라이언트 기반의 일시적인 상태 관리를 위한 좋은 시나리오를 제공하지는 않는다. 서버에 유지되는 상태와 클라이언트의 상태를 구분지으며 Relay와 Falcor를 Redux와 Mobx와 조합해서 양쪽의 장점을 모두 취할 수는 있다. 결론: 현재 시점에서 클라이언트 상태(state) 관리 영역에는 확실한 승자가 없다. 그저 하는 각각의 작업에 맞는 도구를 선택해야 한다.</p>
+</blockquote>
+<p>Redux를 만든 Dan Abramov는 주제와 관련된 좋은 강의를 만들어 두었다.</p>
+<ul>
+<li><a href="https://egghead.io/courses/getting-started-with-redux">Getting Started with Redux</a></li>
+<li><a href="https://egghead.io/courses/building-react-applications-with-idiomatic-redux">Building Applications with Idiomatic Redux</a></li>
+</ul>
+<p>둘다 Redux의 기초를 알려주는 무척 훌륭한 단계별 자습서지만 Redux를 최대한 활용하려면 더 깊은 이해가 필요하다.</p>
+<p>다음은 당신이 더 나은 Redux 앱을 만드는데 도움을 줄 팁들이다.</p>
+<h2>1. Redux의 장점을 이해하라</h2>
+<ol>
+<li>결정적인(determinmistic) 뷰 렌더</li>
+<li>결정적인 상태 재생산</li>
+</ol>
+<p>결정론(determinism)은 어플리케이션 테스트와 진단, 버그 픽스에 중요하다. 만약 당신의 앱이 비결정적이라면 뷰와 상태가 언제나 유효한 값을 가진다고 장담할 수 없다. 비결정적인 상태 자체가 버그라고도 말할 수 있다.</p>
+<p>하지만 어떤 것들은 본질적으로 비결정적이다. 유저의 입력 타이밍 또는 네트워크 입출력이 그렇다. 그렇다면 코드가 정말로 작동하는지 어떻게 알 수 있을까? 답은 간단하다. 분리시키는 것이다.</p>
+<p>Redux의 주 목적은 뷰의 렌더링 과정이나 네트워크 입출력과 같은 사이드 이펙트로부터 상태 관리를 독립시키는 것이다. 사이드 이펙트가 분리된다면 코드는 훨씬 간결해진다. 또 훨씬 이해하기 쉽고 DOM 업데이트와 네트워크 요청과 분리된 상태의 비즈니스 로직을 테스트하기도 쉬워진다.</p>
+<p>뷰 렌더링이 네트워크 입출력과 상태 업데이트와 분리되면 결정적인 뷰 렌더링이 된다. 이는 같은 상태값이 주어졌을 때 언제나 같은 결과값이 표시된다는 말이다. 그리고 렌더링 과정에서 불규칙적으로 상태값을 없애버리거나 조작해버리는 비동기적인 작업들의 경쟁에서 오는 사이드 이펙트의 발생 가능성도 제거한다.</p>
+<p>경험이 적은 사람은 뷰를 생성하는 일에 대해 보통 이렇게 생각한다. “이건 유저 모델이 필요할 것 같으니 우선 데이터를 가져올 비동기 요청을 하고, 프라미스(promise)가 해결(resolve)되면 모델에서 이름을 가져와서 유저 컴포넌트의 이름을 업데이트해야지. 그 위에는 할일 목록이 필요하니까 데이터를 요청하고(fetch) 프라미스가 해결되면 반복문을 이용해서 뷰에다 그려야겠다.”</p>
+<p>이러한 접근 방식에는 주요한 문제점이 몇 가지 있다.</p>
+<ol>
+<li>어떤 시점에도 완전한 뷰를 렌더링하기 위한 모든 데이터를 가지고 있지 못하다. 컴포넌트가 관련 작업을 하기 전까지는 데이터 요청을 실제로 시작하지 않는다.</li>
+<li>서로 다른 데이터 요청 작업은 서로 다른 시점에 끝나며 뷰 렌더링 과정에서 일어나는 일의 순서를 미묘하게 바꿔버린다. 렌더 순서를 정확히 이해하기 위해서는 예상할 수 없는 것들에 대한 지식을 가지고 있어야 한다. 돌발 질문: 위의 시나리오에서 무엇이 먼저 렌더링될까? 할일 목록? 서로 순서를 경쟁하기 때문에 알 수 없다.</li>
+<li>때로는 이벤트 리스너가 뷰를 변경한다.</li>
+</ol>
+<blockquote>
+<p>“비결정론 = 병렬 프로세스 + 상태 공유”
+~ Martin Odersky(Scala designer)</p>
+</blockquote>
+<blockquote>
+<p>데이터 요청과 데이터 조작, 그리고 뷰 렌더링을 연결하는 것은 시간여행 스파게티 코드를 만드는 레시피다.</p>
+</blockquote>
+<p>저 말이 B급 공상과학 영화처럼 들릴 수 있다는 것을 안다. 하지만 날 믿어보기 바란다. 시간여행 스파게티 코드는 프로그래밍에서 최악의 취미다.</p>
+<p>Flux 아키텍쳐는 다음과 같은 규칙들을 따름으로서 엄격한 분리와 작업 순서를 강제한다.</p>
+<ol>
+<li>먼저 고정된 상태(state)으로 시작한다.</li>
+<li>뷰를 렌더링한다. 이 렌더링 루프에서는 어떤 것도 상태를 변경할 수 없다.</li>
+<li>동일한 상태가 주어지면 뷰는 언제나 같은 결과를 렌더링한다.</li>
+<li>이벤트 리스너는 유저의 입력과 네트워크 요청을 처리하기 위해 대기한다. 이벤트 리스너가 관련 요청을 감지했을 때 액션(action)이 저장소(store)로 발송(dispatch)된다.</li>
+<li>액션이 발송되고 나면 상태는 새로운 상태로 업데이트되고 렌더링 과정이 반복된다. 오직 발송된 액션만이 상태에 영향을 줄 수 있다.</li>
+</ol>
+<p>이상이 UI를 위한 단방향 아키텍쳐인 Flux에 대한 단순한 설명이다.</p>
+<figure class="">
+<img src="https://cdn-images-1.medium.com/max/1600/1*2FrT8oMXswVWiVEfBCXlAQ.png">
+<figcaption>Flux 아키텍쳐</figcaption>
+</figure>
+<p>Flux 아키텍쳐와 함께 뷰는 유저 입력을 듣고, 그것들을 액션 객체로 변환하고, 그 객체들은 저장소로 전송된다. 저장소는 어플리케이션의 상태를 업데이트하고 뷰에게는 다시 렌더링하라고 알려준다. 물론 뷰는 입력과 이벤트의 유일한 소스인 경우는 거의 없지만 문제될 것은 없다.  아래와 같이 추가적인 이벤트 리스너가 액션 객체를 발송한다.</p>
+<figure class="">
+<img src="https://cdn-images-1.medium.com/max/1600/1*MdaK2tzd5f9BqadwMvPoKg.png">
+</figure>
+<p>중요한 사실은 Flux의 상태 업데이트는 트랜잭션(transaction)이라는 점이다. 상태가 가지고 있는 업데이트 메소드를 단순 호출하거나 직접 수정하는 대신 액션 객체가 저장소로 발송된다. 액션 객체는 트랜잭션의 기록이다. 적용되어야 할 사항이 기록된 은행 거래 내역에 비유해서 생각해 볼 수 있다. 예를 들어 은행에 입금을 한 경우 입금 전의 잔액이 지워지지는 않는다. 대신 변경된 잔액이 기존의 거래 내역에 추가되는 식이다. 액션 객체는 어플리케이션의 상태에 트랜잭션 내역이 추가된다.</p>
+<p>엑션 객체는 아래와 같은 형태를 가진다.</p>
+<pre><code class="language-javascript">{
+  <span class="hljs-attr">type</span>: ADD_TODO,
+  <span class="hljs-attr">payload</span>: <span class="hljs-string">'Learn Redux'</span>
+}
+</code></pre>
+<p>액션 객체는 상태 처리에 관한 모든 실행 로그를 유지할 수 있게 한다. 그 로그는 결정적인(deterministic) 방법으로 상태를 재생산할 수 있다. 이는 동일한 초기 상태와 같은 트랜잭션이 같은 순서대로 주어지면 언제나 같은 상태를 결과로 가진다는 의미다.</p>
+<p>이것은 중요한 사실을 내포한다.</p>
+<ol>
+<li>쉬운 테스트</li>
+<li>쉬운 번복/재실행</li>
+<li>시간 여행 디버깅</li>
+<li>유지성 - 상태값이 사라져버려도 모든 트랜잭션의 기록을 가지고 있다면 다시 만들어낼 수 있다.</li>
+</ol>
+<p>공간과 시간을 지배하고 싶지 않은 사람이 있겠는가? 트랜잭션을 기반으로 한 상태는 당신에게 시간을 지배할 수 있는 강력한 힘을 부여한다.</p>
+<figure>
+    <img src="https://cdn-images-1.medium.com/max/1600/1*KFJdTQCHH60QDDWTJobVRw.gif" alt="">
+    <figcaption>Redux dev tools history slider view</figcaption>
+</figure>
+<h2>2. Redux가 필요하지 않은 앱도 있다.</h2>
+<p>UI 워크플로우가 단순하면 Redux를 사용하는 것은 너무 과한 일이 될 수 있다. 만약 당신이 틱택토(tic-tac-toe) 게임을 만든다면 정말로 복구/재현이 필요할까? 게임이 몇 분 이상 유지될 일은 거의 없고 유저가 게임을 망친다면 그냥 초기화하고 새로 시작하게 하면 된다.</p>
+<p>만약:</p>
+<ul>
+<li>유저 워크플로우가 단순하다면</li>
+<li>유저 간의 공동 작업이 없다면</li>
+<li>서버 사이드 이벤트(SSE)나 웹 소켓을 관리할 필요가 없다면</li>
+<li>하나의 페이지가 하나의 소스에서 데이터를 가져온다면</li>
+</ul>
+<p>앱의 이벤트 흐름은 충분히 단순할 것이며 트랜잭션 기반의 상태 관리를 적용하기 위한 노력 대비 얻는 이점은 없을 것이다.</p>
+<p>만약 앱에 Flux를 적용하고 싶지 않다면 Flux같은 역할을 하는 더 간단한 솔루션이 있다. <a href="https://github.com/mobxjs/mobx">MobX</a>를 확인해보길 바란다.</p>
+<p>하지만 앱의 복잡도가 증가할수록, 뷰의 상태 관리의 복잡도가 증가할수록, 트랜잭션 기반의 상태는 가치가 상승한다. MobX는 트랙잭션 상태 관리를제공하지 않는다.</p>
+<p>만약:</p>
+<ul>
+<li>워크플로우가 복잡하다면</li>
+<li>앱이 다양한 유저 행동 흐름을 가진다면(일반 유저와 어드민이 동시에 사용한다고 가정)</li>
+<li>유저 간에 공동 작업이 가능하다면</li>
+<li>웹 소켓이나 SSE를 사용한다면</li>
+<li>하나의 뷰에서 복수의 API를 이용해 데이터를 가져온다면</li>
+</ul>
+<p>트랜잭션 상태 관리에 시간을 들인 만큼 이득을 볼 수 있을 것이다. Redux가 당신의 앱에 딱 좋을 수 있다.</p>
+<p>웹 소켓과 SSE는 Redux는 무슨 관련이 있는가? 불확정한 상태 관리에서는 비동기 I/O 기반의 소스를 추가할수록 앱에게 대체 무슨 일이 일어나고 있는지 이해하기 힘들어진다. 결정적인 상태와 상태 트랜잭션 기록은 근본적으로 저런 문제를 단순화시킨다.</p>
+<p>개인적인 의견으로는 대부분의 대규모 SaaS 제품에는 적어도 몇 가지 복잡한 UI가 포함되어 있고 트랜잭션 상태 관리를 사용해야 한다고 생각한다. 대부분의 작은 유틸리티 앱이나 프로토타입은 사용해서는 안된다. 작업에 맞는 도구를 사용해야 한다.</p>
+<h2>3. Reducer 이해하기</h2>
+<blockquote>
+<p>Redux = Flux + Functional Programming</p>
+</blockquote>
+<p>Flux는 액션 객체를 이용해 단반향 데이터 흐름과 트랜잭션 상태를 규정한다. 하지만 액션 객체를 어떻게 처리해야 할지는 언급하지 않았다. 그래서 Redux가 등장했다.</p>
+<p>Redux 상태 관리의 주요 구성 요소는 리듀서(reducer) 함수다. 리듀서 함수란 무엇인가?</p>
+<p>함수형 프로그래밍에서는 일반적으로 <code>reduce()</code>나 <code>fold()</code> 유틸리티 함수는 리스트에 포함된 각각의 값에 리듀서 함수를 적용해서 하나의 누적된 값을 만들어내는 데 사용한다. 아래는 자바스크립트 배열에 <code>Array.prototype.reduce()</code> 메소드를 이용해서 합계를 계산하는 리듀서의 예제다.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> initialState = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">const</span> reducer = <span class="hljs-function">(<span class="hljs-params">state = initialState, data</span>) =&gt;</span> state + data;
+<span class="hljs-keyword">const</span> total = [<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].reduce(reducer);
+<span class="hljs-built_in">console</span>.log(total); <span class="hljs-comment">// 6</span>
+</code></pre>
+<p>Redux는 리듀서를 배열에 적용하는 대신 액션 객체의 스트림에 적용한다. 액션 객체는 아래와 같은 형태임을 기억하자.</p>
+<pre><code class="language-javascript">{
+  <span class="hljs-attr">type</span>: ADD_TODO,
+  <span class="hljs-attr">payload</span>: <span class="hljs-string">'Learn Redux'</span>
+}
+</code></pre>
+<p>합계를 계산하는 리듀서를 Redux 스타일의 리듀서로 바꿔보자.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> defaultState = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">const</span> reducer = <span class="hljs-function">(<span class="hljs-params">state = defaultState, action</span>) =&gt;</span> {
+  <span class="hljs-keyword">switch</span> (action.type) {
+    <span class="hljs-keyword">case</span> <span class="hljs-string">'ADD'</span>: <span class="hljs-keyword">return</span> state + action.payload;
+    <span class="hljs-keyword">default</span>: <span class="hljs-keyword">return</span> state;
+  }
+};
+</code></pre>
+<p>이제 테스트 액션을 적용할 수 있다.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> actions = [
+  { <span class="hljs-attr">type</span>: <span class="hljs-string">'ADD'</span>, <span class="hljs-attr">payload</span>: <span class="hljs-number">0</span> },
+  { <span class="hljs-attr">type</span>: <span class="hljs-string">'ADD'</span>, <span class="hljs-attr">payload</span>: <span class="hljs-number">1</span> },
+  { <span class="hljs-attr">type</span>: <span class="hljs-string">'ADD'</span>, <span class="hljs-attr">payload</span>: <span class="hljs-number">2</span> }
+];
+
+<span class="hljs-keyword">const</span> total = actions.reduce(reducer, <span class="hljs-number">0</span>); <span class="hljs-comment">// 3</span>
+</code></pre>
+<h2>4. 리듀서는 순수(pure) 함수여야 한다</h2>
+<p>결정적인 상태 재생산을 위해서는 리듀서는 반드시 순수 함수여야 한다. 예외는 없다. 순수 함수란:</p>
+<ol>
+<li>동일한 입력이 주어지면 언제나 동일한 출력을 반환한다.</li>
+<li>사이드 이펙트가 없다.</li>
+</ol>
+<p>자바스크립트에서 중요한 사실은 원시 값이 아닌(non-primitive) 모든 객체는 함수에 참조로서 전달된다는 사실이다. 달리 말하자면 함수에 객체를 전달하고 그 객체의 속성을 직접 수정하면 함수 외부의 값도 함께 변경된다는 의미다. 이것이 사이드 이펙트다. 함수에 전달하는 객체가 어디에서 왔는지 완전히 알지 못한다면 그 함수의 호출이 무엇을 의미하는지 결코 알 수 없다. 그러면 안된다.</p>
+<p>리듀서는 반드시 새로운 객체를 반환해야 한다. 예를 들면 <code>Object.assign({}, state, { 변경사항 })</code>으로 이를 구현할 수 있다.</p>
+<p>배열 인자 또한 참조값이다. 리듀서 내부에서 배열에 <code>.push()</code> 메소드를 이용해서 새로운 아이템을 추가해서는 안된다. 마찬가지로 <code>.pop()</code>, <code>.shift()</code>, <code>.reverse()</code>, <code>.unshift()</code>, <code>.shift()</code> 를 비롯한 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Mutator_methods">변경(mutator) 메소드</a>를 사용해서는 안된다.</p>
+<p>배열을 안전하게 처리하고 싶다면 상태를 처리할 때 <code>.push()</code>, <code>.concat()</code> 같은 메소드 대신 안전한 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Accessor_methods">accessor 메소드</a>를 사용하도록 제한해야 한다.</p>
+<p>아래의 예제에서 <code>ADD_CHAT</code> 케이스를 살펴보자.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> ADD_CHAT = <span class="hljs-string">'CHAT::ADD_CHAT'</span>;
+
+<span class="hljs-keyword">const</span> defaultState = {
+  <span class="hljs-attr">chatLog</span>: [],
+  <span class="hljs-attr">currentChat</span>: {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">msg</span>: <span class="hljs-string">''</span>,
+    <span class="hljs-attr">user</span>: <span class="hljs-string">'Anonymous'</span>,
+    <span class="hljs-attr">timeStamp</span>: <span class="hljs-number">1472322852680</span>
+  }
+};
+
+<span class="hljs-keyword">const</span> chatReducer = <span class="hljs-function">(<span class="hljs-params">state = defaultState, action = {}</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> { type, payload } = action;
+  <span class="hljs-keyword">switch</span> (type) {
+    <span class="hljs-keyword">case</span> ADD_CHAT:
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.assign({}, state, {
+        <span class="hljs-attr">chatLog</span>: state.chatLog.concat(payload)
+      });
+    <span class="hljs-keyword">default</span>: <span class="hljs-keyword">return</span> state;
+  }
+};
+</code></pre>
+<p>새로운 객체가 <code>Object.assign()</code> 으로 생성되었고 <code>.push()</code> 대신 <code>.concat()</code>을 이용해서 배열에 아이템을 추가했음을 확인할 수 있다.</p>
+<p>개인적으로는 상태값이 우발적으로 변경되길 바라지 않는다. 그래서 나는 <a href="https://facebook.github.io/immutable-js/">immutable data API</a>와 Redux를 함께 사용하는 방법을 연구해왔다. 만약 상태가 불변(immutable) 객체라면 그것이 우발적으로 변경되었는지 확인하기 위해 코드를 살펴볼 필요도 없어진다. 나는 팀원들과 일하면서 의도치 않게 변경된 상태로 인해 발생한 버그를 발견한 후 이런 결론이 이르게 되엇다.</p>
+<p>순수 함수에 대해서는 이보다 더 많은 내용이 있다. 만약 Redux를 배포용 어플리케이션에 사용할 계획이 있다면 순수 함수에 대해 확실히 파악해야 한다. 그리고 그와 함께 그리고 시간 다루기, 로그 기록, 난수 등도 알아둬야 한다. 더 자세한 사항은 <a href="https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976#.26ljw27tp">&quot;Master the JavaScript Interview: What is a Pure Function?&quot;</a>을 살펴보기 바란다.</p>
+<h2>5. 기억하라: 리듀서는 반드시 신뢰할 수 있는 단일 출처야야 한다</h2>
+<p>앱의 모든 상태는 신뢰할수 있는 단일 출처(single source of truth)를 가져야 한다. 이 말은 상태는 한곳에만 저장되어 있다는 의미다. 그리고 상태 값이 필요한 모든 곳에서는 이 단일 출처를 참조해서 상태에 접근해야 한다.</p>
+<p>서로 다른 요소에 각각의 출처가 있는 것은 괜찮다. 예를 들어 URL은 유저의 요청 경로와 파라메터에 대해 단일 신뢰 출처가 될 수 있다. 앱은 API URL을 단일 신뢰 출처로 가지는 서비스 설정 기능을 가질 수 있다. 하지만…</p>
+<p>어떤 상태라도 Redux 저장소에 저장할 경우, 어떤 접근이라도 Redux를 통해 이루어져야 한다. 이 원칙에 충실하지 않는다면 Flux와 Redux가 해결하려고 했던 문제점인 Redux 저장소의 상태가 망가져버리는 일이나 의도치 못한 상태 조작으로 인한 버그가 발생할 수 있다.</p>
+<p>달리 말하자면 신뢰할 수 있는 단일 출처가 없다면 Redux를 사용하든 안하든 아래와 같은 것들을 잃어버리게 된다.</p>
+<ul>
+<li>결졍적인 뷰 렌더링</li>
+<li>결정적인 상태 재생산</li>
+<li>쉬운 복구/재현</li>
+<li>시간 여행 디버깅</li>
+<li>테스트 용이성</li>
+</ul>
+<h2>6. 액션 타입에 상수를 사용하라</h2>
+<p>나는 리듀서에 전달된 액션의 히스토리를 살펴봤을 때 가능하면 추적하기 쉽게 하려고 한다. 만약 모든 액션이 <code>CHANGE_MESSAGE</code>같은 짧고 일반적인 이름을 가진다면 앱에서 어떤 일이 일어나고 있는지 파악하기 어렵다. 하지만 <code>CHAT::CHANGE_MESSAGE</code>처럼 보다 구체적인 이름을 사용한다면 앱의 상태를 더 명확하게 파악할 수 있다.</p>
+<p>또 정의되지 않은(<code>undefined</code>) 타입의 액션을 발송한다면 앱은 에러를 발생시킬 것이다. 만약 상수를 사용하지 않고 잘못된 문자열을 직접 입력한다면 그 액션은 조용히 잘못된 결과를 발생시킬 것이다.</p>
+<p>리듀서에 사용할 모든 액션의 타입을 한곳에 모아서 유지할 때 얻게되는 장점은 다음과 같다.</p>
+<ul>
+<li>일관적인 이름을 사용하게 된다</li>
+<li>리듀서 API를 빠르게 이해할 수 있다</li>
+<li>풀 리퀘스트(pull request)에서 무엇이 변경되었는지 확인하라</li>
+</ul>
+<h2>7. 발송을 호출하는 쪽에서 액션의 로직을 분리하기 위해 액션 생성자를 사용하라</h2>
+<p>내가 리듀서 내부에서는 ID를 생성하거나 현재 시간을 파악할 수 없다고 말하면 사람들은 나를 이상하게 바라본다. 만약 당신도 화면을 의심스럽게 바라보고 있다면 안심해도 된다. 당신만 그런 것이 아니니까.</p>
+<p>그렇다면 액션이 필요한 모든 곳에서 순수하지 못한(impure) 로직을 중복 작성하는 일을 피하기 위해서는 어떻게 해야 하는가? 답은 액션 생성자(action creator)다.</p>
+<p>액션 생성자는 아래와 같은 여러 이점을 가지고 있다.</p>
+<ul>
+<li>액션을 발송하기 전에 입력값을 연산을 할 수 있다.</li>
+<li>상용구(boilerplate)를 줄인다.</li>
+</ul>
+<p>이제 <code>ADD_CHAT</code> 타입의 액션 객체를 액션 생성자를 이용해 만들어보자.</p>
+<pre><code class="language-javascript"><span class="hljs-comment">// 액션 생성자는 순수하지 않을 수 있다.</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> addChat = ({
+  <span class="hljs-comment">// cuid는 random uuids/v4 GUIDs보다 안전하다.(usecuid.org 참조)</span>
+  id = cuid(),
+  msg = <span class="hljs-string">''</span>,
+  user = <span class="hljs-string">'Anonymous'</span>,
+  timeStamp = <span class="hljs-built_in">Date</span>.now()
+} = {}) =&gt; ({
+  <span class="hljs-attr">type</span>: ADD_CHAT,
+  <span class="hljs-attr">payload</span>: { id, msg, user, timeStamp }
+});
+</code></pre>
+<p>위의 코드에서 볼 수 있듯 <a href="https://github.com/ericelliott/cuid">cuid</a>를 이용해서 각각의 채팅 액션별로 랜덤 아이디를 생성한다. 그리고 <code>Date.now()</code>를 이용해 타임스탬프를 생성한다. 둘다 리듀서 내부서는 실행하기에 안전하지 못한 순수하지 못한 연산들이다. 하지만 액션 생성자 내부에서는 사용해도 무방하다.</p>
+<h3>액션 생성자를 이용해 상용구를 줄이자</h3>
+<p>어떤 사람들은 액션 생성자를 사용하는 방법이 프로젝트에 상용구를 증가시킨다고 말한다. 그들의 의견과는 달리 내가 액션 생성자를 이용해서 리듀서 내부에서 상용구를 얼마나 줄이는지 확인해보라.</p>
+<blockquote>
+<p>팁: 만약 상수, 리듀서, 액션 생성자를 모두 같은 파일에 저장하면 별도 위치에서 가져올 상용구가 줄어든다.</p>
+</blockquote>
+<p>채팅 유저에게 사용자 이름과 신분을 조정할 수 있는 기능을 부여한다고 가정하자. 구현을 위해 몇개의 액션을 처리하기 위한 핸들러를 리듀서에 아래와 같이 추가할 수 있다.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> chatReducer = <span class="hljs-function">(<span class="hljs-params">state = defaultState, action = {}</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> { type, payload } = action;
+
+  <span class="hljs-keyword">switch</span> (type) {
+    <span class="hljs-keyword">case</span> ADD_CHAT:
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.assign({}, state, {
+        <span class="hljs-attr">chatLog</span>: state.chatLog.concat(payload)
+      });
+    <span class="hljs-keyword">case</span> CHANGE_STATUS:
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.assign({}, state, {
+        <span class="hljs-attr">statusMessage</span>: payload
+      });
+    <span class="hljs-keyword">case</span> CHANGE_USERNAME:
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.assign({}, state, {
+        <span class="hljs-attr">userName</span>: payload
+      });
+    <span class="hljs-keyword">default</span>: <span class="hljs-keyword">return</span> state;
+  }
+};
+</code></pre>
+<p>리듀서 함수의 규모가 커지면 반복되는 상용구도 함께 늘어난다. 내가 만든 대부분의 리듀서는 위의 예제보다 훨씬 복잡했고 많은 중복 코드가 있었다. 단순한 속성 변경 액션을 하나로 모은다면 어떨까? 바꿔보자. 어렵지 않다.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> chatReducer = <span class="hljs-function">(<span class="hljs-params">state = defaultState, action = {}</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> { type, payload } = action;
+
+  <span class="hljs-keyword">switch</span> (type) {
+    <span class="hljs-keyword">case</span> ADD_CHAT:
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.assign({}, state, {
+        <span class="hljs-attr">chatLog</span>: state.chatLog.concat(payload)
+      });
+
+    <span class="hljs-comment">// 간단한 속성 변경 액션을 모두 모은다</span>
+    <span class="hljs-keyword">case</span> CHANGE_STATUS:
+    <span class="hljs-keyword">case</span> CHANGE_USERNAME:
+      <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.assign({}, state, payload);
+
+    <span class="hljs-keyword">default</span>: <span class="hljs-keyword">return</span> state;
+  }
+};
+</code></pre>
+<p>여분의 공간과 코멘트가 붙어도 수정한 버전이 더 짧고 <code>case</code>문도 2개로 줄었다.</p>
+<h3>switch…case 문은 위험하지 않은가?</h3>
+<p><a href="https://ericelliottjs.com/product/programming-javascript-applications-paper-ebook-bundle/">어디선가</a> <code>switch</code> 문은 가능한 사용하지 않아야 한다는 글을 읽었을 수도 있다. 원하지 않게 에러가 발생할 수도 있고 switch문의 덩치가 커져버릴 수도 있다. 그리고 의도적인 fall-through(위의 코드처럼 복수의 케이스를 겹쳐서 사용하는 것)를 사용하지 말라는 얘기도 들었을 것이다. 왜냐하면 버그가 발생하면 찾기 어렵기 때문이다. 모두 좋은 조언이다. 하지만 방금 언급한 위험들에 대해서 좀 더 생각해보자.</p>
+<ul>
+<li>리듀서는 조합이 가능(composable)하다. 그러므로 덩치가 커지는 것은 문제가 아니다. case문이 커지면 리듀서를 분리하면 된다.</li>
+<li>모든 case의 본체는 <code>return</code>한다. 그러므로 의도치 않은 fall-through는 결코 발생하지 않는다.</li>
+</ul>
+<p>Redux는 <code>switch...case</code>문을 잘 사용한다.공식적으로 이 건에 대해서는 나의 조언을 바꾸겠다. 위의 사례처럼 간단한 룰(switch 문을 목적에 맞게 작게 만들고 모든 case 몸통에서 return문을 사용하는 것)을 적용한다면 <code>switch</code>는 괜찮다.</p>
+<p>그리고 이 버전이 다른 형태의 페이로드(payload)를 요구한다는 것을 알아챘을 것이다. 액션 생성자는 아래와 같은 형태를 가진다.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> changeStatus = <span class="hljs-function">(<span class="hljs-params">statusMessage = <span class="hljs-string">'Online'</span></span>) =&gt;</span> ({
+  <span class="hljs-attr">type</span>: CHANGE_STATUS,
+  <span class="hljs-attr">payload</span>: { statusMessage }
+});
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> changeUserName = <span class="hljs-function">(<span class="hljs-params">userName = <span class="hljs-string">'Anonymous'</span></span>) =&gt;</span> ({
+  <span class="hljs-attr">type</span>: CHANGE_USERNAME,
+  <span class="hljs-attr">payload</span>: { userName }
+});
+</code></pre>
+<p>코드에서 알 수 있듯이 이 액션 생성자들은 인자와 상태의 구조가 변경되었다. 하지만 그것이 전부는 아니다.</p>
+<h2>8. 서명 문서에 기본 매개변수(default parameter)를 사용하라</h2>
+<p>텍스트 에디터 플러그인으로 Tern.js(Sublime Text나 Atom에서도 사용 가능하다)를 사용하고 있다면 ES6 기본 매개변수를 통해 액션 생성자에 필요한 인터페이스를 파악해줄 것이다. 그리고 액션 생성자를 호출할 때 자동 완성이 가능하며 이는 개발자에게 인지 부하를 덜어준다. 왜내하면 액션 생성자에 필요한 페이로드 타입을 외우고 있을 필요가 없기 때문이다.</p>
+<p>만약 Tern, TypeScript, Flow 같은 타입 인터페이스 플러그인을 사용하고 있지 않다면 꼭 사용하길 바란다.</p>
+<p>노트: 나는 타입 주석(type annotation)보다는 함수 선언에 함께 작성된 기본 매개변수를 통해 파악하는 것을 더 선호한다. 그 이유는:</p>
+<ol>
+<li>Flow나 TypeScript를 사용할 필요가 없다. 대신 표준 자바스크립트를 사용하면 된다.</li>
+<li>TypeScript나 Flow를 사용하고 있다면 타입 주석은 기본 매개변수와 중복된다. TypeScript와 Flow 모두 기본 매개변수로부터 타입을 추론하기 때문이다.</li>
+<li>코드가 문법 잡음이 적을 때 더 가독성이 높다는 것을 알게 되었다.</li>
+<li>기본 설정을 얻게 된다. 이는 타입 에러에 의한 CI(continuos integration) 빌드 실패를 통해 확인하지 않아도 의도하지 않은 <code>undefined</code> 파라메터가 코드 안에 숨어있는 일이 결코 없게 된다는 의미다.</li>
+</ol>
+<h2>9. 연산이 추가된 상태와 분리(decoupling)을 위해 선택자(Selector)를 사용하라</h2>
+<p>역사상 가장 복잡한 채팅 앱을 만든다고 가정해보자. 50만줄 이상의 코드를 작성한 상태에서 기획 부서에서 새로운 기능을 요구했다. 그런데 그 기능은 지금껏 구현한 상태의 구조를 바꿔야만 구현이 가능한 상황이다.</p>
+<p>당황할 필요는 없다. 기존 상태 구조와 앱의 나머지 부분들 사이의 결합도를 낮추기 위한 스마트한 방법인 선택자를 사용하면 된다.</p>
+<p>내가 작성한 거의 대부분의 리듀서에서 나는 뷰를 만들기 위해 필요한 변수를 추출하기 위한 선택자를 추가로 작성했다. 간단한 채팅 리듀서는 어떻게 생겼을지 한번 살펴보자.</p>
+<pre><code class="language-JavaScript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> getViewState = <span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> <span class="hljs-built_in">Object</span>.assign({}, state);
+</code></pre>
+<p>너무 간단해서 gist로 저장할 가치조차 없다. 코드를 보고 어이가 없겠지만 잠깐, 상태에 약간의 연산을 추가하면 어떨까? 세션이 열려있는 동안 채팅에 참여한 모든 유저의 목록을 가져오는 것 같은? 이것을 <code>recentlyActiveUsers</code>라고 하자.</p>
+<p>이 정보는 현재 상태에 이미 저장되어 있지만 가져오기는 쉽지 않다. <code>getViewState()</code>에서 이 값들을 가져오자.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> getViewState = <span class="hljs-function"><span class="hljs-params">state</span> =&gt;</span> <span class="hljs-built_in">Object</span>.assign({}, state, {
+  <span class="hljs-comment">// return a list of users active during this session</span>
+  recentlyActiveUsers: [...new <span class="hljs-built_in">Set</span>(state.chatLog.map(<span class="hljs-function"><span class="hljs-params">chat</span> =&gt;</span> chat.user))]
+});
+</code></pre>
+<p>만약 연산된 상태를 모두 선택자를 통해 가져온다면:</p>
+<ol>
+<li>리듀서와 컴포넌트의 복잡도를 줄여준다.</li>
+<li>상태 구조와 앱 사이의 결합도를 낮춰준다.</li>
+<li>리듀서 내부에서조차 단일 출처 원칙을 따른다.</li>
+</ol>
+<h2>10. TDD 사용: 테스트를 먼저 작성하라</h2>
+<p><a href="http://link.springer.com/article/10.1007%2Fs10664-008-9062-z">많은</a> <a href="https://www.computer.org/csdl/mags/so/2007/03/s3024.pdf">연구</a>들이 테스트를 먼저 하는 방법론과 테스트를 나중에 하는 방법론, 그리고 테스트를 전혀 하지 않는 방법론을 비교해 보았다. 결과는 명확하고 극명하다. 대부분의 연구가 구현 전에 테스트를 작성했을 경우 어플리케이션 배포시 40~80%의 버그가 감소했다는 결과를 내놓았다.</p>
+<blockquote>
+<p>TDD는 배포시 버그 비율은 절반 이상으로 줄일 수 있고 이 주장을 뒷받침할 수 있는 많은 증거들이 존재한다.</p>
+</blockquote>
+<p>이 글에서 작성한 예제 코드를 작성할 때 나는 모두 유닛 테스트부터 시작했다.</p>
+<p>부서지기 쉬운 테스트를 피하기 위해서 나는 기대값을 만들기 위한 팩토리 함수를 작성했다.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> createChat = ({
+  id = <span class="hljs-number">0</span>,
+  msg = <span class="hljs-string">''</span>,
+  user = <span class="hljs-string">'Anonymous'</span>,
+  timeStamp = <span class="hljs-number">1472322852680</span>
+} = {}) =&gt; ({
+  id, msg, user, timeStamp
+});
+
+<span class="hljs-keyword">const</span> createState = ({
+  userName = <span class="hljs-string">'Anonymous'</span>,
+  chatLog = [],
+  statusMessage = <span class="hljs-string">'Online'</span>,
+  currentChat = createChat()
+} = {}) =&gt; ({
+  userName, chatLog, statusMessage, currentChat
+});
+</code></pre>
+<p>둘다 함수 모두 기본값을 제공하므로 테스트에서는 팩토리가 제공하는 기본 구조에다가 내가 필요한 속성을 덮어쓸 수 있다.</p>
+<p>다음과 같이 사용한다.</p>
+<pre><code class="language-javascript">describe(<span class="hljs-string">'chatReducer()'</span>, ({ test }) =&gt; {
+  test(<span class="hljs-string">'with no arguments'</span>, ({ same, end }) =&gt; {
+    <span class="hljs-keyword">const</span> msg = <span class="hljs-string">'should return correct default state'</span>;
+
+    <span class="hljs-keyword">const</span> actual = reducer();
+    <span class="hljs-keyword">const</span> expected = createState();
+
+    same(actual, expected, msg);
+    end();
+  });
+});
+</code></pre>
+<p>노트: 나는 그 단순함 때문에 유닛 테스트에 <a href="https://medium.com/javascript-scene/why-i-use-tape-instead-of-mocha-so-should-you-6aa105d8eaf4#.711m3iv2m">tape를 사용한다</a>. 나는 물론 Mocha와 Jasmine도 2~3년간 사용해 본 경험이 있고, 기타 다양한 테스트 프레임워크도 사용해 보았다. 어떤 프레임워크를 사용하든 합당한 목적과 원칙을 가지고 선택해야 할 것이다.</p>
+<p>위에서 작성한 테스트 코드의 스타일에 대해 간략히 설명하고자 한다. Jasmine과 Mocha를 사용해 온 경험이 있는 탓에 나는 바깥 블럭에서 테스트하고자 하는 컴포넌트를 설명하는 것으로 시작하는 편이다. 그리고 안쪽 블럭에서는 컴포넌트에 전달하는 것을 서술한다. 내부에서는 간단한 테스트 라이브러리의 <code>deepEqual()</code>이나 <code>toEqual()</code>등으로 실행할 수 있는 간단한 등가 가정문을 작성한다.</p>
+<p>위에서 볼 수 있듯 나는 <code>beforeEach()</code>나 <code>afterEach()</code>같은 유틸리티 메소드 대신 독립된 테스트 상태값과 팩토리 함수를 사용했다. 왜냐하면 저 유틸리티 함수들로 인해 경험이 부족한 개발자들이 의도치 않게 상태값을 테스트 케이스마다 공유하게 되는 일을 피하기 위해서이다.</p>
+<p>짐작했겠지만 나는 리듀서마다 서로 다른 3개의 테스트를 작성했다.</p>
+<ol>
+<li>리듀서를 직접 테스트: 방금 본 예제에 해당한다. 리듀서가 기대한 값을 반환하는지 확인하기 위해 필수적으로 필요하다.</li>
+<li>액션 생성자 테스트: 사전 정의된 상태값을 초기값으로 하여 액션을 리듀서에 적용하는 방식으로 액션 생성자를 테스트한다.</li>
+<li>선택자 테스트: 예상된 값을 가진 게산된 속성을 포함한 기대한 모든 값을 가지고 있는지 확인한다.</li>
+</ol>
+<p>리듀서 테스트는 이미 확인했으니 다른 예제를 살펴보자.</p>
+<h3>액션 생성자 테스트</h3>
+<pre><code class="language-javascript">describe(<span class="hljs-string">'addChat()'</span>, ({ test }) =&gt; {
+  test(<span class="hljs-string">'with no arguments'</span>, ({ same, end}) =&gt; {
+    <span class="hljs-keyword">const</span> msg = <span class="hljs-string">'should add default chat message'</span>;
+
+    <span class="hljs-keyword">const</span> actual = pipe(
+      <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> reducer(<span class="hljs-literal">undefined</span>, addChat()),
+      <span class="hljs-comment">// id, timestamp 속성은 반드시 존재해야 하지만 실제 값은 무엇이든 상관없다.</span>
+      state =&gt; {
+        <span class="hljs-keyword">const</span> chat = state.chatLog[<span class="hljs-number">0</span>];
+        chat.id = !!chat.id;
+        chat.timeStamp = !!chat.timeStamp;
+        <span class="hljs-keyword">return</span> state;
+      }
+    )();
+
+    <span class="hljs-keyword">const</span> expected = <span class="hljs-built_in">Object</span>.assign(createState(), {
+      <span class="hljs-attr">chatLog</span>: [{
+        <span class="hljs-attr">id</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">user</span>: <span class="hljs-string">'Anonymous'</span>,
+        <span class="hljs-attr">msg</span>: <span class="hljs-string">''</span>,
+        <span class="hljs-attr">timeStamp</span>: <span class="hljs-literal">true</span>
+      }]
+    });
+
+    same(actual, expected, msg);
+    end();
+  });
+
+
+  test(<span class="hljs-string">'with all arguments'</span>, ({ same, end}) =&gt; {
+    <span class="hljs-keyword">const</span> msg = <span class="hljs-string">'should add correct chat message'</span>;
+
+    <span class="hljs-keyword">const</span> actual = reducer(<span class="hljs-literal">undefined</span>, addChat({
+      <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
+      <span class="hljs-attr">user</span>: <span class="hljs-string">'@JS_Cheerleader'</span>,
+      <span class="hljs-attr">msg</span>: <span class="hljs-string">'Yay!'</span>,
+      <span class="hljs-attr">timeStamp</span>: <span class="hljs-number">1472322852682</span>
+    }));
+    <span class="hljs-keyword">const</span> expected = <span class="hljs-built_in">Object</span>.assign(createState(), {
+      <span class="hljs-attr">chatLog</span>: [{
+        <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">user</span>: <span class="hljs-string">'@JS_Cheerleader'</span>,
+        <span class="hljs-attr">msg</span>: <span class="hljs-string">'Yay!'</span>,
+        <span class="hljs-attr">timeStamp</span>: <span class="hljs-number">1472322852682</span>
+      }]
+    });
+
+    same(actual, expected, msg);
+    end();
+  });
+});
+</code></pre>
+<p>이 예제는 여러모로 흥미롭다. <code>addChat()</code> 액션 생성자는 순수(pure)하지 않다. 그 말은 함수 내부에서 조작될 값을 직접 전달하지 않는다면 그 함수가 만들어낼 기대값을 얻을 수 없다는 의미다. 이에 대응하기 위해, 우리는 <code>pipe</code>를 사용했다. 나는 때때로 <code>pipe</code>를 필요하지 않은 여분의 변수를 생성하는 데 사용한다. 나는 그것을 생성된 값을 무시할 때 사용한다. 존재한다는 것은 확실히 할 수 있지만 어떤 값을 가지는지는 알 필요가 없다. 내가 타입 체크조차 하지 않았던 것을 확인해보라. 그 값들의 처리는 타입 추론과 기본값의 역할에 맡긴다.</p>
+<p>Pipe는 입력값을 일련의 함수들에 연속적으로 전달해주는 유틸리티 함수다. Pipe 내부에서 값을 전달받은 함수는 그 결과를 다음 함수의 입력으로 전달하고, 이 과정은 pipe 내부의 모든 함수들에 연속적으로 적용된다. 나는 <code>lodash/fp/pipe</code>로부터 lodash pipe 함수를 이용한다. 이는 lodash/flow의 별칭이기도 하다. 흥미롭게도 <code>pipe()</code> 함수 그 자체도 리듀서 함수로부터 만들어졌다.</p>
+<pre><code class="language-javascript"><span class="hljs-keyword">const</span> pipe = <span class="hljs-function">(<span class="hljs-params">...fns</span>) =&gt;</span> x =&gt; fns.reduce(<span class="hljs-function">(<span class="hljs-params">v, f</span>) =&gt;</span> f(v), x);
+
+<span class="hljs-keyword">const</span> fn1 = <span class="hljs-function"><span class="hljs-params">s</span> =&gt;</span> s.toLowerCase();
+<span class="hljs-keyword">const</span> fn2 = <span class="hljs-function"><span class="hljs-params">s</span> =&gt;</span> s.split(<span class="hljs-string">''</span>).reverse().join(<span class="hljs-string">''</span>);
+<span class="hljs-keyword">const</span> fn3 = <span class="hljs-function"><span class="hljs-params">s</span> =&gt;</span> s + <span class="hljs-string">'!'</span>
+
+<span class="hljs-keyword">const</span> newFunc = pipe(fn1, fn2, fn3);
+<span class="hljs-keyword">const</span> result = newFunc(<span class="hljs-string">'Time'</span>); <span class="hljs-comment">// emit!</span>
+</code></pre>
+<p>나는 <code>pipe()</code> 함수를 상태 전환을 단순화시키기 위해 리듀서 파일에서 많이 사용한다. 모든 상태 전환은 궁극적으로 하나의 데이터 표현에서 다음으로 옮겨가는 데이터의 흐름이다. 그것을 구현하는데 <code>pipe()</code>가 무척 적합하다.</p>
+<p>액션 생성자 또한 모든 기본값을 덮어쓰게 한다는 점을 기억하라. 그래서 우리는 특정 값의 테스트를 위해 특정한 아이디와 타임스탬프를 전달할 수 있는 것이다.</p>
+<h3>선택자(selector) 테스트</h3>
+<p>마지막으로 상태 선택자를 테스트하고 계산된 모든 값들이 기대한 값과 일치하는지 확인하자.</p>
+<pre><code class="language-javascript">describe(<span class="hljs-string">'getViewState'</span>, ({ test }) =&gt; {
+  test(<span class="hljs-string">'with chats'</span>, ({ same, end }) =&gt; {
+    <span class="hljs-keyword">const</span> msg = <span class="hljs-string">'should return the state needed to render'</span>;
+    <span class="hljs-keyword">const</span> chats = [
+      createChat({
+        <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-attr">user</span>: <span class="hljs-string">'Bender'</span>,
+        <span class="hljs-attr">msg</span>: <span class="hljs-string">'Does Barry Manilow know you raid his wardrobe?'</span>,
+        <span class="hljs-attr">timeStamp</span>: <span class="hljs-number">451671300000</span>
+      }),
+      createChat({
+        <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-attr">user</span>: <span class="hljs-string">'Andrew'</span>,
+        <span class="hljs-attr">msg</span>: <span class="hljs-string">`Hey let's watch the mouth, huh?`</span>,
+        <span class="hljs-attr">timeStamp</span>: <span class="hljs-number">451671480000</span> }),
+      createChat({
+        <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-attr">user</span>: <span class="hljs-string">'Brian'</span>,
+        <span class="hljs-attr">msg</span>: <span class="hljs-string">`We accept the fact that we had to sacrifice a whole Saturday in
+              detention for whatever it was that we did wrong.`</span>,
+        <span class="hljs-attr">timeStamp</span>: <span class="hljs-number">451692000000</span>
+      })
+    ];
+
+    <span class="hljs-keyword">const</span> state = chats.map(addChat).reduce(reducer, reducer());
+
+    <span class="hljs-keyword">const</span> actual = getViewState(state);
+    <span class="hljs-keyword">const</span> expected = <span class="hljs-built_in">Object</span>.assign(createState(), {
+      <span class="hljs-attr">chatLog</span>: chats,
+      <span class="hljs-attr">recentlyActiveUsers</span>: [<span class="hljs-string">'Bender'</span>, <span class="hljs-string">'Andrew'</span>, <span class="hljs-string">'Brian'</span>]
+    });
+
+    same(actual, expected, msg);
+    end();
+  });
+});
+</code></pre>
+<p>이 테스트에서 우리는 <code>Array.prototyope.reduce()</code> 메소드를 <code>addChat()</code> 액션 생성자를 처리하기 위해서 사용했다. Redux 리듀서의 멋진 점은 그들은 그저 보통의 <code>reducer</code> 함수라는 사실이다. 이는 다른 리듀서 함수로 함 수 있는 모든 것들을 Redux 리듀서 함수에도 할 수 있다는 의미와 같다.</p>
+<p>우리의 ‘기대된(expected)’ 값은 모든 채팅 객체가 로그에 남아있는지, 최근에 활성화된 유저가 제대로 표시되어 있는지 확인한다.</p>
+<h2>Redux 규칙</h2>
+<p>만약 당신이 Redux를 제대로 사용한다면 다음과 같은 장점을 취할 수 있다</p>
+<ul>
+<li>시간차 때문에 발생하는 버그의 제거</li>
+<li>결정적인 뷰 렌더링</li>
+<li>결정적인 상태(state) 재생산</li>
+<li>기능의 간편한 번복/재실행</li>
+<li>디버깅 단순화</li>
+<li>시간 여행자 되기</li>
+</ul>
+<p>하지만 위의 것들이 가능하게 하려면 다음 규칙들을 따라야 한다.</p>
+<ul>
+<li>리듀서는 반드시 순수한 함수여야 한다</li>
+<li>리듀서는 반드시 앱 상태의 신뢰할 수 있는 단일 출처여야 한다</li>
+<li>리듀서는 언제나 열거 가능(serializable)해야 한다</li>
+<li>리듀서는 함수를 포함해서는 안된다</li>
+</ul>
+<p>또한 다음을 명심하길 바란다.</p>
+<ul>
+<li>어떤 앱은 Redux가 필요하지 않다</li>
+<li>액션 타입에는 상수를 사용하라</li>
+<li>액션 로직와 디스패치 호출자를 분리하기 위해 액션 생성자를 사용하라</li>
+<li>자체 타입 기술을 위해 ES6 기본 파라메터를 활용하라</li>
+<li>계산된 상태와 분리를 위해 셀렉터를 이용하라</li>
+<li>항상 TDD 개발!</li>
+</ul>
+</div><div class="date-published" data-reactid="20"><em data-reactid="21"><!-- react-text: 22 -->Published <!-- /react-text --><!-- react-text: 23 -->23 Jan 2017<!-- /react-text --></em></div></div><div class="footer" data-reactid="24"><noscript data-reactid="25"></noscript><hr data-reactid="26"/><p data-reactid="27"><!-- react-text: 28 -->© <!-- /react-text --><a href="https://www.github.com/rhostem" data-reactid="29">rhotsem</a><span data-reactid="30"> All rights reserved.</span></p></div></div></div></div></div></div><script src="/bundle.js?t=1485707446736"></script></body></html>
