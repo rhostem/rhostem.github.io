@@ -1,2 +1,0 @@
-webpackJsonp([0xbdf29dc11d048000],{"./node_modules/json-loader/index.js!./.cache/json/tags-vcs.json":function(t,a){t.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/2017-01-07-git-basic/"},frontmatter:{title:"버전 관리 시스템 Git 기초",date:"2017-01-08",mainImage:"/images/post-main/2017-01-07-git-basic/file-status.png"}}}]}},pathContext:{tag:"VCS"}}}});
-//# sourceMappingURL=path---tags-vcs-7d39b3c0165f02b4e61c.js.map

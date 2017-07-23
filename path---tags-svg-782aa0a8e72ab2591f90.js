@@ -1,2 +1,0 @@
-webpackJsonp([0xb49844aad67c7000],{"./node_modules/json-loader/index.js!./.cache/json/tags-svg.json":function(t,a){t.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/2017-05-29-few-html-tips/"},frontmatter:{title:"[번역] 몇가지 HTML 팁",date:"2017-05-29",mainImage:null}}}]}},pathContext:{tag:"SVG"}}}});
-//# sourceMappingURL=path---tags-svg-782aa0a8e72ab2591f90.js.map
