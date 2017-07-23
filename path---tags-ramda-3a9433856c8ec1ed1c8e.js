@@ -1,2 +1,0 @@
-webpackJsonp([0x47a3d901e3f6b400],{"./node_modules/json-loader/index.js!./.cache/json/tags-ramda.json":function(a,t){a.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/posts//2017-04-20-curry-and-partial-application/"},frontmatter:{title:"함수형 프로그래밍: partial application과 curry",date:"2017-04-20",mainImage:null}}}]}},pathContext:{tag:"Ramda"}}}});
-//# sourceMappingURL=path---tags-ramda-3a9433856c8ec1ed1c8e.js.map
