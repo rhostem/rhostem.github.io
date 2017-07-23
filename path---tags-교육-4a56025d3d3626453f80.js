@@ -1,0 +1,2 @@
+webpackJsonp([0x7ebd09e62fa01c00],{"./node_modules/json-loader/index.js!./.cache/json/tags-교육.json":function(e,t){e.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/2017-03-06-a-university-degree-might-be-a-huge-wasteof-time/"},frontmatter:{title:"[번역] 프로그래머가 되고 싶은가? 그렇다면 대학 학위를 취득하는 일은 큰 시간 낭비일 수 있다",date:"2017-03-06",mainImage:null}}}]}},pathContext:{tag:"교육"}}}});
+//# sourceMappingURL=path---tags-교육-4a56025d3d3626453f80.js.map
