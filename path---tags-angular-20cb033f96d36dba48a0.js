@@ -1,0 +1,2 @@
+webpackJsonp([0x387ecc29562a9200],{"./node_modules/json-loader/index.js!./.cache/json/tags-angular.json":function(a,n){a.exports={data:{allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/posts/2017-05-11-angular2-two-way-binding/"},frontmatter:{title:"Angular 2의 양방향 연결(two-way binding) 구현",date:"2017-05-11",mainImage:"/images/post-main/2017-05-11-angular2-two-way-binding/karina-carvalho-94650.jpg"}}}]}},pathContext:{tag:"Angular"}}}});
+//# sourceMappingURL=path---tags-angular-20cb033f96d36dba48a0.js.map
