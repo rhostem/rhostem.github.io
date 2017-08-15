@@ -4,6 +4,10 @@
       "path---tags-es-6-3117659b3f24e7afd0d2.js",
       "path---tags-es-6-3117659b3f24e7afd0d2.js.map"
     ],
+    "page-component---src-pages-archive-js": [
+      "page-component---src-pages-archive-js-644d864c9b1ab9c6ac32.js",
+      "page-component---src-pages-archive-js-644d864c9b1ab9c6ac32.js.map"
+    ],
     "path---posts-2017-01-23-10-tips-for-better-redux-architecture": [
       "path---posts-2017-01-23-10-tips-for-better-redux-architecture-e8728b3e984788fb5d39.js",
       "path---posts-2017-01-23-10-tips-for-better-redux-architecture-e8728b3e984788fb5d39.js.map"
@@ -21,12 +25,12 @@
       "path---posts-2017-01-07-git-basic-065509ff8c2723ffe9b8.js.map"
     ],
     "path---tags": [
-      "path---tags-44e54e88fcd7b9aea955.js",
-      "path---tags-44e54e88fcd7b9aea955.js.map"
+      "path---tags-b5aa439bf31ae1660b46.js",
+      "path---tags-b5aa439bf31ae1660b46.js.map"
     ],
     "page-component---src-pages-index-js": [
-      "page-component---src-pages-index-js-a9c33fc7b1af7870f4f3.js",
-      "page-component---src-pages-index-js-a9c33fc7b1af7870f4f3.js.map"
+      "page-component---src-pages-index-js-7488a59cd8baf8c1e910.js",
+      "page-component---src-pages-index-js-7488a59cd8baf8c1e910.js.map"
     ],
     "path---tags-angular": [
       "path---tags-angular-e683eb2a27b413f48507.js",
@@ -61,8 +65,8 @@
       "path---tags-es-7-be0a1d9e4b7454fa1b45.js.map"
     ],
     "page-component---src-pages-tags-js": [
-      "page-component---src-pages-tags-js-10001dd18cd9fc76c0ff.js",
-      "page-component---src-pages-tags-js-10001dd18cd9fc76c0ff.js.map"
+      "page-component---src-pages-tags-js-1154f5bf8d8221288e2c.js",
+      "page-component---src-pages-tags-js-1154f5bf8d8221288e2c.js.map"
     ],
     "path---tags-html": [
       "path---tags-html-59fbd5b0da02e0cae07b.js",
@@ -101,8 +105,8 @@
       "path---tags-redux-0d49efbd2d48ecd7af5c.js.map"
     ],
     "commons": [
-      "commons-2d4af185c53290e88848.js",
-      "commons-2d4af185c53290e88848.js.map"
+      "commons-f74642c0d3b5548f0b22.js",
+      "commons-f74642c0d3b5548f0b22.js.map"
     ],
     "path---posts-2017-05-11-angular-2-two-way-binding": [
       "path---posts-2017-05-11-angular-2-two-way-binding-355afc70533f7bb91b67.js",
@@ -149,24 +153,28 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "page-component---src-templates-post-page-js": [
-      "page-component---src-templates-post-page-js-e3bc605a20ba315a3ffe.js",
-      "page-component---src-templates-post-page-js-e3bc605a20ba315a3ffe.js.map"
+      "page-component---src-templates-post-page-js-2cae9798ff27d5499720.js",
+      "page-component---src-templates-post-page-js-2cae9798ff27d5499720.js.map"
     ],
     "path---tags-git": [
       "path---tags-git-33e8a8d4516ecf7803de.js",
       "path---tags-git-33e8a8d4516ecf7803de.js.map"
     ],
     "app": [
-      "app-bcda60de44a88e98d011.js",
-      "app-bcda60de44a88e98d011.js.map"
+      "app-82c508d7f58df0a20ecc.js",
+      "app-82c508d7f58df0a20ecc.js.map"
+    ],
+    "path---archive": [
+      "path---archive-4d9f2d43d4951e408dda.js",
+      "path---archive-4d9f2d43d4951e408dda.js.map"
     ],
     "path---tags-npm": [
       "path---tags-npm-5fc2081d4a46912d2cf4.js",
       "path---tags-npm-5fc2081d4a46912d2cf4.js.map"
     ],
     "page-component---src-templates-tag-page-js": [
-      "page-component---src-templates-tag-page-js-9fa5187721b07d5bb312.js",
-      "page-component---src-templates-tag-page-js-9fa5187721b07d5bb312.js.map"
+      "page-component---src-templates-tag-page-js-c61aeee894a8e624e1c3.js",
+      "page-component---src-templates-tag-page-js-c61aeee894a8e624e1c3.js.map"
     ],
     "path---posts-2017-08-14-typescript-npm-package": [
       "path---posts-2017-08-14-typescript-npm-package-34faddb1bbbd4caf3644.js",
