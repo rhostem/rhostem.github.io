@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="/favicon.ico"><title data-react-helmet="true">TypeScript로 작성하는 React-Redux 앱 · rhostem.github.io</title><link rel="preload" href="/component---src-templates-post-page-js-e1a3583d67ff044f893e.js" as="script"><link rel="preload" href="/path---posts-2018-01-15-react-redux-typescript-16a36f76c8dfa2634140.js" as="script"><link rel="preload" href="/app-b6026d07d8e95edec923.js" as="script"><link rel="preload" href="/commons-3838ae415689947773f4.js" as="script"><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-b6026d07d8e95edec923.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","123038792091823":"component---src-templates-post-page-js-e1a3583d67ff044f893e.js","77653406118394":"component---src-templates-tag-page-js-84fe5edb205db9176f92.js","94533468323174":"component---src-pages-archive-js-ed23f917e01870dfc442.js","35783957827783":"component---src-pages-index-js-965b5a9705757d7750d7.js","195850678278728":"component---src-pages-tags-js-74fc7600ccc7b10f7e7d.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","164175503936797":"path---posts-2018-01-15-react-redux-typescript-16a36f76c8dfa2634140.js","68439797455181":"path---posts-2017-10-29-what-i-ve-learned-over-5-years-as-a-software-developer-e36e32238623d7acc319.js","169218390599405":"path---posts-2017-10-21-lazy-image-loading-with-lodzad-js-100b60c163ccda48fd51.js","100446341923525":"path---posts-2017-09-how-i-rediscovered-my-love-for-java-script-after-throwing-90-of-it-in-the-trash-56d1ea7d0c9e242ab804.js","145841845583320":"path---posts-2017-09-07-redux-saga-toast-control-0459b3e02b81f68baa5b.js","24821313258508":"path---posts-2017-09-01-ftp-deploy-process-with-dploy-21dc1b26f0d8a3e270bc.js","273271926437122":"path---posts-2017-08-14-typescript-npm-package-bfe99aab598a9848b661.js","51041092804311":"path---posts-2017-07-29-migration-to-gatsby-v-1-1040f4a22409a533c060.js","77281886954417":"path---posts-2017-06-24-unified-styling-language-523e46e70b2c5e38ea1f.js","108070224341676":"path---posts-2017-06-11-adopting-flow-and-typescript-7f1f1114a899d4d57740.js","155193107753380":"path---posts-2017-05-29-few-html-tips-52f59b4d7dde81fb1fb5.js","171050743598678":"path---posts-2017-05-11-angular-2-two-way-binding-6f1e5a086ea7ae26009f.js","63880527107612":"path---posts-2017-04-20-curry-and-partial-application-3782a0097c69d6df2826.js","176061616332342":"path---posts-2017-04-11-8-simple-rules-for-a-robust-scalable-css-architecture-f8f26bc73e48f913906b.js","150032955988021":"path---posts-2017-03-06-a-university-degree-might-be-a-huge-wasteof-time-5ce286a098fa21299a3f.js","50524928929878":"path---posts-2017-01-23-10-tips-for-better-redux-architecture-65c7736d6dea49b72ed1.js","54737707693777":"path---posts-2017-01-07-git-basic-74277e605c23e17bc85a.js","175395347749900":"path---posts-2017-01-03-react-class-component-autobinding-a045bab8b96969028dce.js","176125121670995":"path---posts-2016-12-19-a-study-plan-to-cure-java-script-fatigue-b3252d41a9d1d726389c.js","33543605589326":"path---tags-type-script-1b857e2811b0765996e1.js","84586273293571":"path---tags-react-d2b36afd85850c98508d.js","159190219261617":"path---tags-redux-67fc2de8c2975855602d.js","255438083297007":"path---tags-소프트웨어-개발-2d3133a684ac44dccaf4.js","187966355343853":"path---tags-코딩-e659147e3a5779659ae5.js","174442408225510":"path---tags-번역-0b8ac666ba459a55ff08.js","198727112194860":"path---tags-web-1d9a627268e45d0d6117.js","172435999708190":"path---tags-intersection-observer-api-95df8128a2230a3265ec.js","67335324583948":"path---tags-javascript-ed276a5819479e029367.js","275184731935280":"path---tags-함수형-프로그래밍-02320ad4e402edc41873.js","179364368719564":"path---tags-redux-saga-666f6e7a26a04fed12c2.js","20342444442079":"path---tags-es-6-6815de179c55f0588fc5.js","148940181000026":"path---tags-ftp-656f19f8538db9257b0b.js","256147262351551":"path---tags-npm-60e75354be8513ecdd1d.js","68876525710793":"path---tags-개발-도구-fa5a516ca803d1d8b0e1.js","51720743109199":"path---tags-typescript-2489bb2983655ecdb1fb.js","62117242295850":"path---tags-angular-923ff8ccd864c57d4dd5.js","134928267902561":"path---tags-gatsby-714c7cd6f46c1b1f0428.js","209063065961547":"path---tags-css-43c052f85990587e753e.js","184231978963465":"path---tags-css-in-js-81ff8be9c96eed632f3c.js","195721700418347":"path---tags-flow-d0e1f268c047a2c6e92c.js","122719066174630":"path---tags-html-fc0e6bd060cf3d9bba49.js","198566080075388":"path---tags-svg-96eaec71f69c508094ec.js","139350379999136":"path---tags-교육-d88cfd8f933e23ed15b5.js","208849726414084":"path---tags-vcs-6a7a20da19fae1c1c322.js","224989948613620":"path---tags-git-e7068f7ce1ec149c8d5b.js","63707833379887":"path---tags-svn-ba982a7699abda5655b1.js","110607662475245":"path---tags-es-7-65540d0f39df1abbf05d.js","232020054444554":"path---archive-ee858b3ae78694801805.js","142629428675168":"path---index-18f457a8132f8ec2353e.js","55702396619907":"path---tags-041f2e10ddb123412bf8.js"}/*]]>*/</script><style type="text/css" data-styled-components="" data-styled-components-is-local="false">/* sc-component-id: sc-global-3391772677 */
+@font-face{font-family:'Nanum Square';src:url('/fonts/nanum-square/fonts/NanumSquareL.eot');src:url('/fonts/nanum-square/fonts/NanumSquareL.eot?#iefix') format('embedded-opentype'), url('/fonts/nanum-square/fonts/NanumSquareL.woff') format('woff'), url('/fonts/nanum-square/fonts/NanumSquareL.ttf') format('truetype'), url('/fonts/nanum-square/fonts/NanumSquareOTFLight.svg#017f9c78318bcde3d1dc4451e8eaca0a') format('svg');font-style:normal;font-weight:300;}@font-face{font-family:'Nanum Square';src:url('/fonts/nanum-square/fonts/NanumSquareR.eot');src:url('/fonts/nanum-square/fonts/NanumSquareR.eot?#iefix') format('embedded-opentype'), url('/fonts/nanum-square/fonts/NanumSquareR.woff') format('woff'), url('/fonts/nanum-square/fonts/NanumSquareR.ttf') format('truetype'), url('/fonts/nanum-square/fonts/NanumSquareOTFR.svg#9e23ceb0c858ca37642ba540402577eb') format('svg');font-style:normal;font-weight:400;}@font-face{font-family:'Nanum Square';src:url('/fonts/nanum-square/fonts/NanumSquareB.eot');src:url('/fonts/nanum-square/fonts/NanumSquareB.eot?#iefix') format('embedded-opentype'), url('/fonts/nanum-square/fonts/NanumSquareB.woff') format('woff'), url('/fonts/nanum-square/fonts/NanumSquareB.ttf') format('truetype'), url('/fonts/nanum-square/fonts/NanumSquareOTFB.svg#a41a1fda1fdf3dafd3394867a156b1cf') format('svg');font-style:normal;font-weight:700;}@font-face{font-family:'Nanum Square';src:url('/fonts/nanum-square/fonts/NanumSquareEB.eot');src:url('/fonts/nanum-square/fonts/NanumSquareEB.eot?#iefix') format('embedded-opentype'), url('/fonts/nanum-square/fonts/NanumSquareEB.woff') format('woff'), url('/fonts/nanum-square/fonts/NanumSquareEB.ttf') format('truetype'), url('/fonts/nanum-square/fonts/NanumSquareOTFExtraBold.svg#090d6763bc81b49309446d23fbd10e87') format('svg');font-style:normal;font-weight:900;}@font-face{font-family:Menlo Regular;src:url("/fonts/menlo-regular.eot"),url("/fonts/menlo-regular.woff2"),url("/fonts/menlo-regular.woff"),url("/fonts/menlo-regular.ttf"),url("/fonts/menlo-regular.svg");}@font-face{font-family:Iropke Batang;src:url("/fonts/IropkeBatangM.eot"),url("/fonts/IropkeBatangM.woff");}.iframe-video-wrapper{position:relative;display:block;padding-bottom:56.25%;margin:3.2rem 0;}.iframe-video{position:absolute;top:0;left:0;width:100%;height:100%;}
+/* sc-component-id: sc-global-1662883474 */
+code,code[class*='language-'],pre[class*='language-']{color:#333;text-align:left;white-space:pre;word-spacing:normal;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;font-family:Consolas,'Liberation Mono',Menlo,Courier,monospace;line-height:1.4;direction:ltr;cursor:text;border:none;}pre[class*='language-']{overflow:auto;margin:1em 0;padding:1.2em;border-radius:3px;font-size:85%;}pre code{background:none;}p code,li code,table code{margin:0;border-radius:3px;padding:0.2em 0;font-size:85%;}p code:before,p code:after,li code:before,li code:after,table code:before,table code:after{-webkit-letter-spacing:-0.2em;-moz-letter-spacing:-0.2em;-ms-letter-spacing:-0.2em;letter-spacing:-0.2em;content:'\0a0';}code,:not(pre) > code[class*='language-'],pre[class*='language-']{background:rgba(0,0,0,0.04);}:not(pre) > code[class*='language-']{padding:0.1em;border-radius:0.3em;}.token.comment,.token.prolog,.token.doctype,.token.cdata{color:#969896;}.token.punctuation,.token.string,.token.atrule,.token.attr-value{color:#183691;}.token.property,.token.tag{color:#63a35c;}.token.boolean,.token.number{color:#0086b3;}.token.selector,.token.attr-name,.token.attr-value .punctuation:first-child,.token.keyword,.token.regex,.token.important{color:#795da3;}.token.operator,.token.entity,.token.url,.language-css .token.string{color:#a71d5d;}.token.entity{cursor:help;}.namespace{opacity:0.7;}
+</style><style type="text/css" data-styled-components="bQoRXm iBvkGg fRgHgE hWZvQB cwjmdK cGKapv ibTlJH dfDgjx ixrxkJ ibnLDE EPfTs lapvmv gdjUgP ljsGxQ iwKfCE lZYIl dlBGGJ jiYrEi" data-styled-components-is-local="true">/* sc-component-id: sc-bdVaJa */
+
+.bQoRXm{position:relative;min-height:100vh;padding-top:3.2rem;padding-bottom:4rem;}
+/* sc-component-id: sc-bwzfXH */
+
+.fRgHgE{width:100%;padding:0 1.2rem;margin-left:auto;margin-right:auto;}@media (min-width:1060px){.fRgHgE{width:1020px;padding:0 1.6rem;}}
+/* sc-component-id: sc-htpNat */
+
+.ibTlJH{width:100%;padding:0 1.2rem;margin-left:auto;margin-right:auto;margin-top:3.2rem;}@media (min-width:1060px){.ibTlJH{width:1020px;padding:0 1.6rem;}}@media (min-width:750px){.ibTlJH{width:740px;}}
+/* sc-component-id: sc-bxivhb */
+
+.iBvkGg{position:absolute;z-index:1;top:0;left:0;width:100%;background:linear-gradient(to right,#4568dc,#b06ab3);border-bottom:1px solid #ebebeb;-webkit-letter-spacing:-1px;-moz-letter-spacing:-1px;-ms-letter-spacing:-1px;letter-spacing:-1px;}.iBvkGg::after{clear:both;content:"";display:table;}
+/* sc-component-id: sc-ifAKCX */
+
+.hWZvQB{float:left;margin:0;color:#fff;font-weight:100;font-size:1.2rem;font-family:'Roboto',sans-serif;line-height:3.2rem;}
+/* sc-component-id: sc-EHOje */
+
+.cwjmdK{float:right;list-style:none;padding-left:0;margin:0;}.cwjmdK::after{clear:both;content:"";display:table;}
+/* sc-component-id: sc-bZQynM */
+
+.cGKapv{float:left;line-height:3.2rem;margin-bottom:0;font-family:'Roboto',sans-serif;font-size:1rem;font-weight:100;color:#fff;}.cGKapv:not(:first-child){margin-left:0.5rem;}
+/* sc-component-id: sc-gzVnrw */
+
+.ljsGxQ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;bottom:0;width:100%;height:4rem;padding:0.5rem 0;background-color:#fff;border-top:1px solid #ebebeb;font-family:'Roboto',sans-serif;line-height:1.4;text-align:center;}
+/* sc-component-id: sc-htoDjs */
+
+.iwKfCE{width:100%;padding:0 1.2rem;margin-left:auto;margin-right:auto;font-family:'Roboto';font-weight:100;font-size:0.7rem;}@media (min-width:1060px){.iwKfCE{width:1020px;padding:0 1.6rem;}}@media (min-width:550px){.iwKfCE{font-size:0.75rem;}}
+/* sc-component-id: sc-dnqmqq */
+
+/* sc-component-id: sc-iwsKbI */
+
+.dlBGGJ{color:hsla(291,0%,18%,0.95);text-decoration:underline;}
+/* sc-component-id: sc-gZMcBi */
+
+.jiYrEi{text-align:center;font-size:0.75rem;margin-top:0.2rem;}@media (min-width:550px){.jiYrEi{font-size:0.85rem;}}.jiYrEi > *{margin-left:0.5em;}.jiYrEi i{color:hsla(291,0%,18%,0.95);}
+/* sc-component-id: sc-gqjmRU */
+
+.EPfTs{margin-left:-0.3rem;}.EPfTs::after{clear:both;content:"";display:table;}
+/* sc-component-id: sc-VigVT */
+
+.lapvmv{font-family:'Roboto';font-size:0.8rem;font-weight:100;display:block;float:left;padding:0.25em 0.625em;margin-bottom:0.35em;margin-left:0.35em;line-height:1.6rem;color:rgba(0,0,0,0.6);background-color:rgba(0,0,0,0.04);border-radius:3px;}.lapvmv:hover{background-color:rgba(0,0,0,0.1);}
+/* sc-component-id: sc-jTzLTM */
+
+.dfDgjx{text-align:left;font-weight:bold;}
+/* sc-component-id: sc-fjdhpX */
+
+.ixrxkJ{font-size:0.9rem;}.ixrxkJ::after{clear:both;content:"";display:table;}
+/* sc-component-id: sc-jzJRlG */
+
+.ibnLDE{margin-top:0.8rem;}
+/* sc-component-id: sc-chPdSV */
+
+.gdjUgP{margin-top:3.2rem;margin-bottom:3.2rem;}
+</style><style id="glamor-styles"></style><script id="glamor-ids">
+        // <![CDATA[
+        window._glamor = []
+        // ]]>
+        </script><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = location.hash.replace('#', '')
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="sitemap" type="application/xml" href="/sitemap.xml"><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#4568dc"><link rel="alternate" type="application/rss+xml" href="/rss.xml"><script>/*<![CDATA[*/!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/commons-3838ae415689947773f4.js","/app-b6026d07d8e95edec923.js","/path---posts-2018-01-15-react-redux-typescript-16a36f76c8dfa2634140.js","/component---src-templates-post-page-js-e1a3583d67ff044f893e.js"])/*]]>*/</script><link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><style>$[object Object]</style><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.6em 'Nanum Square','Spectral','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','sans-serif';box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(291, 0%, 18%,0.95);font-family:'Nanum Square','Spectral','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','sans-serif';font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;}h1{margin-left:0;margin-right:0;margin-top:6.4rem;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(291, 0%, 18%,1);font-family:'Nanum Square','Roboto','Spectral','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','sans-serif';font-weight:800;text-rendering:optimizeLegibility;font-size:2.4rem;line-height:3.2rem;}h2{margin-left:0;margin-right:0;margin-top:4.8rem;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(291, 0%, 18%,1);font-family:'Nanum Square','Roboto','Spectral','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','sans-serif';font-weight:800;text-rendering:optimizeLegibility;font-size:1.6875rem;line-height:3.2rem;}h3{margin-left:0;margin-right:0;margin-top:3.2rem;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(291, 0%, 18%,1);font-family:'Nanum Square','Roboto','Spectral','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','sans-serif';font-weight:800;text-rendering:optimizeLegibility;font-size:1.375rem;line-height:1.6rem;}h4{margin-left:0;margin-right:0;margin-top:2.4rem;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8rem;color:hsla(291, 0%, 18%,1);font-family:'Nanum Square','Roboto','Spectral','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','sans-serif';font-weight:800;text-rendering:optimizeLegibility;font-size:1.2rem;line-height:1.6rem;}h5{margin-left:0;margin-right:0;margin-top:2.4rem;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8rem;color:hsla(291, 0%, 18%,1);font-family:'Nanum Square','Roboto','Spectral','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','sans-serif';font-weight:800;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.6rem;}h6{margin-left:0;margin-right:0;margin-top:2.4rem;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:0.8rem;color:hsla(291, 0%, 18%,1);font-family:'Nanum Square','Roboto','Spectral','-apple-system','BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue','sans-serif';font-weight:800;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.6rem;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;}ul{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;margin:1.6rem 0;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;font-size:0.85rem;line-height:1.6rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;font-size:1rem;line-height:1.6rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;}blockquote{margin-left:-1.2rem;margin-right:-1.2rem;margin-top:2.4rem;padding-bottom:0;padding-left:1.6rem;padding-right:1.2rem;padding-top:0;margin-bottom:2.4rem;border-left:3px solid hsla(291, 0%, 18%,0.6);color:hsla(291, 0%, 18%,0.6);font-style:italic;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.2rem - 1px);background:hsla(291, 0%, 18%,0.1);border:none;height:1px;margin:3.2rem auto;width:50%;color:hsla(291, 0%, 18%,1);background-image:linear-gradient(90deg,rgba(34,34,34,.2),rgba(34,34,34,.75),rgba(34,34,34,.2));}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.2rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.2rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.6rem;margin-bottom:calc(1.2rem / 2);margin-top:calc(1.2rem / 2);}li > ul{margin-left:1.6rem;margin-bottom:calc(1.2rem / 2);margin-top:calc(1.2rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.2rem / 2);}code{font-size:0.85rem;line-height:1.6rem;}kbd{font-size:0.85rem;line-height:1.6rem;}samp{font-size:0.85rem;line-height:1.6rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.06667rem;padding-right:1.06667rem;padding-top:0.8rem;padding-bottom:calc(0.8rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{border-color:#2e2e2e;color:#2e2e2e;text-decoration:none;}@media (min-width: 550px){html{font-size:109.375%;}}p > img{margin-bottom:0.8rem;}p > img + em{font-size:0.85em;line-height:1.4;display:block;text-align:right;margin-bottom:2.4rem;color:hsla(291, 0%, 18%,0.5);}.gatsby-resp-image-link{box-shadow:none;margin-top:1.6rem;}.gatsby-resp-image-link:hover{background:none;box-shadow:none;}@media only screen and (min-width:38rem){.gatsby-resp-image-link{border-radius:.15rem;overflow:hidden;}}.post > .gatsby-highlight, .gatsby-resp-iframe-wrapper, .gatsby-resp-image-link{margin-left:-1.2rem;margin-right:-1.2rem;}.post .gatsby-resp-image-link + em{font-size:0.85em;line-height:1.4;display:block;text-align:right;margin-top:0.8rem;margin-bottom:2.4rem;color:hsla(291, 0%, 18%,0.5);}.post .gatsby-resp-image-link + em > a{color:hsla(291, 0%, 18%,0.5);background-image:none !important;}tt, code{font-family:Menlo,"Space Mono",Consolas,"Roboto Mono","Droid Sans Mono","Liberation Mono",Courier,monospace;font-variant:none;-webkit-font-feature-settings:"clig" 0, "calt" 0;font-feature-settings:"clig" 0, "calt" 0;padding-top:0.1em;padding-bottom:0.1em;background-color:#f8f8f8;border-radius:2px;font-size:0.85em;}code:before,code:after,tt:before,tt:after{letter-spacing:-0.2em;content:" ";}pre code:before,pre code:after,pre tt:before,pre tt:after{content:"";}.gatsby-highlight{background-color:rgba(0,0,0, 0.04);border-radius:.15rem;margin-top:0;margin-bottom:1.2rem;padding:1.2rem;overflow:auto;}.gatsby-highlight pre[class*='language-']{background-color:transparent;border-radius:0;margin:0;padding:0;overflow:initial;float:left;min-width:100%;text-shadow:none;}.gatsby-highlight-code-line{background:#fff2cc;display:block;margin-right:-1.2rem;margin-left:-1.2rem;padding-right:1.2rem;padding-left:0.8rem;border-left:0.4rem solid #ffd9b3;}.post a:not(.gatsby-resp-image-link):not(.anchor), .link-underline{position:relative;background-image:linear-gradient(#2e2e2e,#2e2e2e);text-shadow:0.03em 0 #fff, -0.03em 0 #fff, 0 0.03em #fff, 0 -0.03em #fff, 0.06em 0 #fff, -0.06em 0 #fff, 0.09em 0 #fff, -0.09em 0 #fff, 0.12em 0 #fff, -0.12em 0 #fff, 0.15em 0 #fff, -0.15em 0 #fff;transition:all 250ms cubic-bezier(0.4, 0, 0.2, 1);background-position:0 98%;background-repeat:repeat-x;background-size:1px 1px;}.post a:not(.gatsby-resp-image-link):not(.anchor):hover, .link-underline:hover{color:#4568dc;background-image:linear-gradient(#4568dc,#4568dc);}.post a.anchor{text-shadow:0 !important;background-image:0 !important;}.post a[href*='//']:after{content:" " url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-external'%20viewBox='0%200%2032%2032'%20width='14'%20height='14'%20fill='none'%20stroke='%232e2e2e'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='9.38%'%3E%3Cpath%20d='M14%209%20L3%209%203%2029%2023%2029%2023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E");padding-right:0.2rem;}.post a[href*='//']:hover:after{content:" " url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20class='i-external'%20viewBox='0%200%2032%2032'%20width='14'%20height='14'%20fill='none'%20stroke='%234568dc'%20stroke-linecap='round'%20stroke-linejoin='round'%20stroke-width='9.38%'%3E%3Cpath%20d='M14%209%20L3%209%203%2029%2023%2029%2023%2018%20M18%204%20L28%204%2028%2014%20M28%204%20L14%2018'/%3E%3C/svg%3E");}@media (min-width: 1060px){html{font-size:118.75%;}}</style><style></style><link rel="amphtml" href="/amp/posts/2018-01-15-react-redux-typescript/"></head><body><div id="___gatsby"><div data-reactroot="" data-reactid="1" data-react-checksum="1550561497"><main class="sc-bdVaJa bQoRXm" data-reactid="2"><!-- react-empty: 3 --><nav class="sc-bxivhb iBvkGg" data-reactid="4"><div class="sc-bwzfXH fRgHgE" data-reactid="5"><a href="/" data-reactid="6"><div class="sc-ifAKCX hWZvQB" data-reactid="7">rhostem.github.io</div></a><ul class="sc-EHOje cwjmdK" data-reactid="8"><a class="sc-bZQynM cGKapv" href="/tags" data-reactid="9">Tag</a><a class="sc-bZQynM cGKapv" href="/archive" data-reactid="10">Archive</a></ul></div></nav><div class="sc-htpNat ibTlJH" data-reactid="11"><header data-reactid="12"><h1 class="sc-jTzLTM dfDgjx" data-reactid="13">TypeScript로 작성하는 React-Redux 앱</h1><div class="sc-fjdhpX ixrxkJ" data-reactid="14"><!-- react-text: 15 -->2018-01-15<!-- /react-text --><!-- react-text: 16 --> · 읽기 <!-- /react-text --><!-- react-text: 17 -->10<!-- /react-text --><!-- react-text: 18 -->분<!-- /react-text --></div><div class="sc-jzJRlG ibnLDE" data-reactid="19"><div class="sc-gqjmRU EPfTs" data-reactid="20"><span class="sc-VigVT lapvmv" data-reactid="21"><a href="/tags/type-script" data-reactid="22">TypeScript</a></span><span class="sc-VigVT lapvmv" data-reactid="23"><a href="/tags/react" data-reactid="24">React</a></span><span class="sc-VigVT lapvmv" data-reactid="25"><a href="/tags/redux" data-reactid="26">Redux</a></span></div></div></header><article class="post sc-chPdSV gdjUgP" data-reactid="27"><p>몇 개의 시스템 관리 도구를 개발하면서 느꼈던 점은 서버에서 내려받은 데이터를 다룰 때 데이터의 형태가 타입으로 정의되어 있지 않다 보니 API 문서나 개발 도구의 네트워크 탭, 어떤 경우에는 콘솔 로그를 찍어야 하는 일이 많아서 불편하다는 점이었다. 특히 앱의 규모가 커지고 다뤄야 하는 데이터가 많아질수록 그로 인한 오류는 더욱 자주 발생하곤 했다. 자바스크립트가 동적 타입 언어다 보니 생기는 어쩔 수 없는 문제라고 할 수 있다. 물론 특정 데이터의 기본값을 확장하는 방법과 에디터의 도움을 받으면 어느 정도 극복은 가능하다.</p>
+<div class="gatsby-highlight">
+      <pre class="language-js"><code>getData<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> data <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> DEFAULT_DATA<span class="token punctuation">,</span> res<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+  <span class="token function">update</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+      </div>
+<p>하지만 데이터 형태를 넘어 함수 객체의 데이터형, 리턴 타입까지 정의할 수 있고 프로그래밍 오류를 줄일 수 있을 것이라는 기대에 Angular 와 함께 인기를 얻기 시작한 TypeScript에 자연스럽게 관심을 두게 되었고, 몇 개의 앱을 TypeScript로 개발하게 되었다.</p>
+<p>하지만 써 본 결과, 역시 모든 것에는 장단점이 존재한다는 것을 확인할 수 있었다.</p>
+<h2 id="javascript를-정적-타입-언어-형태로-작성하는-것이-정말로-개발에-도움이-되는가"><a href="#javascript%EB%A5%BC-%EC%A0%95%EC%A0%81-%ED%83%80%EC%9E%85-%EC%96%B8%EC%96%B4-%ED%98%95%ED%83%9C%EB%A1%9C-%EC%9E%91%EC%84%B1%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%B4-%EC%A0%95%EB%A7%90%EB%A1%9C-%EA%B0%9C%EB%B0%9C%EC%97%90-%EB%8F%84%EC%9B%80%EC%9D%B4-%EB%90%98%EB%8A%94%EA%B0%80" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>Javascript를 정적 타입 언어 형태로 작성하는 것이 정말로 개발에 도움이 되는가?</h2>
+<p>도움이 되는 요소는 분명히 있다. 모든 데이터와 함수의 파라미터에 자료형을 붙임으로써 숫자 형 변수에 <code>length</code>같은 속성을 참조하려다가 <code>undefined</code> 값을 돌려받는 일 따위는 확실히 막을 수 있다. 그리고 더 정확한 코드 자동완성이 가능해지므로 한동안 작업을 하지 않다가 다시 시작해도 코드를 파악하는데 시간이 덜 걸리기도 했다.</p>
+<p>하지만 개발에 걸리는 시간은 확실히 늘어난다. 타입 선언을 하지 않았다고 자꾸 오류를 발생시키는 TypeScript 컴파일러 때문에 <code>tsconfig.json</code> 파일의 각종 옵션을 <code>false</code> 로 바꿔버리고 <code>any</code> 타입을 남발하면서 개발을 진행하고 싶은 충동이 들 수 있는데, 그렇게 할 거라면 정적 언어를 사용하는 의미가 없어진다. 특히 외부 라이브러리는 TypeScript 는 <a href="https://github.com/DefinitelyTyped/DefinitelyTyped">DefinitelyTyped</a>에 올라온 타입 정의를, flow 는 <a href="https://github.com/flowtype/flow-typed">flow-typed</a>에 추가된 타입 정의를 사용해야 한다. 하지만 타입 정의의 버전은 라이브러리의 최신 버전보다 이전인 경우가 더 많고 수년 전에 안정화되어서 개발이 중단된 라이브러리는 없는 경우도 많다. 그럴 땐 직접 타입을 선언해서 사용해야 한다. 그리고 어떤 라이브러리들은 콜백 함수에 정말 상세하게 타입을 정의해두곤 하는데, 거기에 맞추기 위해 타입 정의를 작성하다 보면 제법 많은 시간이 지나가곤 한다.</p>
+<p>그리고 정적 타입 언어가 오류 자체를 줄여주는 것은 아니다. 컴파일 오류가 없다고 하더라도 코드 로직에서는 얼마든지 잘못된 결과를 만들어낼 수 있다. 테스트 코드를 작성하지 않는 이상 오류가 발생하지 않는다는 보장은 가질 수 없는 것에는 변함이 없다. 그리고 데이터 타입 측면에서도 서버의 데이터 모델과 프론트엔드 코드의 타입이 언제나 일치한다는 보장은 없으며 서버 코드에 오류가 있는 경우라면 말할 것도 없다.</p>
+<h2 id="그래도-자동완성-기능은-역시-매력적이다"><a href="#%EA%B7%B8%EB%9E%98%EB%8F%84-%EC%9E%90%EB%8F%99%EC%99%84%EC%84%B1-%EA%B8%B0%EB%8A%A5%EC%9D%80-%EC%97%AD%EC%8B%9C-%EB%A7%A4%EB%A0%A5%EC%A0%81%EC%9D%B4%EB%8B%A4" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>그래도 자동완성 기능은 역시 매력적이다</h2>
+<p>TypeScript, flow 같은 자바스크립트 정적 언어를 통해 자동완성, intelliSense 라고도 불리는 기능을 제대로 활용할 있다는 것은 확실히 좋은 점이다. 특히 Redux 를 사용할 때 reducer 내부에서 특정 케이스 아래에서 action 객체의 속성을 참조하기 위해 점(<code>.</code>)을 찍으면 에디터(TypeScript 라면 vscode)가 어떤 타입의 액션인지 알아서 파악한 후 정확한 속성을 표시해 주는 모습을 보면 막혀 있던 가슴이 시원해지는 느낌이 들기도 한다. 이처럼 타이핑은 수많은 액션 타입을 사용해야 하는 Redux 에서 무척 큰 도움이 된다. 사실 내가 TypeScript를 이용해서 해결하려고 했던 것도 Redux 에서 action, reducer, model 의 속성을 확인하기 위해 이 파일 저 파일을 옮겨다니며 확인하는 일을 해결하고 싶어서였다.</p>
+<h2 id="typescript-react-redux-프로젝트-설정"><a href="#typescript-react-redux-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%A4%EC%A0%95" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>TypeScript React-Redux 프로젝트 설정</h2>
+<p>TypeScript React 앱은 <a href="https://github.com/facebookincubator/create-react-app">create-react-app</a>을 사용하면 간단히 만들 수 있다. 다만 TypeScript로 사용하기 위해서는 옵션을 추가해야 한다.</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> -g create-react-app
+
+create-react-app my-app --scripts-version<span class="token operator">=</span>react-scripts-ts
+</code></pre>
+      </div>
+<p>이렇게 해서 프로젝트를 생성하면 앱 실행에 react-scripts 대신 <a href="https://github.com/wmonk/create-react-app-typescript">react-scripts-ts</a>를 사용하기 때문에 소스를 TypeScript로 작성할 수 있다.</p>
+<h2 id="react-컴포넌트-타입-선언"><a href="#react-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%ED%83%80%EC%9E%85-%EC%84%A0%EC%96%B8" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>React 컴포넌트 타입 선언</h2>
+<p>컴포넌트로는 함수형의 stateless component, 클래스 형태의 statefull component, Redux 가 연결된 container component 가 있다. higher-order 컴포넌트도 있지만, 여기에서는 다루지 않도록 하겠다. 타입 선언을 위해서는 React의 타입 선언 패키지를 설치 후 진행해야 한다.</p>
+<div class="gatsby-highlight">
+      <pre class="language-bash"><code><span class="token function">npm</span> i -D @types/react @types/react-dom @types/react-redux
+</code></pre>
+      </div>
+<h3 id="1-stateless-component"><a href="#1-stateless-component" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>1. stateless component</h3>
+<p>React는 Props의 데이터형을 설정하기 위해 컴포넌트 클래스는 <code>static</code> 타입의 <code>PropTypes</code> 변수 안에 타입을 선언하는 방식을 사용한다. 하지만 이제는 TypeScript를 사용하므로 <code>interface</code>나 <code>type</code>을 사용해서 Props의 형태를 선언하면 된다.</p>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+type Props <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// Props 타입 선언</span>
+
+<span class="token comment">// 컴포너트의 리턴 타입을 Props 타입과 함께 설정</span>
+<span class="token keyword">const</span> TSSFC<span class="token punctuation">:</span> React<span class="token punctuation">.</span>SFC<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Props</span><span class="token punctuation">></span></span> <span class="token operator">=</span> props <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> children<span class="token punctuation">,</span> <span class="token operator">...</span>restProps <span class="token punctuation">}</span> <span class="token operator">=</span> props
+
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token spread"><span class="token punctuation">{</span><span class="token punctuation">...</span><span class="token attr-value">restProps</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>children<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> TSSFC
+</code></pre>
+      </div>
+<p>React의 Props와 State의 타입 선언에는 <a href="https://www.typescriptlang.org/docs/handbook/generics.html">generic</a> 타입을 사용한다. generic 타입은 함수처럼 인자를 받아서 타입 선언을 유동적으로 바꿀 수 있으므로 컴포넌트마다 서로 다른 Props와 State를 선언하는데 활용된다. 컴포넌트 <code>TSSFC</code>의 리턴 타입이 <code>React.SFC&#x3C;Props></code>으로 되어 있는데, 이는 <code>Props</code>라는 타입을 전달받아서 내부적으로 타입 선언에 사용한다는 의미이다.</p>
+<h3 id="2-statefull-component"><a href="#2-statefull-component" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>2. statefull component</h3>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+
+type Props <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+type State <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">TSComponent</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token operator">&lt;</span>Props<span class="token punctuation">,</span> State<span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> defaultProps <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  state<span class="token punctuation">:</span> State <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">:</span> Props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>TSComponent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> TSComponent
+</code></pre>
+      </div>
+<p>클래스 컴포넌트는 <code>React.Component</code> 대신 <code>React.Component&#x3C;Props, State></code>를 상속받는 방식을 사용해서 타입을 추가한다. 그리고 클래스 내부에서 <code>state</code> 변수를 선언할 때 타입을 붙여주고 <code>constructor</code> 함수의 인자에도 타입을 붙여준다. 이 외에는 Javascript의 React 컴포넌트와 차이가 없다. 오히려 PropTypes를 이용한 타입 선언보다 TypeScript의 타입 선언이 더 간단하기 때문에 더 간결하게 느껴질 수 있다.</p>
+<h3 id="3-container-component"><a href="#3-container-component" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>3. container component</h3>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> React <span class="token keyword">from</span> <span class="token string">'react'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-redux'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> bindActionCreators<span class="token punctuation">,</span> compose<span class="token punctuation">,</span> Dispatch <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'redux'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> RootState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'../../store/rootReducer'</span>
+<span class="token keyword">import</span> todoActions <span class="token keyword">from</span> <span class="token string">'../../store/todo/actions'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> returntypeof <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react-redux-typescript'</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">mapStateToProps</span> <span class="token operator">=</span> <span class="token punctuation">(</span>state<span class="token punctuation">:</span> RootState<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+  todoList<span class="token punctuation">:</span> state<span class="token punctuation">.</span>todo<span class="token punctuation">.</span>list<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">mapDispatchToProps</span> <span class="token operator">=</span> <span class="token punctuation">(</span>dispatch<span class="token punctuation">:</span> Dispatch<span class="token operator">&lt;</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token operator">></span><span class="token punctuation">)</span> <span class="token operator">=></span>
+  <span class="token function">bindActionCreators</span><span class="token punctuation">(</span>
+    <span class="token punctuation">{</span>
+      addTodo<span class="token punctuation">:</span> todoActions<span class="token punctuation">.</span>addTodo<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    dispatch
+  <span class="token punctuation">)</span>
+
+<span class="token comment">// 두 함수에 의해 생성될 Props를 객체 형태로 가져온다.</span>
+<span class="token keyword">const</span> statePropTypes <span class="token operator">=</span> <span class="token function">returntypeof</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">)</span>
+<span class="token keyword">const</span> actionPropTypes <span class="token operator">=</span> <span class="token function">returntypeof</span><span class="token punctuation">(</span>mapDispatchToProps<span class="token punctuation">)</span>
+
+type Props <span class="token operator">=</span> <span class="token keyword">typeof</span> statePropTypes <span class="token operator">&amp;</span> <span class="token keyword">typeof</span> actionPropTypes <span class="token operator">&amp;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+type State <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Container</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span><span class="token operator">&lt;</span>Props<span class="token punctuation">,</span> State<span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> defaultProps <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  state<span class="token punctuation">:</span> State <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">:</span> Props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">null</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">compose</span><span class="token punctuation">(</span><span class="token function">connect</span><span class="token punctuation">(</span>mapStateToProps<span class="token punctuation">,</span> mapDispatchToProps<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span>Container<span class="token punctuation">)</span>
+</code></pre>
+      </div>
+<p>컨테이너 컴포넌트는 외부 라이브러리를 활용한다. <code>mapStateToProps</code> 함수와 <code>mapDispatchToProps</code> 함수의 리턴값을 <code>typeof</code> 명령어로 타입 형태로 바꿀 수 있도록 객체 형태로 바꿔주는 <code>returntypeof</code>라는 헬퍼 함수가 그것이다. 두 함수의 리턴 타입을 직접 작성하는 것보다 자동으로 생성해주는 라이브러리를 사용함으로서 컴포넌트의 Props 타입 선언을 무척 간편하게 할 수 있다.</p>
+<p>위의 예제 코드에서 <code>returntypeof(mapStateToProps)</code>의 결과는 <code>{ todoList: state.todo.list }</code>가 되고 이를 <code>typeof</code> 연산자로 타입으로 변경하면 아래와 같은 형태가 된다.</p>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code>type StatePropTypes <span class="token operator">=</span> <span class="token punctuation">{</span>
+  todoList<span class="token punctuation">:</span> Array<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Todo</span><span class="token punctuation">></span></span><span class="token punctuation">,</span> <span class="token comment">// 예시를 위해 임의로 todoList가 Todo 타입의 배열이라고 표현</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<p>그리고 <code>type</code> 키워드로 선언한 타입은 <code>&#x26;</code> 연산자를 통해 <a href="https://www.typescriptlang.org/docs/handbook/advanced-types.html">intersection</a> 타입 형태로 합치는 것이 가능하므로 사용자가 직접 정의한 Props와 함께 사용할 수 있다.</p>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code>type Props <span class="token operator">=</span> <span class="token keyword">typeof</span> statePropTypes <span class="token operator">&amp;</span> <span class="token keyword">typeof</span> actionPropTypes <span class="token operator">&amp;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<h2 id="react-redux의-타입-선언"><a href="#react-redux%EC%9D%98-%ED%83%80%EC%9E%85-%EC%84%A0%EC%96%B8" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>React-Redux의 타입 선언</h2>
+<h3 id="action-객체"><a href="#action-%EA%B0%9D%EC%B2%B4" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>action 객체</h3>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code><span class="token keyword">export</span> <span class="token keyword">const</span> ADD_TODO <span class="token operator">=</span> <span class="token string">'ADD_TODO'</span>
+
+<span class="token keyword">export</span> type Actions <span class="token operator">=</span> <span class="token punctuation">{</span>
+  ADD_TODO<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> <span class="token keyword">typeof</span> ADD_TODO <span class="token comment">// string</span>
+    content<span class="token punctuation">:</span> string
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> todoActions <span class="token operator">=</span> <span class="token punctuation">{</span>
+  addTodo<span class="token punctuation">:</span> <span class="token punctuation">(</span>content<span class="token punctuation">:</span> string<span class="token punctuation">)</span><span class="token punctuation">:</span> Actions<span class="token punctuation">[</span><span class="token keyword">typeof</span> ADD_TODO<span class="token punctuation">]</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span> ADD_TODO<span class="token punctuation">,</span>
+    content<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<p>Javascript로 액션을 설정할 때는 타입 상수만 선언해주면 되었지만 여기서는 <code>Actions</code> 타입도 함께 선언해줘야 한다. 그 이유는 액션 타입을 reducer에서 사용하기 위함이다. 액션의 타입이 정의되어 있어야 reducer에서 어떤 액션인지 파악할 수 있다.</p>
+<p>액션의 타입을 직접 선언해줘야 해서 코드의 양이 이 부분에서 많이 늘어난다. 하지만 이 작업을 제대로 해 줘야 reducer의 <code>case</code>문 내부에서 어떤 액션인지 제대로 찾을 수 있다. 액션의 타입 형태는 거의 비슷하므로 복사 &#x26; 붙여넣기를 사용하면 작업 시간을 줄일 수 있지만, 작업 시간이 늘어나는 건 어쩔 수 없다.</p>
+<h3 id="root-action"><a href="#root-action" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>root action</h3>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Actions <span class="token keyword">as</span> TodoActions <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./todo/todoActions'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Actions <span class="token keyword">as</span> AnotherAction <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./todo/anotherAction'</span>
+
+type RootAction <span class="token operator">=</span> TodoActions<span class="token punctuation">[</span>keyof TodoActions<span class="token punctuation">]</span> <span class="token operator">|</span> AnotherAction<span class="token punctuation">[</span>keyof AnotherAction<span class="token punctuation">]</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> RootAction
+</code></pre>
+      </div>
+<p>모든 액션 타입을 합친 하나의 루트 타입을 만든다. <code>RootAction</code>은 <code>|</code> 연산자를 사용해서 만드는 <code>union</code> 타입 형태로서 <code>or</code> 연산자와 유사한 의미다. 앞서 생성한 Actions 타입을 가져온 후 <code>keyof</code> 키워드를 사용해서 <code>union</code> 타입 형태로 변환한 후 <code>RootAction</code> 타입에 할당한다. 다른 액션 생성자 타입도 같은 방식으로 계속 추가하면 된다.</p>
+<p>추가로 설명하자면 <code>TodoActions[keyof TodoActions]</code> 코드의 결과는 아래와 같은 형태가 된다.</p>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code>type todoActionUnion <span class="token operator">=</span>
+  <span class="token operator">|</span> <span class="token punctuation">{</span>
+      type<span class="token punctuation">:</span> <span class="token string">'ADD_TODO'</span><span class="token punctuation">,</span>
+      content<span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token operator">|</span> <span class="token punctuation">{</span>
+      type<span class="token punctuation">:</span> <span class="token string">'TOGGLE_TODO'</span><span class="token punctuation">,</span>
+      id<span class="token punctuation">:</span> string<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<h3 id="reducer-함수와-state"><a href="#reducer-%ED%95%A8%EC%88%98%EC%99%80-state" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>reducer 함수와 state</h3>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> Todo <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./todoModel'</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ADD_TODO <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./todoActions'</span>
+<span class="token keyword">import</span> RootAction <span class="token keyword">from</span> <span class="token string">'../rootAction'</span>
+
+<span class="token keyword">export</span> type TodoState <span class="token operator">=</span> Readonly<span class="token operator">&lt;</span><span class="token punctuation">{</span>
+  list<span class="token punctuation">:</span> Array<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Todo</span><span class="token punctuation">></span></span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token operator">></span>
+
+<span class="token keyword">const</span> initialState<span class="token punctuation">:</span> TodoState <span class="token operator">=</span> <span class="token punctuation">{</span>
+  list<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">todo</span> <span class="token operator">=</span> <span class="token punctuation">(</span>state<span class="token punctuation">:</span> TodoState <span class="token operator">=</span> initialState<span class="token punctuation">,</span> action<span class="token punctuation">:</span> RootAction<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">switch</span> <span class="token punctuation">(</span>action<span class="token punctuation">.</span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> ADD_TODO<span class="token punctuation">:</span>
+    <span class="token comment">// 에디터는 action이 어떤 타입인지 case와 RootAction 타입을 사용해서 파악해준다</span>
+
+    <span class="token keyword">default</span><span class="token punctuation">:</span>
+      <span class="token keyword">return</span> state
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> todo
+</code></pre>
+      </div>
+<p><code>todo</code> state의 형태를 표현한 <code>TodoState</code> 타입 선언에는 <code>ReadOnly</code> 키워드를 사용했다. 이는 컴파일시점에서 이 타입이 할당된 객체가 수정되었는지 검사하는데, redux는 immutable한 객체 상태를 지향하기 때문에 사용하는 것이 좋다.</p>
+<p>그리고 reducer에서는 <code>RootAction</code> 타입과 추후 기술할 <code>RootReducer</code> 타입을 사용한다. reducer 함수의 파라미터인 <code>state</code> 에는 현재 reducer에서만 사용하는 데이터를 표현하는 <code>TodoState</code> 타입을 사용하고,  action 에는 <code>RootAction</code>을 사용했다. <code>RootAction</code> 대신 todoActions 파일에서 선언해둔 타입을 가져와서 <code>RootAction</code>을 만들 때 사용했던 union 타입을 만드는 방식을 사용해도 된다.</p>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code><span class="token keyword">const</span> <span class="token function-variable function">todo</span> <span class="token operator">=</span> <span class="token punctuation">(</span>
+  state<span class="token punctuation">:</span> TodoState <span class="token operator">=</span> initialState<span class="token punctuation">,</span>
+  action<span class="token punctuation">:</span> TodoAction<span class="token punctuation">[</span>keyof TodoActionType<span class="token punctuation">]</span>
+<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<p>이렇게 state 함수의 <code>action</code> 파라미터에 타입을 추가하면 case 문 내부에서 <code>action</code>이 어떤 타입인지 자동으로 파악해준다. 단, 타입을 정확하게 선언해둬야 한다. 수많은 액션 객체를 생성하고 타입을 선언하다 보면(=복사 &#x26; 붙여넣기를 반복하다 보면) 잘못 선언한 타입이 생길 가능성은 얼마든지 있다.</p>
+<h3 id="root-reducer"><a href="#root-reducer" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>root reducer</h3>
+<div class="gatsby-highlight">
+      <pre class="language-jsx"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> combineReducers <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'redux'</span>
+<span class="token keyword">import</span> todo<span class="token punctuation">,</span> <span class="token punctuation">{</span> TodoState <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./todo/todoReducer'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">RootState</span> <span class="token punctuation">{</span>
+  todo<span class="token punctuation">:</span> TodoState<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> rootState <span class="token operator">=</span> combineReducers<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>RootState</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  router<span class="token punctuation">,</span>
+  todo<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> rootState
+</code></pre>
+      </div>
+<p>root reducer 는 <code>rootAction</code>보다 단순하다. reducer들의 state 구조를 표현한 타입을 가져와서 합치기만 하면 된다. 그리고 <code>combineReducers</code> 함수가 리턴해야 하는 객체의 형태가 가변적이므로 generic type으로 <code>RootState</code>를 전달하고 있다.</p>
+<h2 id="이렇듯-장황한-타이핑이-필요한-typescript"><a href="#%EC%9D%B4%EB%A0%87%EB%93%AF-%EC%9E%A5%ED%99%A9%ED%95%9C-%ED%83%80%EC%9D%B4%ED%95%91%EC%9D%B4-%ED%95%84%EC%9A%94%ED%95%9C-typescript" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>이렇듯 장황한 타이핑이 필요한 TypeScript</h2>
+<p>React, Redux에서 TypeScript를 사용하는 방법을 정리해보았다. 개인적으로 TypeScript, Flow를 모두 시도해 본 상황에서 다음 프로젝트에 TypeScript를 사용할지 말지를 고민하고 있다. 동적 타입의 언어는 유연하다는 장점도 있고 개발 진행 속도도 빠르기 때문이다. 인기 있는 언어인 php, python, ruby도 동적 타입 언어이기도 하다. 많은 팀원이 참여하고 있는 프로젝트라면 TypeScript를 도입해볼 만 하지만 타입 선언만 강제할 수 있을 뿐 서로의 코딩 스타일이 달라서 결국 표준 스타일의 정립과 많은 대화의 필요성은 마찬가지일 것 같다.</p>
+<hr>
+<h2 id="참고-자료"><a href="#%EC%B0%B8%EA%B3%A0-%EC%9E%90%EB%A3%8C" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>참고 자료</h2>
+<h3 id="react-redux-타입-설정"><a href="#react-redux-%ED%83%80%EC%9E%85-%EC%84%A4%EC%A0%95" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>React, Redux 타입 설정</h3>
+<ul>
+<li><a href="https://github.com/piotrwitek/react-redux-typescript-guide">https://github.com/piotrwitek/react-redux-typescript-guide</a></li>
+<li><a href="https://github.com/piotrwitek/react-redux-typescript-starter-kit">https://github.com/piotrwitek/react-redux-typescript-starter-kit</a></li>
+</ul>
+<h3 id="본문에서-사용한-전체-예제-코드"><a href="#%EB%B3%B8%EB%AC%B8%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%9C-%EC%A0%84%EC%B2%B4-%EC%98%88%EC%A0%9C-%EC%BD%94%EB%93%9C" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"/></svg></a>본문에서 사용한 전체 예제 코드</h3>
+<ul>
+<li><a href="https://github.com/rhostem/react-typescript-starter">https://github.com/rhostem/react-typescript-starter</a></li>
+</ul></article><div id="disqus_thread" data-reactid="28"></div></div><footer class="sc-gzVnrw ljsGxQ" data-reactid="29"><div class="sc-htoDjs iwKfCE" data-reactid="30"><div class="sc-dnqmqq lZYIl" data-reactid="31"><span data-reactid="32">Copyright © 2016-2017. </span><a class="sc-iwsKbI dlBGGJ" href="https://www.github.com/rhostem" data-reactid="33">rhostem</a><span data-reactid="34"> All rights reserved</span></div><div class="sc-gZMcBi jiYrEi" data-reactid="35"><a href="https://www.github.com/rhostem" data-reactid="36"><i class="fa fa-github" data-reactid="37"></i></a><a href="mailto:syoung.j@gmail.com" data-reactid="38"><i class="fa fa-envelope-o" data-reactid="39"></i></a><a href="/rss.xml" data-reactid="40"><i class="fa fa-rss" data-reactid="41"></i></a></div></div></footer></main></div></div><script>
+  
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-83587837-3', 'auto');
+  
+  ga('send', 'pageview');
+      </script></body></html>
