@@ -1,4 +1,352 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[rhostem.github.io]]></title><description><![CDATA[프론트엔드 웹 개발 기술 블로그입니다.]]></description><link>https://rhostem.github.io</link><image><url>https://rhostem.github.io/logos/logo-512.png</url><title>rhostem.github.io</title><link>https://rhostem.github.io</link></image><generator>rhostem.github.io</generator><lastBuildDate>Mon, 15 Jan 2018 12:38:27 GMT</lastBuildDate><atom:link href="https://rhostem.github.io/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[rhostem]]></author><copyright><![CDATA[Copyright © 2016. rhostem All rights reserved]]></copyright><item><title><![CDATA[TypeScript로 작성하는 React-Redux 앱]]></title><description><![CDATA[몇 개의 시스템 관리 도구를 개발하면서 느꼈던 점은 서버에서 내려받은 데이터를 다룰 때 데이터의 형태가 타입으로 정의되어 있지 않다 보니 API…]]></description><link>https://rhostem.github.io/posts/2018-01-15-react-redux-typescript/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-01-15-react-redux-typescript/</guid><category><![CDATA[TypeScript]]></category><category><![CDATA[React]]></category><category><![CDATA[Redux]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Mon, 15 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;몇 개의 시스템 관리 도구를 개발하면서 느꼈던 점은 서버에서 내려받은 데이터를 다룰 때 데이터의 형태가 타입으로 정의되어 있지 않다 보니 API 문서나 개발 도구의 네트워크 탭, 어떤 경우에는 콘솔 로그를 찍어야 하는 일이 많아서 불편하다는 점이었다. 특히 앱의 규모가 커지고 다뤄야 하는 데이터가 많아질수록 그로 인한 오류는 더욱 자주 발생하곤 했다. 자바스크립트가 동적 타입 언어다 보니 생기는 어쩔 수 없는 문제라고 할 수 있다. 물론 특정 데이터의 기본값을 확장하는 방법과 에디터의 도움을 받으면 어느 정도 극복은 가능하다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[rhostem.github.io]]></title><description><![CDATA[프론트엔드 웹 개발 기술 블로그입니다.]]></description><link>https://rhostem.github.io</link><image><url>https://rhostem.github.io/logos/logo-512.png</url><title>rhostem.github.io</title><link>https://rhostem.github.io</link></image><generator>rhostem.github.io</generator><lastBuildDate>Tue, 23 Jan 2018 17:37:55 GMT</lastBuildDate><atom:link href="https://rhostem.github.io/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[rhostem]]></author><copyright><![CDATA[Copyright © 2016. rhostem All rights reserved]]></copyright><item><title><![CDATA[[번역] 2018년에 배워야 할 최고의 자바스크립트 라이브러리와 기술]]></title><description><![CDATA[이 글은  Eric Elliot 의  Top JavaScript Libraries & Tech to Learn in 201…]]></description><link>https://rhostem.github.io/posts/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018/</guid><category><![CDATA[Javascript]]></category><category><![CDATA[React]]></category><category><![CDATA[소프트웨어 개발]]></category><category><![CDATA[학습]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Wed, 31 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 &lt;a href=&quot;https://medium.com/@_ericelliott?source=post_header_lockup&quot;&gt;Eric Elliot&lt;/a&gt;의 &lt;a href=&quot;https://medium.com/javascript-scene/top-javascript-libraries-tech-to-learn-in-2018-c38028e028e6&quot;&gt;Top JavaScript Libraries &amp;#x26; Tech to Learn in 2018&lt;/a&gt;을 번역한 글입니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;작년 나는 &lt;a href=&quot;https://medium.com/javascript-scene/top-javascript-frameworks-topics-to-learn-in-2017-700a397b711&quot;&gt;2017년에 배워야할 최고의 기술들을 정리한 글&lt;/a&gt;을 작성했었다. 올해에는 놀라운 현상이 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;“어떤 기술이 투자 대비 학습 효과가 가장 높은가?”라는 질문에 대답이 나오기 시작했다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/cf3c76bd7d6921917d9a1c119985d134-4dbf6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 591px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 71.91201353637902%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsSAAALEgHS3X78AAAB7UlEQVQoz41STW+bQBDl31fqLVKrqj00h15Sqf6qP4LVurKjJI0SJVKog00AY2zjhLCGXWDBwAIdQuwmaaR2BLOzq5333sws16hVW+39ypfK0fFJvV5vt1rNZsuyUPYvy/Oci6PItm2MbUyw4ziu6xJC/P8w6vtcmqae590trs3lBFCiKGKMbbFLvw0ee6RpXJIkq9VKEeXRcCTLsiiKwB/HMYDCpdJvg802D03zVpY5CNfrtXRvhmEghADuGcmTLUDEMR6P/SDgQCRQzVR1pmmWZVFKX6LabBkDCCzLLAyhN0XNkGAih/gUYwzdgpMXmcuYGoa3MCCC1j40zHNJvrG/ewNWclLTdBSlPPIgGWQDG3A+k7r1sKas0BKYdyAYApYydx0i9152GIaQv7kKHEnxJwngsjgG+oJH17z5zPbpjRtIOrq8QKeHV0Vy8UjIH9mPDfIQoeovaTKaCpf6wf5Z+3Ov2a12vlcHh/2HUdmrmyDw50tTUYZXwsHFMX/Ua3S+VvZevf6083b3/Zu9+oda5x3Pf+x92xUFfjEdzPVzrmTQppquSUPhXFWkfrcxOOEb3drpQPj5o69dy4oK38hYqup0bOPbmT6hLnGJw5UtLeqDIhN4WBk8Lyg6TpIszbOnVRRDzHLGyunnvwHb+BAM7QVHCwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;landslide에 의하면 자바스크립트가 가장 많은 수의 패키지를 가지고 있다.&quot;
+        title=&quot;&quot;
+        src=&quot;/static/cf3c76bd7d6921917d9a1c119985d134-4dbf6.png&quot;
+        srcset=&quot;/static/cf3c76bd7d6921917d9a1c119985d134-4174c.png 265w,
+/static/cf3c76bd7d6921917d9a1c119985d134-747a7.png 530w,
+/static/cf3c76bd7d6921917d9a1c119985d134-4dbf6.png 591w&quot;
+        sizes=&quot;(max-width: 591px) 100vw, 591px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;landslide에 의하면 자바스크립트가 가장 많은 수의 패키지를 가지고 있다.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;먼저 소프트웨어가 세계를 지배했고, 웹이 소프트웨어를 지배했으며, 그리고 자바스크립트가 웹을 지배했다. 2018년에는 React가 자바스크립트를 지배하고 있는 중이다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;2018-react의-해&quot;&gt;&lt;a href=&quot;#2018-react%EC%9D%98-%ED%95%B4&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2018: React의 해&lt;/h2&gt;
+&lt;p&gt;React가 2017년 인기 경쟁에서 승리했다.&lt;/p&gt;
+&lt;p&gt;구글 트렌드가 보여주는 것처럼 Angular로 작업중인 개발자들이 여전히 많이 있다.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4fe200630cb0cdbaf09c22b68c89c473-74647.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 31.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsSAAALEgHS3X78AAAAsklEQVQY06WQ0arDMAiG8/5veM7NYIVtbbO0MdrEqunxsN3sYjDYj4ion4oBEUspRGRm/WMxs4iE4ws9YR/2drOIIdqSLEa9Xto05dMpDwMP53B4bbw9+Bc5ME+W7ga5t2br8khvlQviznInCcu66e/PE2bupXTvAzhU/3Nqu3bgHsncr62Xuvub1MQvDWPmNo0ewRyz2wox0ZzoFstlhjFtS65SlTIxboxlr7XVqiIV4A9X0F5daPzyOQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;2-interest-over-time.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4fe200630cb0cdbaf09c22b68c89c473-77393.png&quot;
+        srcset=&quot;/static/4fe200630cb0cdbaf09c22b68c89c473-76afe.png 265w,
+/static/4fe200630cb0cdbaf09c22b68c89c473-3ece8.png 530w,
+/static/4fe200630cb0cdbaf09c22b68c89c473-77393.png 1060w,
+/static/4fe200630cb0cdbaf09c22b68c89c473-7a243.png 1590w,
+/static/4fe200630cb0cdbaf09c22b68c89c473-74647.png 1600w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;하지만 React는 소비자 만족도 설문에서 꾸준히 우위를 점하고 있으며 React의 성장세는 Angular 및 그 외의 라이브버리의 그것을 완전히 제쳐 버렸다.&lt;/p&gt;
+&lt;h3 id=&quot;그럼-vuejs는-난-그게-요즘-인기를-끌고-있다고-들었는데&quot;&gt;&lt;a href=&quot;#%EA%B7%B8%EB%9F%BC-vuejs%EB%8A%94-%EB%82%9C-%EA%B7%B8%EA%B2%8C-%EC%9A%94%EC%A6%98-%EC%9D%B8%EA%B8%B0%EB%A5%BC-%EB%81%8C%EA%B3%A0-%EC%9E%88%EB%8B%A4%EA%B3%A0-%EB%93%A4%EC%97%88%EB%8A%94%EB%8D%B0&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;그럼 Vue.js는? 난 그게 요즘 인기를 끌고 있다고 들었는데?&lt;/h3&gt;
+&lt;p&gt;모두가 Vue.js같은 대안들에 대해 립서비스를 하길 좋아한다. 나는 작년 그에 대해 이런 얘기를 했었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://vuejs.org/&quot;&gt;Vue.js&lt;/a&gt;는 엄청난 수의 Github Star와 다운로드를 기록하고 있다. 지금처럼 나아간다면 2017년에도 큰 인기를 끌겠지만 나는 React나 Angular(둘 다 높은 성장세를 가지고 있다)를 따라잡을 것이라 생각하지는 않는다. Vue.js는 React나 Angular를 배운 다음에 하길 바란다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Vue.js는 2017년에 무척 성공적이었다. 수많은 헤드라인을 기록했고 많은 사람들이 관심을 가졌다. 그리고 내가 예측한대로 Vue.js는 React를 따라잡지 못했고, 2018년에도 그러리라고 확신한다. 이는 2018년에 Angular를 따라잡을 수는 있다는 말이다.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7dafeaa50ce35c879875ebc889c3bb65-74647.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 41.1875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsSAAALEgHS3X78AAAAiElEQVQY05WRzQrDIBCEff93TCHFm4d40uzPmI4VmlJCisO6DLrfsqzhuJKZrevzsSzMMUYAl2XB3VW1zQhmw8zBMHeR5gAz4ZzzHYzGuh6qEIX792PI2/aBOQ8bn6Hqt0MFHsLQjv00/qvApXGZOi/+SIdFhK7Wepp9HyalxMtSyqgeRt+G4Av6LtenxxDsjwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Vue.js 월별 다운로드 수&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7dafeaa50ce35c879875ebc889c3bb65-77393.png&quot;
+        srcset=&quot;/static/7dafeaa50ce35c879875ebc889c3bb65-76afe.png 265w,
+/static/7dafeaa50ce35c879875ebc889c3bb65-3ece8.png 530w,
+/static/7dafeaa50ce35c879875ebc889c3bb65-77393.png 1060w,
+/static/7dafeaa50ce35c879875ebc889c3bb65-7a243.png 1590w,
+/static/7dafeaa50ce35c879875ebc889c3bb65-74647.png 1600w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;Vue.js 월별 다운로드 수&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;표에서 볼 수 있는 것처럼 Vue.js의 다운로드는 Angular에 근접해가고 있다.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ffad4046cb2eae95913b7cb35a6e0307-74647.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 41.0625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsSAAALEgHS3X78AAAAgklEQVQY041Quw7EIAzL/3/lTUgMsPXyKKHntFepQlWL5cFENjHQdgcz+5xIKfXeb2207uhz8NaaKuhrw/Et7O6wBi14Ot1CUK11COP6vxU0eyhCpZQhjFaTryD0uoZjlftsGJ8WNUWCy1eZbQ5YGWERgZIdg8g5w8fMqorJIY4Jgj/kydeip5ULjwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;angular/core 월별 다운로드 수&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ffad4046cb2eae95913b7cb35a6e0307-77393.png&quot;
+        srcset=&quot;/static/ffad4046cb2eae95913b7cb35a6e0307-76afe.png 265w,
+/static/ffad4046cb2eae95913b7cb35a6e0307-3ece8.png 530w,
+/static/ffad4046cb2eae95913b7cb35a6e0307-77393.png 1060w,
+/static/ffad4046cb2eae95913b7cb35a6e0307-7a243.png 1590w,
+/static/ffad4046cb2eae95913b7cb35a6e0307-74647.png 1600w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;angular/core 월별 다운로드 수&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;하지만 React는 선두를 굳건히 지키고 있고 높은 성장률도 가지고 있다.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0a05a8d2e86e1e8b625c2e1e33e76376-74647.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 39.62500000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsSAAALEgHS3X78AAAAjklEQVQY051Qyw7DIAzL/38jEuyGtF448MqDzmzdYVsroVkokoNjHMjMxg9EJISbcy6E4L0HHWcgNd3XgZdY4D10TtGV6wcQr7P2bm+xqZoo3bftWylySOfhWZnPY6eU9ueWRx4W0MUl1mJfgGDA/4JgUGvtvSNCzhkV3VKKqrbWYozogL7UUKJCjCt84gMFRdfcjKPQBAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;React 월별 다운로드 수&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0a05a8d2e86e1e8b625c2e1e33e76376-77393.png&quot;
+        srcset=&quot;/static/0a05a8d2e86e1e8b625c2e1e33e76376-76afe.png 265w,
+/static/0a05a8d2e86e1e8b625c2e1e33e76376-3ece8.png 530w,
+/static/0a05a8d2e86e1e8b625c2e1e33e76376-77393.png 1060w,
+/static/0a05a8d2e86e1e8b625c2e1e33e76376-7a243.png 1590w,
+/static/0a05a8d2e86e1e8b625c2e1e33e76376-74647.png 1600w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;React 월별 다운로드 수&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Vue.js의 성장 속도는 React보다 빠르다. 왜 2017년의 React vs Angular의 구도와는 다른 것일까?&lt;/p&gt;
+&lt;p&gt;2016년 말, 자바스크립트 세계는 새로운 프레임워크를 받아들일 준비가 되어 있었다. Angular 유저는 무척 불만족스러운 상황이었고, React의 유저들은 무척 만족스러운 상태였다. 많은 사람들이 React를 공부하려고 했고 소수의 사람들만이 Angular를 배우길 원했다. 2017년 말 시점에 Angular 2+에 대한 만족도는 여전히 절반 이하인 49%다.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;React와 Vue.js의 대결은 상황이 무척 다르다.&lt;/em&gt; &lt;a href=&quot;https://stateofjs.com/2017/front-end/results&quot;&gt;React의 유저 만족도는 Vue.js를 근소한 차이로 앞서고 있다&lt;/a&gt;(93% 대 90%). 유저들이 React에서 다른 라이브러리로 넘어가게 된 큰 계기는 2017년 초의 React 오픈소스 라이센스와 관련된 혼란이었다. 페이스북은 유저들의 의견을 받아들인 후 라이센스를 교체했다.&lt;/p&gt;
+&lt;p&gt;이 단계에서 나는 시장이 React에서 다른 라이브러리로 이동하고 있다는 합당한 근거를 보지 못했다. Vue.js는 Angular나 jQuery의 유저는 쉽게 데려올 수 있다. 하지만 React의 유저를 뺏어오기는 쉽지 않으므로 꾸준한 성장세는 곧 벽에 부딪힐 것으로 보인다.&lt;/p&gt;
+&lt;p&gt;나는 Vue.js가 1~2년에 걸쳐 급속한 성장을 할 것이라 예상한다. 그리고 1등의 자리를 놓고 React와 치열한 경쟁을 벌이겠지만 그 균형을 깨드릴 무언가 큰 변화가 없다면 Vue.js는 React에 이어 2번째 자리에 머물 것이다.&lt;/p&gt;
+&lt;h2 id=&quot;채용&quot;&gt;&lt;a href=&quot;#%EC%B1%84%EC%9A%A9&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;채용&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;jQuery는 무너졌다&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;채용 목록에서 React는 완전히 jQuery를 넘어섰다–&lt;strong&gt;채용 인기도에서 jQuery를 넘어선 라이브러리는 지난 10년동안 React가 처음이다&lt;/strong&gt;. 우리는 지금 한 시대의 종말을 목도하고 있다.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ccef8a80b6799036efdacba0ea3b3dba-21919.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 59.93930197268589%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAAA9UlEQVQoz51Syw7BQBTtH7PgByS6wEZIVMJCWq/EgrARa5GwFEGlHVYSsZj0mT65TEOnYRJuzjzu6Zw5M3PL3Z7h+/6NjjAMGSlhOBg0TeNFOV3dM5Cq7hLMcosfYtd1G+NjsUeh0EWMFLBWNS4IAsMwePGxNwuVaDJdXcmxQcjB0cG5OTmW+hSKPfQxXWzwWwxKcC50DllBZiBT20OfaymvB4ucHccRhiovUcgnUlGBvjw4UWJyZ+JsOcG32sCyRKkiZ8/zhBHi28j+VQzNNE1wlmZnxl/xWUzqXB+h4fzyjxgC3iz+wbZty7LijK7rQMYZjPEd4jZnXlfYfbIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;React의 성장 - 지난 10년간 jQuery를 넘어선 첫번째 라이브러리(출처: Indeed.com)&quot;
+        title=&quot;&quot;
+        src=&quot;/static/ccef8a80b6799036efdacba0ea3b3dba-77393.png&quot;
+        srcset=&quot;/static/ccef8a80b6799036efdacba0ea3b3dba-76afe.png 265w,
+/static/ccef8a80b6799036efdacba0ea3b3dba-3ece8.png 530w,
+/static/ccef8a80b6799036efdacba0ea3b3dba-77393.png 1060w,
+/static/ccef8a80b6799036efdacba0ea3b3dba-21919.png 1318w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;React의 성장 - 지난 10년간 jQuery를 넘어선 첫번째 라이브러리(출처: Indeed.com)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;작년의 차트와 비교해보자.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/66bb9765ed8729fbb66aff21e160437c-2f472.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 605px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 58.18181818181818%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABAElEQVQoz2P4////nz9//sPAv3//iGGfufHxy7c/DA8ePNh+5JFTzmliUFT9JaDmv3/+Xr33+euPPwxAzsNnH/aeeQtBu0+9xsM+evk9RDPECQz37t3bdvihfeYpTJTfdx3uVLgGFM1A/OjZhwPn3kHQvjNv4OxzNz4Q0Ay0eeP++0YJx+Fo2a7nEDnkgMRp8+PnH45cfA9Bh86/ffr6B7GaHz58uHH/A/3YY9PXPULTQJTNz199vHD70/O3P0jW/OTJk5ev32PVQJTN37//gEv8/v0bnph+/fqFzP779y+aOETzd7jmp0+fwrmPHz+GsIHanj179vnzZ4hzgGogbAASBIrmCTgFxwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;jQuery는 2016년에도 여전했다&quot;
+        title=&quot;&quot;
+        src=&quot;/static/66bb9765ed8729fbb66aff21e160437c-2f472.png&quot;
+        srcset=&quot;/static/66bb9765ed8729fbb66aff21e160437c-8e63e.png 265w,
+/static/66bb9765ed8729fbb66aff21e160437c-8a494.png 530w,
+/static/66bb9765ed8729fbb66aff21e160437c-2f472.png 605w&quot;
+        sizes=&quot;(max-width: 605px) 100vw, 605px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;jQuery는 2016년에도 여전했다&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;여기서 정말 흥미로운 점은 다른 라이브러리들이 jQuery가 떨어진 것보다 더 많이 성장했다는 사실이다. 프론트 엔드 프레임워크와 관련된 채용 정보는 지난해 1만개 이상 늘어났다.&lt;/p&gt;
+&lt;p&gt;채용 기회의 증가와 함께 평균 연봉의 증가도 확인할 수 있다. 2016년말의 9만3천 달러와 비교하면 &lt;a href=&quot;https://www.indeed.com/salaries/Javascript-Developer-Salaries&quot;&gt;11만 달러&lt;/a&gt;로 늘어났다. 같은 기간 물가 상승률은 2%로 연봉 상승률보다 훨씬 낮다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;채용 정보 조사는 Indeed.com에서 이루어졌다. 거짓 양성을 가려내기 위해, 나는 검색 결과의 연관성을 높이기 위해 “software” 키워드로 검색했고 결과를 ~1.5의 값으로 곱했다(프로그래밍 관련 채용 정보 중에 “software” 키워드를 사용하는 것과 그렇지 않은 것의 대략적인 차이) 모든 SERP는 날짜와 연관성이 있는 부분으로 정렬되었다. 결과는 100% 정확하지는 않다. 하지만 이 글에서 사용된 근사치로 사용하기에는 충분하다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;프레임워크-추천&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC-%EC%B6%94%EC%B2%9C&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프레임워크 추천&lt;/h2&gt;
+&lt;p&gt;올해의 수치를 확인한 후 나는 React를 가장 일반적인 앱 개발 방법으로 추천할 준비가 되었다. 여기서 말하는 앱은 모바일 앱(PWA, React Native), 웹 어플리케이션, 사무용 앱, 데스크탑용 미디어 컨텐츠 제작 도구를 포함한다(&lt;a href=&quot;https://electronjs.org/&quot;&gt;Electron&lt;/a&gt;을 확인해보길 바란다).&lt;/p&gt;
+&lt;p&gt;다른 도구를 이용하는 편이 좋은 영역에는 단순한 랜딩 페이지(프레임워크를 완전히 배제하라), 3D 게임, AR/VR이 있다. 3D 컨텐츠를 위해서는 Unity, Unreal, 또는 PlayCanvas를 살펴보길 바란다. 이는 React가 3D 컨텐츠 UI 개발에도 사용되고 있다는 말이다.&lt;/p&gt;
+&lt;p&gt;나는 올해 다른 모든 프레임워크를 엄밀히 말하자면 선택 사항으로 분류했다. 이는 그 프레임워크들이 좋지 않다는 의미가 아니며 단지 채용 시장에서 React에 견줄만한 경쟁자가 아니기 때문이다. 이 목록은 학습시간 투자 대비 효과에 관한 것이며 어떤 기술이 “최고”인지에 관한 것이 아님을 기억하길 바란다.&lt;/p&gt;
+&lt;h2 id=&quot;왜-이렇게-react는-많은-관심을-받고-있는가&quot;&gt;&lt;a href=&quot;#%EC%99%9C-%EC%9D%B4%EB%A0%87%EA%B2%8C-react%EB%8A%94-%EB%A7%8E%EC%9D%80-%EA%B4%80%EC%8B%AC%EC%9D%84-%EB%B0%9B%EA%B3%A0-%EC%9E%88%EB%8A%94%EA%B0%80&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;왜 이렇게 React는 많은 관심을 받고 있는가?&lt;/h2&gt;
+&lt;p&gt;React 직업 목록을 살펴보면서 나는 흥미로운 트렌드를 발견했다. 많은 직업들이 우리가 프론트엔드 웹 개발과 관련없다고 생각했던 것이었다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;React Native(Vue.js와 관련된 직업의 수보다 React Native와 관련된 직업이 더 많을 것이다)&lt;/li&gt;
+&lt;li&gt;React for IOT&lt;/li&gt;
+&lt;li&gt;React for AR/VR (Oculus Rift가 채용을 주도하고 있다)&lt;/li&gt;
+&lt;li&gt;들어본 적이 없는 모호한 컴퓨팅 작업을 위한 React&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;React는 웹이라는 기본 틀에서 벗어났다&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;다양한 쓰임새는 React의 큰 강점 중의 하나다. 다른 많은 프레임워크와는 달리 React에 투자하는 것은 단순히 데이터 모델이나 브라우저나 DOM에 한정되지 않는다. 사실 나는 자바스크립트를 언급조차 하지 않는 꽤 많은 수의 직업을 찾아냈다.&lt;/p&gt;
+&lt;p&gt;또 React는 사실상의 표준이 되어 다양하고 풍부한 개발 생태계를 제공한다. 이는 jQuery 플러그인이 웹을 지배한 이후로 없었던 일이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;문제는 더 이상 “어떤 프레임워크를 쓸 것인가?”가 아니라 “어떤 기술이 React와 가장 잘 맞는가”이다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;어떤 프레임워크도 2018년에는 React의 위치를 넘어설 수 없을 것으로 보인다 (아마도 2019년에도). 당신은 안전하다. 자바스크립트 피로감은 이제 진정될 것처럼 보인다. 우리는 앱 개발에 필요한 멋진 프레임워크를 가지고 있으며 React를 중심으로 훌륭한 개발 생태계가 자리잡고 있다.&lt;/p&gt;
+&lt;h2 id=&quot;어떤-주제를-공부해야-하는가&quot;&gt;&lt;a href=&quot;#%EC%96%B4%EB%96%A4-%EC%A3%BC%EC%A0%9C%EB%A5%BC-%EA%B3%B5%EB%B6%80%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94%EA%B0%80&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;어떤 주제를 공부해야 하는가?&lt;/h2&gt;
+&lt;p&gt;지난해처럼 자바스크립트와 웹 개발의 기본에 집중해야하는 것에는 변함이 없다. 하지만 React 앱을 위한 함수형 프로그래밍에 조금 더 중점을 두어야 한다.&lt;/p&gt;
+&lt;p&gt;React를 훌륭하게 만드는 데에는 2가지 주요 요소가 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;결정적인 뷰 렌더링&lt;/li&gt;
+&lt;li&gt;DOM을 직접 조작하지 않고 뷰 레이어를 추상화시키는 것&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위의 두가지를 염두에 두면서, 당신이 공부해야 하는 주제는 아래와 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/a-functional-programmers-introduction-to-javascript-composing-software-d670d14ede30&quot;&gt;&lt;strong&gt;기본 ES6 문법&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/why-composition-is-harder-with-classes-c3e627dcd0aa&quot;&gt;&lt;strong&gt;Class 문법과 그것의 많은 결점들&lt;/strong&gt;&lt;/a&gt; – React 컴포넌트 작성을 위해 Class를 사용하는 것은 괜찮다. 하지만 직접 만든 클래스를 상속하는 방법은 피해야 하며, &lt;code&gt;instanceOf&lt;/code&gt;의 사용을 피해야 하고, 다른 사람들이 당신이 작성한 클래스 &lt;code&gt;new&lt;/code&gt; 키워드와 함께 사용하지 않도록 한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/composing-software-an-introduction-27b72500d6ea&quot;&gt;&lt;strong&gt;함수형 프로그래밍 &amp;#x26; 소프트웨어 컴포지션&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/a-functional-programmers-introduction-to-javascript-composing-software-d670d14ede30#0355&quot;&gt;&lt;strong&gt;Currying&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36&quot;&gt;&lt;strong&gt;Closures&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976&quot;&gt;&lt;strong&gt;Pure functions&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261&quot;&gt;&lt;strong&gt;Promises&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/7-surprising-things-i-learned-writing-a-fibonacci-generator-4886a5c87710&quot;&gt;&lt;strong&gt;Generators&lt;/strong&gt;&lt;/a&gt; &amp;#x26; &lt;a href=&quot;https://medium.com/javascript-scene/the-hidden-power-of-es6-generators-observable-async-flow-control-cfa4c7f31435&quot;&gt;&lt;strong&gt;async functions&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/the-outrageous-cost-of-skipping-tdd-code-reviews-57887064c412&quot;&gt;&lt;strong&gt;TDD&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.smashingmagazine.com/2015/10/rail-user-centric-model-performance/&quot;&gt;&lt;strong&gt;Rail 성능 모델&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Progressive 웹 어플리케이션&lt;/strong&gt; (PWA): &lt;a href=&quot;https://medium.com/javascript-scene/native-apps-are-doomed-ac397148a2c0&quot;&gt;“네이티브 앱은 이제 끝났다”&lt;/a&gt;와 &lt;a href=&quot;https://medium.com/javascript-scene/why-native-apps-really-are-doomed-native-apps-are-doomed-pt-2-e035b43170e9&quot;&gt;“네이티브 앱이 끝난 진짜 이유”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GraphQ&lt;/strong&gt;L은 2017년에 많이 성숙해졌으며 REST API를 빠르게 따라잡고 있다. Apollo는 오프라인 우선 캐시 아키텍쳐를 기본 사양으로 추가했으며 이로 인해 2018년에는 Apollo+GraphQL이 Redux의 진지한 대안 또는 보완물이 될 것이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;라이브러리--개발-도구&quot;&gt;&lt;a href=&quot;#%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC--%EA%B0%9C%EB%B0%9C-%EB%8F%84%EA%B5%AC&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;라이브러리 &amp;#x26; 개발 도구&lt;/h2&gt;
+&lt;p&gt;아래는 내가 가장 유용하다고 여기는 라이브러리와 도구들이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://reactjs.org/&quot;&gt;&lt;strong&gt;React&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://redux.js.org/&quot;&gt;&lt;strong&gt;Redux&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/redux-saga/redux-saga&quot;&gt;&lt;strong&gt;Redux-Saga&lt;/strong&gt;&lt;/a&gt; – 비동기 I/O 처리와 사이드 이펙트의 분리&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zeit/next.js/&quot;&gt;&lt;strong&gt;Next.js&lt;/strong&gt;&lt;/a&gt; – Node와 Express 기반의 서버 사이드 렌더링, 번들 파일 자동 분리, styled-jsx&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.material-ui.com/&quot;&gt;&lt;strong&gt;Material UI&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/storybooks/storybook&quot;&gt;&lt;strong&gt;Storybook&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cheeriojs/cheerio&quot;&gt;&lt;strong&gt;Cheerio&lt;/strong&gt;&lt;/a&gt; – React 컴포넌트 유닛 테스팅(나는 Enzyme보다 선호한다)f&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://lodash.com/&quot;&gt;&lt;strong&gt;Lodash&lt;/strong&gt;&lt;/a&gt;. 번들 파일의 사이즈가 크게 늘어나지 않도록 필요한 유틸리티만 불러와서 사용하길 바란다(나는 &lt;code&gt;lodash/fp&lt;/code&gt;의 유틸리티를 선호한다)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://babeljs.io/&quot;&gt;&lt;strong&gt;Babel&lt;/strong&gt;&lt;/a&gt; – ES6를 구형 브라우저에서 사용할 수 있도록 컴파일하는데 사용&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://webpack.github.io/&quot;&gt;&lt;strong&gt;Webpack&lt;/strong&gt;&lt;/a&gt; – 표준 자바스크립트 위한 가장 인기있는 번들러.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://eslint.org/&quot;&gt;&lt;strong&gt;ESLint&lt;/strong&gt;&lt;/a&gt; – 문법 오류와 스타일 이슈를 빨리 찾아낸다. 코드 리뷰와 TDD 다음으로 버그를 줄이기에 가장 좋은 도구&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ramdajs.com/&quot;&gt;&lt;strong&gt;Ramda&lt;/strong&gt;&lt;/a&gt; – 대개 함수형 프로그래밍의 lense와 transducer로 사용된다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/javascript-scene/introduction-to-node-express-90c431f9e6fd#.gl2r6gcnn&quot;&gt;&lt;strong&gt;Node &amp;#x26; Express&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://reactivex.io/rxjs/&quot;&gt;&lt;strong&gt;RxJS&lt;/strong&gt;&lt;/a&gt; – Javascript에서 사용하는 Observable. 최근에 나는 transducer를 더 맣이 사용했다. 번들 파일의 사이즈를 키우지 않으려면 &lt;a href=&quot;https://github.com/ReactiveX/rxjs#es6-via-npm&quot;&gt;patch import&lt;/a&gt;를 사용하는 것을 잊지 말길 바란다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;TypeScript&lt;/strong&gt;는 2017년에 많은 관심을 받았다. 하지만 나는 TypeScript가 작업에 방해가 되기도 하며, 앱 개발에 도움을 주는 것 이상으로 복잡도를 높인다는 사실을 확인했다. TypeScript이 주된 단점은 타입 추론보다 타입 명시에 과도하게 의존하고 있다는 점이다. 그리고 고차 함수의 타입 정의는 엄청난 왜곡 없이는 제대로 할 수 없기도 하다. 나는 한동안 온종일 TypeScript을 사용해봤지만, 이 글은 여전히 유효하다: &lt;a href=&quot;https://medium.com/javascript-scene/the-shocking-secret-about-static-types-514d39bf30a3&quot;&gt;“정적 타입에 대한 충격적인 비밀”&lt;/a&gt; &amp;#x26; &lt;a href=&quot;https://medium.com/javascript-scene/you-might-not-need-typescript-or-static-types-aa7cb670a77b&quot;&gt;“당신에게는 TypeScript가 필요없을 수도 있다.”&lt;/a&gt;. Flow도 같은 문제가 있으며 개발 도구가 TypeScript의 그것만큼 훌륭하지 않다. (역주: Flow는 Nuclide, TypeScript는 VS Code)&lt;/p&gt;
+&lt;h2 id=&quot;2018년에-주목해야-할-기술&quot;&gt;&lt;a href=&quot;#2018%EB%85%84%EC%97%90-%EC%A3%BC%EB%AA%A9%ED%95%B4%EC%95%BC-%ED%95%A0-%EA%B8%B0%EC%88%A0&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2018년에 주목해야 할 기술&lt;/h2&gt;
+&lt;p&gt;2018년에 아래 영역의 R&amp;#x26;D는 모두 채용 수요가 늘어나고 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Progressive Web Apps(PWAs)&lt;/li&gt;
+&lt;li&gt;블럭체인 &amp;#x26; 핀테크&lt;/li&gt;
+&lt;li&gt;의료 기술&lt;/li&gt;
+&lt;li&gt;AR/VR – 홀로렌즈, 메타와 ODG는 현재 발매중이다. ODG R-9은 2017년 발매 예정이었지만 2018년에는 가능할 것으로 보인다. MagicLeap는 2018년 출시를 약속했다. AR은 휴대폰이 그랬던 것 이상으로 사용자의 경험을 바꿔놓을 것이다.&lt;/li&gt;
+&lt;li&gt;3D 프린팅&lt;/li&gt;
+&lt;li&gt;AI&lt;/li&gt;
+&lt;li&gt;드론&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;양자 컴퓨팅 또한 세계를 바꿔놓을 준비가 되었다. 하지만 2019년 또는 혼란스러운 과도기를 지난 다음이 될 것 같다. 현재 온라인에는 작동중인 양자 컴퓨터가 있지만 아직 많은 일을 하지는 못한다. 아직은 많은 개발자들에게 실험적인 제품을 만들기에도 이르다. 마이크로소프트는 최근 양자 컴퓨팅을 위한 &lt;a href=&quot;https://arstechnica.com/gadgets/2017/12/microsofts-q-quantum-programming-language-out-now-in-preview/&quot;&gt;Q# 프로그래밍 언어&lt;/a&gt;를 발표했다. 그리고 IBM와 구글도 클라우드 양자 컴퓨팅 시장을 선점하기 위한 투자를 계속하고 있다.&lt;/p&gt;
+&lt;p&gt;만약 양자 컴퓨팅을 배우기 위한 준비를 하고 싶다면, &lt;a href=&quot;https://mitpress.mit.edu/books/quantum-algorithms-linear-algebra&quot;&gt;선형대수학&lt;/a&gt;을 공부해야 한다. 그리고 &lt;a href=&quot;https://plato.stanford.edu/entries/lambda-calculus/&quot;&gt;람다 대수&lt;/a&gt;에 기반한 양자 컴퓨팅의 기능적 탐구도 해야 한다.&lt;/p&gt;
+&lt;p&gt;아마도, AI에서 그랬던 것처럼, 수학적인 기반 지식이 적은 사람들도 양자 컴퓨팅의 능력의 일부를 사용할 수 있도록 클라우드 API가 개발될 것이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TypeScript로 작성하는 React-Redux 앱]]></title><description><![CDATA[몇 개의 시스템 관리 도구를 개발하면서 느꼈던 점은 서버에서 내려받은 데이터를 다룰 때 데이터의 형태가 타입으로 정의되어 있지 않다 보니 API…]]></description><link>https://rhostem.github.io/posts/2018-01-15-react-redux-typescript/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-01-15-react-redux-typescript/</guid><category><![CDATA[TypeScript]]></category><category><![CDATA[React]]></category><category><![CDATA[Redux]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Mon, 15 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;몇 개의 시스템 관리 도구를 개발하면서 느꼈던 점은 서버에서 내려받은 데이터를 다룰 때 데이터의 형태가 타입으로 정의되어 있지 않다 보니 API 문서나 개발 도구의 네트워크 탭, 어떤 경우에는 콘솔 로그를 찍어야 하는 일이 많아서 불편하다는 점이었다. 특히 앱의 규모가 커지고 다뤄야 하는 데이터가 많아질수록 그로 인한 오류는 더욱 자주 발생하곤 했다. 자바스크립트가 동적 타입 언어다 보니 생기는 어쩔 수 없는 문제라고 할 수 있다. 물론 특정 데이터의 기본값을 확장하는 방법과 에디터의 도움을 받으면 어느 정도 극복은 가능하다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;getData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;res &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;assign&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; DEFAULT_DATA&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
@@ -706,7 +1054,7 @@ prod
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;hr&gt;
-&lt;p&gt;FTP를 파일을 배포할 일이 있으면 Filezilla 같은 간편한 앱만 사용했었다. 업로드할 때마다 파인더에서 폴더를 찾고, 원격 폴더도 테스트인지 운영인지 확인하는 과정이 귀찮아져서 업로드 프로세스를 자동화시켜 보았다. 개발자라면 역시 &lt;a href=&quot;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY 원칙&lt;/a&gt;을 지키고 싶어지는 법이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Typescript로 NPM 패키지 만들기]]></title><description><![CDATA[최근 Typescript를 사용하는 Angular(version>=2.x…]]></description><link>https://rhostem.github.io/posts/2017-08-14-typescript-npm-package/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2017-08-14-typescript-npm-package/</guid><category><![CDATA[Typescript]]></category><category><![CDATA[Angular]]></category><category><![CDATA[npm]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Mon, 14 Aug 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;최근 Typescript를 사용하는 Angular(version&gt;=2.x)로 작업을 진행하면서 만들었던 자동완성 컴포넌트가 있었다. 널리 쓰이는 자동완성 컴포넌트에 비해서 뛰어나다고 할 순 없지만 나름 확장성을 고려해서 만들었고 오류 검증도 된 상태였기 때문에 공부하는 셈 치고 NPM 패키지로 만들어보았다. 지금껏 수많은 오픈소스 패키지들을 사용해 왔지만 직접 만들어 본 적은 한 번도 없었기 때문이다.&lt;/p&gt;
+&lt;p&gt;FTP를 파일을 배포할 일이 있으면 Filezilla 같은 간편한 앱만 사용했었다. 업로드할 때마다 파인더에서 폴더를 찾고, 원격 폴더도 테스트인지 운영인지 확인하는 과정이 귀찮아져서 업로드 프로세스를 자동화시켜 보았다. 개발자라면 역시 &lt;a href=&quot;https://en.wikipedia.org/wiki/Don%27t_repeat_yourself&quot;&gt;DRY 원칙&lt;/a&gt;을 지키고 싶어지는 법이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[TypeScript로 NPM 패키지 만들기]]></title><description><![CDATA[최근 TypeScript를 사용하는 Angular(version>=2.x…]]></description><link>https://rhostem.github.io/posts/2017-08-14-typescript-npm-package/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2017-08-14-typescript-npm-package/</guid><category><![CDATA[TypeScript]]></category><category><![CDATA[Angular]]></category><category><![CDATA[npm]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Mon, 14 Aug 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;최근 TypeScript를 사용하는 Angular(version&gt;=2.x)로 작업을 진행하면서 만들었던 자동완성 컴포넌트가 있었다. 널리 쓰이는 자동완성 컴포넌트에 비해서 뛰어나다고 할 순 없지만 나름 확장성을 고려해서 만들었고 오류 검증도 된 상태였기 때문에 공부하는 셈 치고 NPM 패키지로 만들어보았다. 지금껏 수많은 오픈소스 패키지들을 사용해 왔지만 직접 만들어 본 적은 한 번도 없었기 때문이다.&lt;/p&gt;
 &lt;h2 id=&quot;npm&quot;&gt;&lt;a href=&quot;#npm&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;NPM&lt;/h2&gt;
 &lt;p&gt;NPM은 Javascript 패키지 관리자다. 개발자들이 서로의 코드를 쉽게 공유할 수 있는 시스템을 구축해 둔 덕분에 자바스크립트 커뮤니티는 짧은 시간 안에 큰 양적인 성장을 이룰 수 있었다. 패키지 다운로드도 편리하고 버전, 의존성 관리도 잘 되어있기 때문에 서로가 서로의 패키지를 사용하면서 거대한 자바스크립트 소프트웨어 생태계가 구축된 상태다.&lt;/p&gt;
 &lt;p&gt;
@@ -810,7 +1158,7 @@ prod
       &lt;/div&gt;
 &lt;h3 id=&quot;name&quot;&gt;&lt;a href=&quot;#name&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;name&lt;/h3&gt;
 &lt;p&gt;이름은 중복되지 않는 고유한 이름을 사용해야 한다.&lt;/p&gt;
-&lt;p&gt;그런데 패키지의 수가 50만을 향해가고 있기 때문에 적당한 이름을 만들기가 무척 어려워진 상태다. 그래서 패키지 이름 앞에 &lt;a href=&quot;https://docs.npmjs.com/getting-started/scoped-packages&quot;&gt;scope&lt;/a&gt;를 붙일 수도 있다. 대표적으로는 Javascript로 작성된 패키지를 Typescript에서 사용하기 위해 타입 정의 파일(&lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html&quot;&gt;declaration file&lt;/a&gt;)을 제공하는 패키지 앞에 붙이는 &lt;a href=&quot;https://www.npmjs.com/search?q=@types&amp;#x26;page=1&amp;#x26;ranking=optimal&quot;&gt;@types&lt;/a&gt;가 있다. 예를 들어 lodash 패키지의 타입 정의 파일은 @types/lodash 패키지에 배포되고 있다.&lt;/p&gt;
+&lt;p&gt;그런데 패키지의 수가 50만을 향해가고 있기 때문에 적당한 이름을 만들기가 무척 어려워진 상태다. 그래서 패키지 이름 앞에 &lt;a href=&quot;https://docs.npmjs.com/getting-started/scoped-packages&quot;&gt;scope&lt;/a&gt;를 붙일 수도 있다. 대표적으로는 Javascript로 작성된 패키지를 TypeScript에서 사용하기 위해 타입 정의 파일(&lt;a href=&quot;https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html&quot;&gt;declaration file&lt;/a&gt;)을 제공하는 패키지 앞에 붙이는 &lt;a href=&quot;https://www.npmjs.com/search?q=@types&amp;#x26;page=1&amp;#x26;ranking=optimal&quot;&gt;@types&lt;/a&gt;가 있다. 예를 들어 lodash 패키지의 타입 정의 파일은 @types/lodash 패키지에 배포되고 있다.&lt;/p&gt;
 &lt;h3 id=&quot;version&quot;&gt;&lt;a href=&quot;#version&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;version&lt;/h3&gt;
 &lt;p&gt;패키지의 버전을 명시한다. 배포를 위해서는 &lt;a href=&quot;http://semver.org/&quot;&gt;유효한 버전 문자열&lt;/a&gt;이 작성되어 있어야 하고 이전 배포 버전과 같아서는 안된다. &lt;a href=&quot;https://docs.npmjs.com/cli/version&quot;&gt;npm version 명령어&lt;/a&gt;를 사용하면 패키지의 버전을 major, minor, patch 등의 상황에 맞는 버전 문자열로 자동으로 업데이트하고 배포 관련 npm script도 자동으로 실행할 수 있다.&lt;/p&gt;
 &lt;h3 id=&quot;main&quot;&gt;&lt;a href=&quot;#main&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;main&lt;/h3&gt;
@@ -821,8 +1169,8 @@ prod
       &lt;/div&gt;
 &lt;p&gt;위의 코드에서는 &lt;code&gt;Ng2SimpleAutocomplete&lt;/code&gt;라는 모듈을 불러왔다. main에 지정된 파일에 해당 모듈이 export되어 있지 않다면 자연스럽게 not found 에러가 발생할 것이다.&lt;/p&gt;
 &lt;h3 id=&quot;typings&quot;&gt;&lt;a href=&quot;#typings&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;typings&lt;/h3&gt;
-&lt;p&gt;타입 정의 파일의 위치를 명시한다. 일반 Javascript 패키지에는 필요하지 않지만 Typescript로 개발된 패키지는 이 항목이 필요하다.&lt;/p&gt;
-&lt;p&gt;NPM은 Javascript로 작성된 모듈을 불러올 수 있으므로 Typescript로 패키지를 작성했더라도 배포된 파일은 Javascript로 컴파일된 형태여야 한다. 그리고 컴파일된 파일에는 Typescript에서 작성한 타입 주석이 모두 제외되어 있다. 게다가 interface 처럼 Typescript에만 있는 값을 export했을 경우에는 해당 모듈을 아예 찾을 수 없다는 에러를 발생시킨다. 그래서 컴파일 시에 타입 정의 파일도 생성시키도록 하고, package.json 파일에도 typings 항목을 작성해야 Typescript로 작성된 모듈을 NPM을 통해 공유할 수 있다.&lt;/p&gt;
+&lt;p&gt;타입 정의 파일의 위치를 명시한다. 일반 Javascript 패키지에는 필요하지 않지만 TypeScript로 개발된 패키지는 이 항목이 필요하다.&lt;/p&gt;
+&lt;p&gt;NPM은 Javascript로 작성된 모듈을 불러올 수 있으므로 TypeScript로 패키지를 작성했더라도 배포된 파일은 Javascript로 컴파일된 형태여야 한다. 그리고 컴파일된 파일에는 TypeScript에서 작성한 타입 주석이 모두 제외되어 있다. 게다가 interface 처럼 TypeScript에만 있는 값을 export했을 경우에는 해당 모듈을 아예 찾을 수 없다는 에러를 발생시킨다. 그래서 컴파일 시에 타입 정의 파일도 생성시키도록 하고, package.json 파일에도 typings 항목을 작성해야 TypeScript로 작성된 모듈을 NPM을 통해 공유할 수 있다.&lt;/p&gt;
 &lt;h3 id=&quot;scripts&quot;&gt;&lt;a href=&quot;#scripts&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;scripts&lt;/h3&gt;
 &lt;p&gt;NPM 스크립트를 사용하면 패키지에 설치된 모듈을 실행할 수 있다. NPM 스크립트를 사용하지 않더라도 아래와 같은 방법으로 실행할 수 있긴 한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
@@ -833,9 +1181,9 @@ prod
 &lt;h3 id=&quot;dependencies--devdependencies&quot;&gt;&lt;a href=&quot;#dependencies--devdependencies&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;dependencies &amp;#x26; devDependencies&lt;/h3&gt;
 &lt;p&gt;패키지에 설치된 다른 NPM 모듈들의 이름과 버전이 명시되어 있다. 처음 NPM을 사용했을 땐 왜 저 두 항목으로 구분해 두었는지 이해가 가지 않았지만 패키지 배포의 측면에서 생각해보니 쉽게 이해가 되었다.&lt;/p&gt;
 &lt;p&gt;dependencies 항목에 포함된 패키지들은 패키지를 공유받은 사람에게 필요한 패키지들이다. 하지만 devDependencies 항목의 패키지들은 공유받은 사람들에게는 없어도 되는 패키지들이다. dependencies에 @angular/core 같은 필수 패키지가 들어간다면 devDependencies에는 테스트, 배포를 위한 패키지들이 들어간다고 볼 수 있다. 하지만 배포를 하지 않는다면 굳이 구분할 필요는 없고, 배포된다 하더라도 딱히 문제를 발생시키지는 않는다. 다만 패키지의 덩치를 필요없이 키우는 결과를 낳기 때문에 좋은 소리는 듣지 못할 것이다.&lt;/p&gt;
-&lt;h2 id=&quot;typescript-파일-컴파일&quot;&gt;&lt;a href=&quot;#typescript-%ED%8C%8C%EC%9D%BC-%EC%BB%B4%ED%8C%8C%EC%9D%BC&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Typescript 파일 컴파일&lt;/h2&gt;
+&lt;h2 id=&quot;typescript-파일-컴파일&quot;&gt;&lt;a href=&quot;#typescript-%ED%8C%8C%EC%9D%BC-%EC%BB%B4%ED%8C%8C%EC%9D%BC&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TypeScript 파일 컴파일&lt;/h2&gt;
 &lt;p&gt;이번 패키지를 개발할 때 테스트 코드는 작성하지 않았고 브라우저에서 작동되는 모습을 보면서 개발을 진행했다. 그래서 일반 앱처럼대신 프로젝트를 구성하는 대신  배포를 위한 빌드 프로세스만 따로 추가하는 방법을 사용했다. 프로젝트 베이스로는 &lt;a href=&quot;https://github.com/AngularClass/angular-starter&quot;&gt;angular starter&lt;/a&gt;를 사용했고 빌드 프로세스 구성에는 Gulp를 사용했다. 그래서 tsconfig.json 파일도 개발용 앱을 위한 설정, 빌드를 위한 설정을 가진 파일을 따로 만들어서 사용했다.&lt;/p&gt;
-&lt;p&gt;아래 소스는 Typescript 파일을 Javascript 파일로 변환하는 과정이다.&lt;/p&gt;
+&lt;p&gt;아래 소스는 TypeScript 파일을 Javascript 파일로 변환하는 과정이다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
       &lt;pre class=&quot;language-js&quot;&gt;&lt;code&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; gulp &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;gulp&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; ts &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;gulp-typescript&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -886,7 +1234,7 @@ node_modules
       &lt;/div&gt;
 &lt;p&gt;그리고 Git 저장소에서 npm version 명령어를 사용하면 변경된 package.json 파일을 자동으로 커밋해준다. 커밋 메시지에는 버전명이 들어간다.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;첫 NPM 패키지 개발을 Typescript로 진행하다보니 문제도 많이 발생했고 시간도 제법 많이 걸렸다. 그래도 처음부터 끝까지 하나의 과정을 진행하고 마무리 지으며 많은 부분을 경험할 수 있어서 좋았다.&lt;/p&gt;
+&lt;p&gt;첫 NPM 패키지 개발을 TypeScript로 진행하다보니 문제도 많이 발생했고 시간도 제법 많이 걸렸다. 그래도 처음부터 끝까지 하나의 과정을 진행하고 마무리 지으며 많은 부분을 경험할 수 있어서 좋았다.&lt;/p&gt;
 &lt;p&gt;그리고 내가 배포한 패키지의 다운로드 수가 적다 하더라도 불특정 다수에게 공개된다고 생각하니 코드 작성에 더 신중해지고 오류가 발생해도 빠르게 대처하게 되었다. 이는 자율적으로 하는 작업과 실무처럼 외부의 요구에 의해 하는 작업의 차이에서 왔을 것이다. 구글같은 회사에서 왜 직원들에게 일정 시간은 개인 프로젝트를 진행하게 하는지 그 이유를 제대로 알게 되었다고나 할까.&lt;/p&gt;
 &lt;p&gt;이번에 개발한 패키지는 &lt;a href=&quot;https://www.npmjs.com/package/ng2-simple-autocomplete&quot;&gt;ng2-simple-autocomplete&lt;/a&gt;라는 이름을 가지고 NPM 저장소에 배포되어 있다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Gatsby v1에서 달라진 점들]]></title><description><![CDATA[이 블로그는  Gatsby 로 만들었다. 작년 연말 블로그를 만들기로 한 후 정적 사이트 생성기(static site generator)를 둘러보다가 Gatsby의 존재를 알게 되었다. node.js와 Javascript…]]></description><link>https://rhostem.github.io/posts/2017-07-29-migration-to-gatsby-v1/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2017-07-29-migration-to-gatsby-v1/</guid><category><![CDATA[Gatsby]]></category><category><![CDATA[React]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Sat, 29 Jul 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 블로그는 &lt;a href=&quot;https://www.gatsbyjs.org/&quot;&gt;Gatsby&lt;/a&gt;로 만들었다. 작년 연말 블로그를 만들기로 한 후 정적 사이트 생성기(static site generator)를 둘러보다가 Gatsby의 존재를 알게 되었다. node.js와 Javascript 언어를 기반으로 하며 React로 페이지 구성을 할 수 있다는 건 프론트엔드 개발을 하는 나에게 무척 매력적인 요소였다. 원래 유력한 후보는 더 폭넓은 사용자와 성숙도를 가진 &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;jekyll&lt;/a&gt;이었지만 Gatsby를 선택하게 되었다.&lt;/p&gt;
 &lt;h2 id=&quot;서버-렌더링을-이용한-정적인-페이지-생성&quot;&gt;&lt;a href=&quot;#%EC%84%9C%EB%B2%84-%EB%A0%8C%EB%8D%94%EB%A7%81%EC%9D%84-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%A0%95%EC%A0%81%EC%9D%B8-%ED%8E%98%EC%9D%B4%EC%A7%80-%EC%83%9D%EC%84%B1&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;서버 렌더링을 이용한 정적인 페이지 생성&lt;/h2&gt;
@@ -1686,7 +2034,7 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;p&gt;이 글은 독일 베를린에서 개최된 CSSconf EU 2017에서 발표된 같은 제목을 가진 세션과 함께 작성되었다. 영상은 &lt;a href=&quot;https://www.youtube.com/watch?v=X_uTCnaRe94&quot;&gt;Youtube에서 시청할 수 있다&lt;/a&gt;.&lt;/p&gt;
 &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=&quot;iframe-video-wrapper&quot;&gt;
   &lt;iframe class=&quot;iframe-video video&quot; src=&quot;https://www.youtube.com/embed/X_uTCnaRe94&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</content:encoded></item><item><title><![CDATA[[번역] Flow와 TypeScript의 채택 - 두 프로세스의 비교]]></title><description><![CDATA[이 글은 James Kyle의  Adopting Flow & TypeScript - A comparison between the two on-boarding processes…]]></description><link>https://rhostem.github.io/posts/2017-06-11-adopting-flow-and-typescript/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2017-06-11-adopting-flow-and-typescript/</guid><category><![CDATA[Flow]]></category><category><![CDATA[Typescript]]></category><category><![CDATA[Javascript]]></category><category><![CDATA[코딩]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Sun, 11 Jun 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 James Kyle의 &lt;a href=&quot;http://thejameskyle.com/adopting-flow-and-typescript.html&quot;&gt;Adopting Flow &amp;#x26; TypeScript - A comparison between the two on-boarding processes&lt;/a&gt;를 번역한 글입니다.&lt;/p&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</content:encoded></item><item><title><![CDATA[[번역] Flow와 TypeScript의 채택 - 두 프로세스의 비교]]></title><description><![CDATA[이 글은 James Kyle의  Adopting Flow & TypeScript - A comparison between the two on-boarding processes…]]></description><link>https://rhostem.github.io/posts/2017-06-11-adopting-flow-and-typescript/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2017-06-11-adopting-flow-and-typescript/</guid><category><![CDATA[Flow]]></category><category><![CDATA[TypeScript]]></category><category><![CDATA[Javascript]]></category><category><![CDATA[코딩]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Sun, 11 Jun 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 James Kyle의 &lt;a href=&quot;http://thejameskyle.com/adopting-flow-and-typescript.html&quot;&gt;Adopting Flow &amp;#x26; TypeScript - A comparison between the two on-boarding processes&lt;/a&gt;를 번역한 글입니다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;우리가 타입 검사기를 도입한다고 가정해보자.&lt;/p&gt;
 &lt;p&gt;앱 개발 중에 NaN값이 많이 발생해서 원인을 찾아보았고 아래의 코드를 찾을 수 있었다.&lt;/p&gt;
@@ -1702,7 +2050,7 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;p&gt;둘다 간단하게 파일별로 채택이 가능하다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Flow: &lt;code&gt;// @flow&lt;/code&gt; 코멘트를 파일 최상단에 추가한다.&lt;/li&gt;
-&lt;li&gt;Typescript: 파일의 확장자 &lt;code&gt;.js&lt;/code&gt;를 &lt;code&gt;.ts&lt;/code&gt;로 변경한다.&lt;/li&gt;
+&lt;li&gt;TypeScript: 파일의 확장자 &lt;code&gt;.js&lt;/code&gt;를 &lt;code&gt;.ts&lt;/code&gt;로 변경한다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;하지만 각각 어떤 일이 일어나는지 비교해보자.&lt;/p&gt;
 &lt;h2 id=&quot;typescript-채택&quot;&gt;&lt;a href=&quot;#typescript-%EC%B1%84%ED%83%9D&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TypeScript 채택&lt;/h2&gt;
@@ -2366,7 +2714,7 @@ And nothing else matters&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&
 &lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;hr&gt;
-&lt;p&gt;CSS를 아키텍처를 제대로 구성하는 일은 생각보다 어려운 일이기에 Bootstrap같은 프레임워크가 높은 인기를 가지게 된 것은 자연스러운 현상이다. 하지만 모든 것을 외부 프레임워크에 의존할 수는 없다. React, Angular, Vue같은 컴포넌트 기반의 라이브러리가 널리 사용되는 상황에서 CSS 작성도 그에 맞춰서 컴포넌트 기반으로 견고하게 작성할 수 있도록 해야 할 것이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[번역] 프로그래머가 되고 싶은가? 그렇다면 대학 학위를 취득하는 일은 큰 시간 낭비일 수 있다]]></title><description><![CDATA[이 글은  Eric Elliott 의  Want to Code? A University Degree Might be a Huge Waste of Time…]]></description><link>https://rhostem.github.io/posts/2017-03-06-a-university-degree-might-be-a-huge-wasteof-time/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2017-03-06-a-university-degree-might-be-a-huge-wasteof-time/</guid><category><![CDATA[소프트웨어 개발]]></category><category><![CDATA[교육]]></category><category><![CDATA[번역]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Mon, 06 Mar 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 &lt;a href=&quot;https://medium.com/@_ericelliott&quot;&gt;Eric Elliott&lt;/a&gt;의 &lt;a href=&quot;https://medium.com/javascript-scene/want-to-code-a-university-degree-might-be-a-huge-waste-of-time-81e1817a2ef0#.jdu89qa4a&quot;&gt;Want to Code? A University Degree Might be a Huge Waste of Time&lt;/a&gt;를 번역한 글입니다.&lt;/p&gt;
+&lt;p&gt;CSS를 아키텍처를 제대로 구성하는 일은 생각보다 어려운 일이기에 Bootstrap같은 프레임워크가 높은 인기를 가지게 된 것은 자연스러운 현상이다. 하지만 모든 것을 외부 프레임워크에 의존할 수는 없다. React, Angular, Vue같은 컴포넌트 기반의 라이브러리가 널리 사용되는 상황에서 CSS 작성도 그에 맞춰서 컴포넌트 기반으로 견고하게 작성할 수 있도록 해야 할 것이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[번역] 프로그래머가 되고 싶은가? 그렇다면 대학 학위를 취득하는 일은 큰 시간 낭비일 수 있다]]></title><description><![CDATA[이 글은  Eric Elliott 의  Want to Code? A University Degree Might be a Huge Waste of Time…]]></description><link>https://rhostem.github.io/posts/2017-03-06-a-university-degree-might-be-a-huge-wasteof-time/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2017-03-06-a-university-degree-might-be-a-huge-wasteof-time/</guid><category><![CDATA[소프트웨어 개발]]></category><category><![CDATA[학습]]></category><category><![CDATA[번역]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Mon, 06 Mar 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 &lt;a href=&quot;https://medium.com/@_ericelliott&quot;&gt;Eric Elliott&lt;/a&gt;의 &lt;a href=&quot;https://medium.com/javascript-scene/want-to-code-a-university-degree-might-be-a-huge-waste-of-time-81e1817a2ef0#.jdu89qa4a&quot;&gt;Want to Code? A University Degree Might be a Huge Waste of Time&lt;/a&gt;를 번역한 글입니다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;많은 사람은 소프트웨어 엔지니어가 되기 위해서는 대학 학위가 필요하다고 생각한다.&lt;/p&gt;
 &lt;p&gt;얼마 전 나는 &lt;a href=&quot;https://medium.com/javascript-scene/learn-to-code-13-tips-that-could-save-you-years-of-effort-92ce799a3e1f&quot;&gt;“Learn to Code: 13 Tips that Could Save You Years of Effort”&lt;/a&gt;라는 포스트를 작성했다. 그 글에서 제시한 첫번째 팁은 “대학 커리큘럼은 잊어라”였다. 전문은 아래와 같다.&lt;/p&gt;
