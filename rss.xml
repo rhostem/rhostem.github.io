@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[rhostem.github.io]]></title><description><![CDATA[프론트엔드 웹 개발 기술 블로그입니다.]]></description><link>https://rhostem.github.io</link><image><url>https://rhostem.github.io/logos/logo-512.png</url><title>rhostem.github.io</title><link>https://rhostem.github.io</link></image><generator>rhostem.github.io</generator><lastBuildDate>Sun, 13 May 2018 16:20:51 GMT</lastBuildDate><atom:link href="https://rhostem.github.io/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[rhostem]]></author><copyright><![CDATA[Copyright © 2016. rhostem All rights reserved]]></copyright><item><title><![CDATA[[번역] 2018년에 배워야 할 최고의 자바스크립트 라이브러리와 기술]]></title><description><![CDATA[이 글은  Eric Elliot 의  Top JavaScript Libraries & Tech to Learn in 2018 을 번역한 글입니다. 작년 나는  201…]]></description><link>https://rhostem.github.io/posts/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018/</guid><category><![CDATA[번역]]></category><category><![CDATA[Javascript]]></category><category><![CDATA[React]]></category><category><![CDATA[소프트웨어 개발]]></category><category><![CDATA[학습]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Thu, 25 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;!-- mainImage: &quot;/images/post-main/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018.jpeg&quot; --&gt;
-&lt;p&gt;이 글은 &lt;a href=&quot;https://medium.com/@_ericelliott?source=post_header_lockup&quot;&gt;Eric Elliot&lt;/a&gt;의 &lt;a href=&quot;https://medium.com/javascript-scene/top-javascript-libraries-tech-to-learn-in-2018-c38028e028e6&quot;&gt;Top JavaScript Libraries &amp;#x26; Tech to Learn in 2018&lt;/a&gt;을 번역한 글입니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[rhostem.github.io]]></title><description><![CDATA[프론트엔드 웹 개발 기술 블로그입니다.]]></description><link>https://rhostem.github.io</link><image><url>https://rhostem.github.io/logos/logo-512.png</url><title>rhostem.github.io</title><link>https://rhostem.github.io</link></image><generator>rhostem.github.io</generator><lastBuildDate>Mon, 14 May 2018 12:41:40 GMT</lastBuildDate><atom:link href="https://rhostem.github.io/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[rhostem]]></author><copyright><![CDATA[Copyright © 2016. rhostem All rights reserved]]></copyright><item><title><![CDATA[[번역] 2018년에 배워야 할 최고의 자바스크립트 라이브러리와 기술]]></title><description><![CDATA[이 글은  Eric Elliot 의  Top JavaScript Libraries & Tech to Learn in 2018 을 번역한 글입니다. 작년 나는  201…]]></description><link>https://rhostem.github.io/posts/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018/</guid><category><![CDATA[번역]]></category><category><![CDATA[Javascript]]></category><category><![CDATA[React]]></category><category><![CDATA[소프트웨어 개발]]></category><category><![CDATA[학습]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Thu, 25 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 &lt;a href=&quot;https://medium.com/@_ericelliott?source=post_header_lockup&quot;&gt;Eric Elliot&lt;/a&gt;의 &lt;a href=&quot;https://medium.com/javascript-scene/top-javascript-libraries-tech-to-learn-in-2018-c38028e028e6&quot;&gt;Top JavaScript Libraries &amp;#x26; Tech to Learn in 2018&lt;/a&gt;을 번역한 글입니다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;작년 나는 &lt;a href=&quot;https://medium.com/javascript-scene/top-javascript-frameworks-topics-to-learn-in-2017-700a397b711&quot;&gt;2017년에 배워야할 최고의 기술들을 정리한 글&lt;/a&gt;을 작성했었다. 올해에는 놀라운 현상이 있었다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“어떤 기술이 투자 대비 학습 효과가 가장 높은가?”라는 질문에 대답이 나오기 시작했다.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1-modulecounts-cf3c76bd7d6921917d9a1c119985d134-4dbf6.png&quot;
+    href=&quot;/static/1-modulecounts-cf3c76bd7d6921917d9a1c119985d134-a7edd.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -22,13 +21,13 @@
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;landslide에 의하면 자바스크립트가 가장 많은 수의 패키지를 가지고 있다.&quot;
         title=&quot;&quot;
-        src=&quot;/static/1-modulecounts-cf3c76bd7d6921917d9a1c119985d134-4dbf6.png&quot;
-        srcset=&quot;/static/1-modulecounts-cf3c76bd7d6921917d9a1c119985d134-4174c.png 265w,
-/static/1-modulecounts-cf3c76bd7d6921917d9a1c119985d134-747a7.png 530w,
-/static/1-modulecounts-cf3c76bd7d6921917d9a1c119985d134-4dbf6.png 591w&quot;
+        src=&quot;/static/1-modulecounts-cf3c76bd7d6921917d9a1c119985d134-a7edd.png&quot;
+        srcset=&quot;/static/1-modulecounts-cf3c76bd7d6921917d9a1c119985d134-9f758.png 265w,
+/static/1-modulecounts-cf3c76bd7d6921917d9a1c119985d134-3afab.png 530w,
+/static/1-modulecounts-cf3c76bd7d6921917d9a1c119985d134-a7edd.png 591w&quot;
         sizes=&quot;(max-width: 591px) 100vw, 591px&quot;
       /&gt;
     &lt;/span&gt;
@@ -44,7 +43,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-74647.png&quot;
+    href=&quot;/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-ce7d2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -60,15 +59,15 @@
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;2-interest-over-time.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-77393.png&quot;
-        srcset=&quot;/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-76afe.png 265w,
-/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-3ece8.png 530w,
-/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-77393.png 1060w,
-/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-7a243.png 1590w,
-/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-74647.png 1600w&quot;
+        src=&quot;/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-9056e.png&quot;
+        srcset=&quot;/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-507eb.png 265w,
+/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-63b28.png 530w,
+/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-9056e.png 1060w,
+/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-d381a.png 1590w,
+/static/2-interest-over-time-4fe200630cb0cdbaf09c22b68c89c473-ce7d2.png 1600w&quot;
         sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
       /&gt;
     &lt;/span&gt;
@@ -86,7 +85,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-74647.png&quot;
+    href=&quot;/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-ce7d2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -102,15 +101,15 @@
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Vue.js 월별 다운로드 수&quot;
         title=&quot;&quot;
-        src=&quot;/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-77393.png&quot;
-        srcset=&quot;/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-76afe.png 265w,
-/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-3ece8.png 530w,
-/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-77393.png 1060w,
-/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-7a243.png 1590w,
-/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-74647.png 1600w&quot;
+        src=&quot;/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-9056e.png&quot;
+        srcset=&quot;/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-507eb.png 265w,
+/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-63b28.png 530w,
+/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-9056e.png 1060w,
+/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-d381a.png 1590w,
+/static/3-vue-js-downloads-7dafeaa50ce35c879875ebc889c3bb65-ce7d2.png 1600w&quot;
         sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
       /&gt;
     &lt;/span&gt;
@@ -123,7 +122,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-74647.png&quot;
+    href=&quot;/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-ce7d2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -139,15 +138,15 @@
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;angular/core 월별 다운로드 수&quot;
         title=&quot;&quot;
-        src=&quot;/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-77393.png&quot;
-        srcset=&quot;/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-76afe.png 265w,
-/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-3ece8.png 530w,
-/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-77393.png 1060w,
-/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-7a243.png 1590w,
-/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-74647.png 1600w&quot;
+        src=&quot;/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-9056e.png&quot;
+        srcset=&quot;/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-507eb.png 265w,
+/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-63b28.png 530w,
+/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-9056e.png 1060w,
+/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-d381a.png 1590w,
+/static/4-angular-downloads-ffad4046cb2eae95913b7cb35a6e0307-ce7d2.png 1600w&quot;
         sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
       /&gt;
     &lt;/span&gt;
@@ -160,7 +159,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-74647.png&quot;
+    href=&quot;/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-ce7d2.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -176,15 +175,15 @@
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;React 월별 다운로드 수&quot;
         title=&quot;&quot;
-        src=&quot;/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-77393.png&quot;
-        srcset=&quot;/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-76afe.png 265w,
-/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-3ece8.png 530w,
-/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-77393.png 1060w,
-/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-7a243.png 1590w,
-/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-74647.png 1600w&quot;
+        src=&quot;/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-9056e.png&quot;
+        srcset=&quot;/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-507eb.png 265w,
+/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-63b28.png 530w,
+/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-9056e.png 1060w,
+/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-d381a.png 1590w,
+/static/5-react-downloads-0a05a8d2e86e1e8b625c2e1e33e76376-ce7d2.png 1600w&quot;
         sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
       /&gt;
     &lt;/span&gt;
@@ -204,7 +203,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-21919.png&quot;
+    href=&quot;/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-72200.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -220,14 +219,14 @@
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;React의 성장 - 지난 10년간 jQuery를 넘어선 첫번째 라이브러리(출처: Indeed.com)&quot;
         title=&quot;&quot;
-        src=&quot;/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-77393.png&quot;
-        srcset=&quot;/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-76afe.png 265w,
-/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-3ece8.png 530w,
-/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-77393.png 1060w,
-/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-21919.png 1318w&quot;
+        src=&quot;/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-9056e.png&quot;
+        srcset=&quot;/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-507eb.png 265w,
+/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-63b28.png 530w,
+/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-9056e.png 1060w,
+/static/6-react-rising-ccef8a80b6799036efdacba0ea3b3dba-72200.png 1318w&quot;
         sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
       /&gt;
     &lt;/span&gt;
@@ -240,7 +239,7 @@
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/7-jquery-is-so-2016-66bb9765ed8729fbb66aff21e160437c-2f472.png&quot;
+    href=&quot;/static/7-jquery-is-so-2016-66bb9765ed8729fbb66aff21e160437c-1a9b3.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -256,13 +255,13 @@
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;jQuery는 2016년에도 여전했다&quot;
         title=&quot;&quot;
-        src=&quot;/static/7-jquery-is-so-2016-66bb9765ed8729fbb66aff21e160437c-2f472.png&quot;
-        srcset=&quot;/static/7-jquery-is-so-2016-66bb9765ed8729fbb66aff21e160437c-8e63e.png 265w,
-/static/7-jquery-is-so-2016-66bb9765ed8729fbb66aff21e160437c-8a494.png 530w,
-/static/7-jquery-is-so-2016-66bb9765ed8729fbb66aff21e160437c-2f472.png 605w&quot;
+        src=&quot;/static/7-jquery-is-so-2016-66bb9765ed8729fbb66aff21e160437c-1a9b3.png&quot;
+        srcset=&quot;/static/7-jquery-is-so-2016-66bb9765ed8729fbb66aff21e160437c-5dbc7.png 265w,
+/static/7-jquery-is-so-2016-66bb9765ed8729fbb66aff21e160437c-b03ef.png 530w,
+/static/7-jquery-is-so-2016-66bb9765ed8729fbb66aff21e160437c-1a9b3.png 605w&quot;
         sizes=&quot;(max-width: 605px) 100vw, 605px&quot;
       /&gt;
     &lt;/span&gt;
@@ -657,7 +656,7 @@ observer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-2bcf5.jpg&quot;
+    href=&quot;/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-3c6e7.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -673,14 +672,14 @@ observer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;lozad.js&quot;
         title=&quot;&quot;
-        src=&quot;/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-61672.jpg&quot;
-        srcset=&quot;/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-14611.jpg 265w,
-/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-48db9.jpg 530w,
-/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-61672.jpg 1060w,
-/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-2bcf5.jpg 1548w&quot;
+        src=&quot;/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-677bc.jpg&quot;
+        srcset=&quot;/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-af975.jpg 265w,
+/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-b78ed.jpg 530w,
+/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-677bc.jpg 1060w,
+/static/lozad.js-7e9439a7a7ecbbe9b9b10369325dd5e4-3c6e7.jpg 1548w&quot;
         sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
       /&gt;
     &lt;/span&gt;
@@ -705,7 +704,7 @@ observer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/caniuse-intersection-api-4285802630d0d4866a4c1533c0b0726a-969f0.png&quot;
+    href=&quot;/static/caniuse-intersection-api-4285802630d0d4866a4c1533c0b0726a-a56a8.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -721,13 +720,13 @@ observer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Intersection Observer의 브라우저 지원 현황&quot;
         title=&quot;&quot;
-        src=&quot;/static/caniuse-intersection-api-4285802630d0d4866a4c1533c0b0726a-969f0.png&quot;
-        srcset=&quot;/static/caniuse-intersection-api-4285802630d0d4866a4c1533c0b0726a-9cd49.png 265w,
-/static/caniuse-intersection-api-4285802630d0d4866a4c1533c0b0726a-e4e3a.png 530w,
-/static/caniuse-intersection-api-4285802630d0d4866a4c1533c0b0726a-969f0.png 992w&quot;
+        src=&quot;/static/caniuse-intersection-api-4285802630d0d4866a4c1533c0b0726a-a56a8.png&quot;
+        srcset=&quot;/static/caniuse-intersection-api-4285802630d0d4866a4c1533c0b0726a-0cdbc.png 265w,
+/static/caniuse-intersection-api-4285802630d0d4866a4c1533c0b0726a-ffb20.png 530w,
+/static/caniuse-intersection-api-4285802630d0d4866a4c1533c0b0726a-a56a8.png 992w&quot;
         sizes=&quot;(max-width: 992px) 100vw, 992px&quot;
       /&gt;
     &lt;/span&gt;
@@ -850,41 +849,7 @@ observer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
       &lt;/div&gt;
 &lt;p&gt;그리고 Redux 미들웨어인 &lt;a href=&quot;https://redux-saga.js.org/&quot;&gt;Redux-Saga&lt;/a&gt;를 사용하면 비동기 액션은 물론 다양한 사이드 이펙트를 발생시킬 수 있는 헬퍼 함수를 활용해서 복잡한 로직을 쉽게 구현할 수 있다.&lt;/p&gt;
 &lt;h2 id=&quot;redux-saga&quot;&gt;&lt;a href=&quot;#redux-saga&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Redux-Saga&lt;/h2&gt;
-&lt;p&gt;
-  &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/Redux-Saga-Logo-Landscape-233044a5a805285112492aa959864556-ec791.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 26.951871657754012%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA3UlEQVQY05WP3WqDQBSEff83Ki0ltIReFKJNSkI2BBVJtP6ga1HXrrtf1dIESm46cA4DM3OY4zDCWjtP27VYY/mLSbvFb3mcX1KWJUIcSLKYj+FMpUt0r2maZtaVUpeQtl+zfi1jLtyZiDEGcRDE5xhXrDjVEachZB15rF5dvDcP13UJgoD9dk+Y+SzrR17kgid5z6K6Q+rqp+G0iqIYzT5RGLE5rtkV7/j92LaJkWVNkiRkWTZPmqa0qiXqfY6d4Fk+sGs2KNNdDw7DQJ7ncyAvcj77enxL819ML38Di0t/Rck74WcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;redux-saga logo&quot;
-        title=&quot;&quot;
-        src=&quot;/static/Redux-Saga-Logo-Landscape-233044a5a805285112492aa959864556-77393.png&quot;
-        srcset=&quot;/static/Redux-Saga-Logo-Landscape-233044a5a805285112492aa959864556-76afe.png 265w,
-/static/Redux-Saga-Logo-Landscape-233044a5a805285112492aa959864556-3ece8.png 530w,
-/static/Redux-Saga-Logo-Landscape-233044a5a805285112492aa959864556-77393.png 1060w,
-/static/Redux-Saga-Logo-Landscape-233044a5a805285112492aa959864556-7a243.png 1590w,
-/static/Redux-Saga-Logo-Landscape-233044a5a805285112492aa959864556-ec791.png 1870w&quot;
-        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
-      /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
-  &lt;/a&gt;
-    &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;./Redux-Saga-Logo-Landscape.png&quot; alt=&quot;redux-saga logo&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Redux-Saga는 ES6에서 도입된 &lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/function*&quot;&gt;Generator 함수&lt;/a&gt;를 기반으로 한다.&lt;/p&gt;
 &lt;p&gt;Generator 함수는 코드 진행 중에 &lt;code class=&quot;language-text&quot;&gt;yield&lt;/code&gt; 키워드를 만나면 일단 멈춘다. 그리고 계속 진행하라는 지시&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Generator/next&quot;&gt;(&lt;code class=&quot;language-text&quot;&gt;Generator.prototype.next&lt;/code&gt;)&lt;/a&gt;가 전달되어야 다음 &lt;code class=&quot;language-text&quot;&gt;yield&lt;/code&gt; 키워드 까지 코드를 진행시킨다. Redux-Saga는 이 Generator 함수의 특징을 활용한다.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
@@ -1034,7 +999,7 @@ prod
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-d5374.png&quot;
+    href=&quot;/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-8537f.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1050,14 +1015,14 @@ prod
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;npm_module_count.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-77393.png&quot;
-        srcset=&quot;/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-76afe.png 265w,
-/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-3ece8.png 530w,
-/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-77393.png 1060w,
-/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-d5374.png 1196w&quot;
+        src=&quot;/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-9056e.png&quot;
+        srcset=&quot;/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-507eb.png 265w,
+/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-63b28.png 530w,
+/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-9056e.png 1060w,
+/static/npm_module_count-a0dab1ebc3f0674f8ce412edea8dd8ec-8537f.png 1196w&quot;
         sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1069,7 +1034,7 @@ prod
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/rolling-weekly-downloads-of-npm-pagckage-0507acfae4dab19d741c063b1d96bf01-77970.png&quot;
+    href=&quot;/static/rolling-weekly-downloads-of-npm-pagckage-0507acfae4dab19d741c063b1d96bf01-15ec5.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1085,13 +1050,13 @@ prod
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Rolling weekly downloads of npm pagckage&quot;
         title=&quot;&quot;
-        src=&quot;/static/rolling-weekly-downloads-of-npm-pagckage-0507acfae4dab19d741c063b1d96bf01-77970.png&quot;
-        srcset=&quot;/static/rolling-weekly-downloads-of-npm-pagckage-0507acfae4dab19d741c063b1d96bf01-9a589.png 265w,
-/static/rolling-weekly-downloads-of-npm-pagckage-0507acfae4dab19d741c063b1d96bf01-ecd39.png 530w,
-/static/rolling-weekly-downloads-of-npm-pagckage-0507acfae4dab19d741c063b1d96bf01-77970.png 807w&quot;
+        src=&quot;/static/rolling-weekly-downloads-of-npm-pagckage-0507acfae4dab19d741c063b1d96bf01-15ec5.png&quot;
+        srcset=&quot;/static/rolling-weekly-downloads-of-npm-pagckage-0507acfae4dab19d741c063b1d96bf01-7be02.png 265w,
+/static/rolling-weekly-downloads-of-npm-pagckage-0507acfae4dab19d741c063b1d96bf01-71b13.png 530w,
+/static/rolling-weekly-downloads-of-npm-pagckage-0507acfae4dab19d741c063b1d96bf01-15ec5.png 807w&quot;
         sizes=&quot;(max-width: 807px) 100vw, 807px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1272,7 +1237,7 @@ node_modules
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/css_modules-aa48fad6ee049b8cfbf8a597ace6e2cf-fb14d.png&quot;
+    href=&quot;/static/css_modules-aa48fad6ee049b8cfbf8a597ace6e2cf-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1288,13 +1253,13 @@ node_modules
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;CSS Modules&quot;
         title=&quot;&quot;
-        src=&quot;/static/css_modules-aa48fad6ee049b8cfbf8a597ace6e2cf-fb14d.png&quot;
-        srcset=&quot;/static/css_modules-aa48fad6ee049b8cfbf8a597ace6e2cf-1b26e.png 265w,
-/static/css_modules-aa48fad6ee049b8cfbf8a597ace6e2cf-12aa6.png 530w,
-/static/css_modules-aa48fad6ee049b8cfbf8a597ace6e2cf-fb14d.png 800w&quot;
+        src=&quot;/static/css_modules-aa48fad6ee049b8cfbf8a597ace6e2cf-3d7b4.png&quot;
+        srcset=&quot;/static/css_modules-aa48fad6ee049b8cfbf8a597ace6e2cf-7e884.png 265w,
+/static/css_modules-aa48fad6ee049b8cfbf8a597ace6e2cf-9c901.png 530w,
+/static/css_modules-aa48fad6ee049b8cfbf8a597ace6e2cf-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1345,7 +1310,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/jss-c1858b832f5d77ed956c19e573a311da-fb14d.png&quot;
+    href=&quot;/static/jss-c1858b832f5d77ed956c19e573a311da-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1361,13 +1326,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;JSS&quot;
         title=&quot;&quot;
-        src=&quot;/static/jss-c1858b832f5d77ed956c19e573a311da-fb14d.png&quot;
-        srcset=&quot;/static/jss-c1858b832f5d77ed956c19e573a311da-1b26e.png 265w,
-/static/jss-c1858b832f5d77ed956c19e573a311da-12aa6.png 530w,
-/static/jss-c1858b832f5d77ed956c19e573a311da-fb14d.png 800w&quot;
+        src=&quot;/static/jss-c1858b832f5d77ed956c19e573a311da-3d7b4.png&quot;
+        srcset=&quot;/static/jss-c1858b832f5d77ed956c19e573a311da-7e884.png 265w,
+/static/jss-c1858b832f5d77ed956c19e573a311da-9c901.png 530w,
+/static/jss-c1858b832f5d77ed956c19e573a311da-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1420,7 +1385,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/styled_components-0255f7f9432314954838b64b5b2b6082-fb14d.png&quot;
+    href=&quot;/static/styled_components-0255f7f9432314954838b64b5b2b6082-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1436,13 +1401,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Styled Component&quot;
         title=&quot;&quot;
-        src=&quot;/static/styled_components-0255f7f9432314954838b64b5b2b6082-fb14d.png&quot;
-        srcset=&quot;/static/styled_components-0255f7f9432314954838b64b5b2b6082-1b26e.png 265w,
-/static/styled_components-0255f7f9432314954838b64b5b2b6082-12aa6.png 530w,
-/static/styled_components-0255f7f9432314954838b64b5b2b6082-fb14d.png 800w&quot;
+        src=&quot;/static/styled_components-0255f7f9432314954838b64b5b2b6082-3d7b4.png&quot;
+        srcset=&quot;/static/styled_components-0255f7f9432314954838b64b5b2b6082-7e884.png 265w,
+/static/styled_components-0255f7f9432314954838b64b5b2b6082-9c901.png 530w,
+/static/styled_components-0255f7f9432314954838b64b5b2b6082-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1467,7 +1432,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/glamorous-33bd04ea9c1f743a7f93e9ce21509b6c-fb14d.png&quot;
+    href=&quot;/static/glamorous-33bd04ea9c1f743a7f93e9ce21509b6c-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1483,13 +1448,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Glamorous&quot;
         title=&quot;&quot;
-        src=&quot;/static/glamorous-33bd04ea9c1f743a7f93e9ce21509b6c-fb14d.png&quot;
-        srcset=&quot;/static/glamorous-33bd04ea9c1f743a7f93e9ce21509b6c-1b26e.png 265w,
-/static/glamorous-33bd04ea9c1f743a7f93e9ce21509b6c-12aa6.png 530w,
-/static/glamorous-33bd04ea9c1f743a7f93e9ce21509b6c-fb14d.png 800w&quot;
+        src=&quot;/static/glamorous-33bd04ea9c1f743a7f93e9ce21509b6c-3d7b4.png&quot;
+        srcset=&quot;/static/glamorous-33bd04ea9c1f743a7f93e9ce21509b6c-7e884.png 265w,
+/static/glamorous-33bd04ea9c1f743a7f93e9ce21509b6c-9c901.png 530w,
+/static/glamorous-33bd04ea9c1f743a7f93e9ce21509b6c-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1589,7 +1554,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/styletron-72199c6431c5036d91c05af639c12590-fb14d.png&quot;
+    href=&quot;/static/styletron-72199c6431c5036d91c05af639c12590-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1605,13 +1570,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;styletron&quot;
         title=&quot;&quot;
-        src=&quot;/static/styletron-72199c6431c5036d91c05af639c12590-fb14d.png&quot;
-        srcset=&quot;/static/styletron-72199c6431c5036d91c05af639c12590-1b26e.png 265w,
-/static/styletron-72199c6431c5036d91c05af639c12590-12aa6.png 530w,
-/static/styletron-72199c6431c5036d91c05af639c12590-fb14d.png 800w&quot;
+        src=&quot;/static/styletron-72199c6431c5036d91c05af639c12590-3d7b4.png&quot;
+        srcset=&quot;/static/styletron-72199c6431c5036d91c05af639c12590-7e884.png 265w,
+/static/styletron-72199c6431c5036d91c05af639c12590-9c901.png 530w,
+/static/styletron-72199c6431c5036d91c05af639c12590-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1651,7 +1616,7 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/css_in_js_bundle_size-a482afd8114111631048427740448dbf-fb14d.png&quot;
+    href=&quot;/static/css_in_js_bundle_size-a482afd8114111631048427740448dbf-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1667,13 +1632,13 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;CSS-in-JS bundle size comparison using Airbnb’s styles&quot;
         title=&quot;&quot;
-        src=&quot;/static/css_in_js_bundle_size-a482afd8114111631048427740448dbf-fb14d.png&quot;
-        srcset=&quot;/static/css_in_js_bundle_size-a482afd8114111631048427740448dbf-1b26e.png 265w,
-/static/css_in_js_bundle_size-a482afd8114111631048427740448dbf-12aa6.png 530w,
-/static/css_in_js_bundle_size-a482afd8114111631048427740448dbf-fb14d.png 800w&quot;
+        src=&quot;/static/css_in_js_bundle_size-a482afd8114111631048427740448dbf-3d7b4.png&quot;
+        srcset=&quot;/static/css_in_js_bundle_size-a482afd8114111631048427740448dbf-7e884.png 265w,
+/static/css_in_js_bundle_size-a482afd8114111631048427740448dbf-9c901.png 530w,
+/static/css_in_js_bundle_size-a482afd8114111631048427740448dbf-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1695,7 +1660,7 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/module_counts_comparison-ea3b14f35280bdef41e560ff097eacce-12f36.png&quot;
+    href=&quot;/static/module_counts_comparison-ea3b14f35280bdef41e560ff097eacce-5a84c.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1711,13 +1676,13 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;npm과 bower의 모듈 수 변화 추이&quot;
         title=&quot;&quot;
-        src=&quot;/static/module_counts_comparison-ea3b14f35280bdef41e560ff097eacce-12f36.png&quot;
-        srcset=&quot;/static/module_counts_comparison-ea3b14f35280bdef41e560ff097eacce-6db2a.png 265w,
-/static/module_counts_comparison-ea3b14f35280bdef41e560ff097eacce-42bdb.png 530w,
-/static/module_counts_comparison-ea3b14f35280bdef41e560ff097eacce-12f36.png 608w&quot;
+        src=&quot;/static/module_counts_comparison-ea3b14f35280bdef41e560ff097eacce-5a84c.png&quot;
+        srcset=&quot;/static/module_counts_comparison-ea3b14f35280bdef41e560ff097eacce-bee5d.png 265w,
+/static/module_counts_comparison-ea3b14f35280bdef41e560ff097eacce-72ada.png 530w,
+/static/module_counts_comparison-ea3b14f35280bdef41e560ff097eacce-5a84c.png 608w&quot;
         sizes=&quot;(max-width: 608px) 100vw, 608px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1742,7 +1707,7 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/polished-fb711bd2bbed8359c9498343b3fb894d-fb14d.png&quot;
+    href=&quot;/static/polished-fb711bd2bbed8359c9498343b3fb894d-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1758,13 +1723,13 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Polished&quot;
         title=&quot;&quot;
-        src=&quot;/static/polished-fb711bd2bbed8359c9498343b3fb894d-fb14d.png&quot;
-        srcset=&quot;/static/polished-fb711bd2bbed8359c9498343b3fb894d-1b26e.png 265w,
-/static/polished-fb711bd2bbed8359c9498343b3fb894d-12aa6.png 530w,
-/static/polished-fb711bd2bbed8359c9498343b3fb894d-fb14d.png 800w&quot;
+        src=&quot;/static/polished-fb711bd2bbed8359c9498343b3fb894d-3d7b4.png&quot;
+        srcset=&quot;/static/polished-fb711bd2bbed8359c9498343b3fb894d-7e884.png 265w,
+/static/polished-fb711bd2bbed8359c9498343b3fb894d-9c901.png 530w,
+/static/polished-fb711bd2bbed8359c9498343b3fb894d-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1819,7 +1784,7 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/yoga-9653a2e7466c3b13c58276253280bdc2-fb14d.png&quot;
+    href=&quot;/static/yoga-9653a2e7466c3b13c58276253280bdc2-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1835,13 +1800,13 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Yoga&quot;
         title=&quot;&quot;
-        src=&quot;/static/yoga-9653a2e7466c3b13c58276253280bdc2-fb14d.png&quot;
-        srcset=&quot;/static/yoga-9653a2e7466c3b13c58276253280bdc2-1b26e.png 265w,
-/static/yoga-9653a2e7466c3b13c58276253280bdc2-12aa6.png 530w,
-/static/yoga-9653a2e7466c3b13c58276253280bdc2-fb14d.png 800w&quot;
+        src=&quot;/static/yoga-9653a2e7466c3b13c58276253280bdc2-3d7b4.png&quot;
+        srcset=&quot;/static/yoga-9653a2e7466c3b13c58276253280bdc2-7e884.png 265w,
+/static/yoga-9653a2e7466c3b13c58276253280bdc2-9c901.png 530w,
+/static/yoga-9653a2e7466c3b13c58276253280bdc2-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1872,7 +1837,7 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/react_sketchapp-13cf59ccb9049f5873f470758a66a693-8d7df.png&quot;
+    href=&quot;/static/react_sketchapp-13cf59ccb9049f5873f470758a66a693-bcd16.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1888,13 +1853,13 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;react-sketchapp&quot;
         title=&quot;&quot;
-        src=&quot;/static/react_sketchapp-13cf59ccb9049f5873f470758a66a693-8d7df.png&quot;
-        srcset=&quot;/static/react_sketchapp-13cf59ccb9049f5873f470758a66a693-3dd2c.png 265w,
-/static/react_sketchapp-13cf59ccb9049f5873f470758a66a693-97ea5.png 530w,
-/static/react_sketchapp-13cf59ccb9049f5873f470758a66a693-8d7df.png 718w&quot;
+        src=&quot;/static/react_sketchapp-13cf59ccb9049f5873f470758a66a693-bcd16.png&quot;
+        srcset=&quot;/static/react_sketchapp-13cf59ccb9049f5873f470758a66a693-152a3.png 265w,
+/static/react_sketchapp-13cf59ccb9049f5873f470758a66a693-1bef3.png 530w,
+/static/react_sketchapp-13cf59ccb9049f5873f470758a66a693-bcd16.png 718w&quot;
         sizes=&quot;(max-width: 718px) 100vw, 718px&quot;
       /&gt;
     &lt;/span&gt;
@@ -1907,7 +1872,7 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/react_sketchapp_profile_card-af7dbd36e081d237908258034125b740-fb14d.png&quot;
+    href=&quot;/static/react_sketchapp_profile_card-af7dbd36e081d237908258034125b740-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -1923,13 +1888,13 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Profile Cards example powered by react-sketchapp&quot;
         title=&quot;&quot;
-        src=&quot;/static/react_sketchapp_profile_card-af7dbd36e081d237908258034125b740-fb14d.png&quot;
-        srcset=&quot;/static/react_sketchapp_profile_card-af7dbd36e081d237908258034125b740-1b26e.png 265w,
-/static/react_sketchapp_profile_card-af7dbd36e081d237908258034125b740-12aa6.png 530w,
-/static/react_sketchapp_profile_card-af7dbd36e081d237908258034125b740-fb14d.png 800w&quot;
+        src=&quot;/static/react_sketchapp_profile_card-af7dbd36e081d237908258034125b740-3d7b4.png&quot;
+        srcset=&quot;/static/react_sketchapp_profile_card-af7dbd36e081d237908258034125b740-7e884.png 265w,
+/static/react_sketchapp_profile_card-af7dbd36e081d237908258034125b740-9c901.png 530w,
+/static/react_sketchapp_profile_card-af7dbd36e081d237908258034125b740-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2026,7 +1991,7 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/type-coverage-0defe0e9d3d25ea4bd4b626924cce8eb-7870e.png&quot;
+    href=&quot;/static/type-coverage-0defe0e9d3d25ea4bd4b626924cce8eb-87a14.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2042,13 +2007,13 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;Type Coverage&quot;
         title=&quot;&quot;
-        src=&quot;/static/type-coverage-0defe0e9d3d25ea4bd4b626924cce8eb-7870e.png&quot;
-        srcset=&quot;/static/type-coverage-0defe0e9d3d25ea4bd4b626924cce8eb-cb792.png 265w,
-/static/type-coverage-0defe0e9d3d25ea4bd4b626924cce8eb-51e07.png 530w,
-/static/type-coverage-0defe0e9d3d25ea4bd4b626924cce8eb-7870e.png 738w&quot;
+        src=&quot;/static/type-coverage-0defe0e9d3d25ea4bd4b626924cce8eb-87a14.png&quot;
+        srcset=&quot;/static/type-coverage-0defe0e9d3d25ea4bd4b626924cce8eb-df1fd.png 265w,
+/static/type-coverage-0defe0e9d3d25ea4bd4b626924cce8eb-6f2d3.png 530w,
+/static/type-coverage-0defe0e9d3d25ea4bd4b626924cce8eb-87a14.png 738w&quot;
         sizes=&quot;(max-width: 738px) 100vw, 738px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2092,7 +2057,7 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-b760e.png&quot;
+    href=&quot;/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-8bb8b.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2108,15 +2073,15 @@ styletron&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;adopting flow and typescript graph&quot;
         title=&quot;&quot;
-        src=&quot;/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-77393.png&quot;
-        srcset=&quot;/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-76afe.png 265w,
-/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-3ece8.png 530w,
-/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-77393.png 1060w,
-/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-7a243.png 1590w,
-/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-b760e.png 1864w&quot;
+        src=&quot;/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-9056e.png&quot;
+        srcset=&quot;/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-507eb.png 265w,
+/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-63b28.png 530w,
+/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-9056e.png 1060w,
+/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-d381a.png 1590w,
+/static/adopting-flow-and-typescript-graph-6ebb075710a43fdfc58b7cb13d9e5f60-8bb8b.png 1864w&quot;
         sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2577,11 +2542,11 @@ And nothing else matters&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&
 &lt;h2 id=&quot;컴포넌트의-경계를-중시하라&quot;&gt;&lt;a href=&quot;#%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EC%9D%98-%EA%B2%BD%EA%B3%84%EB%A5%BC-%EC%A4%91%EC%8B%9C%ED%95%98%EB%9D%BC&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;컴포넌트의 경계를 중시하라.&lt;/h2&gt;
 &lt;p&gt;예를 들어 헤더, 네비게이션 바, 컨텐츠 컴포넌트를 포함한 부모 컴포넌트가 있다면 자식 컴포넌트들의 레이아웃과 관련된 스타일을 작성해야 할 것이다. 하지만 이 경우 결코 컴포넌트 내부의 스타일은 건드리지 말고 CSS box model 바깥의 스타일(position, margin, display, width, float, z-index)만 선언해야 한다.&lt;/p&gt;
 
-  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/box-model-f32a75647fb0fc9dec62581d0c6a48ea-678c5.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/box-model-f32a75647fb0fc9dec62581d0c6a48ea-7af81.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
   
   &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block; ; max-width: 192px; margin-left: auto; margin-right: auto;&quot;&gt;
     &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 89.58333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsSAAALEgHS3X78AAADc0lEQVQ4y22UiVMaWRCH+adTa1VSZku5NAiajceabA6zGjW6Gy9WEEXAE0RAXbc2Go+Vw4PRAWZAub68mXETok7VV/2635ue+nX3PJOiKMi5HBcXWc4FiqJSqVQolzXKVKtVPSbLOX2txbT9hygWi5i0w5vxLRJbO8QTWySTSapis1Qq6WgJspJEKp0WL5X12PX19T2Mj9cwlWuQPwiTW3uNHBkkuzaAHB7gOj5EKTZ4yxDFWKPfgDhXjL5DSkxxI1SZbqqg7AU4mjLjf/MET38TR+428qEuLhacSH4XZ74OMnMOfZ0VsazfwPBdqCEXhdgoN5WqkVD9skzGa+MoaOcwYOdfn4WDRRvSRgdZwenaM06W2gw/0oDwzyIODv4yU4iPNyZcIuWxchZ1suu3sz1vJRlxwkk/9cNfKe/3kt99IdZ9VA/6qDXAUR8ncxbym2M/JkzOWrjc7iIcbWdxxYJ3sQX3/M8srpqZX2rFI/zlqI3lDduttRNYt5EW76SEotzmR6OGlTqUDlZIi4RXO8+ZX7MwMNHEy+FHvB1vYsz7lAl/C4OTjwnE2/Bv2lmIWAnGbSwKMrvPyQhF+dgY1VodkyQrSH8v8J/bzImoizfUwqTfTLd7BueUm5b3Q5gHh+mYmBZ2BPvHP3BMeBjxOpnyP+Ew5uLQ3YoUGeE8K2FKn1+SSXg4dls4WncwOdfMh+mntP/poXVsjke9g/zUP0TriJuml8M0//4J26cg72c6GHU3sS/qvjfdwvn6B46T6VvJh0KyaIpWw9VEG8GEDc9aOx7xgfmoi4lAG6MeM3OiUd5wB7OrzwgI6QEh+fRWcuF/yd+6LGp4kegkFLHj3xA1ilp0lmJWZvzNjM8+JrRpxILCBqJWfOtWUneb0tjl4j8vKIkRUT53C3p01L0eciKe3fmF4l7P97huu6l86eXEd2dsimKwtaZoQ6rudFHY6vyGst2JLAqfEcOtbt/ZE8gJlxjsVl2ykVD8y8p+iELQSdrnJKP9ZndI+xzCOh7cSwnkgFP8KZrkqnE5yJ9DFFe6KUffUN747R6l8CuU9VdUovf3ytHX3IT7uNIk6wnFVXVTUlHkLGpOukOWYv4S6TzNaeqYUuFSjz10rqQY96VJVVVqot3iKtPbXhPWoK772pMvqFxIV/r6xzPfz9Xqdf1e/ArLh8zQVBYKpwAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;
-      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;box model&quot; title=&quot;&quot; src=&quot;/static/box-model-f32a75647fb0fc9dec62581d0c6a48ea-678c5.png&quot; srcset=&quot;/static/box-model-f32a75647fb0fc9dec62581d0c6a48ea-678c5.png 192w&quot; sizes=&quot;(max-width: 192px) 100vw, 192px&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot; alt=&quot;box model&quot; title=&quot;&quot; src=&quot;/static/box-model-f32a75647fb0fc9dec62581d0c6a48ea-7af81.png&quot; srcset=&quot;/static/box-model-f32a75647fb0fc9dec62581d0c6a48ea-7af81.png 192w&quot; sizes=&quot;(max-width: 192px) 100vw, 192px&quot;&gt;
     &lt;/span&gt;
   &lt;/span&gt;
   
@@ -2786,7 +2751,7 @@ And nothing else matters&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/flux-architecture-d85ad3f28317b3055689511f0425e501-fef92.png&quot;
+    href=&quot;/static/flux-architecture-d85ad3f28317b3055689511f0425e501-d5b17.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2802,13 +2767,13 @@ And nothing else matters&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;1*2FrT8oMXswVWiVEfBCXlAQ.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/flux-architecture-d85ad3f28317b3055689511f0425e501-fef92.png&quot;
-        srcset=&quot;/static/flux-architecture-d85ad3f28317b3055689511f0425e501-8756a.png 265w,
-/static/flux-architecture-d85ad3f28317b3055689511f0425e501-6a83e.png 530w,
-/static/flux-architecture-d85ad3f28317b3055689511f0425e501-fef92.png 968w&quot;
+        src=&quot;/static/flux-architecture-d85ad3f28317b3055689511f0425e501-d5b17.png&quot;
+        srcset=&quot;/static/flux-architecture-d85ad3f28317b3055689511f0425e501-7fff0.png 265w,
+/static/flux-architecture-d85ad3f28317b3055689511f0425e501-93368.png 530w,
+/static/flux-architecture-d85ad3f28317b3055689511f0425e501-d5b17.png 968w&quot;
         sizes=&quot;(max-width: 968px) 100vw, 968px&quot;
       /&gt;
     &lt;/span&gt;
@@ -2821,7 +2786,7 @@ And nothing else matters&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/flux-architecture-server-31d68adadcdde5ff41a9a77032f3e82a-18eea.png&quot;
+    href=&quot;/static/flux-architecture-server-31d68adadcdde5ff41a9a77032f3e82a-aa2fe.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -2837,13 +2802,13 @@ And nothing else matters&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;1*MdaK2tzd5f9BqadwMvPoKg.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/flux-architecture-server-31d68adadcdde5ff41a9a77032f3e82a-18eea.png&quot;
-        srcset=&quot;/static/flux-architecture-server-31d68adadcdde5ff41a9a77032f3e82a-f3de5.png 265w,
-/static/flux-architecture-server-31d68adadcdde5ff41a9a77032f3e82a-daad0.png 530w,
-/static/flux-architecture-server-31d68adadcdde5ff41a9a77032f3e82a-18eea.png 1000w&quot;
+        src=&quot;/static/flux-architecture-server-31d68adadcdde5ff41a9a77032f3e82a-aa2fe.png&quot;
+        srcset=&quot;/static/flux-architecture-server-31d68adadcdde5ff41a9a77032f3e82a-aca1e.png 265w,
+/static/flux-architecture-server-31d68adadcdde5ff41a9a77032f3e82a-885e4.png 530w,
+/static/flux-architecture-server-31d68adadcdde5ff41a9a77032f3e82a-aa2fe.png 1000w&quot;
         sizes=&quot;(max-width: 1000px) 100vw, 1000px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3322,7 +3287,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/snapshot-svn-2102ad65a318377c7514542207286e28-fb14d.png&quot;
+    href=&quot;/static/snapshot-svn-2102ad65a318377c7514542207286e28-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3338,13 +3303,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;snapshot-svn.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/snapshot-svn-2102ad65a318377c7514542207286e28-fb14d.png&quot;
-        srcset=&quot;/static/snapshot-svn-2102ad65a318377c7514542207286e28-1b26e.png 265w,
-/static/snapshot-svn-2102ad65a318377c7514542207286e28-12aa6.png 530w,
-/static/snapshot-svn-2102ad65a318377c7514542207286e28-fb14d.png 800w&quot;
+        src=&quot;/static/snapshot-svn-2102ad65a318377c7514542207286e28-3d7b4.png&quot;
+        srcset=&quot;/static/snapshot-svn-2102ad65a318377c7514542207286e28-7e884.png 265w,
+/static/snapshot-svn-2102ad65a318377c7514542207286e28-9c901.png 530w,
+/static/snapshot-svn-2102ad65a318377c7514542207286e28-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3357,7 +3322,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/snapshot-git-9bd28f507ce614506460d4a0994045f4-fb14d.png&quot;
+    href=&quot;/static/snapshot-git-9bd28f507ce614506460d4a0994045f4-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3373,13 +3338,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;snapshot-git.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/snapshot-git-9bd28f507ce614506460d4a0994045f4-fb14d.png&quot;
-        srcset=&quot;/static/snapshot-git-9bd28f507ce614506460d4a0994045f4-1b26e.png 265w,
-/static/snapshot-git-9bd28f507ce614506460d4a0994045f4-12aa6.png 530w,
-/static/snapshot-git-9bd28f507ce614506460d4a0994045f4-fb14d.png 800w&quot;
+        src=&quot;/static/snapshot-git-9bd28f507ce614506460d4a0994045f4-3d7b4.png&quot;
+        srcset=&quot;/static/snapshot-git-9bd28f507ce614506460d4a0994045f4-7e884.png 265w,
+/static/snapshot-git-9bd28f507ce614506460d4a0994045f4-9c901.png 530w,
+/static/snapshot-git-9bd28f507ce614506460d4a0994045f4-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3393,7 +3358,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/snapshot-delta-63955ff76423d5e7b826b8672386d752-babd1.png&quot;
+    href=&quot;/static/snapshot-delta-63955ff76423d5e7b826b8672386d752-25b11.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3409,12 +3374,12 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;snapshot-delta.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/snapshot-delta-63955ff76423d5e7b826b8672386d752-babd1.png&quot;
-        srcset=&quot;/static/snapshot-delta-63955ff76423d5e7b826b8672386d752-5eb2f.png 265w,
-/static/snapshot-delta-63955ff76423d5e7b826b8672386d752-babd1.png 455w&quot;
+        src=&quot;/static/snapshot-delta-63955ff76423d5e7b826b8672386d752-25b11.png&quot;
+        srcset=&quot;/static/snapshot-delta-63955ff76423d5e7b826b8672386d752-ef879.png 265w,
+/static/snapshot-delta-63955ff76423d5e7b826b8672386d752-25b11.png 455w&quot;
         sizes=&quot;(max-width: 455px) 100vw, 455px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3450,7 +3415,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/file-status-15e9721b6870c8c242b350056fb3dfd3-fb14d.png&quot;
+    href=&quot;/static/file-status-15e9721b6870c8c242b350056fb3dfd3-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3466,13 +3431,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;file-status.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/file-status-15e9721b6870c8c242b350056fb3dfd3-fb14d.png&quot;
-        srcset=&quot;/static/file-status-15e9721b6870c8c242b350056fb3dfd3-1b26e.png 265w,
-/static/file-status-15e9721b6870c8c242b350056fb3dfd3-12aa6.png 530w,
-/static/file-status-15e9721b6870c8c242b350056fb3dfd3-fb14d.png 800w&quot;
+        src=&quot;/static/file-status-15e9721b6870c8c242b350056fb3dfd3-3d7b4.png&quot;
+        srcset=&quot;/static/file-status-15e9721b6870c8c242b350056fb3dfd3-7e884.png 265w,
+/static/file-status-15e9721b6870c8c242b350056fb3dfd3-9c901.png 530w,
+/static/file-status-15e9721b6870c8c242b350056fb3dfd3-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3490,7 +3455,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/branch-6a9b6f3ba7c5d6d82324902af2ee1906-fb14d.png&quot;
+    href=&quot;/static/branch-6a9b6f3ba7c5d6d82324902af2ee1906-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3506,13 +3471,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;branch.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/branch-6a9b6f3ba7c5d6d82324902af2ee1906-fb14d.png&quot;
-        srcset=&quot;/static/branch-6a9b6f3ba7c5d6d82324902af2ee1906-1b26e.png 265w,
-/static/branch-6a9b6f3ba7c5d6d82324902af2ee1906-12aa6.png 530w,
-/static/branch-6a9b6f3ba7c5d6d82324902af2ee1906-fb14d.png 800w&quot;
+        src=&quot;/static/branch-6a9b6f3ba7c5d6d82324902af2ee1906-3d7b4.png&quot;
+        srcset=&quot;/static/branch-6a9b6f3ba7c5d6d82324902af2ee1906-7e884.png 265w,
+/static/branch-6a9b6f3ba7c5d6d82324902af2ee1906-9c901.png 530w,
+/static/branch-6a9b6f3ba7c5d6d82324902af2ee1906-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3554,7 +3519,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/merge-same-ancestor-210172ba558363953854dfabe7e1e2ed-fb14d.png&quot;
+    href=&quot;/static/merge-same-ancestor-210172ba558363953854dfabe7e1e2ed-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3570,13 +3535,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;merge-same-ancestor.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/merge-same-ancestor-210172ba558363953854dfabe7e1e2ed-fb14d.png&quot;
-        srcset=&quot;/static/merge-same-ancestor-210172ba558363953854dfabe7e1e2ed-1b26e.png 265w,
-/static/merge-same-ancestor-210172ba558363953854dfabe7e1e2ed-12aa6.png 530w,
-/static/merge-same-ancestor-210172ba558363953854dfabe7e1e2ed-fb14d.png 800w&quot;
+        src=&quot;/static/merge-same-ancestor-210172ba558363953854dfabe7e1e2ed-3d7b4.png&quot;
+        srcset=&quot;/static/merge-same-ancestor-210172ba558363953854dfabe7e1e2ed-7e884.png 265w,
+/static/merge-same-ancestor-210172ba558363953854dfabe7e1e2ed-9c901.png 530w,
+/static/merge-same-ancestor-210172ba558363953854dfabe7e1e2ed-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3591,7 +3556,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3-way-merge-69eeaa9c76ec63995e3e52a2e98f848f-fb14d.png&quot;
+    href=&quot;/static/3-way-merge-69eeaa9c76ec63995e3e52a2e98f848f-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3607,13 +3572,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;3-way-merge.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/3-way-merge-69eeaa9c76ec63995e3e52a2e98f848f-fb14d.png&quot;
-        srcset=&quot;/static/3-way-merge-69eeaa9c76ec63995e3e52a2e98f848f-1b26e.png 265w,
-/static/3-way-merge-69eeaa9c76ec63995e3e52a2e98f848f-12aa6.png 530w,
-/static/3-way-merge-69eeaa9c76ec63995e3e52a2e98f848f-fb14d.png 800w&quot;
+        src=&quot;/static/3-way-merge-69eeaa9c76ec63995e3e52a2e98f848f-3d7b4.png&quot;
+        srcset=&quot;/static/3-way-merge-69eeaa9c76ec63995e3e52a2e98f848f-7e884.png 265w,
+/static/3-way-merge-69eeaa9c76ec63995e3e52a2e98f848f-9c901.png 530w,
+/static/3-way-merge-69eeaa9c76ec63995e3e52a2e98f848f-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3626,7 +3591,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/3-way-merge-result-ccb3964e89f185f8dbc51d95832502de-fb14d.png&quot;
+    href=&quot;/static/3-way-merge-result-ccb3964e89f185f8dbc51d95832502de-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3642,13 +3607,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;3-way-merge-result.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/3-way-merge-result-ccb3964e89f185f8dbc51d95832502de-fb14d.png&quot;
-        srcset=&quot;/static/3-way-merge-result-ccb3964e89f185f8dbc51d95832502de-1b26e.png 265w,
-/static/3-way-merge-result-ccb3964e89f185f8dbc51d95832502de-12aa6.png 530w,
-/static/3-way-merge-result-ccb3964e89f185f8dbc51d95832502de-fb14d.png 800w&quot;
+        src=&quot;/static/3-way-merge-result-ccb3964e89f185f8dbc51d95832502de-3d7b4.png&quot;
+        srcset=&quot;/static/3-way-merge-result-ccb3964e89f185f8dbc51d95832502de-7e884.png 265w,
+/static/3-way-merge-result-ccb3964e89f185f8dbc51d95832502de-9c901.png 530w,
+/static/3-way-merge-result-ccb3964e89f185f8dbc51d95832502de-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3675,7 +3640,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/basic-rebase-1-e6c6d30a79edb3d39d6bbaaca7202c21-fb14d.png&quot;
+    href=&quot;/static/basic-rebase-1-e6c6d30a79edb3d39d6bbaaca7202c21-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3691,13 +3656,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;basic-rebase-1.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/basic-rebase-1-e6c6d30a79edb3d39d6bbaaca7202c21-fb14d.png&quot;
-        srcset=&quot;/static/basic-rebase-1-e6c6d30a79edb3d39d6bbaaca7202c21-1b26e.png 265w,
-/static/basic-rebase-1-e6c6d30a79edb3d39d6bbaaca7202c21-12aa6.png 530w,
-/static/basic-rebase-1-e6c6d30a79edb3d39d6bbaaca7202c21-fb14d.png 800w&quot;
+        src=&quot;/static/basic-rebase-1-e6c6d30a79edb3d39d6bbaaca7202c21-3d7b4.png&quot;
+        srcset=&quot;/static/basic-rebase-1-e6c6d30a79edb3d39d6bbaaca7202c21-7e884.png 265w,
+/static/basic-rebase-1-e6c6d30a79edb3d39d6bbaaca7202c21-9c901.png 530w,
+/static/basic-rebase-1-e6c6d30a79edb3d39d6bbaaca7202c21-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3709,7 +3674,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/basic-rebase-2-9559865403194d1b66cece6d3330ea1a-fb14d.png&quot;
+    href=&quot;/static/basic-rebase-2-9559865403194d1b66cece6d3330ea1a-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3725,13 +3690,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;basic-rebase-2.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/basic-rebase-2-9559865403194d1b66cece6d3330ea1a-fb14d.png&quot;
-        srcset=&quot;/static/basic-rebase-2-9559865403194d1b66cece6d3330ea1a-1b26e.png 265w,
-/static/basic-rebase-2-9559865403194d1b66cece6d3330ea1a-12aa6.png 530w,
-/static/basic-rebase-2-9559865403194d1b66cece6d3330ea1a-fb14d.png 800w&quot;
+        src=&quot;/static/basic-rebase-2-9559865403194d1b66cece6d3330ea1a-3d7b4.png&quot;
+        srcset=&quot;/static/basic-rebase-2-9559865403194d1b66cece6d3330ea1a-7e884.png 265w,
+/static/basic-rebase-2-9559865403194d1b66cece6d3330ea1a-9c901.png 530w,
+/static/basic-rebase-2-9559865403194d1b66cece6d3330ea1a-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3743,7 +3708,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/basic-rebase-3-910b5deb713c24f12eae4004c9c28998-fb14d.png&quot;
+    href=&quot;/static/basic-rebase-3-910b5deb713c24f12eae4004c9c28998-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3759,13 +3724,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;basic-rebase-3.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/basic-rebase-3-910b5deb713c24f12eae4004c9c28998-fb14d.png&quot;
-        srcset=&quot;/static/basic-rebase-3-910b5deb713c24f12eae4004c9c28998-1b26e.png 265w,
-/static/basic-rebase-3-910b5deb713c24f12eae4004c9c28998-12aa6.png 530w,
-/static/basic-rebase-3-910b5deb713c24f12eae4004c9c28998-fb14d.png 800w&quot;
+        src=&quot;/static/basic-rebase-3-910b5deb713c24f12eae4004c9c28998-3d7b4.png&quot;
+        srcset=&quot;/static/basic-rebase-3-910b5deb713c24f12eae4004c9c28998-7e884.png 265w,
+/static/basic-rebase-3-910b5deb713c24f12eae4004c9c28998-9c901.png 530w,
+/static/basic-rebase-3-910b5deb713c24f12eae4004c9c28998-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3777,7 +3742,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/basic-rebase-4-e97029d685aa468a95862378e14d9f69-fb14d.png&quot;
+    href=&quot;/static/basic-rebase-4-e97029d685aa468a95862378e14d9f69-3d7b4.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3793,13 +3758,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;basic-rebase-4.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/basic-rebase-4-e97029d685aa468a95862378e14d9f69-fb14d.png&quot;
-        srcset=&quot;/static/basic-rebase-4-e97029d685aa468a95862378e14d9f69-1b26e.png 265w,
-/static/basic-rebase-4-e97029d685aa468a95862378e14d9f69-12aa6.png 530w,
-/static/basic-rebase-4-e97029d685aa468a95862378e14d9f69-fb14d.png 800w&quot;
+        src=&quot;/static/basic-rebase-4-e97029d685aa468a95862378e14d9f69-3d7b4.png&quot;
+        srcset=&quot;/static/basic-rebase-4-e97029d685aa468a95862378e14d9f69-7e884.png 265w,
+/static/basic-rebase-4-e97029d685aa468a95862378e14d9f69-9c901.png 530w,
+/static/basic-rebase-4-e97029d685aa468a95862378e14d9f69-3d7b4.png 800w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3825,7 +3790,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;
   &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/git-flow-b5bbc57b674b863052f05a9cb26dcccc-197f9.png&quot;
+    href=&quot;/static/git-flow-b5bbc57b674b863052f05a9cb26dcccc-275d8.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -3841,13 +3806,13 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
     &gt;
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
         alt=&quot;git-flow.png&quot;
         title=&quot;&quot;
-        src=&quot;/static/git-flow-b5bbc57b674b863052f05a9cb26dcccc-197f9.png&quot;
-        srcset=&quot;/static/git-flow-b5bbc57b674b863052f05a9cb26dcccc-587bf.png 265w,
-/static/git-flow-b5bbc57b674b863052f05a9cb26dcccc-5ce7c.png 530w,
-/static/git-flow-b5bbc57b674b863052f05a9cb26dcccc-197f9.png 790w&quot;
+        src=&quot;/static/git-flow-b5bbc57b674b863052f05a9cb26dcccc-275d8.png&quot;
+        srcset=&quot;/static/git-flow-b5bbc57b674b863052f05a9cb26dcccc-543d9.png 265w,
+/static/git-flow-b5bbc57b674b863052f05a9cb26dcccc-7e55a.png 530w,
+/static/git-flow-b5bbc57b674b863052f05a9cb26dcccc-275d8.png 790w&quot;
         sizes=&quot;(max-width: 790px) 100vw, 790px&quot;
       /&gt;
     &lt;/span&gt;
@@ -3939,9 +3904,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;li&gt;&lt;a href=&quot;http://egorsmirnov.me/2015/08/16/react-and-es6-part3.html&quot;&gt;React and ES6 - Part 3, Binding to methods of React class (ES7 included)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://facebook.github.io/react/docs/react-api.html#createclass&quot;&gt;React.createClass&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://medium.com/google-developers/exploring-es7-decorators-76ecb65fb841#.4s8bu1oeo&quot;&gt;Exploring EcmaScript Decorators&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[번역] 자바스크립트 피로감을 줄여주기 위한 학습 계획]]></title><description><![CDATA[이 글은  “A Study Plan To Cure JavaScript Fatigue” 를 번역한 글입니다. 많은 이들처럼 나도 최근 Jose Aguinaga의 글  “How it feels to learn JavaScript in 201…]]></description><link>https://rhostem.github.io/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue/</guid><category><![CDATA[번역]]></category><category><![CDATA[Javascript]]></category><category><![CDATA[React]]></category><category><![CDATA[Redux]]></category><category><![CDATA[Gatsby]]></category><category><![CDATA[ES6]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Mon, 19 Dec 2016 00:00:00 GMT</pubDate><content:encoded>&lt;!-- path: &quot;/hello-world/&quot; --&gt;
-&lt;!-- 원문: https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.boi9p3ig6 --&gt;
-&lt;p&gt;이 글은 &lt;a href=&quot;https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.boi9p3ig6&quot;&gt;“A Study Plan To Cure JavaScript Fatigue”&lt;/a&gt;를 번역한 글입니다.&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[번역] 자바스크립트 피로감을 줄여주기 위한 학습 계획]]></title><description><![CDATA[이 글은  “A Study Plan To Cure JavaScript Fatigue” 를 번역한 글입니다. 많은 이들처럼 나도 최근 Jose Aguinaga의 글  “How it feels to learn JavaScript in 201…]]></description><link>https://rhostem.github.io/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue/</guid><category><![CDATA[번역]]></category><category><![CDATA[Javascript]]></category><category><![CDATA[React]]></category><category><![CDATA[Redux]]></category><category><![CDATA[Gatsby]]></category><category><![CDATA[ES6]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Mon, 19 Dec 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 &lt;a href=&quot;https://medium.freecodecamp.com/a-study-plan-to-cure-javascript-fatigue-8ad3a54f2eb1#.boi9p3ig6&quot;&gt;“A Study Plan To Cure JavaScript Fatigue”&lt;/a&gt;를 번역한 글입니다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;많은 이들처럼 나도 최근 Jose Aguinaga의 글 &lt;a href=&quot;https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f#.5wjpn7svo&quot;&gt;“How it feels to learn JavaScript in 2016”&lt;/a&gt;을 읽었다.&lt;/p&gt;
 &lt;p&gt;그의 글은 정곡을 찔렀던 것이 분명한 모양이다.(나는 그 포스트가 Hacker News에 한번도 아니고 두번이나 탑 스팟에 오르는 것을 보았다.) 그건 &lt;a href=&quot;https://www.reddit.com/r/javascript/&quot;&gt;/r/javascript&lt;/a&gt;에서도 가장 인기있는 글이었고 Medium에서는 1만개의 ‘like’를 기록했다.&lt;/p&gt;
@@ -3974,7 +3937,39 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;h2 id=&quot;자바스크립트-앱의-구성-요소&quot;&gt;&lt;a href=&quot;#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%95%B1%EC%9D%98-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;자바스크립트 앱의 구성 요소&lt;/h2&gt;
 &lt;p&gt;왜 모던 자바스크립트 앱에 그렇게 복잡해 보이는지 이해하기 위해서는 먼저 그것들이 어떻게 동작하는지를 이해해야 한다.&lt;/p&gt;
 &lt;p&gt;먼저 약 2008년경의 “전통적인” 웹앱의 형태를 보자.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*k8ouvk608TxH5FaLM8XUxQ.png&quot; alt=&quot;전통적인 웹앱&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1-c1905ae43f335b6c1afc412623389b21-b4c52.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1024px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 18.06640625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABKUlEQVQY0z1Ov07CYBz8hARBVgeNDjq5GDdHX8DBzQeQycnFV/AJHIwuOhoTfQQnCKaRUFBAKm2lQCn987Vpv/4H+7NfTbjkcsnl7nIIpfjp6zmqYx6f9Joy/8VO61ghewY2SqZKDtrMuNl6k/qyaB5rkbaa4MWmXrNfxq/GJGDDC9p13r1c0IpQhkFnls8GBXwuD36hUR0CsbwzCzs3tkEqn4wKHOuAMjQvLdO+9S2/oldtEUYAXjO8pl2b8fLLQb6rZg+FnnqUvnvi2sqd9G1u/b83drgP5b7fnj4KPe2QejE3L7mN4ArXneeAjU6p5zb8leWgPvEyVUduYRFAOSRQHA2s7ZT7KTciF4qhk5RnEinQXO2BRwmXrIMIu3FnsUY9EADF3Tn6A0HExR9ZU7LeAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;전통적인 웹앱&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1-c1905ae43f335b6c1afc412623389b21-b4c52.png&quot;
+        srcset=&quot;/static/1-c1905ae43f335b6c1afc412623389b21-a52e7.png 265w,
+/static/1-c1905ae43f335b6c1afc412623389b21-a00b8.png 530w,
+/static/1-c1905ae43f335b6c1afc412623389b21-b4c52.png 1024w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;데이터베이스가 백엔드로 데이터를 보낸다.(당신의 PHP 또는 rails 앱)&lt;/li&gt;
 &lt;li&gt;백엔드가 데이터를 읽어서 HTML을 내보낸다.&lt;/li&gt;
@@ -3982,7 +3977,39 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;/ol&gt;
 &lt;p&gt;이제 많은 앱들이 탭 메뉴나 모달 윈도우같은 상호작용을 구현하기 위해 클라이언트에서 자바스크립트 코드를 첨가한다. 하지만 근본적으로 브라우저는 여전히 HTML을 전달받은 후 시작한다.&lt;/p&gt;
 &lt;p&gt;이제 이것을 SPA(Single Page App)이라고도 알려져 있는 2016년의 “모던” 웹 앱과 비교해 보자.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*_kZH0yiuh9b7ypYpoPANTw.png&quot; alt=&quot;2016 모던 웹앱&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2-ef035e48404bb62d7c84162c8c3314cb-b4c52.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1024px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 18.06640625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAABSElEQVQY0x2OO0vDUBzFIxT6iAjVDyC6Vp0cXAQXR1cHZweXTuIncFJwcdBJcHIStItOPrCgrbTFJCa26UOtadOkJrnNze3NQ/M39QdnOZxzOIypOazM927Eckd5r/U3ASBmWzjdELXj5/tWtylpe9hyVkyCll3B2x4UieKU6LWr08lGqKQo7652bo03LY9KPh9kmGhggiu0A70F8Cn39/EA72KEs2JZeVCqANWXbm5g2OeGia6oQE/hFUC9s3TPoRuRd0Qkkg0FAFoB8Hl/iTFUJ1Hj1UOp0rloSvoaE0GQF69x6k6knMyrWy6hC8OQZMwnvK7n0aXxaB9APUyNsgEfLFoF5wwVnZNf8WeGkSq9MfvbH4+eJpQmSn/Vrbm2bM6aPcoGQ0iaKv0vjoAPiAMGFvqQdDl/2uOCecp5U4AgAV1g7dIw9gdJpe5A8/5mBwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;2016 모던 웹앱&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2-ef035e48404bb62d7c84162c8c3314cb-b4c52.png&quot;
+        srcset=&quot;/static/2-ef035e48404bb62d7c84162c8c3314cb-a52e7.png 265w,
+/static/2-ef035e48404bb62d7c84162c8c3314cb-a00b8.png 530w,
+/static/2-ef035e48404bb62d7c84162c8c3314cb-b4c52.png 1024w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;차이점을 알겠는가? 서버은 이제 HTML을 보내는대신 &lt;em&gt;데이터&lt;/em&gt;를 보낸다. 그리고 “데이터에서 HTML로의 전환” 단계는 서버 대신 클라이언트에서 일어난다.(그래서 당신은 클라이언트에게 데이터에서 HTML로의 전환이 어떻게 일어나는지를 설명해주는 코드를 전달해줘야만 한다)&lt;/p&gt;
 &lt;p&gt;이는 많은 사실을 내포하고 있다. 먼저 장점으로는:&lt;/p&gt;
 &lt;ul&gt;
@@ -4004,7 +4031,39 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;반면에 당신이 블로그와 같은 순수하게 정적인 사이트를 개발한다면 서버에서 HTML을 생성해서 전달하는 것이 확실히 좋으니 그렇게 하면 된다.&lt;/p&gt;
 &lt;p&gt;진실은 거의 대부분의 웹앱이 앞선 두 경우, 계산기와 블로그의 중간쯤 어딘가에 위치한다는 점이다. 문제는 앱이 클라이언트-서버 스펙트럼의 어느 지점에 위치하는지를 파악하는 것이다.&lt;/p&gt;
 &lt;p&gt;하지만 핵심은 &lt;em&gt;그 스펙트럼은 연속적이지 않다&lt;/em&gt;는 점이다. 순수한 서버 사이드 앱에서 순수한 클라이언트 사이드 앱으로 조금씩 이동해 나갈 수는 없다. 어떤 지점(the Divide)이 되면 작업을 멈춰야 하고 모든 것을 서버와 클라이언트로 분리하는 리팩토링 과정을 강요받게 된다. 그렇게 하지 않으면 유지보수가 불가능한 스파게티 코드만이 남을 것이다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*m0iR2VK7iNt8flGqyhYx9A.png&quot; alt=&quot;the divide&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3-5e4b266a1ec89a81bb63191519ccde29-b4c52.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1024px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 18.06640625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA90lEQVQY02Nwle2VV2WoFGTAA/4z/Gb6FP9FAJ8aY/YmCUfxLnGGNNdFGvM6jpgc3HRL+uWTz6LPHnwU/fLhl9S3L79Fn9z5IHb/4Vuhl6c/6b458jnw4cV3Io/uvhd7dv+jxOtnX6Qe3Hwn+urpF9E9a6/LTqrca14StkqNIdp8pnBH3jbR////s4Jwc8YmgXz/ZSo53ksVNy64wPn93R+WJ+/ec7/4/4n//IknLEA1LLWJ68WqYtbKPL7zgQ2kp7dkJ19T+kaRNNcFggxusr1ChswNPDCnazFUs9sKt0vYi3aK4fKeJkM1hxFbIy+qqD2TNkMNMwCuZm3VjYKOjAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;the divide&quot;
+        title=&quot;&quot;
+        src=&quot;/static/3-5e4b266a1ec89a81bb63191519ccde29-b4c52.png&quot;
+        srcset=&quot;/static/3-5e4b266a1ec89a81bb63191519ccde29-a52e7.png 265w,
+/static/3-5e4b266a1ec89a81bb63191519ccde29-a00b8.png 530w,
+/static/3-5e4b266a1ec89a81bb63191519ccde29-b4c52.png 1024w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;이것이 당신이 ‘그냥 jQuery만 쓰자’라고 생각하면 안되는 이유다. jQuery는 접착테이프 같은 존재라고 생각하면 된다. 집안에 있는 조그만 것들을 고치기에는 정말 편리하다. 하지만 자꾸 쓰게 되면 점점 엉망이 되어가는 집을 발견하게 될 것이다.&lt;/p&gt;
 &lt;p&gt;반면에 모던 자바스크립트 프레임워크는 부품을 만들기 위한 3D 프린팅 기법과 유사하다. 더 많은 시간이 걸리지만 결과물은 훨씬 깔끔하고 튼튼하다. 그리고 대부분의 웹앱들은 빠르든 늦든 스펙트럼의 오른쪽으로 향할 것이다. 모던 자바스크립트를 공부하는 것은 많은 노력이 필요하지만 그래도 더 좋은 방향임은 분명하다.&lt;/p&gt;
 &lt;h2 id=&quot;0주차-자바스크립트-기본&quot;&gt;&lt;a href=&quot;#0%EC%A3%BC%EC%B0%A8-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B8%B0%EB%B3%B8&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;0주차: 자바스크립트 기본&lt;/h2&gt;
@@ -4013,7 +4072,39 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;h2 id=&quot;1주차-react-시작하기&quot;&gt;&lt;a href=&quot;#1%EC%A3%BC%EC%B0%A8-react-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1주차: React 시작하기&lt;/h2&gt;
 &lt;p&gt;이제 자바스크립트 기본 문법도 알았고 자바스크립트 앱이 왜 그렇게 복잡해 보일 수 있는지도 알았으니 이제 본격적으로 뭘 하면 될까? 어디에서부터 시작하면 될까?&lt;/p&gt;
 &lt;p&gt;나는 그 답이 &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;리액트(React)&lt;/a&gt;라고 믿는다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*eHRtRF0w78XfLEhOpFTflQ.png&quot; alt=&quot;react homepage screenshot&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4-f1ebe7aca5ca549b078f21fcc634d7f9-b4c52.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1024px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 66.69921875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAACOUlEQVQ4y21RaW8SURSd/2FiBSlSmGEb1mBtbGoNGhNjBFKEJpYmjZr0b/gT/NgPJv4iQtj3tUBYww7Hdx++BttOcubeufecc+97I2l1Oux5X+Gpy4cXRiNkWYbFYoGiKLBarfxbVVW43G7Y7XYYDAZotVpoNBoYGZ84NpuN86kukYDDZOLRxOIuZFmB6cAAo14Pk/GAC4XmIVeGRITHICtbI/XED8+nMJzvPkI9fstNheFjuu2G/wzEdIpOl4sf03N4BN+pHz7/B3iPT3jN7fXyaxHcu1PShmazGbsgIkWPw4EjjxuHTgfcNiteqnaWq7zmcznveJZ7eknHfsou9Pv7eLL3DNfvT/Hn+go33y9w9eY1fl1GcfPtAr9/xPAz/Bl6xn1+T0uQgsEgQqEQB+WEQCCA6NkZLs+jHOfhMGLRKEMEsUgEXyNfHmgEpM1mg8Vigfl8jvV6DfGsWX3O6lNWnzFMplOsWJ/qi9WK80lHD3kISJPJBLVaDcViEe12G6PRiGPBBK1WC8VCAeVyGQUW27e3mDLjbreLTCazrTGNWIh6Er2omUqlkEgkEI/HeU6m9XoduVwO+XyeD6xWq+j3+xzZbJbXKdJAGj6bzbaGYgMyaDQaaDaboM0pT6fTXCQwHo/R6/WQYvUcM0wmk5xDW9OmErlWKhU+jYwIYlqn0+E9uhJCqVTCcDjEYDBAnp2qyjR16rFF/jOkqXREIgsBbUiE5XLJ425OvRHjTIcDzNgJ6f7Ih/AXVFCse3s5HLwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;react homepage screenshot&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4-f1ebe7aca5ca549b078f21fcc634d7f9-b4c52.png&quot;
+        srcset=&quot;/static/4-f1ebe7aca5ca549b078f21fcc634d7f9-a52e7.png 265w,
+/static/4-f1ebe7aca5ca549b078f21fcc634d7f9-a00b8.png 530w,
+/static/4-f1ebe7aca5ca549b078f21fcc634d7f9-b4c52.png 1024w&quot;
+        sizes=&quot;(max-width: 1024px) 100vw, 1024px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;리액트는 페이스북이 만든 오프소스 UI 라이브러리다. UI 라이브러리라는 것은 즉 ‘데이터에서 HTML로 전환’하는 단계(뷰 레이어)에 사용된다는 말이다.&lt;/p&gt;
 &lt;p&gt;내 주관적인 생각으로 리액트가 &lt;em&gt;가장 좋은&lt;/em&gt; 라이브러리라서 추천하는 것은 아니니 오해하지 않았으면 좋겠다. 리액트를 추천하는 건 그게 &lt;em&gt;꽤 좋기&lt;/em&gt; 때문이다.&lt;/p&gt;
 &lt;ul&gt;
@@ -4039,7 +4130,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;/ul&gt;
 &lt;p&gt;나는 라이브러리나 프레임워크를 배우는 가장 좋은 방법은 그냥 사용해 보는 것이라 믿는다. 그리고 개인 프로젝트는 새로운 기술을 시도해보기에 좋은 선택이다. 개인 프로젝트는 싱글 페이지 웹앱부터 복잡도가 높은 앱까지 어떤 것도 될 수 있지만 당신의 개인 사이트를 재구성하는 것도 적절한 방법이다.&lt;/p&gt;
 &lt;p&gt;싱글 페이지 앱으로 스태틱 페이지를 만드는 것은 맞지 않는 일이지만 리액트는 비밀 무기: &lt;a href=&quot;https://github.com/gatsbyjs/gatsby&quot;&gt;개츠비(Gatsby)&lt;/a&gt;를 가지고 있다. 개츠비는 리액트 기반의 스태틱 사이트 제네레이터(static site generator)로서 아무런 어려움 없이 리액트의 모든 장점을 가져올 수 있는 치트키라고 할 수 있다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*nnHXMTKwXxCWJiY9yX2ZMA.gif&quot; alt=&quot;Gatsby&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/5-999b1e38cc372551f8d2bef2ca1c16af.gif&quot; alt=&quot;Gatsby&quot;&gt;&lt;/p&gt;
 &lt;p&gt;개츠비가 리액트를 시작하기 좋은 도구인 이유는 아래와 같다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;미리 설정되어 있는 웹팩 개발 환경을 제공한다. 즉 복잡한 설정을 하느라 머리아플 필요가 없다.&lt;/li&gt;
@@ -4062,18 +4153,120 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;이제 당신은 정적인 컨텐츠를 만들어내는 간단한 리액트 앱을 만들 수 있게 되었다. 하지만 실제 웹앱은 정적(static)이지 않다. 데이터베이스같은 곳에서 데이터를 가져와야 한다.&lt;/p&gt;
 &lt;p&gt;지금은 단순히 데이터를 컴포넌트에 전달하기만 할 수 있다. 하지만 그런 방식은 금세 복잡하고 지저분해진다. 예를 들어 두개의 독립적인 컴포넌트가 동일한 데이터를 보여줘야 한다면? 또 컴포넌트간에 서로 데이터를 주고받아야 할 필요가 생긴다면?&lt;/p&gt;
 &lt;p&gt;여기가 바로 &lt;strong&gt;상태 관리&lt;/strong&gt;가 필요한 지점이다. 상태를 각각의 컴포넌트 대신 하나의 전역 저장소에 저장한 후 리액트 컴포넌트에 전달(dispatch)하는 방식을 사용하자.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*g1LsxUV91i50-xE_VlMrsQ.png&quot; alt=&quot;redux data flow&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6-636589a41afc7e26ff7c540d0ca63808-72d95.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 16.799999999999997%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAA4UlEQVQI12O4dPLRlUvHnv5/9vBdztcvX4PvXnvRfP/St/83zj9b+PHDp/nf332rebD91ceHO159+vX+Z/DbTx9C3p/8vOz7yf//v1z6Vvf62/uwrze+5b4/+uP/m6OfzjLcvvLCEYgDbl58IcsABLcvv9C8d/1V6N2rLw1B/FfnPnD9uPDT+8fFnz4/t/zmBYl9O/fD7OfFX2HfzvzUAPF/nv4t9+38j8Dv53/aM8DAw1tv+B/cfK374vF7ZgYc4Mv1b+yfbn7h+H7hJ8eP87+kv17+xvL55leud5c+wfUAALFjjNOZ5UwFAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;redux data flow&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6-636589a41afc7e26ff7c540d0ca63808-9056e.png&quot;
+        srcset=&quot;/static/6-636589a41afc7e26ff7c540d0ca63808-507eb.png 265w,
+/static/6-636589a41afc7e26ff7c540d0ca63808-63b28.png 530w,
+/static/6-636589a41afc7e26ff7c540d0ca63808-9056e.png 1060w,
+/static/6-636589a41afc7e26ff7c540d0ca63808-d381a.png 1590w,
+/static/6-636589a41afc7e26ff7c540d0ca63808-72d95.png 2000w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;리액트 생태계에서 가장 인기있는 상태 관리 라이브러리는 리덕스(Redux)다. 리덕스는 데이터를 집중화해줄 뿐만 아니라 데이터를 조작할 때 엄격한 프로토콜을 강제한다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*4STSciyhxtniKgVagN2y0Q.png&quot; alt=&quot;redux document&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7-66f143ef8b5527f6f38f90fba8151d93-ce7d2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 78.0625%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAAAsSAAALEgHS3X78AAABwklEQVQoz41S74vTQBC9//+v8cOBoCBUUNvzOPGLB6WImjZN0mySze7s7O/40toeipQOL5vZZN/M7My7m6Yp+NhuWbTder3ebDZSyuk2u8PDFMoNldt6uVouFouiKPAx53wTOYRgjMGaUgLHe48tMxMRnJzTNbJzDqV2XSeEaIG2HYahB/q+6yXZyGFil/5PRiowug6sw+HQiOMbobCZY4m+quEgeIdww2zSeX++s/XbWuyableL/aEHdlVb1OIghnFETXKu4GhH4ijJuZD+kGNKZCwRwJpIG9Y2a+O0JsblzWzX7ty0Vd2W+7opq7ra76uuAhftIheMD8TWxeRSdiFaa9HaF/LQysW3Nx+L+/vl8+sv31cf3r8rXy2Lt6uvz59VeuLp8Uf50KhHnp6K5mH5CVo4zfFYdoyKSGo1KD0Sj0r74ICAH3makVJMGQ5GmY72kjlP2caJfMZIFEdi56xltpdDVxXGXPz6udsW+3J3i7D+IqO6QZGQ1Ct0KEEVmkO6UZ4oDw1HRw3P03I+3kS9kCFCoWyvZwzaayS3ceSgztB2hrJhNCH/Q8a5nvxggjRhIA8Bob3If1pPTjxvL5l/A0MznP3TPkXoAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;redux document&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7-66f143ef8b5527f6f38f90fba8151d93-9056e.png&quot;
+        srcset=&quot;/static/7-66f143ef8b5527f6f38f90fba8151d93-507eb.png 265w,
+/static/7-66f143ef8b5527f6f38f90fba8151d93-63b28.png 530w,
+/static/7-66f143ef8b5527f6f38f90fba8151d93-9056e.png 1060w,
+/static/7-66f143ef8b5527f6f38f90fba8151d93-d381a.png 1590w,
+/static/7-66f143ef8b5527f6f38f90fba8151d93-ce7d2.png 1600w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;리덕스는 일종의 ‘은행’으로 생각할 수 있다. 은행을 이용할 때 당신은 지역 지점으로 가서 계좌 잔액을 임의로 변경할 수는 없다. 대신 입출금 양식을 작성해서 인증받은 은행원에게 전달해서 관련 작업을 할 수 있도록 요청해야 한다.&lt;/p&gt;
 &lt;p&gt;비슷하게 리덕스는 전역 상태를 직접 변경할 수 없게 해 두었다. 대신 리듀서(reducer)에 액션(action)을 전달해야 한다. 리듀서는 특수한 함수로서 액션을 전달받아서 작업을 수행한 후 업데이트된 새로운 상태를 반환한다.&lt;/p&gt;
 &lt;p&gt;이러한 추가적인 작업은 앱 전반적으로 매우 유지보수성이 좋고 표준화된 데이터 흐름을 제공한다. 그리고 &lt;a href=&quot;https://github.com/gaearon/redux-devtools&quot;&gt;Redux devtool&lt;/a&gt;같은 툴은 리덕스와 관련된 일련의 작업들을 시각화해준다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*lAp8ZAk5uNFTuxjhx4GTdw.gif&quot; alt=&quot;redux dev tool&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/8-9fbbfc06193b4b202bb82352f4da2bb5.gif&quot; alt=&quot;redux dev tool&quot;&gt;&lt;/p&gt;
 &lt;p&gt;리덕스 관련 강의로 다시 한번 우리의 친구 Wes의 &lt;a href=&quot;https://learnredux.com/&quot;&gt;리덕스 강의&lt;/a&gt;를 들어도 되고(이건 무료다!) egghead.io에 올라와 있는 리덕스를 개발한 Dan Abramov의 &lt;a href=&quot;https://egghead.io/courses/getting-started-with-redux&quot;&gt;비디오&lt;/a&gt;를 참고해도 좋다. 이 비디오도 역시 무료다.&lt;/p&gt;
 &lt;h2 id=&quot;5주차보너스-graphql로-api를-구성하기&quot;&gt;&lt;a href=&quot;#5%EC%A3%BC%EC%B0%A8%EB%B3%B4%EB%84%88%EC%8A%A4-graphql%EB%A1%9C-api%EB%A5%BC-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;5주차(보너스): GraphQL로 API를 구성하기&lt;/h2&gt;
 &lt;p&gt;지금껏 많은 내용들을 이야기했지만 모두 클라이언트에 관한 것들만이었다. 클라이언트는 등식의 단지 절반일 뿐이다. 노드(Node) 생태계를 깊이 파고들지 않을 것이라 하더라도 이 핵심 요소는 언급할 필요가 있다. 데이터가 서버에서 클라언트로 어떻게 전달되는지에 관한 내용이다.&lt;/p&gt;
 &lt;p&gt;기술은 너무나 빠르게 변하고 있기 때문에 &lt;a href=&quot;http://graphql.org/&quot;&gt;GraphQL&lt;/a&gt;(Facebook의 또 다른 오픈소스 프로젝트)이 전통적인 REST API의 진지한 대안으로 여겨지고 있다는 사실은 또 그렇게 놀랍지 않다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*HiWFjGqvZEOEUaSGau89eQ.png&quot; alt=&quot;GraphQL homepage&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9-7c3da519e6ae5e49e0f498980db53e87-ce7d2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 58.8125%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABdUlEQVQoz6WQ207CQBCG9wXQm9ID7R7o7vawpaUtiV5zow+rMdHXEUEQoiKgiUq809kipEHubL5O/t1/ZjKzyKKBwyKHha4ft4B21GrHJpEHsWkQpD2Vn/K4gEJkEWkQAZhYNj1RweESMLE+QgQLjhvXcLnh8eomQNAvcnPAYiH0Y0HXjwvXVx5PWNj1o9xXhecrGEeoQiY9rgoq099i+M+s/rnVt4kUcdkpCuxHMBIWSZidYJFxnsJeNg1dmXuig6Evix0S2iTUxZnbS90ShMO7NMoo11NBAVelLsMBWDYJTKYsGhMSM5pQqlo0QpUBbXSGXhvDw2y1J/Sq1cKWvqweYoseG+aBIQEQOzyRwHpEprC5UCUWnbq7AzUM7y9HTXxsUogNQ4uGFgfS0OXVTZ2LbaxxvdN7yej7Hx96/1jXWa7enueLxfIV4vxluYkvi9VG7CWjz/VXHUgaju6ns8fhaHw7GA7uRtPZ03gynTzMwNpL/gGzWBATRk1OawAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;GraphQL homepage&quot;
+        title=&quot;&quot;
+        src=&quot;/static/9-7c3da519e6ae5e49e0f498980db53e87-9056e.png&quot;
+        srcset=&quot;/static/9-7c3da519e6ae5e49e0f498980db53e87-507eb.png 265w,
+/static/9-7c3da519e6ae5e49e0f498980db53e87-63b28.png 530w,
+/static/9-7c3da519e6ae5e49e0f498980db53e87-9056e.png 1060w,
+/static/9-7c3da519e6ae5e49e0f498980db53e87-d381a.png 1590w,
+/static/9-7c3da519e6ae5e49e0f498980db53e87-ce7d2.png 1600w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;REST API가 사전 정의된 데이터 집합에 접근하기 위한 여러개의 REST 경로(ex. /api/posts, /api/comments, …)를 제공하는 것에 반해서 GraphQL은 단 1개의 경로만 제공하고 클라이언트가 필요한 데이터에 접근하기 위한 쿼리를 던지게 한다.&lt;/p&gt;
 &lt;p&gt;예를 들어 정육점, 빵집, 식료품점 등 여러 가게들 돌아다니는 것과 쇼핑 목록을 작성해서 세 가게에 모두 전달하는 것을 비교해서 상상해보라. 이 새로운 전략은 복수의 소스(또는 테이블)에서 데이터를 가져오려고 할 때 특히 중요해진다. 앞서 예를 든 쇼핑 목록처럼 이제는 클라이언트에서 필요한 데이터를 조합하기 위해서는 단 한번의 요청만으로도 가능해지기 때문이다.&lt;/p&gt;
 &lt;p&gt;GraphQL은 1년간 뜨거운 관심을 받아 왔고 많은 프로젝트(2주차에서 언급한 개츠비 등)들이 적용할 계획을 가지고 있다. GraphQL 자체는 단지 프로토콜일 뿐이고 구현체로는 &lt;a href=&quot;http://apollostack.com/&quot;&gt;아폴로(Apollo)&lt;/a&gt;(리덕스와도 잘 작동한다) 라이브러리가 있다. 아직은 GraphQL와 아폴로에 대한 교육 자료가 많지 않지만 &lt;a href=&quot;http://dev.apollodata.com/&quot;&gt;아폴로 공식 문서&lt;/a&gt;가 입문에 도움이 될 것이다.&lt;/p&gt;
@@ -4081,7 +4274,41 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;나는 리액트 생태계가 안전한 선택이기에 추천을 했었다. 하지만 리액트만이 좋은 프론트 엔드 스택은 아니다. 좀 더 알아보고 싶다면, 다음의 두 라이브러리를 추천한다.&lt;/p&gt;
 &lt;h3 id=&quot;vue&quot;&gt;&lt;a href=&quot;#vue&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Vue&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;http://vuejs.org/&quot;&gt;Vue&lt;/a&gt;는 상대적으로 새로운 라이브러리지만 기록적인 속도로 성장하고 있고 이미 중국의 바이두와 알리바바(중국의 구글과 아마존)같은 메이저급 회사들이 도입한 상태다. 또 PHP 프레임워크 &lt;a href=&quot;https://laravel.com/&quot;&gt;Laravel&lt;/a&gt;의 공식 프론트엔드 레이어이기도 하다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1000/1*JFTBjxOMAh1H8q6Gz1zmMw.png&quot; alt=&quot;vue.js&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/10-f2a9546db6d6eb3122e856f783144da1-ce7d2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 56.56250000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAABA0lEQVQoz32QS07DMBBAczgOwQ04ACsuwA2QuuMQ7EDAkh2bVkhILBAQSqM4Hztjj79h4rRSkyZ5sqzxeN5YnqSNhLgzFB9pmv5mn1XWhiARlSaMNqadIjnInb5z/Pzm+uzq8nG3oUTFeM34X5ZnORMNSIXTMuGDp/327fniftU1gurpe/OyfecKpEZQCrWZlXvA6R8sKfiC/C59fdiuhVXobdj/bF72bTDx/VNc8LprMS8DKtbUXAJNy1pbNrwEYZ3rrwrBR5MbyDRZhYha0wvOefomHXuZklIq6jiQ3RH+gDthMp/IIRBXFwDUEQr2eRjVyrF8TFEUjLGFgiVZRBYK/gHLxnxqXSg2uwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;vue.js&quot;
+        title=&quot;&quot;
+        src=&quot;/static/10-f2a9546db6d6eb3122e856f783144da1-9056e.png&quot;
+        srcset=&quot;/static/10-f2a9546db6d6eb3122e856f783144da1-507eb.png 265w,
+/static/10-f2a9546db6d6eb3122e856f783144da1-63b28.png 530w,
+/static/10-f2a9546db6d6eb3122e856f783144da1-9056e.png 1060w,
+/static/10-f2a9546db6d6eb3122e856f783144da1-d381a.png 1590w,
+/static/10-f2a9546db6d6eb3122e856f783144da1-ce7d2.png 1600w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;p&gt;리액트와 비교해서 주목할점은 특징은 아래와 같다.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;라우팅과 상태 관리 라이브러리를 공식적으로 지원한다.&lt;/li&gt;
