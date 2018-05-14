@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[rhostem.github.io]]></title><description><![CDATA[프론트엔드 웹 개발 기술 블로그입니다.]]></description><link>https://rhostem.github.io</link><image><url>https://rhostem.github.io/logos/logo-512.png</url><title>rhostem.github.io</title><link>https://rhostem.github.io</link></image><generator>rhostem.github.io</generator><lastBuildDate>Mon, 14 May 2018 13:33:12 GMT</lastBuildDate><atom:link href="https://rhostem.github.io/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[rhostem]]></author><copyright><![CDATA[Copyright © 2016. rhostem All rights reserved]]></copyright><item><title><![CDATA[[번역] 2018년에 배워야 할 최고의 자바스크립트 라이브러리와 기술]]></title><description><![CDATA[이 글은  Eric Elliot 의  Top JavaScript Libraries & Tech to Learn in 2018 을 번역한 글입니다. 작년 나는  201…]]></description><link>https://rhostem.github.io/posts/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018/</guid><category><![CDATA[번역]]></category><category><![CDATA[Javascript]]></category><category><![CDATA[React]]></category><category><![CDATA[소프트웨어 개발]]></category><category><![CDATA[학습]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Thu, 25 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 &lt;a href=&quot;https://medium.com/@_ericelliott?source=post_header_lockup&quot;&gt;Eric Elliot&lt;/a&gt;의 &lt;a href=&quot;https://medium.com/javascript-scene/top-javascript-libraries-tech-to-learn-in-2018-c38028e028e6&quot;&gt;Top JavaScript Libraries &amp;#x26; Tech to Learn in 2018&lt;/a&gt;을 번역한 글입니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[rhostem.github.io]]></title><description><![CDATA[프론트엔드 웹 개발 기술 블로그입니다.]]></description><link>https://rhostem.github.io</link><image><url>https://rhostem.github.io/logos/logo-512.png</url><title>rhostem.github.io</title><link>https://rhostem.github.io</link></image><generator>rhostem.github.io</generator><lastBuildDate>Mon, 14 May 2018 13:50:18 GMT</lastBuildDate><atom:link href="https://rhostem.github.io/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[rhostem]]></author><copyright><![CDATA[Copyright © 2016. rhostem All rights reserved]]></copyright><item><title><![CDATA[[번역] 2018년에 배워야 할 최고의 자바스크립트 라이브러리와 기술]]></title><description><![CDATA[이 글은  Eric Elliot 의  Top JavaScript Libraries & Tech to Learn in 2018 을 번역한 글입니다. 작년 나는  201…]]></description><link>https://rhostem.github.io/posts/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018/</guid><category><![CDATA[번역]]></category><category><![CDATA[Javascript]]></category><category><![CDATA[React]]></category><category><![CDATA[소프트웨어 개발]]></category><category><![CDATA[학습]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Thu, 25 Jan 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 &lt;a href=&quot;https://medium.com/@_ericelliott?source=post_header_lockup&quot;&gt;Eric Elliot&lt;/a&gt;의 &lt;a href=&quot;https://medium.com/javascript-scene/top-javascript-libraries-tech-to-learn-in-2018-c38028e028e6&quot;&gt;Top JavaScript Libraries &amp;#x26; Tech to Learn in 2018&lt;/a&gt;을 번역한 글입니다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;작년 나는 &lt;a href=&quot;https://medium.com/javascript-scene/top-javascript-frameworks-topics-to-learn-in-2017-700a397b711&quot;&gt;2017년에 배워야할 최고의 기술들을 정리한 글&lt;/a&gt;을 작성했었다. 올해에는 놀라운 현상이 있었다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“어떤 기술이 투자 대비 학습 효과가 가장 높은가?”라는 질문에 대답이 나오기 시작했다.&lt;/strong&gt;&lt;/p&gt;
@@ -753,7 +753,40 @@ observer&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
 &lt;li&gt;&lt;a href=&quot;http://tech.lezhin.com/2017/07/13/intersectionobserver-overview&quot;&gt;IntersectionObserver를 이용한 이미지 동적 로딩 기능 개선&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[번역] 자바스크립트에 대한 애정을 언어의 90%를 쓰레기통에 버리면서 다시 발견했던 과정]]></title><description><![CDATA[이 글은  Joel Thoms 의  How I rediscovered my love for JavaScript after throwing 90% of it in the trash…]]></description><link>https://rhostem.github.io/posts/2017-09-how-i-rediscovered-my-love-for-java-script-after-throwing-90-of-it-in-the-trash/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2017-09-how-i-rediscovered-my-love-for-java-script-after-throwing-90-of-it-in-the-trash/</guid><category><![CDATA[Javascript]]></category><category><![CDATA[함수형 프로그래밍]]></category><category><![CDATA[번역]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Fri, 08 Sep 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 &lt;a href=&quot;https://hackernoon.com/@joelthoms?source=post_header_lockup&quot;&gt;Joel Thoms&lt;/a&gt;의 &lt;a href=&quot;https://hackernoon.com/how-i-rediscovered-my-love-for-javascript-after-throwing-90-of-it-in-the-trash-f1baed075d1b&quot;&gt;How I rediscovered my love for JavaScript after throwing 90% of it in the trash&lt;/a&gt;를 번역한 글입니다.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;img src=&quot;/images/post-main/2017-09-how-i-rediscovered-my-love-for-java-script-after-throwing-90-of-it-in-the-trash/trashbin.png&quot; alt=&quot;trashbin&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/trashbin-4ec3ca4e2039f0d44bcb89a4dc75bb55-39813.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 64.63195691202873%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAADg0lEQVQ4yx3S3U9bdRzH8dNzyjmnPAxaYcIGlTJZGQ/yOEo3hwMHhRZa2p5CKX0AhD4BLU9jgCzLQAWJ0UyNLls0XpjF7MJNjd5ooptTyS508U5j4p3/xtuzXbzyS76//D755JufYJBFDIqIaBSRdGKBAUk1IsgSgiCglhh4JWJmcMZMtU15NntKkQzIok5/oyoyhYUqJpN+b7RJSFZdhYRYLmE8XoBQJlH2kpnmmANnvp2JW6fJ3q4ktn2CVyPHaT5rfhZqKpD0QJ1+KoqCouqBsl0fvKgH1egqJQxVEhVdxZzdqcZ1qxXfjVqC+xUsHZZycNvC4WelvP1JNT295RQUHMNUWIxaVIRafAylpBhBsQjIZl2FXt0iIhQLVLeodGmlNHhUnEEFV1hFiyvEU4VoMZl4pohe9xlKKjuxVHdhsXbzXG0PZms7QpW1lKqaMk6eMuuex1pnw2atp8djoWPayOBrCuGcQnpdJrOqsHjZSCZvodk5gr0nTINjAnt3hFOd49jaAgghnxfP8ADnLtYy0N+DfyTAuDuKK2anOyviWVYJrSlkthTy2ypLWxL59Ur8vlm8o0lGPAl83hS+QBptIo1wc0/j6mYD8fAJ1uMO1qcusBUdJDLTSNuMxLDeLrAsM7+ht7uikrkssrpykvWYn43EGK8ng2wnNa4tTLK/lkD494nGn0c5/j464J/H7/DXzx/x3x93eO/GNPVBgYFFldElmdmnLTdMxBYE9nc7+f2rHR7fW+HR11Ee3Jvl4Rer/PT5IkIyZOXux1ke3v+QH+4c8s2na/z25S43P1iizqf/wZSKKyMTW1aYWzURSQm8+1YvT76/xq/fLfLg2yhHP+Z4dD/LL3fXELJRL7n4IJupETZmh9ma9/BmbpzNvI86vxHHjELfnMLkokI0qxDLGthedfJGfoqdjI/tlI/NtJflxCjL8RGE/dUQ13NBDjam2Mt6OVjReH8rxvW1EHVjJtqjMucTClpaJaJLLEhsLr7M3lKU3VxE390UV9OTbCUnuTIXRrDb2rDVtFBX00pjfTdtTRfoaOmjtdlBeZ/CC36BJk1kaFpkbFZkMimg9Z3G192Fdt6Bz+nA6zxH6GI/k5eGEGYCHhKBMZITE8wEg4S9fsZcbkJuNwG3E+9QE+5LdoLDjQRdZ5gLdLAw6mTJ308+5CIbGGJ+zEPaP0JWC/E/4sXYlrFKFKEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;trashbin&quot;
+        title=&quot;&quot;
+        src=&quot;/static/trashbin-4ec3ca4e2039f0d44bcb89a4dc75bb55-9056e.png&quot;
+        srcset=&quot;/static/trashbin-4ec3ca4e2039f0d44bcb89a4dc75bb55-507eb.png 265w,
+/static/trashbin-4ec3ca4e2039f0d44bcb89a4dc75bb55-63b28.png 530w,
+/static/trashbin-4ec3ca4e2039f0d44bcb89a4dc75bb55-9056e.png 1060w,
+/static/trashbin-4ec3ca4e2039f0d44bcb89a4dc75bb55-39813.png 1114w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;h2 id=&quot;나와-자바스크립트의-관계&quot;&gt;&lt;a href=&quot;#%EB%82%98%EC%99%80-%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-%EA%B4%80%EA%B3%84&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;나와 자바스크립트의 관계&lt;/h2&gt;
 &lt;p&gt;자바스크립트와 함께하는 여행의 시작은 1997년 Netscape Navigator 3가 있던 시절로 거슬러 올라간다. 그때는 자바스크립트로 할 수 있는 일이 많지 않았다. &lt;strong&gt;자바스크립트로 할 수 있는 가장 멋진 일은 마우스 오버 효과를 만드는 것이었다&lt;/strong&gt;. 그 시절의 그 정도는 제법 고급 기술이었다. 단순히 마우스 포인터를 가져다 대는 것만으로 페이지의 콘텐츠를 바꾼다는 것은 당시로서는 정말로 멋진 기능이었다. 그리고 DHTML이 등장하기 전이었기에 DOM 요소를 숨기고 보여주는 일도 여전히 마법같은 일이었다.&lt;/p&gt;
 &lt;p&gt;그 시절에 자바스크립트의 성장은 매우 느렸고, 자바스크립트는 입력 양식(form) 유효성 검사에 주로 사용되고 있었다. 자바스크립트에 향한 관심이나 발전은 지금처럼 크지 않았다. 그저 있으면 좋은 부가적인 요소였다. 자바스크립트는 개발에 있어 주요 고려 대상이 결코 아니었고 애플리케이션이 자바스크립트 없이도 확실히 동작할 수 있도록 보장해야 했었다.&lt;/p&gt;
@@ -2259,7 +2292,38 @@ And nothing else matters&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&
       &lt;pre class=&quot;language-html&quot;&gt;&lt;code class=&quot;language-html&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;label&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;Phone number: &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;input&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;tel&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;mobile&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;label&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
       &lt;/div&gt;
 &lt;p&gt;아래의 이미지를 비교해보자. 왼쪽이 &lt;code class=&quot;language-text&quot;&gt;type=&amp;quot;text&amp;quot;&lt;/code&gt;, 오른쪽이 &lt;code class=&quot;language-text&quot;&gt;type=&amp;quot;number&amp;quot;&lt;/code&gt;인 경우 보여지는 키보드의 모습이다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://hacks.mozilla.org/files/2016/08/keyboard_compare-500x443.png&quot; alt=&quot;&amp;#x27;text&amp;#x27;, &amp;#x27;number&amp;#x27; 형식에 따른 스마트폰 키보드&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/keyboard_compare-500x443-4660d93cdbf1f1e2c40f1d5fe732a107-2ce03.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 500px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 88.6%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAACvElEQVQ4y51UaW/TQBD1//8PICQQUiVEvwESAoqqqjQ9adomjuPE8RE7PuI7R5P08WbbVCEiCLHSaGbWz29ndmZWC8MIozDE0Pcxm89h9nrQdR3T2QxVXcP1PJw0GnBdF2EUwaMv30Q3m02UVYXJdKo4zi8uoHlDH/4ohB+M4LgegtFIfYyTBMl4jCzPUZJY4YgJiB04Dlz6YsdJrHBplqEoS2hC5vkBHG+odJYXyItS6UfJEY9TfhspEsHZPDhKUmSCK4pnbExirawnqKezZxF/U6rJVP2Yl0xtNlcY0bK/jS25pwmwqOqdIkA5PaWI/TesiCJcA7dPfCZkhJuE28Sb+/9NuAv7G+GulNN/TLncTlmJ2Bt+RTuXSjLKPxZiSzRVwScpSL5pi6RFDT/OMc5yVen8qeK7bE36axiEWOsgjDGKEvqcHjay6UY477ChOVFpmrGJU4ypUx4g1X+0M4TjEtc2G7tt9HDbNqB3+2h1ejD7NkzLoW9Ru+iYFu7aHdRMZzJhX/IaVg8PatxCTtRyucIDfZmumt81g0S6YWJgu+gPOFJewDEboW/ZHK0IPWqzP8CM87tcLrFYLBTBjIRxHClbVsQ5F4xmkUh+6DKS/sCFHCC27Q7R7VkctQBt3VARJZzbMcdLVs35DoIAq9UjoW3bjJ53qFKkSCSW7VE7yl/bIs1bXb08VVWi5AMgUUn6EtVq9Ziyz9dKDtF+nJyq9HwWpEcih5FZTL3FqCzu/7xp4dXbfVXFimQ5HwtZEo08YeslESrCo5NLHByd4qrZ5rM0VClK6u4wUIU5ODrDh8+HuNNN3nUfNy2Dlc1xz7ezYH/e804te6iyMMwBtL39j3jx+h0+fz1kpWLVBrreUZEYPQcv37zH3v4nHJ9d47hxhW+HDbZQgjkJ0zTFgoW6vuviy/djnF7e4heQ+Ei6GPXTfQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;&apos;text&apos;, &apos;number&apos; 형식에 따른 스마트폰 키보드&quot;
+        title=&quot;&quot;
+        src=&quot;/static/keyboard_compare-500x443-4660d93cdbf1f1e2c40f1d5fe732a107-2ce03.png&quot;
+        srcset=&quot;/static/keyboard_compare-500x443-4660d93cdbf1f1e2c40f1d5fe732a107-77870.png 265w,
+/static/keyboard_compare-500x443-4660d93cdbf1f1e2c40f1d5fe732a107-2ce03.png 500w&quot;
+        sizes=&quot;(max-width: 500px) 100vw, 500px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
 &lt;h2 id=&quot;이미지&quot;&gt;&lt;a href=&quot;#%EC%9D%B4%EB%AF%B8%EC%A7%80&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;이미지&lt;/h2&gt;
 &lt;p&gt;SVG 파일은 아래처럼 &lt;code class=&quot;language-text&quot;&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 태그에 사용할 수 있을 뿐만 아니라&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot;&gt;
