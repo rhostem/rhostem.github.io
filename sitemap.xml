@@ -4,6 +4,8 @@
 <url> <loc>https://rhostem.github.io/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/posts/2018-05-20-gulp-static-site/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2018-01-25-top-java-script-libraries-tech-to-learn-in-2018/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2018-01-15-react-redux-typescript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-10-29-what-i-ve-learned-over-5-years-as-a-software-developer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -24,6 +26,11 @@
 <url> <loc>https://rhostem.github.io/posts/2017-01-07-git-basic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-01-03-react-class-component-autobinding/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tags/gulp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tags/pug/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tags/html/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tags/sass/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tags/css/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/번역/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/react/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -42,10 +49,8 @@
 <url> <loc>https://rhostem.github.io/tags/개발-도구/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/angular/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/gatsby/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rhostem.github.io/tags/css/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/css-in-js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/flow/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rhostem.github.io/tags/html/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/svg/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/vcs/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/git/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
