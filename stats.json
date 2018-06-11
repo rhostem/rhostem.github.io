@@ -5,8 +5,8 @@
       "path---tags-es-6-0952d66c7c2610ac1714.js.map"
     ],
     "path---4": [
-      "path---4-12e87012b4b74fb9bfe7.js",
-      "path---4-12e87012b4b74fb9bfe7.js.map"
+      "path---4-810dc5e6eca126f7930d.js",
+      "path---4-810dc5e6eca126f7930d.js.map"
     ],
     "path---posts-2017-09-01-ftp-deploy-process-with-dploy": [
       "path---posts-2017-09-01-ftp-deploy-process-with-dploy-1c9f8834de3810445048.js",
@@ -29,8 +29,8 @@
       "path---posts-2017-01-07-git-basic-855fcd52dcf494865239.js.map"
     ],
     "path---tags": [
-      "path---tags-16e3278bd8776f86173c.js",
-      "path---tags-16e3278bd8776f86173c.js.map"
+      "path---tags-0d38d8fd8693139a44c5.js",
+      "path---tags-0d38d8fd8693139a44c5.js.map"
     ],
     "path---tags-angular": [
       "path---tags-angular-562a0d0464d3035d3900.js",
@@ -65,12 +65,12 @@
       "path---posts-2017-06-24-unified-styling-language-703779d8404d3217c612.js.map"
     ],
     "component---src-templates-tag-page-js": [
-      "component---src-templates-tag-page-js-6a9206353d1cf46cecb9.js",
-      "component---src-templates-tag-page-js-6a9206353d1cf46cecb9.js.map"
+      "component---src-templates-tag-page-js-f3d32b645678651eda89.js",
+      "component---src-templates-tag-page-js-f3d32b645678651eda89.js.map"
     ],
     "path---5": [
-      "path---5-f59ee940e6338f7a29de.js",
-      "path---5-f59ee940e6338f7a29de.js.map"
+      "path---5-ffb34aaff090de1904d9.js",
+      "path---5-ffb34aaff090de1904d9.js.map"
     ],
     "path---tags-react": [
       "path---tags-react-b1611435e0e6b007d222.js",
@@ -89,8 +89,8 @@
       "path---posts-2017-09-how-i-rediscovered-my-love-for-java-script-after-throwing-90-of-it-in-the-trash-896969e61c8e403da1f5.js.map"
     ],
     "component---src-templates-index-js": [
-      "component---src-templates-index-js-529f74e83a4727d4b7aa.js",
-      "component---src-templates-index-js-529f74e83a4727d4b7aa.js.map"
+      "component---src-templates-index-js-8c3dcd87dcda453f0194.js",
+      "component---src-templates-index-js-8c3dcd87dcda453f0194.js.map"
     ],
     "path---posts-2017-06-11-adopting-flow-and-typescript": [
       "path---posts-2017-06-11-adopting-flow-and-typescript-7e34bbb099018228f402.js",
@@ -113,8 +113,8 @@
       "path---tags-gatsby-8d1f8b538cc65dd81315.js.map"
     ],
     "path---index": [
-      "path---index-9ff81f471d77365503a4.js",
-      "path---index-9ff81f471d77365503a4.js.map"
+      "path---index-f16d40b6335f93218746.js",
+      "path---index-f16d40b6335f93218746.js.map"
     ],
     "path---posts-2017-09-07-redux-saga-toast-control": [
       "path---posts-2017-09-07-redux-saga-toast-control-7d48b0f4965a1ec2d950.js",
@@ -137,8 +137,12 @@
       "path---posts-2017-05-29-few-html-tips-e8695f68123966c9e3ef.js.map"
     ],
     "path---2": [
-      "path---2-5b8358c162cd97837959.js",
-      "path---2-5b8358c162cd97837959.js.map"
+      "path---2-6cd0a8d5c660ddc3ec9e.js",
+      "path---2-6cd0a8d5c660ddc3ec9e.js.map"
+    ],
+    "path---tags-shell-script": [
+      "path---tags-shell-script-ce7bafa40abfaac883ca.js",
+      "path---tags-shell-script-ce7bafa40abfaac883ca.js.map"
     ],
     "path---tags-redux": [
       "path---tags-redux-470d26f187014e44c682.js",
@@ -161,8 +165,8 @@
       "path---posts-2017-10-21-lazy-image-loading-with-lodzad-js-c7193a314684617c9d14.js.map"
     ],
     "path---posts-2018-05-27-pm-2-deploy": [
-      "path---posts-2018-05-27-pm-2-deploy-95dd7980beff039bd39d.js",
-      "path---posts-2018-05-27-pm-2-deploy-95dd7980beff039bd39d.js.map"
+      "path---posts-2018-05-27-pm-2-deploy-0ced205eedde5fd1c070.js",
+      "path---posts-2018-05-27-pm-2-deploy-0ced205eedde5fd1c070.js.map"
     ],
     "path---posts-2017-05-11-angular-2-two-way-binding": [
       "path---posts-2017-05-11-angular-2-two-way-binding-e77e93b7a4279ee6ca4e.js",
@@ -197,8 +201,8 @@
       "path---tags-redux-saga-d71288412305baa3e18b.js.map"
     ],
     "path---3": [
-      "path---3-a334dc9aff9f451cb603.js",
-      "path---3-a334dc9aff9f451cb603.js.map"
+      "path---3-717be4e14694fce713a5.js",
+      "path---3-717be4e14694fce713a5.js.map"
     ],
     "path---tags-css-in-js": [
       "path---tags-css-in-js-85475c701de51df214b8.js",
@@ -236,25 +240,29 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---posts-2018-06-12-shellscript-to-check-commit": [
+      "path---posts-2018-06-12-shellscript-to-check-commit-36abcdafa5043d8bbdfd.js",
+      "path---posts-2018-06-12-shellscript-to-check-commit-36abcdafa5043d8bbdfd.js.map"
+    ],
     "path---tags-git": [
-      "path---tags-git-ee1d8129157551381b35.js",
-      "path---tags-git-ee1d8129157551381b35.js.map"
+      "path---tags-git-951d6eca379e38f2dc92.js",
+      "path---tags-git-951d6eca379e38f2dc92.js.map"
     ],
     "path---posts-2018-05-20-gulp-static-site": [
       "path---posts-2018-05-20-gulp-static-site-488432bfe5ebb126dc20.js",
       "path---posts-2018-05-20-gulp-static-site-488432bfe5ebb126dc20.js.map"
     ],
     "app": [
-      "app-da635f9c6754bf5c7174.js",
-      "app-da635f9c6754bf5c7174.js.map"
+      "app-a55670a692615fd56f76.js",
+      "app-a55670a692615fd56f76.js.map"
     ],
     "path---posts-2018-01-25-top-java-script-libraries-tech-to-learn-in-2018": [
-      "path---posts-2018-01-25-top-java-script-libraries-tech-to-learn-in-2018-b6046f823a966138b554.js",
-      "path---posts-2018-01-25-top-java-script-libraries-tech-to-learn-in-2018-b6046f823a966138b554.js.map"
+      "path---posts-2018-01-25-top-java-script-libraries-tech-to-learn-in-2018-3f7452fd5c894c2ee72d.js",
+      "path---posts-2018-01-25-top-java-script-libraries-tech-to-learn-in-2018-3f7452fd5c894c2ee72d.js.map"
     ],
     "path---archive": [
-      "path---archive-86182a599a5534315b40.js",
-      "path---archive-86182a599a5534315b40.js.map"
+      "path---archive-c2c4cc42236d6ab3c714.js",
+      "path---archive-c2c4cc42236d6ab3c714.js.map"
     ],
     "path---tags-nginx": [
       "path---tags-nginx-e129ee82b73af20036b3.js",
