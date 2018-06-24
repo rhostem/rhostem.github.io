@@ -5,6 +5,7 @@
 <url> <loc>https://rhostem.github.io/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/5</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/posts/2018-06-24-javascript-vs-typescript-vs-reasonml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2018-06-12-shellscript-to-check-commit/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2018-05-27-pm2-deploy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2018-05-20-gulp-static-site/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -12,7 +13,7 @@
 <url> <loc>https://rhostem.github.io/posts/2018-01-15-react-redux-typescript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-10-29-what-i-ve-learned-over-5-years-as-a-software-developer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-10-21-lazy-image-loading-with-lodzad-js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rhostem.github.io/posts/2017-09-how-i-rediscovered-my-love-for-java-script-after-throwing-90-of-it-in-the-trash/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/posts/2017-09-07-redux-saga-toast-control/2017-09-how-i-rediscovered-my-love-for-java-script-after-throwing-90-of-it-in-the-trash/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-09-07-redux-saga-toast-control/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-09-01-ftp-deploy-process-with-dploy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-08-14-typescript-npm-package/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -28,6 +29,10 @@
 <url> <loc>https://rhostem.github.io/posts/2017-01-07-git-basic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-01-03-react-class-component-autobinding/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tags/java-script/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tags/type-script/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tags/reason-ml/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tags/번역/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/git/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/shell-script/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/pm-2/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -38,12 +43,9 @@
 <url> <loc>https://rhostem.github.io/tags/html/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/sass/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/css/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rhostem.github.io/tags/번역/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rhostem.github.io/tags/javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/react/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/소프트웨어-개발/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/학습/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rhostem.github.io/tags/type-script/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/redux/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/코딩/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/web/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
