@@ -1,2 +1,2 @@
-webpackJsonp([0xe19b8ab0ac05],{918:function(t,a){t.exports={data:{site:{siteMetadata:{title:"rhostem.github.io",url:"https://rhostem.github.io"}},allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/posts/2018-05-20-gulp-static-site/"},frontmatter:{title:"Gulp로 구성한 퍼블리싱 개발 환경",date:"2018-05-20",mainImage:null}}}]}},pathContext:{tag:"Sass"}}}});
+webpackJsonp([0xe19b8ab0ac05],{920:function(t,a){t.exports={data:{site:{siteMetadata:{title:"rhostem.github.io",url:"https://rhostem.github.io"}},allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/posts/2018-05-20-gulp-static-site/"},frontmatter:{title:"Gulp로 구성한 퍼블리싱 개발 환경",date:"2018-05-20",mainImage:null}}}]}},pathContext:{tag:"Sass"}}}});
 //# sourceMappingURL=path---tags-sass-474ab513bffc756f94d6.js.map
