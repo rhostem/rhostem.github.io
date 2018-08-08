@@ -2,7 +2,6 @@ var wordList = []
 var routeMap = {}
 var wordMap = {}
 var tagList = []
-
 ;(function init() {
   importScripts('//cdn.jsdelivr.net/npm/ramda@latest/dist/ramda.min.js')
 
@@ -14,20 +13,27 @@ var tagList = []
       wordMap = searchIndex.wordMap
       tagList = searchIndex.tagList
     })
-}())
+})()
 
-// event lisnter for postMessage
-onmessage = function (e) {
+/**
+ * event listener for postMessage
+ *
+ * postMessage({
+ *  action: string,
+ *  payload: any
+ * })
+ */
+onmessage = function(e) {
   var action = e.data.action
   var payload = e.data.payload
 
   switch (action) {
     case 'SEARCH':
       search(payload)
-      break;
+      break
 
     default:
-      break;
+      break
   }
 }
 
@@ -38,50 +44,62 @@ const getKey = w => `${IDENTIFIER}${w}`
 const trimSearchText = (search = '') => {
   return search
     .toLowerCase()
-    .replace(/\s{2,}|\n|\r|,|\(|\)/g, ' ')
-    .replace(/\.|'|"|\{|\}|\[|\]|/, '')
+    .replace(/\.|\s{1,}|\n|\r|,|\(|\)/g, ' ')
+    .replace(/'|"|\{|\}|\[|\]/g, '')
 }
 
 function search(search = '') {
-  const trimmedSearch = trimSearchText(search)
+  if (search < 1) return null
 
-  if (trimmedSearch < 1) return null
+  const searchWords = trimSearchText(search).split(/\s+/)
 
   let resultRouteMap = {}
   let resultTagRouteList = []
 
-  for (const searchWord of trimmedSearch.split(/\s/)) {
+  for (const searchWord of searchWords) {
     if (searchWord.length > 1) {
-      // 입력한 단어가 wordMap에 등록된 단어와 정확히 일치하면 wordList를 탐색하는 과정을 생략한다.
-
       for (const word of wordList) {
-        if (word.match(searchWord)) {
-          resultRouteMap = addMatchingRoutes(
-            resultRouteMap,
-            wordMap[getKey(word)].routes,
-            search
-          )
+        if (word.indexOf(searchWord) > -1) {
+          resultRouteMap = addMatchingRoutes(resultRouteMap, wordMap[getKey(word)].routes, search)
         }
       }
 
       for (const tag of tagList) {
-        if (tag.toLowerCase().match(searchWord)) {
+        if (tag.toLowerCase().indexOf(searchWord) > -1) {
           resultTagRouteList.push(addMatchingTagToRoute(tag))
         }
       }
     }
   }
 
-  // onmessage 이벤트에서 전달받을 수 있도록 메시지 전달
+  // 결과가 없으면 단어를 1글자씩 줄여서 한번 검색한다.
+  if (R.and(R.isEmpty(resultRouteMap), R.isEmpty(resultTagRouteList))) {
+    if (R.all(s => s.length <= 1, searchWords)) {
+      sendResult({
+        resultPostRoutes: [],
+        resultTagRoutes: [],
+      })
+    }
+
+    this.search(searchWords.map(s => R.take(s.length - 1, s)).join(' '))
+  } else {
+    // onmessage 이벤트에서 전달받을 수 있도록 메시지 전달
+    sendResult({
+      resultPostRoutes: convertResultToList(resultRouteMap),
+      resultTagRoutes: R.uniqBy(tagRoute => tagRoute.name, resultTagRouteList),
+    })
+  }
+}
+
+const sendResult = ({ resultPostRoutes, resultTagRoutes }) => {
   postMessage({
     action: 'SEARCH_RESULT',
     payload: {
-      resultPostRoutes: convertResultToList(resultRouteMap),
-      resultTagRoutes: R.uniqBy(tagRoute => tagRoute.name, resultTagRouteList),
-    }
+      resultPostRoutes,
+      resultTagRoutes,
+    },
   })
 }
-
 
 const increasePoint = ({ resultRouteMap, routeId, amount }) => {
   return R.assocPath(
