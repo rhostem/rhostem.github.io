@@ -4,7 +4,6 @@ var wordMap = {}
 var tagList = []
 ;(function init() {
   importScripts('//cdn.jsdelivr.net/npm/ramda@latest/dist/ramda.min.js')
-
   fetch(`/search/searchIndex.json`)
     .then(res => res.json())
     .then(searchIndex => {
@@ -136,10 +135,12 @@ const addMatchingRoutes = (resultRouteMap = {}, matchingRoutes = [], search = ''
   return resultRouteMap
 }
 
-const cervertToKebab = str => str.replace(/\s+/g, '-').toLowerCase()
+function getTagRoute(tag = '') {
+  return `/tag/${tag.replace(/\s+/g, '_').toLowerCase()}`
+}
 
 const addMatchingTagToRoute = (tag = '') => {
-  return { name: tag, route: `/tags/${cervertToKebab(tag)}` }
+  return { name: tag, route: getTagRoute(tag) }
 }
 
 /**
