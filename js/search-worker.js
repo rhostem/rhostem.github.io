@@ -4,7 +4,7 @@ var wordMap = {}
 var tagList = []
 ;(function init() {
   importScripts('//cdn.jsdelivr.net/npm/ramda@latest/dist/ramda.min.js')
-  importScripts('./blogUtils.js')
+  importScripts('./getTagRoute.js')
 
   fetch(`/search/searchIndex.json`)
     .then(res => res.json())
@@ -138,7 +138,7 @@ const addMatchingRoutes = (resultRouteMap = {}, matchingRoutes = [], search = ''
 }
 
 const addMatchingTagToRoute = (tag = '') => {
-  return { name: tag, route: blogUtils.getTagRoute(tag) }
+  return { name: tag, route: getTagRoute(tag) }
 }
 
 /**
