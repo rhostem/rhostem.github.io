@@ -4,7 +4,7 @@ var wordMap = {}
 var tagList = []
 ;(function init() {
   importScripts('//cdn.jsdelivr.net/npm/ramda@latest/dist/ramda.min.js')
-  importScripts('./getTagRoute.js')
+  importScripts('./searchUtil.js')
 
   fetch(`/search/searchIndex.json`)
     .then(res => res.json())
@@ -29,8 +29,8 @@ onmessage = function(e) {
   var payload = e.data.payload
 
   switch (action) {
-    case 'SEARCH':
-      search(payload)
+    case searchUtil.actions.SEARCH_REQUEST:
+      search(payload.searchInput)
       break
 
     default:
@@ -38,35 +38,46 @@ onmessage = function(e) {
   }
 }
 
-const IDENTIFIER = '@_' // 워드맵 키 앞에 붙일 식별자. 예약어와 충돌 방지를 위함
-
-const getKey = w => `${IDENTIFIER}${w}`
-
-const trimSearchText = (search = '') => {
-  return search
-    .toLowerCase()
-    .replace(/\.|\s{1,}|\n|\r|,|\(|\)/g, ' ')
-    .replace(/'|"|\{|\}|\[|\]/g, '')
-}
+var MIN_SEARCH_LEN = 2
 
 function search(search = '') {
-  if (search < 1) return null
+  var startTime = +new Date()
 
-  const searchWords = trimSearchText(search).split(/\s+/)
+  if (!search) {
+    sendNoResult({
+      startTime,
+    })
+    return
+  }
 
-  let resultRouteMap = {}
-  let resultTagRouteList = []
+  if (search && search.length < MIN_SEARCH_LEN) {
+    sendNoResult({
+      startTime,
+    })
+    return
+  }
 
-  for (const searchWord of searchWords) {
-    if (searchWord.length > 1) {
-      for (const word of wordList) {
-        if (word.indexOf(searchWord) > -1) {
-          resultRouteMap = addMatchingRoutes(resultRouteMap, wordMap[getKey(word)].routes, search)
+  var searchWords = searchUtil.trimText(search).split(/\s+/)
+  var resultRouteMap = {}
+  var resultTagRouteList = []
+
+  for (var searchWord of searchWords) {
+    if (searchWord.length >= MIN_SEARCH_LEN) {
+      // 검색어가 단어와 매칭되는지 확인
+      for (var word of wordList) {
+        // 검색어는 인덱싱된 단어의 시작 부분부터 매칭되어야 한다
+        if (word.match(`^${searchWord}`)) {
+          resultRouteMap = addMatchingRoutes(
+            resultRouteMap,
+            wordMap[searchUtil.getKey(word)][searchUtil.ROUTES],
+            search
+          )
         }
       }
 
-      for (const tag of tagList) {
-        if (tag.toLowerCase().indexOf(searchWord) > -1) {
+      // 검색어가 태그와 매칭되는지
+      for (var tag of tagList) {
+        if (tag.toLowerCase().match(`^${searchWord}`)) {
           resultTagRouteList.push(addMatchingTagToRoute(tag))
         }
       }
@@ -75,34 +86,45 @@ function search(search = '') {
 
   // 결과가 없으면 단어를 1글자씩 줄여서 한번 검색한다.
   if (R.and(R.isEmpty(resultRouteMap), R.isEmpty(resultTagRouteList))) {
-    if (R.all(s => s.length <= 1, searchWords)) {
-      sendResult({
-        resultPostRoutes: [],
-        resultTagRoutes: [],
+    // 단어를 더 이상 줄일 수 없으면 결과 없음 전송
+    if (R.all(s => s.length < MIN_SEARCH_LEN, searchWords)) {
+      sendNoResult({
+        startTime,
       })
     }
 
+    // 단어를 1글자씩 줄여서 한번 더 검색
     this.search(searchWords.map(s => R.take(s.length - 1, s)).join(' '))
   } else {
     // onmessage 이벤트에서 전달받을 수 있도록 메시지 전달
     sendResult({
       resultPostRoutes: convertResultToList(resultRouteMap),
       resultTagRoutes: R.uniqBy(tagRoute => tagRoute.name, resultTagRouteList),
+      searchTime: +new Date() - startTime,
     })
   }
 }
 
-const sendResult = ({ resultPostRoutes, resultTagRoutes }) => {
+function sendNoResult({ startTime }) {
+  sendResult({
+    resultPostRoutes: [],
+    resultTagRoutes: [],
+    searchTime: +new Date() - startTime,
+  })
+}
+
+var sendResult = ({ resultPostRoutes, resultTagRoutes, searchTime }) => {
   postMessage({
-    action: 'SEARCH_RESULT',
+    action: searchUtil.actions.SEARCH_SUCCESS,
     payload: {
       resultPostRoutes,
       resultTagRoutes,
+      searchTime,
     },
   })
 }
 
-const increasePoint = ({ resultRouteMap, routeId, amount }) => {
+var increasePoint = ({ resultRouteMap, routeId, amount }) => {
   return R.assocPath(
     [routeId, 'point'],
     R.path([routeId, 'point'], resultRouteMap) + amount,
@@ -110,12 +132,12 @@ const increasePoint = ({ resultRouteMap, routeId, amount }) => {
   )
 }
 
-const addMatchingRoutes = (resultRouteMap = {}, matchingRoutes = [], search = '') => {
+var addMatchingRoutes = (resultRouteMap = {}, matchingRoutes = [], search = '') => {
   matchingRoutes.forEach((routeId = 0) => {
-    const matchingData = routeMap[routeId]
+    var matchingData = routeMap[routeId]
 
     if (!resultRouteMap[routeId]) {
-      // 추가되어 있지 않다면 새로 추가한다. point는 1
+      // 추가되어 있지 않다면 새로 추가한다. 기본 point는 1
       resultRouteMap[routeId] = {
         data: matchingData,
         point: 1,
@@ -128,25 +150,31 @@ const addMatchingRoutes = (resultRouteMap = {}, matchingRoutes = [], search = ''
         amount: 1,
       })
     }
-    // 제목에 포함되어 있다면 포인트를 추가한다.
-    if (matchingData.title.toLowerCase().includes(search)) {
-      resultRouteMap = increasePoint({ resultRouteMap, routeId, amount: 1 })
+
+    // 검색 제목에 포함되어 있다면 포인트 추가한다.
+    if (matchingData.title.split(' ').filter(w => w.match(`^${search}`)).length > 0) {
+      resultRouteMap = increasePoint({ resultRouteMap, routeId, amount: 10 })
+    }
+
+    // 태그에 포함되어 있다면 포인트 추가한다.
+    if (matchingData.tags.filter(t => t.toLowerCase().match(`^${search}`)).length > 0) {
+      resultRouteMap = increasePoint({ resultRouteMap, routeId, amount: 5 })
     }
   })
 
   return resultRouteMap
 }
 
-const addMatchingTagToRoute = (tag = '') => {
-  return { name: tag, route: getTagRoute(tag) }
+var addMatchingTagToRoute = (tag = '') => {
+  return { name: tag, route: searchUtil.getTagRoute(tag) }
 }
 
 /**
  * 결과 라우트 맵을 배열로 변환하고, point로 정렬한다.
  */
-const convertResultToList = (resultPostRoutes = {}) => {
-  const routeIds = Object.keys(resultPostRoutes)
-  const sortedRoutes = R.pipe(
+var convertResultToList = (resultPostRoutes = {}) => {
+  var routeIds = Object.keys(resultPostRoutes)
+  var sortedRoutes = R.pipe(
     R.map(routeId => resultPostRoutes[routeId]),
     R.sort((a, b) => b.point - a.point)
   )(routeIds)
