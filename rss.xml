@@ -1,4 +1,254 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[rhostem.github.io]]></title><description><![CDATA[프론트엔드 웹 개발 기술 블로그]]></description><link>https://rhostem.github.io</link><image><url>https://rhostem.github.io/logos/logo-512.png</url><title>rhostem.github.io</title><link>https://rhostem.github.io</link></image><generator>rhostem.github.io</generator><lastBuildDate>Wed, 22 Aug 2018 01:46:34 GMT</lastBuildDate><atom:link href="https://rhostem.github.io/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[rhostem]]></author><copyright><![CDATA[Copyright © 2016. rhostem All rights reserved]]></copyright><item><title><![CDATA[VSCode와 Babel Flow 플러그인으로 타입을 헐렁하게 써보자]]></title><description><![CDATA[…]]></description><link>https://rhostem.github.io/posts/2018-08-11-use-flow-type-loosely/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-08-11-use-flow-type-loosely/</guid><category><![CDATA[Flow]]></category><category><![CDATA[JavaScript]]></category><category><![CDATA[VSCode]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Sat, 11 Aug 2018 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;자바스크립트와-정적-타입&quot;&gt;&lt;a href=&quot;#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%99%80-%EC%A0%95%EC%A0%81-%ED%83%80%EC%9E%85&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;자바스크립트와 정적 타입&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[rhostem.github.io]]></title><description><![CDATA[프론트엔드 웹 개발 기술 블로그]]></description><link>https://rhostem.github.io</link><image><url>https://rhostem.github.io/logos/logo-512.png</url><title>rhostem.github.io</title><link>https://rhostem.github.io</link></image><generator>rhostem.github.io</generator><lastBuildDate>Wed, 22 Aug 2018 08:18:09 GMT</lastBuildDate><atom:link href="https://rhostem.github.io/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[rhostem]]></author><copyright><![CDATA[Copyright © 2016. rhostem All rights reserved]]></copyright><item><title><![CDATA[블로그 검색 기능 개발 과정]]></title><description><![CDATA[블로그를 만든 지 거의 2년이 다 되어가고 작성한 포스트도 어느덧 20개를 넘었다. 콘텐츠가 쌓이니 자연스럽게 ‘검색’ 기능을 붙이고 싶은 욕심이 들었다. Gatsby…]]></description><link>https://rhostem.github.io/posts/2018-08-23-blog-search/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-08-23-blog-search/</guid><category><![CDATA[검색]]></category><category><![CDATA[Node.js]]></category><category><![CDATA[Web Worker]]></category><category><![CDATA[Service Worker]]></category><category><![CDATA[UMD]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Thu, 23 Aug 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;블로그를 만든 지 거의 2년이 다 되어가고 작성한 포스트도 어느덧 20개를 넘었다. 콘텐츠가 쌓이니 자연스럽게 ‘검색’ 기능을 붙이고 싶은 욕심이 들었다. Gatsby를 사용해서 만든 블로그라서 플러그인을 검색해 보니 역시 검색 기능을 구현한 것이 있었다. 자바스크립트 기반의 검색 엔진인 &lt;a href=&quot;http://elasticlunr.com/&quot;&gt;Elasticlunr.js&lt;/a&gt;를 사용한 플러그인이었는데, 테스트해 보니 안타깝게도 한글 문장은 인덱싱되지 않았다. 그래서 공부도 할 겸 직접 구현하기로 했다.&lt;/p&gt;
+&lt;h2 id=&quot;자체-검색-엔진-구현&quot;&gt;&lt;a href=&quot;#%EC%9E%90%EC%B2%B4-%EA%B2%80%EC%83%89-%EC%97%94%EC%A7%84-%EA%B5%AC%ED%98%84&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;자체 검색 엔진 구현&lt;/h2&gt;
+&lt;p&gt;우선 검색 기능에 대한 요구 사항을 정리해 보았다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;Github pages&lt;/a&gt;에 호스팅 된 정적인(static) 사이트라서 검색은 브라우저에서 진행되어야 한다.&lt;/li&gt;
+&lt;li&gt;클라이언트 사이드 검색이므로 인덱싱 파일은 크기가 가능한 한 작아야 한다.&lt;/li&gt;
+&lt;li&gt;영어 및 한글도 검색 가능해야 한다.&lt;/li&gt;
+&lt;li&gt;검색 결과에는 매칭된 포스트 제목과 태그를 표시해야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;nodejs에서-검색을-위한-콘텐츠-인덱싱-진행&quot;&gt;&lt;a href=&quot;#nodejs%EC%97%90%EC%84%9C-%EA%B2%80%EC%83%89%EC%9D%84-%EC%9C%84%ED%95%9C-%EC%BD%98%ED%85%90%EC%B8%A0-%EC%9D%B8%EB%8D%B1%EC%8B%B1-%EC%A7%84%ED%96%89&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;node.js에서 검색을 위한 콘텐츠 인덱싱 진행&lt;/h2&gt;
+&lt;p&gt;콘텐츠를 단어를 추출한 후 단어와 그 단어를 포함한 페이지를 매칭시킨 &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%97%AD%EC%83%89%EC%9D%B8&quot;&gt;역색인&lt;/a&gt;을 구성하는 방법을 사용했다. 처음에는 문장 검색을 위해 글자를 하나하나 분리하고 인접한 단어 정보를 저장해서 검색 결과와 함께 문장을 다시 구성할 수 있도록 하려고 했었다. 그런데 그 과정에서 인덱싱 파일의 크기가 너무 커져 버렸고 효율도 좋지 않았다. 결국, 단어 단위의 역 인덱스로 내가 할 수 있는 구현을 하자는 쪽으로 방향을 틀었다.&lt;/p&gt;
+&lt;p&gt;인덱싱 데이터 구성은 node.js 환경에서 아래의 과정을 통해 진행된다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;콘텐츠가 포함된 모든 마크다운(md) 파일을 가져온다.&lt;/li&gt;
+&lt;li&gt;마크다운에서 YAML 형식으로 작성된 front matter 영역과 본문을 분리한다.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/remarkjs/remark&quot;&gt;remark&lt;/a&gt; 라이브러리로 콘텐츠 본문을 텍스트로 변환한다.&lt;/li&gt;
+&lt;li&gt;본문 텍스트에서 단어를 분리하고 포스트 경로로 매핑하는 단어 맵을 만든다.&lt;/li&gt;
+&lt;li&gt;front matter에서는 제목, 태그 정보를 추출한다.&lt;/li&gt;
+&lt;li&gt;검색에 필요한 데이터를 JSON 파일로 저장한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;인덱싱 파일을 생성하면 아래과 같은 형태가 된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;wordList&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;[번역]&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;자바스크립트&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;피로감을&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    ...
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;wordMap&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;@_[번역]&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;@_자바스크립트&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;26&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;@_피로감을&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    ...
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;routeMap&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;route&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;[번역] 자바스크립트 피로감을 줄여주기 위한 학습 계획&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;tags&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;번역&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;JavaScript&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;React&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Redux&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Gatsby&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ES&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    ...
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;tagList&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;번역&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;JavaScript&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;React&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    ...
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;사용자의 검색어를 입력받으면 &lt;code class=&quot;language-text&quot;&gt;wordList&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;tagList&lt;/code&gt;에서 매칭되는 단어를 찾은 후 &lt;code class=&quot;language-text&quot;&gt;routeMap&lt;/code&gt;에 저장된 정보를 활용해서 결과를 보여주는 방식이다. 실제 검색 로직에서는 결과 정렬을 위한 랭킹 점수 부여 등의 과정이 추가된다.&lt;/p&gt;
+&lt;p&gt;콘텐츠의 총글자 수가 약 35만 자인 상태에서 인덱싱 파일을 생성하니 그 크기가 350KB 정도로 브라우저에서 충분히 감당할 수 있을 정도였다. gzip으로 인코딩하면 100KB까지 줄어든다. 하지만 그 크기는 점점 커질 테니, 인덱싱 데이터를 서비스 워커를 사용해서 미리 불러오도록 했다.&lt;/p&gt;
+&lt;h2 id=&quot;서비스-워커service-worker를-사용한-검색-데이터-캐싱&quot;&gt;&lt;a href=&quot;#%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%9B%8C%EC%BB%A4service-worker%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-%EA%B2%80%EC%83%89-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%BA%90%EC%8B%B1&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;서비스 워커(Service Worker)를 사용한 검색 데이터 캐싱&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/API/Service_Worker_API&quot;&gt;서비스 워커&lt;/a&gt;는 브라우저의 백그라운드에서 동작하면서 웹앱과 브라우저, 네트워크 사이의 프락시 역할을 한다.
+원격 데이터를 호출하는 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API&quot;&gt;fetch&lt;/a&gt; 이벤트를 감지해서 특정 네트워크 요청에 대한 응답을 캐싱하는 등의 작업이 가능하다. 그리고 웹앱에 필요한 리소스를 내려받아서 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage&quot;&gt;CacheStorage&lt;/a&gt;에 저장해서 재방문 시 빠르게 가져올 수 있도록 한다. (서비스 워커를 사용하면 &lt;a href=&quot;https://wicg.github.io/BackgroundSync/spec/#sync-manager-interface&quot;&gt;백그라운드 동기화&lt;/a&gt;도 가능하지만 아직은 크롬 브라우저에서만 가능한 기술이다) 이를 바탕으로 네트워크가 불안하거나 오프라인인 상태에서도 앱이 구동할 수 있도록 할 수 있다. 네트워크 요청을 하지 않는 앱이라면 네이티브 앱과 다를 바가 없게 되는 것이다.&lt;/p&gt;
+&lt;p&gt;검색 기능을 구현하면서 서비스 워커를 사용해서 덩치가 큰 인덱싱 파일을 CacheStorage에 저장했다. 이런 기능을 간편히 사용하기 위한 라이브러리에는 &lt;a href=&quot;https://github.com/GoogleChromeLabs/sw-precache&quot;&gt;sw-precache&lt;/a&gt;가 있다. Gatsby에는 이를 바탕으로 한 플러그인이 이미 존재하고 있으며, 나도 사용하고 있었다. &lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-plugin-offline/?=offline&quot;&gt;gatsby-plugin-offline&lt;/a&gt;이 그것인데, 기본 옵션만 사용해도 웹사이트 데이터를 잘 캐싱해준다. 이 플러그인의 추가 옵션을 살짝 수정해서 덩치가 큰 인덱싱 파일도 저장하도록 했다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; rootDir &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;public&apos;&lt;/span&gt;
+
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  resolve&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;gatsby-plugin-offline&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  options&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    staticFileGlobs&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;rootDir&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/search/*.json`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 검색 인덱싱 파일 추가&lt;/span&gt;
+      &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;rootDir&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/**/*.{woff2}`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;rootDir&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/commons-*js`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;rootDir&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/app-*js`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;rootDir&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/index.html`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;rootDir&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/manifest.json`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;rootDir&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/manifest.webmanifest`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;rootDir&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/offline-plugin-app-shell-fallback/index.html`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/precache_1-caa574bc279d3314a55c820cc9c35c8d-2c9da.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 527px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 20.30360531309298%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAA9klEQVQY0x2PbW+CMBRG+f+/aB+WxSx7SdQ42ZYJoiK1gEKh1DERQ3J25dPtbfucnMfbxTFpmlFVFUVZYq1FHQ7E+wSttZw1rjJspm/oryXNLqIIf1D+AhdH2G1IFQXjfgq+8eraSliRKIEkCmPuYMP9vq5rjG3onfx5emDzMmE9eaRYzrjFIUMScV59oqevlP4c/f6MZ8RsFa4Jwoj1Zkua5aOpcw7bNLRtS9/3hKsAf/HBYjbHnI50Z0cls8hSsoOiLgoSaetZMdBS+Q7K8+No1wjocrmMsK7rGIaBVN72SrONE37bP7prTykypZE2wrjebmP2H9z+JniiROrsAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;precache_1.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/precache_1-caa574bc279d3314a55c820cc9c35c8d-2c9da.png&quot;
+        srcset=&quot;/static/precache_1-caa574bc279d3314a55c820cc9c35c8d-b8e76.png 265w,
+/static/precache_1-caa574bc279d3314a55c820cc9c35c8d-2c9da.png 527w&quot;
+        sizes=&quot;(max-width: 527px) 100vw, 527px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;최초 방문&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/precache_2-ab9569c1cfcf2285ed7b5dbe685da272-2c9da.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 527px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 19.35483870967742%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAA6ElEQVQY0yVPW26DMBDk/lfpd2/Q/kSJQh+JSIAkvIyNsR1jU5QSNF1cS6OVdsYzO1HTMGitIaWEMQZCdEizPMwsv2AYBlR1HXZK6aCp4h3Y1x4mSwL60xEl7cwhRnQrSqy4XG/gXOBuLfpewXuPlnPM82+Yp3OGhLCG2N07zOcWmsA2b+jjDeTHFt3rC6J/YYqcDMuqRq9UgB9HKLp8WRawtsX3McGBkJLh/HjA3Q0s8ZwxCOI7Cq2pSVSQSVFWaFhLH3mo5JzDNE2wdsD6RCdxpspr+JXazM8nhRlwIYjr4KiNH3+C7g+0eycQBbjwkQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;precache_2.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/precache_2-ab9569c1cfcf2285ed7b5dbe685da272-2c9da.png&quot;
+        srcset=&quot;/static/precache_2-ab9569c1cfcf2285ed7b5dbe685da272-b8e76.png 265w,
+/static/precache_2-ab9569c1cfcf2285ed7b5dbe685da272-2c9da.png 527w&quot;
+        sizes=&quot;(max-width: 527px) 100vw, 527px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;em&gt;재방문&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;스크린 샷을 살펴보면 &lt;code class=&quot;language-text&quot;&gt;searchIndex.json&lt;/code&gt; 파일을 가져오는 데 걸리는 시간이 처음에는 118ms지만 재방문했을 때는 서비스 워커를 통해 10ms가 걸렸다. 1/10 정도로 많이 줄어들었다는 사실을 확인할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;웹-워커web-worker를-사용한-검색&quot;&gt;&lt;a href=&quot;#%EC%9B%B9-%EC%9B%8C%EC%BB%A4web-worker%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-%EA%B2%80%EC%83%89&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;웹 워커(Web Worker)를 사용한 검색&lt;/h2&gt;
+&lt;p&gt;자바스크립트는 싱글 스레드라고 알고 있는 사람들이 많지만, 웹 워커(&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/API/Web_Workers_API&quot;&gt;Web Workers&lt;/a&gt;)를 사용하면 멀티 스레드 프로그래밍이 가능하다. 그리고 서비스 워커보다는 브라우저 지원 폭이 넓어서 인터넷 익스플로러 9를 반드시 지원해야 하는 웹사이트가 아니라면 사용해도 된다. 웹 워커를 사용하면 좋은 사례에는 다음과 같은 것들이 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ray tracing(이미지 렌더링 기술)&lt;/li&gt;
+&lt;li&gt;암호화&lt;/li&gt;
+&lt;li&gt;데이터 prefetching&lt;/li&gt;
+&lt;li&gt;Progressive Web App&lt;/li&gt;
+&lt;li&gt;문법 검사&lt;/li&gt;
+&lt;li&gt;타이머&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;상대적으로 큰 데이터를 처리해야 해서 검색 로직 구현에도 웹 워커를 사용하기로 했다. 하지만 웹 워커와 메인 스레드 사이의 통신을 위해서는 &lt;code class=&quot;language-text&quot;&gt;postMessage&lt;/code&gt;를 사용해서 데이터를 보내고, &lt;code class=&quot;language-text&quot;&gt;onmessage&lt;/code&gt; 이벤트 핸들러에서 데이터를 받아서 처리해야 한다. 워커에 의미 있는 이름을 가진 메소드를 추가해서 보다 가독성 있는 방법으로 통신할 방법은 아직은 없다. 이를 개선하기 위한 &lt;a href=&quot;https://github.com/GoogleChromeLabs/comlink&quot;&gt;comlink&lt;/a&gt;라는 라이브러리가 있긴 하다. 하지만 나는 redux에서 하는 것처럼 정형화된 데이터를 주고받는 방식으로 구현했다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 메인 스레드 소스 코드&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; searchWorker
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;window&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Worker &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;searchWorker&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// 웹 워커 등록&lt;/span&gt;
+  searchWorker &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Worker&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/js/search-worker.js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; searchService &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// 검색&lt;/span&gt;
+  find&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;searchInput &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    searchWorker&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;postMessage&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      action&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;SEARCH_REQUEST&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      payload&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        searchInput&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 웹 워커 소스 코드&lt;/span&gt;
+&lt;span class=&quot;token function-variable function&quot;&gt;onmessage&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; action &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;action
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; payload &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;payload
+
+  &lt;span class=&quot;token keyword&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;action&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;SEARCH_REQUEST&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token function&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;payload&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;searchInput&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;input&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;이런 식으로 스레드 간에 데이터를 주고받을 수 있다. 위의 코드에서는 메인 스레드에서 메시지를 보내고, 웹 워커에서 메시지를 받는 과정이 표현되어 있지만 당연히 반대로도 가능하다.&lt;/p&gt;
+&lt;p&gt;웹 워커를 사용해서 350KB 크기의 데이터를 검색하는 데 보통 0.15~0.2초가 걸렸다.&lt;/p&gt;
+&lt;h2 id=&quot;nodejs-브라우저-웹-워커에서-함께-사용할-모듈-작성&quot;&gt;&lt;a href=&quot;#nodejs-%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EC%9B%B9-%EC%9B%8C%EC%BB%A4%EC%97%90%EC%84%9C-%ED%95%A8%EA%BB%98-%EC%82%AC%EC%9A%A9%ED%95%A0-%EB%AA%A8%EB%93%88-%EC%9E%91%EC%84%B1&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Node.js, 브라우저, 웹 워커에서 함께 사용할 모듈 작성&lt;/h2&gt;
+&lt;p&gt;검색 기능을 구현하는 과정에서 node.js, 브라우저, 웹 워커에서 공통으로 사용해야 하는 로직이 발견되었다. 인덱싱과 검색 과정에서 문장과 단어의 불필요한 문자를 제거하는 기능이 대표적이다. 그리고 웹 워커를 사용하니 스레드 간의 메시지를 구분할 때 사용하는 enum 역할을 하는 문자열도 일치시킬 필요가 생겼다.&lt;/p&gt;
+&lt;p&gt;하지만 세 환경에서는 모듈을 사용하는 방식이 서로 다르다. node.js에서는 모듈을 사용하기 위해 자체 모듈인 &lt;code class=&quot;language-text&quot;&gt;module&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;require&lt;/code&gt;를 사용하지만, 브라우저와 웹 워커에서는 사용할 수 없다. 브라우저에서는 Webpack과 ES6의 &lt;code class=&quot;language-text&quot;&gt;export&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;import&lt;/code&gt;를 사용한다. 그리고 웹 워커에서는 &lt;code class=&quot;language-text&quot;&gt;importScripts&lt;/code&gt; 함수를 통해 외부 스크립트 내부에서 할당한 전역 객체를 사용해야 한다.&lt;/p&gt;
+&lt;p&gt;이 3가지 환경에서 모두 사용할 수 있는 모듈 선언 방식이 &lt;a href=&quot;https://github.com/umdjs/umd&quot;&gt;UMD (Universal Module Definition)&lt;/a&gt; 패턴이다. 링크된 Github 저장소의 &lt;code class=&quot;language-text&quot;&gt;templates&lt;/code&gt; 폴더에는 여러 사례에 대한 예제 코드가 작성되어 있다. 검색 엔진을 위한 모듈 작성에는 &lt;a href=&quot;https://github.com/umdjs/umd/blob/master/templates/returnExports.js&quot;&gt;returnExports.js&lt;/a&gt; 예제를 활용했다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// searchUtil.js&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// 즉시 실행 함수(IIFE) 형태로 선언한다. factory는 모듈 객체를 반환하는 함수다.&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;root&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; factory&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// webpack을 위한 AMD 모듈 선언 방식,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// webpack은 AMD, CommonJS 방식 둘 다 지원한다.&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; define &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;function&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; define&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;amd&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; factory&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// node.js에 해당하는 케이스&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; module &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;object&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// 모듈 객체를 전역 컨텍스트에 할당. 웹 워커와 브라우저에서 사용할 수 있다.&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    root&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;searchUtil &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// 모듈 객체&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    actions&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token constant&quot;&gt;SEARCH_REQUEST&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;SEARCH_REQUEST&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    trimText&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;str&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;이렇게 선언된 모듈은 각각의 환경에 맞는 방식으로 불러와서 사용할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// node.js에서 사용&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; actions &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;../static/js/searchUtil&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// ES6 모듈에서 사용&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; actions &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;../static/js/searchUtil&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 웹 워커에서 사용&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;importScripts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;./searchUtil.js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;searchUtil&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;actions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;SEARCH_REQUEST&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;h2 id=&quot;향후-개선-방향&quot;&gt;&lt;a href=&quot;#%ED%96%A5%ED%9B%84-%EA%B0%9C%EC%84%A0-%EB%B0%A9%ED%96%A5&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;향후 개선 방향&lt;/h2&gt;
+&lt;p&gt;검색 기능을 구현하긴 했지만 말 그대로 동작할 정도로만 만들어 두었을 뿐이다. 검색어가 입력되면 단어 목록 전체를 살펴보기 때문에 현재 O(n)의 검색 시간이 걸리는 상태다. 이를 개선하기 위해서는 당장 생각하는 방법으로는 단어를 초성이나 글자별로 그룹화해서 일부만 찾아보는 방식이 있겠다. 검색 결과 캐싱, 랭킹 부여 방식도 개선 등 고칠 점이 많으니 천천히 시도해 볼 생각이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[VSCode와 Babel Flow 플러그인으로 타입을 헐렁하게 써보자]]></title><description><![CDATA[…]]></description><link>https://rhostem.github.io/posts/2018-08-11-use-flow-type-loosely/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-08-11-use-flow-type-loosely/</guid><category><![CDATA[Flow]]></category><category><![CDATA[JavaScript]]></category><category><![CDATA[VSCode]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Sat, 11 Aug 2018 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;자바스크립트와-정적-타입&quot;&gt;&lt;a href=&quot;#%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%99%80-%EC%A0%95%EC%A0%81-%ED%83%80%EC%9E%85&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;자바스크립트와 정적 타입&lt;/h2&gt;
 &lt;p&gt;자바스크립트는 타입을 명시적으로 지정하지 않는 동적 타입 언어다. 하지만 프론트엔드 앱의 복잡도가 높아지고 서버에서도 자바스크립트가 사용되면서 자바스크립트에 정적 타입을 적용하는 사람들이 많이 늘어났다. 현재 TypeScript(이하 ‘타입스크립트’)는 2018년 8월 현재 &lt;a href=&quot;https://www.npmjs.com/package/typescript&quot;&gt;주간 다운로드 수 200만이 넘고 있으며&lt;/a&gt; Flow(이하 ‘플로우’)를 사용하기 위한 Babel 플러그인도 &lt;a href=&quot;https://www.npmjs.com/package/babel-plugin-transform-flow-strip-types&quot;&gt;100만회 이상 다운로드&lt;/a&gt; 되고 있다.&lt;/p&gt;
 &lt;p&gt;앱의 규모가 커지면서 수많은 함수와 컴포넌트를 작성하다 보면 이 함수가 어떤 형태의 객체를 반환하는지, 컴포넌트가 어떤 값을 전달받아야 하는지 전부 기억하기 어렵다. 코드를 통한 유추, API 문서, 디버깅과 로그를 통해 확인하는 과정을 모두 생략하게 해주는 것이 타입이다. 그 외에도 많은 역할을 하는 타입 정의는 내게 보고 있는 것이 무엇인지 알려주는 친절한 파트너가 될 수 있다.&lt;/p&gt;
 &lt;p&gt;하지만 개인적으로는 여전히 타입 없이 프로그래밍하는 쪽을 더 선호하는 편이다. 이유는? 역시 손이 많이 가기 때문이다. 손이 많이 간다는 건 작업 시간이 늘어난다는 말과 같다. 물론 시간을 들인 만큼 소프트웨어가 더 견고해질 수 있다. 즉 오류에 강해진다. 하지만 오류가 줄어든다고 해서 소프트웨어와 코드의 품질이 무조건 좋아지는 것은 아니며, 타입 검사기로는 찾을 수 없는 오류는 여전히 발생할 수 있다.&lt;/p&gt;
