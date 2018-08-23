@@ -38,31 +38,40 @@ onmessage = function(e) {
   }
 }
 
-var MIN_SEARCH_LEN = 2
+function isEng(str) {
+  return /^[A-Za-z]*$/.test(str)
+}
+
+function getMinSearchLen(str) {
+  return isEng(str) ? 2 : 1
+}
+
+/**
+ * 문자열의 길이가 충분한지 확인. 영어는 2글자 이상. 한글은 1글자
+ */
+function isTooShort(str = '') {
+  var minLen = getMinSearchLen(str)
+  return str.length < minLen
+}
 
 function search(search = '') {
-  var startTime = +new Date()
-
   if (!search) {
-    sendNoResult({
-      startTime,
-    })
+    sendNoResult()
     return
   }
 
-  if (search && search.length < MIN_SEARCH_LEN) {
-    sendNoResult({
-      startTime,
-    })
+  if (search && isTooShort(search)) {
+    sendNoResult()
     return
   }
 
+  var minSearchLen = getMinSearchLen(search)
   var searchWords = searchUtil.trimText(search).split(/\s+/)
   var resultRouteMap = {}
   var resultTagRouteList = []
 
   for (var searchWord of searchWords) {
-    if (searchWord.length >= MIN_SEARCH_LEN) {
+    if (searchWord.length >= minSearchLen) {
       // 검색어가 단어와 매칭되는지 확인
       for (var word of wordList) {
         // 검색어는 인덱싱된 단어의 시작 부분부터 매칭되어야 한다
@@ -87,10 +96,8 @@ function search(search = '') {
   // 결과가 없으면 단어를 1글자씩 줄여서 한번 검색한다.
   if (R.and(R.isEmpty(resultRouteMap), R.isEmpty(resultTagRouteList))) {
     // 단어를 더 이상 줄일 수 없으면 결과 없음 전송
-    if (R.all(s => s.length < MIN_SEARCH_LEN, searchWords)) {
-      sendNoResult({
-        startTime,
-      })
+    if (R.all(s => s.length < minSearchLen, searchWords)) {
+      sendNoResult()
     }
 
     // 단어를 1글자씩 줄여서 한번 더 검색
@@ -100,16 +107,14 @@ function search(search = '') {
     sendResult({
       resultPostRoutes: convertResultToList(resultRouteMap),
       resultTagRoutes: R.uniqBy(tagRoute => tagRoute.name, resultTagRouteList),
-      searchTime: +new Date() - startTime,
     })
   }
 }
 
-function sendNoResult({ startTime }) {
+function sendNoResult() {
   sendResult({
     resultPostRoutes: [],
     resultTagRoutes: [],
-    searchTime: +new Date() - startTime,
   })
 }
 
