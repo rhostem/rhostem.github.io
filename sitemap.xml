@@ -3,6 +3,7 @@
 <url> <loc>https://rhostem.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/posts/2018-08-31-mongodb-connection/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2018-08-23-blog-search/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2018-08-11-use-flow-type-loosely/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2018-07-22-web-architecture-101/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -31,6 +32,9 @@
 <url> <loc>https://rhostem.github.io/posts/2017-01-07-git-basic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-01-03-react-class-component-autobinding/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tag/mongodb</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tag/ubuntu</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tag/aws</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/검색</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/node.js</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/web_worker</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
