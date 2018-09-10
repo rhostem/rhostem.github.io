@@ -3,6 +3,7 @@
 <url> <loc>https://rhostem.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/posts/2018-09-12-javascript-reactivity/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2018-08-31-mongodb-connection/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2018-08-23-blog-search/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2018-08-11-use-flow-type-loosely/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -32,6 +33,9 @@
 <url> <loc>https://rhostem.github.io/posts/2017-01-07-git-basic/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-01-03-react-class-component-autobinding/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2016-12-19-A-Study-Plan-To-Cure-JavaScript-Fatigue/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tag/javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tag/vue</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/tag/번역</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/mongodb</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/ubuntu</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/aws</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -41,12 +45,10 @@
 <url> <loc>https://rhostem.github.io/tag/service_worker</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/umd</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/flow</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rhostem.github.io/tag/javascript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/vscode</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/웹_개발</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/소프트웨어_개발</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/아키텍쳐</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rhostem.github.io/tag/번역</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/typescript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/reasonml</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/git</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
