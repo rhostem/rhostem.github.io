@@ -17,7 +17,7 @@
 <url> <loc>https://rhostem.github.io/posts/2018-01-15-react-redux-typescript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-10-29-what-i-ve-learned-over-5-years-as-a-software-developer/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-10-21-lazy-image-loading-with-lodzad-js/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://rhostem.github.io/posts/2017-09-07-redux-saga-toast-control/2017-09-how-i-rediscovered-my-love-for-java-script-after-throwing-90-of-it-in-the-trash/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/posts/2017-09-how-i-rediscovered-my-love-for-java-script-after-throwing-90-of-it-in-the-trash/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-09-07-redux-saga-toast-control/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-09-01-ftp-deploy-process-with-dploy/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/posts/2017-08-14-typescript-npm-package/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -81,5 +81,6 @@
 <url> <loc>https://rhostem.github.io/tag/svn</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tag/es7</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/archive/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://rhostem.github.io/stats/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://rhostem.github.io/tags/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
