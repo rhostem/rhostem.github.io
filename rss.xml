@@ -1,4 +1,176 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[rhostem.github.io]]></title><description><![CDATA[프론트엔드 웹 개발 기술 블로그]]></description><link>https://rhostem.github.io</link><image><url>https://rhostem.github.io/logos/logo-512.png</url><title>rhostem.github.io</title><link>https://rhostem.github.io</link></image><generator>rhostem.github.io</generator><lastBuildDate>Wed, 19 Sep 2018 03:53:34 GMT</lastBuildDate><atom:link href="https://rhostem.github.io/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[rhostem]]></author><copyright><![CDATA[Copyright © 2016. rhostem All rights reserved]]></copyright><item><title><![CDATA[[번역] 자바스크립트 반응성(Reactivity)에 대한 가장 좋은 설명]]></title><description><![CDATA[Gregg Pollack의  The Best Explanation of JavaScript Reactivity 🎆 를 번역한 글이다. SPA…]]></description><link>https://rhostem.github.io/posts/2018-09-12-javascript-reactivity/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-09-12-javascript-reactivity/</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Vue]]></category><category><![CDATA[번역]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Wed, 12 Sep 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Gregg Pollack의 &lt;a href=&quot;https://medium.com/vue-mastery/the-best-explanation-of-javascript-reactivity-fea6112dd80d&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;The Best Explanation of JavaScript Reactivity 🎆&lt;/a&gt;를 번역한 글이다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[rhostem.github.io]]></title><description><![CDATA[프론트엔드 웹 개발 기술 블로그]]></description><link>https://rhostem.github.io</link><image><url>https://rhostem.github.io/logos/logo-512.png</url><title>rhostem.github.io</title><link>https://rhostem.github.io</link></image><generator>rhostem.github.io</generator><lastBuildDate>Sun, 28 Oct 2018 06:55:15 GMT</lastBuildDate><atom:link href="https://rhostem.github.io/rss.xml" rel="self" type="application/rss+xml"/><author><![CDATA[rhostem]]></author><copyright><![CDATA[Copyright © 2016. rhostem All rights reserved]]></copyright><item><title><![CDATA[Nuxt, Vue와 Express로 프론트엔드와 백엔드를 하나의 서버 앱에서 사용하기]]></title><description><![CDATA[SPA(Single Page Application)의 서버 렌더링 웹사이트의 내용을 페이지가 바뀔 때마다 완전히 새로 구성하지 않고 필요한 부분만 동적으로 변경하는 방식의 앱을 SPA…]]></description><link>https://rhostem.github.io/posts/2018-10-26-nuxtjs-universal/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-10-26-nuxtjs-universal/</guid><category><![CDATA[Nuxt]]></category><category><![CDATA[Vue.js]]></category><category><![CDATA[Express.js]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Sun, 28 Oct 2018 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;spasingle-page-application의-서버-렌더링&quot;&gt;&lt;a href=&quot;#spasingle-page-application%EC%9D%98-%EC%84%9C%EB%B2%84-%EB%A0%8C%EB%8D%94%EB%A7%81&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SPA(Single Page Application)의 서버 렌더링&lt;/h2&gt;
+&lt;p&gt;웹사이트의 내용을 페이지가 바뀔 때마다 완전히 새로 구성하지 않고 필요한 부분만 동적으로 변경하는 방식의 앱을 SPA라고 한다. 서버는 클라이언트에게 웹사이트에 필요한 필수적인 자원만 넘겨준 후 그 다음은 모두 브라우저가 처리하도록 한다. WWW가 생긴 후 오랜 기간동안 일반적인 웹사이트는 페이지가 변경될 때마다 서버에서 모든 컨텐츠를 다시 내려받는 방식이었다. 하지만 SPA는 그 전통적인 방식을 벗어난 것이며, 예전과는 비교할 수 없을 정도의 빠르고 쾌적한 사용자 경험을 제공할 수 있게 되었다.&lt;/p&gt;
+&lt;p&gt;그런데 SPA에게는 사용자에게는 보이지 않는 문제가 있다. 검색엔진같은 소프트웨어에게는 SPA로 만들어진 웹사이트는 아마 아무런 내용이 없는 빈 페이지로 보일 것이며, 심지어 모든 페이지의 &lt;code class=&quot;language-text&quot;&gt;head&lt;/code&gt; 태그 안에는 같은 내용이 들어가 있을 것이기 때문에 페이지의 구분도 불가능하다. 즉 검색 엔진 최적화(SEO, Search Engine Optimization)가 어려우며 검색 엔진에 웹사이트가 가지고 있는 다양한 컨텐츠가 노출되지 않는다. 더 많은 사용자 유입을 위해 검색 엔진의 힘을 빌려야 하는 언론, 쇼핑몰, 블로그 같은 웹사이트라면 SPA를 도입하기 망설여질 것이다.&lt;/p&gt;
+&lt;p&gt;그래서 개발자들은 이를 극복하기 위해 서버 기반 웹앱과 SPA를 결합하는 방법을 고안했다. 서버가 브라우저에 아무것도 없는 HTML 페이지를 전달하는 대신, 최초에 표시될 내용만큼은 모두 서버에서 확실히 구성한 후 브라우저에 보내자는 것이다. 그리고 그 이후부터는 SPA처럼 동작하게 한다. 그러면 검색 엔진에게도 제대로 된 웹페이지가 보여질 것이고, 사용자에게도 여전히 빠른 웹사이트를 제공할 수 있을 것이다. 이 방식을 서버 사이드 렌더링, 또는 Universal Web App이라고 부른다. 서버 사이드 렌더링 아이디어가 없었다면 SPA의 활용 범위는 지금보다 훨씬 더 좁았을 것이다.&lt;/p&gt;
+&lt;h2 id=&quot;vue의-서버-사이드-렌더링을-쉽게-만드는-nuxt-프레임워크&quot;&gt;&lt;a href=&quot;#vue%EC%9D%98-%EC%84%9C%EB%B2%84-%EC%82%AC%EC%9D%B4%EB%93%9C-%EB%A0%8C%EB%8D%94%EB%A7%81%EC%9D%84-%EC%89%BD%EA%B2%8C-%EB%A7%8C%EB%93%9C%EB%8A%94-nuxt-%ED%94%84%EB%A0%88%EC%9E%84%EC%9B%8C%ED%81%AC&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Vue의 서버 사이드 렌더링을 쉽게 만드는 Nuxt 프레임워크&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nuxtjs.org&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Nuxt&lt;/a&gt;는 Vue.js를 프론트엔드 레이어로 하는 서버 사이드 렌더링 프레임워크다. React 서버 사이드 렌더링 프레임워크인 Next.js와 이름이 유사하다는 점에서 추측할 수 있겠지만, 둘 다 &lt;a href=&quot;https://zeit.co&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Zeit&lt;/a&gt;팀에서 시작한 오픈소스 프레임워크다.&lt;/p&gt;
+&lt;p&gt;서버 사이드 렌더링 아이디어 자체는 간단하지만, 그걸 구현하는 것은 그리 녹록치 않은 일이다. 앱의 시작 지점이 서버니까 일단 서버 앱이 있어야 하며, 클라이언트 스크립트도 이 페이지가 서버에서 시작하는지, 웹브라우저에서 시작하는지를 구분해서 처리해야 하고, 라우트별로 다른 API를 호출해서 HTML의 &lt;code class=&quot;language-text&quot;&gt;head&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;body&lt;/code&gt;를 구성해야 하는 등 할 일이 많다. Vue가 등장하기 전이며 React는 0.1x였던 시기에는 프로젝트 초기 구성 자체가 큰 허들이었던 걸로 기억한다.&lt;/p&gt;
+&lt;p&gt;하지만 이제는 Next.js, Nuxt.js라는 멋진 프레임워크가 있기에 처음부터 끝까지 모든 것을 제어하고 싶은 사람이 아니라면, 아주 간단히 서버 사이드 렌더링을 구현할 수 있다. 특히 프레임워크 차원에서 개발자에게 필요한 각종 유용한 기능을 제공하기 때문에 더욱 좋다.&lt;/p&gt;
+&lt;p&gt;그런데 문득 이런 생각이 들었다. 프론트엔드 앱의 시작 지점이 서버라면, 굳이 API 서버 앱을 별도로 둘 필요 없이 예전처럼 하나의 앱으로 개발하면 되지 않을까? Express.js라는 훌륭한 자바스크립트 서버 프레임워크도 있고 말이다. 하지만 자바스크립트가 아닌 다른 언어를 사용하는 백엔드 개발자가 더 많은데다, SPA 프레임워크를 사용하면서 서버 개발자가 마크업을 건드릴 일이 사라졌으니 반드시 같이 있어야 할 필요가 없기도 하다. 최근에는 서버리스 컴퓨팅이나 마이크로 서비스 아키텍쳐까지 트렌드를 타고 있어서 더욱 그렇다. 하지만 공부나 사이드 프로젝트를 위해 혼자 앱을 개발할 때는 안성맞춤일 것 같고, 풀 스택 개발자들이 함께 앱을 만들어 나갈때도 좋을 것 같다.&lt;/p&gt;
+&lt;h2 id=&quot;nuxt로-만든-앱에-api-라우트를-연결하는-과정&quot;&gt;&lt;a href=&quot;#nuxt%EB%A1%9C-%EB%A7%8C%EB%93%A0-%EC%95%B1%EC%97%90-api-%EB%9D%BC%EC%9A%B0%ED%8A%B8%EB%A5%BC-%EC%97%B0%EA%B2%B0%ED%95%98%EB%8A%94-%EA%B3%BC%EC%A0%95&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Nuxt로 만든 앱에 API 라우트를 연결하는 과정&lt;/h2&gt;
+&lt;h3 id=&quot;nuxtjs-앱-설치&quot;&gt;&lt;a href=&quot;#nuxtjs-%EC%95%B1-%EC%84%A4%EC%B9%98&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Nuxt.js 앱 설치&lt;/h3&gt;
+&lt;p&gt;Nuxt는 &lt;a href=&quot;https://nuxtjs.org/guide/installation&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;간편한 설치 과정&lt;/a&gt;을 제공한다. 설치 과정에서 여러가지 옵션을 선택할 수 있는데, Custom Server 옵션으로 express를 선택하도록 하자.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/select-express-a9d008acfcd77b4460729aa8c658ed8a-ac6bd.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 38.40579710144928%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABGklEQVQoz5WR226CUBBF+RQroNa2CspN7iBXaSupwaS1Tev/f8R25uiDabBJH1aGDJm1h0Ga+ymWcYFFmMOIS5hJCY169nqDByfE2PBwb/lUXajLFWTN6kXRbagLB1JQt/CrLbzyFSZJDIJlbtYIuZs/Ew284gVWUokwLViDF9GDDDM3EXViekIqNfsDok2LvN1jTqJJWuPOiTCgNNn0odohFCvAyCaoPyZ4mDe+rrydEO4OPyTr8PZ5xO7riLr7gLvtkL1/44nkA5LJqxhDEg8vlQf7EJ88jQootMmY7sONEdUpJT7a1ONUuo/K6Jcqns/DvxEbzuhGLLxOkpmrQys9sFTpkUp2Wp1f/pHa17+FxH9XD7N/D97iBAUNA1CHrNm+AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;./select-express.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/select-express-a9d008acfcd77b4460729aa8c658ed8a-9056e.png&quot;
+        srcset=&quot;/static/select-express-a9d008acfcd77b4460729aa8c658ed8a-507eb.png 265w,
+/static/select-express-a9d008acfcd77b4460729aa8c658ed8a-63b28.png 530w,
+/static/select-express-a9d008acfcd77b4460729aa8c658ed8a-9056e.png 1060w,
+/static/select-express-a9d008acfcd77b4460729aa8c658ed8a-ac6bd.png 1104w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3 id=&quot;nuxtconfigjs에서-미들웨어-설정&quot;&gt;&lt;a href=&quot;#nuxtconfigjs%EC%97%90%EC%84%9C-%EB%AF%B8%EB%93%A4%EC%9B%A8%EC%96%B4-%EC%84%A4%EC%A0%95&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;nuxt.config.js에서 미들웨어 설정&lt;/h3&gt;
+&lt;p&gt;설치가 완료되고 &lt;code class=&quot;language-text&quot;&gt;npm run dev&lt;/code&gt; 명령어를 실행하면 앱이 잘 실행되는 것을 확인할 수 있다. 옵션 선택 과정에서 prettier나 eslint를 선택했으면 문법 오류 때문에 빌드가 안될 수 있는데, 그럴 땐 일단 webpack에서 관련 설정을 임시로 제거하도록 하자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// nuxt.config.js&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+
+  build&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;/*
+    ** You can extend webpack config here
+    */&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;config&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ctx&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// Run ESLint on save&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;ctx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isDev &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; ctx&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isClient&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token comment&quot;&gt;// 이 부분을 주석 처리하고 코드는 나중에 정리하자&lt;/span&gt;
+        config&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;rules&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+          enforce&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;pre&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          test&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token regex&quot;&gt;/\.(js|vue)$/&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          loader&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;eslint-loader&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          exclude&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token regex&quot;&gt;/(node_modules)/&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;그리고 nuxt.config.js 파일에서 serverMiddleware 속성에 새로운 값을 할당한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// nuxt.config.js&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+
+  serverMiddleware&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// 앱의 /api/* 라우트로 접근하는 모든 요청은 &amp;lt;project root&gt;/api/index.js 모듈이 처리하도록 한다.&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;~/api/index.js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;그리고 미들웨어로 사용할 express 앱을 모듈로 추가한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// &amp;lt;project root&gt;/api/index.js&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; express &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;express&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// express 인스턴스 생성&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; app &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 라우트 메소드 추가&lt;/span&gt;
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;API root&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 서버 미들웨어로 사용할 수 있도록 export&lt;/span&gt;
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  path&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;/api&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  handler&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; app
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;이렇게 설정과 파일을 구성하면 Nuxt는 자동으로 api/index.js 파일을 불러와서 미들웨어로 사용한다. 브라우저에서 /api 라우트에 접근하면 &lt;code class=&quot;language-text&quot;&gt;res.send&lt;/code&gt; 메소드로 전달한 문자열이 출력되는 것을 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/mw_api_root-8967fb457890bdc1a0e48e1cdd157995-58146.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; ; max-width: 1060px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 85.56149732620321%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAABmElEQVQ4y+2Uy07CQBRAu3Q7/Aj/Y/wUiCtYgaBLfPCQihgSjQ+M+gGuNDFGwRBbWnmExyAUFDpt53qnamN0QxPdeZLbmbmdezpJc0eSkNRReSF/cBk4yB2T89MLsn9YJscnZ0TeLZHUZpbkd/aIXCiRdFYmG1vbJJXOklQmRzYzBbKekUk6Xwzk5eKC9Mnt5VW4dn/Fq2210+kPaJ8OaLfXp4YxpjOT0RGONUWnj2qDKlqTqlqLqvUWVeoNEV1Va7Lrm7tlT1irPiQBmUxf+Mt0CuiCTrcHQ8OA6cyEGbNwPsaYgN6eQLPfhifjGUZjDs3hK7xiraY8rnnCSqWyIoTmzDQdxDQZhukwxhzLshzbtkXaEU/GbIdZ+N4WeXDEUtTqmpb0hHW1nhBJsR8HDnMjtnJLzLSvQly4Qs454++Aj5hPOPcZ5xGCD/6Ffydc+faX/fBTqOt64uODFvjHdjtF11c9oaIocbf1sOcQ7iewxj0EOhKeMBwOB+Px+FIkElmMRqO+QtTEYrGlUCgUdGUol34LvESkN3SwFywT+jubAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px #ffffff;&quot;
+        alt=&quot;mw_api_root&quot;
+        title=&quot;&quot;
+        src=&quot;/static/mw_api_root-8967fb457890bdc1a0e48e1cdd157995-9056e.png&quot;
+        srcset=&quot;/static/mw_api_root-8967fb457890bdc1a0e48e1cdd157995-507eb.png 265w,
+/static/mw_api_root-8967fb457890bdc1a0e48e1cdd157995-63b28.png 530w,
+/static/mw_api_root-8967fb457890bdc1a0e48e1cdd157995-9056e.png 1060w,
+/static/mw_api_root-8967fb457890bdc1a0e48e1cdd157995-58146.png 1496w&quot;
+        sizes=&quot;(max-width: 1060px) 100vw, 1060px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;이제 express가 미들웨어로 연결되었으니 여기서부터는 일반적인 express 앱 개발을 진행하면 된다. 앱에 라우트를 추가하고, 미들웨어를 추가하고, 데이터베이스를 연결하면 API 서버가 되는 것이다. 조금 더 상세한 예제는 &lt;a href=&quot;https://github.com/nuxt-community/express-template/tree/master/template&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;템플릿 프로젝트&lt;/a&gt;를 참조하도록 하자.&lt;/p&gt;
+&lt;h3 id=&quot;프론트엔드에서-api-호출&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C%EC%97%90%EC%84%9C-api-%ED%98%B8%EC%B6%9C&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프론트엔드에서 API 호출&lt;/h3&gt;
+&lt;p&gt;이제 Vue 페이지에서 API 라우트를 호출해서 컴포너트에 데이터를 연결하도록 하자. Nuxt는 Vue 컴포넌트에서 페이지 로딩 전에 비동기 데이터를 호출하기 위한 메소드, &lt;code class=&quot;language-text&quot;&gt;head&lt;/code&gt; 태그를 커스타이징하기 위한 메소드를 제공하기 때문에 무척 편리하다. 아래 예제 코드는 &lt;code class=&quot;language-text&quot;&gt;/api/user/:id&lt;/code&gt; 라우트가 &lt;code class=&quot;language-text&quot;&gt;name&lt;/code&gt; 속성을 가진 JSON 데이터를 리턴한다고 가정하고 작성한 컴포넌트다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot;&gt;
+      &lt;pre class=&quot;language-vue.js&quot;&gt;&lt;code class=&quot;language-vue.js&quot;&gt;// pages/user.vue
+
+&amp;lt;template&amp;gt;
+  &amp;lt;div&amp;gt;
+    &amp;lt;!-- asyncData 메소드에서 전달한 객체를 마크업에 표사 --&amp;gt;
+    이름 : {{user.name}}
+  &amp;lt;/div&amp;gt;
+&amp;lt;/template&amp;gt;
+
+&amp;lt;script&amp;gt;
+export default {
+  head() {
+    return {
+      title: `User | ${this.user.name}`, // title 태그 안에 들어갈 내용을 수정한다.
+    }
+  },
+  async asyncData({ app, query }) {
+    // 설치 과정에서 axios 플러그인을 선택했다면 axios를 아래와 같은 형태로 사용 가능하다.
+    const user = await app.$axios.$get(`/api/user/${query.id}`)
+    return { user }
+  },
+}
+&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+      &lt;/div&gt;
+&lt;p&gt;이렇게 Nuxt 프레임워크의 도움으로 간단하게 프론트, 백엔드가 합쳐진 서버 사이드 렌더링 SPA 앱이 만들어졌다.&lt;/p&gt;
+&lt;h2 id=&quot;참고-자료&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0-%EC%9E%90%EB%A3%8C&quot; aria-hidden=&quot;true&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고 자료&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://nuxtjs.org/guide/installation&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Installation - Nuxt.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/nuxt-community/express-template&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Starter template for Nuxt.js with Express.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://expressjs.com/en/guide/routing.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Express routing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[번역] 자바스크립트 반응성(Reactivity)에 대한 가장 좋은 설명]]></title><description><![CDATA[Gregg Pollack의  The Best Explanation of JavaScript Reactivity 🎆 를 번역한 글이다. SPA…]]></description><link>https://rhostem.github.io/posts/2018-09-12-javascript-reactivity/</link><guid isPermaLink="false">https://rhostem.github.io/posts/2018-09-12-javascript-reactivity/</guid><category><![CDATA[JavaScript]]></category><category><![CDATA[Vue]]></category><category><![CDATA[번역]]></category><dc:creator><![CDATA[rhostem]]></dc:creator><pubDate>Wed, 12 Sep 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Gregg Pollack의 &lt;a href=&quot;https://medium.com/vue-mastery/the-best-explanation-of-javascript-reactivity-fea6112dd80d&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;The Best Explanation of JavaScript Reactivity 🎆&lt;/a&gt;를 번역한 글이다.&lt;/p&gt;
 &lt;p&gt;SPA 프레임워크에서 컴포넌트의 상태가 변경되면 렌더링이 다시 실행되는 것처럼, 객체의 속성이 변경될 때 어떤 코드가 자동으로 실행되게 한다면 그 어플리케이션은 반응적이라고 할 수 있다. 이를 구현하기 위해서 &lt;code class=&quot;language-text&quot;&gt;Object.defineProperty&lt;/code&gt; 함수를 사용해 getter, setter 함수를 다시 할당하는 방법을 설명하는 글이다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;많은 프론트엔드 자바스크립트 프레임워크(Angular, React, Vue, etc)는 자신만의 반응성(Reactivity) 엔진을 가지고 있다. 반응성이 무엇인지, 어떻게 동작하는지를 이해함으로써 당신의 개발 기술을 향상할 수 있고 자바스크립트 프레임워크를 보다 효율적으로 사용할 수 있다. 아래의 영상과 비디오를 통해 우리는 Vue 소스 코드에서 확인할 수 있는 것과 같은 종류의 Reactivity를 구현할 것이다.&lt;/p&gt;
