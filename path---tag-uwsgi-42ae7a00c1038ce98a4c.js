@@ -1,2 +1,0 @@
-webpackJsonp([50781915512710],{840:function(t,e){t.exports={data:{site:{siteMetadata:{title:"rhostem.github.io",url:"https://rhostem.github.io"}},allMarkdownRemark:{totalCount:1,edges:[{node:{fields:{slug:"/posts/2018-11-20-deploy-flask-with-uwsgi/"},frontmatter:{title:"구글 애널리틱스 API를 사용한 Flask 앱을 uWSGI와 nginx를 사용해 배포한 과정",date:"2018-11-20",mainImage:null}}}]}},pathContext:{tag:"uWSGI"}}}});
-//# sourceMappingURL=path---tag-uwsgi-42ae7a00c1038ce98a4c.js.map
