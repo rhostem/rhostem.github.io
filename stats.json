@@ -5,12 +5,16 @@
       "path---tag-svg-96eaec71f69c508094ec.js.map"
     ],
     "path---4": [
-      "path---4-721139158bb65e14a68f.js",
-      "path---4-721139158bb65e14a68f.js.map"
+      "path---4-6a764c5ff4e423fa779c.js",
+      "path---4-6a764c5ff4e423fa779c.js.map"
     ],
     "path---posts-2017-09-01-ftp-deploy-process-with-dploy": [
-      "path---posts-2017-09-01-ftp-deploy-process-with-dploy-dbdd2ea38c39d2de2b29.js",
-      "path---posts-2017-09-01-ftp-deploy-process-with-dploy-dbdd2ea38c39d2de2b29.js.map"
+      "path---posts-2017-09-01-ftp-deploy-process-with-dploy-41acbac1eea1ee31cfb6.js",
+      "path---posts-2017-09-01-ftp-deploy-process-with-dploy-41acbac1eea1ee31cfb6.js.map"
+    ],
+    "path---posts-2018-11-20-deploy-flask-with-uwsgi": [
+      "path---posts-2018-11-20-deploy-flask-with-uwsgi-2aa571ce8f5b80c53487.js",
+      "path---posts-2018-11-20-deploy-flask-with-uwsgi-2aa571ce8f5b80c53487.js.map"
     ],
     "path---tag-svn": [
       "path---tag-svn-a75b031ea2d66d916a90.js",
@@ -25,8 +29,12 @@
       "path---posts-2018-07-20-this-in-javascript-95ededfdc77c11d75a6e.js.map"
     ],
     "path---posts-2017-01-23-10-tips-for-better-redux-architecture": [
-      "path---posts-2017-01-23-10-tips-for-better-redux-architecture-81e7e4dc6913ee3985df.js",
-      "path---posts-2017-01-23-10-tips-for-better-redux-architecture-81e7e4dc6913ee3985df.js.map"
+      "path---posts-2017-01-23-10-tips-for-better-redux-architecture-d84d45fc83630aeb382f.js",
+      "path---posts-2017-01-23-10-tips-for-better-redux-architecture-d84d45fc83630aeb382f.js.map"
+    ],
+    "path---tag-uwsgi": [
+      "path---tag-uwsgi-42ae7a00c1038ce98a4c.js",
+      "path---tag-uwsgi-42ae7a00c1038ce98a4c.js.map"
     ],
     "path---posts-2017-07-29-migration-to-gatsby-v-1": [
       "path---posts-2017-07-29-migration-to-gatsby-v-1-d708c4389458f6fbf83a.js",
@@ -41,8 +49,12 @@
       "path---posts-2017-01-07-git-basic-3715e7255d017a10e1a6.js.map"
     ],
     "path---tags": [
-      "path---tags-bd60495326f3fa1a4703.js",
-      "path---tags-bd60495326f3fa1a4703.js.map"
+      "path---tags-0784a5cd362917ff2cad.js",
+      "path---tags-0784a5cd362917ff2cad.js.map"
+    ],
+    "path---tag-google-analytics": [
+      "path---tag-google-analytics-440a3b9376c4111af1b4.js",
+      "path---tag-google-analytics-440a3b9376c4111af1b4.js.map"
     ],
     "path---tag-소프트웨어-개발": [
       "path---tag-소프트웨어-개발-5bd26115b37da446df12.js",
@@ -173,12 +185,12 @@
       "path---posts-2018-11-11-regex-capture-group-49215d5f64351cd623da.js.map"
     ],
     "path---posts-2018-09-12-javascript-reactivity": [
-      "path---posts-2018-09-12-javascript-reactivity-8c1beaf65ed40f94a5a5.js",
-      "path---posts-2018-09-12-javascript-reactivity-8c1beaf65ed40f94a5a5.js.map"
+      "path---posts-2018-09-12-javascript-reactivity-6d98e7fb276eb9225c32.js",
+      "path---posts-2018-09-12-javascript-reactivity-6d98e7fb276eb9225c32.js.map"
     ],
     "path---index": [
-      "path---index-cd02d01129434f11b53d.js",
-      "path---index-cd02d01129434f11b53d.js.map"
+      "path---index-fb14f34d97d68345f4b8.js",
+      "path---index-fb14f34d97d68345f4b8.js.map"
     ],
     "path---tag-vscode": [
       "path---tag-vscode-4654dca1f30af2fe648f.js",
@@ -205,16 +217,16 @@
       "path---tag-service-worker-18c8623bad1526757722.js.map"
     ],
     "path---posts-2017-03-06-a-university-degree-might-be-a-huge-wasteof-time": [
-      "path---posts-2017-03-06-a-university-degree-might-be-a-huge-wasteof-time-e61f59e0d22c57f7d8b5.js",
-      "path---posts-2017-03-06-a-university-degree-might-be-a-huge-wasteof-time-e61f59e0d22c57f7d8b5.js.map"
+      "path---posts-2017-03-06-a-university-degree-might-be-a-huge-wasteof-time-fd048b8692f4e03f5928.js",
+      "path---posts-2017-03-06-a-university-degree-might-be-a-huge-wasteof-time-fd048b8692f4e03f5928.js.map"
     ],
     "path---posts-2017-05-29-few-html-tips": [
       "path---posts-2017-05-29-few-html-tips-c102dce2fc2bff5433c6.js",
       "path---posts-2017-05-29-few-html-tips-c102dce2fc2bff5433c6.js.map"
     ],
     "path---2": [
-      "path---2-d3e70c3dc4f8621d4167.js",
-      "path---2-d3e70c3dc4f8621d4167.js.map"
+      "path---2-713b33c20bd71a1308b1.js",
+      "path---2-713b33c20bd71a1308b1.js.map"
     ],
     "path---tag-css": [
       "path---tag-css-559924bc71f5d63b17c3.js",
@@ -252,6 +264,10 @@
       "path---tag-web-6729f80c3ecd4eb38414.js",
       "path---tag-web-6729f80c3ecd4eb38414.js.map"
     ],
+    "path---tag-flask": [
+      "path---tag-flask-812231b53dc5e82d6370.js",
+      "path---tag-flask-812231b53dc5e82d6370.js.map"
+    ],
     "path---posts-2017-01-03-react-class-component-autobinding": [
       "path---posts-2017-01-03-react-class-component-autobinding-b6b0cac3e3899c64398b.js",
       "path---posts-2017-01-03-react-class-component-autobinding-b6b0cac3e3899c64398b.js.map"
@@ -261,8 +277,8 @@
       "path---posts-2017-04-11-8-simple-rules-for-a-robust-scalable-css-architecture-7c153f5aa03b6ef05a26.js.map"
     ],
     "path---posts-2016-12-19-a-study-plan-to-cure-java-script-fatigue": [
-      "path---posts-2016-12-19-a-study-plan-to-cure-java-script-fatigue-961885af0299ec08f919.js",
-      "path---posts-2016-12-19-a-study-plan-to-cure-java-script-fatigue-961885af0299ec08f919.js.map"
+      "path---posts-2016-12-19-a-study-plan-to-cure-java-script-fatigue-852571721abf82c852f0.js",
+      "path---posts-2016-12-19-a-study-plan-to-cure-java-script-fatigue-852571721abf82c852f0.js.map"
     ],
     "path---tag-redux-saga": [
       "path---tag-redux-saga-b59cfe13f608fe933b0f.js",
@@ -273,8 +289,8 @@
       "path---tag-html-79c4b3df8d4f9381e77e.js.map"
     ],
     "path---3": [
-      "path---3-07ba768dc73554532e08.js",
-      "path---3-07ba768dc73554532e08.js.map"
+      "path---3-f2b9dc0c167aceb330a0.js",
+      "path---3-f2b9dc0c167aceb330a0.js.map"
     ],
     "path---tag-정규표현식": [
       "path---tag-정규표현식-4c19d733ce32e595c63e.js",
@@ -333,20 +349,24 @@
       "path---posts-2018-05-20-gulp-static-site-051150b5f4d13a265ded.js.map"
     ],
     "app": [
-      "app-5d24acf1cc8837af6045.js",
-      "app-5d24acf1cc8837af6045.js.map"
+      "app-969840fea8a852712064.js",
+      "app-969840fea8a852712064.js.map"
     ],
     "path---posts-2018-01-25-top-java-script-libraries-tech-to-learn-in-2018": [
-      "path---posts-2018-01-25-top-java-script-libraries-tech-to-learn-in-2018-e6a3d631b477b156e61d.js",
-      "path---posts-2018-01-25-top-java-script-libraries-tech-to-learn-in-2018-e6a3d631b477b156e61d.js.map"
+      "path---posts-2018-01-25-top-java-script-libraries-tech-to-learn-in-2018-98de236da7da528a3c01.js",
+      "path---posts-2018-01-25-top-java-script-libraries-tech-to-learn-in-2018-98de236da7da528a3c01.js.map"
     ],
     "path---archive": [
-      "path---archive-ae3bc925b97054a29f98.js",
-      "path---archive-ae3bc925b97054a29f98.js.map"
+      "path---archive-d4e65a4d66435e0b8402.js",
+      "path---archive-d4e65a4d66435e0b8402.js.map"
     ],
     "path---posts-2018-08-23-blog-search": [
       "path---posts-2018-08-23-blog-search-d854a009a8dd70d67021.js",
       "path---posts-2018-08-23-blog-search-d854a009a8dd70d67021.js.map"
+    ],
+    "path---tag-python": [
+      "path---tag-python-4673032262f49d74e55c.js",
+      "path---tag-python-4673032262f49d74e55c.js.map"
     ],
     "path---tag-typescript": [
       "path---tag-typescript-40e5285793655d31469e.js",
