@@ -8,8 +8,8 @@
   </head>
   <body>
     <script>
-      const BLOG_URL = `https://blog.rhostem.com`;
-      const redirectTo = `${BLOG_URL}${window.location.pathname}`;
+      const BLOG_URL = "https://blog.rhostem.com";
+      const redirectTo = BLOG_URL.concat(window.location.pathname);
       window.location.href = redirectTo;
     </script>
   </body>
